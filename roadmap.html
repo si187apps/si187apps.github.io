@@ -1,0 +1,430 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Roadmap — si187 Apps</title>
+<meta name="description" content="The si187 Apps product roadmap. Where we are with FPL Coach AI, what's coming next, and how the apps we build in the future get chosen.">
+<meta name="robots" content="index, follow">
+<link rel="canonical" href="https://si187apps.com/roadmap">
+<meta property="og:title" content="Roadmap — si187 Apps">
+<meta property="og:description" content="Where we are, what's next, and how future apps get chosen. Full transparency on the si187 build plan.">
+<meta property="og:url" content="https://si187apps.com/roadmap">
+<meta property="og:image" content="https://si187apps.com/assets/images/og-card.png">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:site" content="@si187apps">
+<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 160 160'><rect width='160' height='160' fill='%23050E05'/><path d='M80 148 A69 69 0 0 1 11 79' fill='none' stroke='%2339FF7A' stroke-width='4.5' stroke-linecap='round' opacity='.15'/><path d='M80 148 A69 69 0 0 0 149 79' fill='none' stroke='%2339FF7A' stroke-width='4.5' stroke-linecap='round' opacity='.15'/><path d='M80 132 A53 53 0 0 1 27 79' fill='none' stroke='%2339FF7A' stroke-width='4.5' stroke-linecap='round' opacity='.32'/><path d='M80 132 A53 53 0 0 0 133 79' fill='none' stroke='%2339FF7A' stroke-width='4.5' stroke-linecap='round' opacity='.32'/><path d='M80 116 A37 37 0 0 1 43 79' fill='none' stroke='%2339FF7A' stroke-width='4.5' stroke-linecap='round' opacity='.55'/><path d='M80 116 A37 37 0 0 0 117 79' fill='none' stroke='%2339FF7A' stroke-width='4.5' stroke-linecap='round' opacity='.55'/><path d='M80 100 A21 21 0 0 1 59 79' fill='none' stroke='%2339FF7A' stroke-width='4.5' stroke-linecap='round' opacity='.75'/><path d='M80 100 A21 21 0 0 0 101 79' fill='none' stroke='%2339FF7A' stroke-width='4.5' stroke-linecap='round' opacity='.75'/><path d='M80 88 A9 9 0 0 1 71 79' fill='none' stroke='%23C084C8' stroke-width='4.5' stroke-linecap='round' opacity='.92'/><path d='M80 88 A9 9 0 0 0 89 79' fill='none' stroke='%23C084C8' stroke-width='4.5' stroke-linecap='round' opacity='.92'/><circle cx='80' cy='79' r='7' fill='%2339FF7A'/></svg>">
+<meta name="theme-color" content="#050E05">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Syne:wght@700;800&family=Inter:wght@300;400;500;600&family=JetBrains+Mono:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../assets/css/site.css">
+<style>
+
+/* ── Phase cards ── */
+.phase-grid { display: flex; flex-direction: column; gap: 3px; }
+
+.phase-card {
+  background: var(--bg-card); border: 1px solid var(--bg-border);
+  border-radius: 0; padding: 0; overflow: hidden;
+  transition: border-color 0.2s;
+}
+.phase-card:first-child { border-radius: 16px 16px 0 0; }
+.phase-card:last-child { border-radius: 0 0 16px 16px; }
+.phase-card:hover { border-color: var(--text3); }
+
+.phase-header {
+  display: grid; grid-template-columns: 80px 1fr 180px;
+  align-items: center; gap: 24px;
+  padding: 28px 36px; cursor: pointer;
+  transition: background 0.15s;
+}
+.phase-header:hover { background: var(--bg-raised); }
+
+.phase-status-col { display: flex; justify-content: center; }
+.phase-status {
+  width: 12px; height: 12px; border-radius: 50%;
+  border: 2px solid var(--bg-border);
+}
+.phase-status.done     { background: var(--green); border-color: var(--green); box-shadow: 0 0 10px rgba(57,255,122,0.4); }
+.phase-status.active   { background: var(--green); border-color: var(--green); box-shadow: 0 0 14px rgba(57,255,122,0.7); animation: pulse-dot 1.8s ease-in-out infinite; }
+.phase-status.soon     { background: transparent; border-color: var(--magenta-dim); }
+.phase-status.future   { background: transparent; border-color: var(--text3); }
+
+.phase-info {}
+.phase-period { font-family: 'JetBrains Mono', monospace; font-size: 10px; letter-spacing: 2px; color: var(--magenta); text-transform: uppercase; margin-bottom: 5px; }
+.phase-name { font-family: 'Syne', sans-serif; font-size: 20px; font-weight: 800; letter-spacing: -0.3px; color: var(--text1); }
+
+.phase-tag-col { display: flex; justify-content: flex-end; }
+
+.phase-body { padding: 0 36px 36px 36px; padding-left: calc(36px + 80px + 24px); display: none; }
+.phase-body.open { display: block; }
+.phase-desc { font-size: 15px; color: var(--magenta); line-height: 1.75; margin-bottom: 24px; max-width: 580px; }
+
+.phase-items { display: flex; flex-direction: column; gap: 10px; }
+.phase-item { display: flex; align-items: flex-start; gap: 12px; font-size: 14px; color: var(--text1); line-height: 1.4; }
+.phase-item-dot { width: 6px; height: 6px; border-radius: 50%; flex-shrink: 0; margin-top: 5px; }
+.phase-item-dot.done   { background: var(--green); }
+.phase-item-dot.active { background: var(--green); box-shadow: 0 0 6px rgba(57,255,122,0.6); }
+.phase-item-dot.planned { background: var(--text3); }
+
+/* ── How we choose what to build next ── */
+.process-steps { display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 20px; }
+.process-step {
+  background: var(--bg-card); border: 1px solid var(--bg-border);
+  border-radius: 16px; padding: 32px;
+}
+.step-num { font-family: 'JetBrains Mono', monospace; font-size: 36px; font-weight: 700; color: var(--bg-border); line-height: 1; margin-bottom: 16px; }
+.step-title { font-family: 'Syne', sans-serif; font-size: 18px; font-weight: 800; letter-spacing: -0.3px; color: var(--text1); margin-bottom: 10px; }
+.step-body { font-size: 14px; color: var(--magenta); line-height: 1.7; }
+
+/* ── Future ideas incubator ── */
+.ideas-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; }
+.idea-card {
+  background: var(--bg-card); border: 1px solid var(--bg-border);
+  border-radius: 14px; padding: 28px;
+  transition: border-color 0.2s;
+}
+.idea-card:hover { border-color: var(--magenta-dim); }
+.idea-status { display: flex; align-items: center; gap: 8px; margin-bottom: 14px; }
+.idea-title { font-size: 17px; font-weight: 600; color: var(--text1); margin-bottom: 8px; }
+.idea-body { font-size: 14px; color: var(--magenta); line-height: 1.65; margin-bottom: 14px; }
+.idea-vote { font-family: 'JetBrains Mono', monospace; font-size: 11px; color: var(--text3); }
+
+/* ── Feedback CTA ── */
+.feedback-banner {
+  background: var(--bg-card); border: 1px solid var(--bg-border);
+  border-left: 3px solid var(--green);
+  border-radius: 0 16px 16px 0; padding: 32px 36px;
+  display: flex; align-items: center; justify-content: space-between;
+  gap: 24px; flex-wrap: wrap;
+}
+.feedback-banner p { font-size: 16px; color: var(--text1); max-width: 480px; line-height: 1.6; }
+.feedback-banner p em { font-style: italic; color: var(--magenta); }
+
+@media (max-width: 900px) {
+  .phase-header { grid-template-columns: 40px 1fr; }
+  .phase-tag-col { display: none; }
+  .phase-body { padding: 0 24px 28px; }
+  .process-steps { grid-template-columns: 1fr; }
+  .ideas-grid { grid-template-columns: 1fr; }
+}
+</style>
+</head>
+<body>
+
+<!-- ══ NAV ══ -->
+<nav id="main-nav">
+  <a href="/" class="nav-logo" aria-label="si187 Apps home">
+    <div class="fp-mark" aria-hidden="true"><svg width="28" height="28" viewBox="0 0 160 160"><path d="M80 148 A69 69 0 0 1 11 79" fill="none" stroke="#39FF7A" stroke-width="4.5" stroke-linecap="round" opacity=".11"/><path d="M80 148 A69 69 0 0 0 149 79" fill="none" stroke="#39FF7A" stroke-width="4.5" stroke-linecap="round" opacity=".11"/><path d="M80 132 A53 53 0 0 1 27 79" fill="none" stroke="#39FF7A" stroke-width="4.5" stroke-linecap="round" opacity=".24"/><path d="M80 132 A53 53 0 0 0 133 79" fill="none" stroke="#39FF7A" stroke-width="4.5" stroke-linecap="round" opacity=".24"/><path d="M80 116 A37 37 0 0 1 43 79" fill="none" stroke="#39FF7A" stroke-width="4.5" stroke-linecap="round" opacity=".44"/><path d="M80 116 A37 37 0 0 0 117 79" fill="none" stroke="#39FF7A" stroke-width="4.5" stroke-linecap="round" opacity=".44"/><path d="M80 100 A21 21 0 0 1 59 79" fill="none" stroke="#39FF7A" stroke-width="4.5" stroke-linecap="round" opacity=".68"/><path d="M80 100 A21 21 0 0 0 101 79" fill="none" stroke="#39FF7A" stroke-width="4.5" stroke-linecap="round" opacity=".68"/><path d="M80 88 A9 9 0 0 1 71 79" fill="none" stroke="#C084C8" stroke-width="4.5" stroke-linecap="round" opacity=".92"/><path d="M80 88 A9 9 0 0 0 89 79" fill="none" stroke="#C084C8" stroke-width="4.5" stroke-linecap="round" opacity=".92"/><circle cx="80" cy="79" r="7" fill="#39FF7A"/></svg></div>
+    <span class="nav-wordmark">si187 <em>Apps</em></span>
+  </a>
+  <ul class="nav-links">
+    <li><a href="/about">About</a></li>
+    <li><a href="/roadmap" class="active">Roadmap</a></li>
+    <li><a href="/manifesto">Manifesto</a></li>
+    <li><a href="/labs">Labs</a></li>
+    <li><a href="/#waitlist" class="nav-cta">Early access</a></li>
+  </ul>
+  <button class="nav-toggle" aria-label="Open menu" id="nav-toggle-btn"><span></span><span></span><span></span></button>
+</nav>
+<div class="mobile-nav" id="mobile-nav">
+  <button class="mobile-nav-close" id="mobile-nav-close" aria-label="Close">✕</button>
+  <a href="/" onclick="closeMobileNav()">Home</a>
+  <a href="/about" onclick="closeMobileNav()">About</a>
+  <a href="/roadmap" onclick="closeMobileNav()">Roadmap</a>
+  <a href="/manifesto" onclick="closeMobileNav()">Manifesto</a>
+  <a href="/labs" onclick="closeMobileNav()">Labs</a>
+  <a href="/#waitlist" onclick="closeMobileNav()" style="color:var(--green)">Early access</a>
+</div>
+
+
+<!-- ══ HERO ══ -->
+<div style="position:relative; overflow:hidden;">
+  <div style="position:absolute;inset:0;pointer-events:none;background:radial-gradient(ellipse 50% 60% at 85% 50%, rgba(57,255,122,0.05) 0%, transparent 70%)"></div>
+  <div class="page-hero">
+    <span class="page-hero-eyebrow reveal">Updated May 2026</span>
+    <h1 class="reveal reveal-d1">The<br>build<br><em>plan.</em></h1>
+    <p class="page-hero-sub reveal reveal-d2">
+      Everything we're working on, what's coming, and the process we use to decide what gets built next. No vague promises. No mystery.
+    </p>
+  </div>
+</div>
+
+<hr class="section-divider">
+
+
+<!-- ══ STATUS LEGEND ══ -->
+<div class="section-wrap" style="padding-bottom:0;">
+  <div style="display:flex; gap:24px; flex-wrap:wrap;" class="reveal">
+    <div style="display:flex;align-items:center;gap:8px;font-size:13px;color:var(--text2);">
+      <div style="width:10px;height:10px;border-radius:50%;background:var(--green);box-shadow:0 0 8px rgba(57,255,122,0.6);"></div>Live / shipped
+    </div>
+    <div style="display:flex;align-items:center;gap:8px;font-size:13px;color:var(--text2);">
+      <div style="width:10px;height:10px;border-radius:50%;background:var(--green);opacity:0.5;"></div>In progress now
+    </div>
+    <div style="display:flex;align-items:center;gap:8px;font-size:13px;color:var(--text2);">
+      <div style="width:10px;height:10px;border-radius:50%;border:2px solid var(--magenta-dim);"></div>Planned
+    </div>
+    <div style="display:flex;align-items:center;gap:8px;font-size:13px;color:var(--text2);">
+      <div style="width:10px;height:10px;border-radius:50%;border:2px solid var(--text3);"></div>Future / researching
+    </div>
+  </div>
+</div>
+
+
+<!-- ══ ROADMAP PHASES ══ -->
+<div class="section-wrap">
+  <div class="phase-grid reveal">
+
+    <!-- Phase 1 — Done -->
+    <div class="phase-card">
+      <div class="phase-header" onclick="togglePhase(this)">
+        <div class="phase-status-col"><div class="phase-status done"></div></div>
+        <div class="phase-info">
+          <div class="phase-period">Feb – Apr 2026</div>
+          <div class="phase-name">Foundation</div>
+        </div>
+        <div class="phase-tag-col"><span class="tag tag-green">✓ Complete</span></div>
+      </div>
+      <div class="phase-body open">
+        <p class="phase-desc">Everything needed to build properly: company structure, brand identity, design system, and the first working version of FPL Coach AI.</p>
+        <div class="phase-items">
+          <div class="phase-item"><div class="phase-item-dot done"></div>si187 Enterprises Ltd incorporated</div>
+          <div class="phase-item"><div class="phase-item-dot done"></div>Studio brand identity locked — palette, mark, typography system</div>
+          <div class="phase-item"><div class="phase-item-dot done"></div>FPL Coach AI v0.5-beta shipped to internal testers (28 Apr 2026)</div>
+          <div class="phase-item"><div class="phase-item-dot done"></div>si187apps.com domain secured via Cloudflare</div>
+          <div class="phase-item"><div class="phase-item-dot done"></div>META social handles registered (@si187apps)</div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Phase 2 — Active -->
+    <div class="phase-card">
+      <div class="phase-header" onclick="togglePhase(this)">
+        <div class="phase-status-col"><div class="phase-status active"></div></div>
+        <div class="phase-info">
+          <div class="phase-period">May – Jul 2026</div>
+          <div class="phase-name">Pre-launch</div>
+        </div>
+        <div class="phase-tag-col"><span class="tag tag-green">◉ In progress</span></div>
+      </div>
+      <div class="phase-body open">
+        <p class="phase-desc">Getting everything in place for August launch. Website live, social presence building, waitlist filling, App Store pipeline set up, and FPL Coach AI polished based on beta feedback.</p>
+        <div class="phase-items">
+          <div class="phase-item"><div class="phase-item-dot done"></div>si187apps.com live on GitHub Pages</div>
+          <div class="phase-item"><div class="phase-item-dot done"></div>Email infrastructure — si@si187apps.com (send + receive)</div>
+          <div class="phase-item"><div class="phase-item-dot done"></div>TikTok handle @si187apps secured</div>
+          <div class="phase-item"><div class="phase-item-dot active"></div>Social content programme — X, Instagram, TikTok daily cadence</div>
+          <div class="phase-item"><div class="phase-item-dot active"></div>Waitlist building — target 1,000+ before launch</div>
+          <div class="phase-item"><div class="phase-item-dot planned"></div>Apple Developer account under si187 Enterprises Ltd (June)</div>
+          <div class="phase-item"><div class="phase-item-dot planned"></div>App Store Connect setup + TestFlight pipeline (June)</div>
+          <div class="phase-item"><div class="phase-item-dot planned"></div>FPL Coach AI v0.8 — beta feedback incorporated (June)</div>
+          <div class="phase-item"><div class="phase-item-dot planned"></div>FPL Coach AI app icon finalised (June)</div>
+          <div class="phase-item"><div class="phase-item-dot planned"></div>Creator seeding — early access to 10 FPL creators (July)</div>
+          <div class="phase-item"><div class="phase-item-dot planned"></div>Press outreach — The Athletic, FPLFocal, Fantasy Football Scout (July)</div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Phase 3 — Planned -->
+    <div class="phase-card">
+      <div class="phase-header" onclick="togglePhase(this)">
+        <div class="phase-status-col"><div class="phase-status soon"></div></div>
+        <div class="phase-info">
+          <div class="phase-period">August 2026</div>
+          <div class="phase-name">Launch — FPL Coach AI</div>
+        </div>
+        <div class="phase-tag-col"><span class="tag tag-magenta">Planned</span></div>
+      </div>
+      <div class="phase-body">
+        <p class="phase-desc">GW1 of the 2026/27 Premier League season. FPL Coach AI goes live on the App Store. The waitlist converts. Paid media activates. We learn everything there is to learn from real users in a live season.</p>
+        <div class="phase-items">
+          <div class="phase-item"><div class="phase-item-dot planned"></div>App Store submission and approval</div>
+          <div class="phase-item"><div class="phase-item-dot planned"></div>Launch day content campaign — social, email, creator network</div>
+          <div class="phase-item"><div class="phase-item-dot planned"></div>Paid ads activation — Meta + X, targeting UK FPL community</div>
+          <div class="phase-item"><div class="phase-item-dot planned"></div>Early access pricing for waitlist subscribers</div>
+          <div class="phase-item"><div class="phase-item-dot planned"></div>Free season pass for beta testers who provided feedback</div>
+          <div class="phase-item"><div class="phase-item-dot planned"></div>Live GW support — rapid response to bugs and edge cases</div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Phase 4 — Post-launch -->
+    <div class="phase-card">
+      <div class="phase-header" onclick="togglePhase(this)">
+        <div class="phase-status-col"><div class="phase-status soon"></div></div>
+        <div class="phase-info">
+          <div class="phase-period">Sep 2026 – May 2027</div>
+          <div class="phase-name">Season 1 — Listening and shipping</div>
+        </div>
+        <div class="phase-tag-col"><span class="tag tag-magenta">Planned</span></div>
+      </div>
+      <div class="phase-body">
+        <p class="phase-desc">The full 2026/27 season with real users. This is where FPL Coach AI gets genuinely good. Every gameweek is feedback. We ship improvements throughout the season, not just at the end of it.</p>
+        <div class="phase-items">
+          <div class="phase-item"><div class="phase-item-dot planned"></div>Bi-weekly feature updates based on user feedback</div>
+          <div class="phase-item"><div class="phase-item-dot planned"></div>Head-to-head comparison tools (my team vs league rivals)</div>
+          <div class="phase-item"><div class="phase-item-dot planned"></div>Mini-league analytics and rank trajectory</div>
+          <div class="phase-item"><div class="phase-item-dot planned"></div>Chip strategy assistant (Wildcard, Triple Captain, Free Hit, Bench Boost)</div>
+          <div class="phase-item"><div class="phase-item-dot planned"></div>Price change alerts and sell-before-drop analysis</div>
+          <div class="phase-item"><div class="phase-item-dot planned"></div>Season debrief — what worked, what didn't, what we're building next</div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Phase 5 — Future -->
+    <div class="phase-card">
+      <div class="phase-header" onclick="togglePhase(this)">
+        <div class="phase-status-col"><div class="phase-status future"></div></div>
+        <div class="phase-info">
+          <div class="phase-period">2027 and beyond</div>
+          <div class="phase-name">What comes next</div>
+        </div>
+        <div class="phase-tag-col"><span class="tag tag-dim">Researching</span></div>
+      </div>
+      <div class="phase-body">
+        <p class="phase-desc">We don't announce apps before they're real. But we're constantly listening — through Labs, through our community, through conversations at si@si187apps.com. The next si187 app will be chosen based on what real people tell us they genuinely need.</p>
+        <div class="phase-items">
+          <div class="phase-item"><div class="phase-item-dot planned"></div>Labs programme active — structured idea validation with community</div>
+          <div class="phase-item"><div class="phase-item-dot planned"></div>Second app concept research begins (Q1 2027)</div>
+          <div class="phase-item"><div class="phase-item-dot future"></div>Second app announced when validated and scoped — not before</div>
+          <div class="phase-item"><div class="phase-item-dot future"></div>Two additional domains being transferred for future app use</div>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</div>
+
+<hr class="section-divider">
+
+
+<!-- ══ HOW WE CHOOSE WHAT TO BUILD ══ -->
+<div class="section-wrap">
+  <span class="eyebrow reveal">Our process</span>
+  <h2 class="section-title reveal reveal-d1">How we decide what<br>gets built <em>next.</em></h2>
+  <p style="font-size:16px;color:var(--magenta);max-width:540px;line-height:1.75;margin-bottom:48px;" class="reveal reveal-d2">
+    We don't pick the next app based on market size reports or investor interest. We build from a specific question: is there a group of people who need this badly enough that they'd tell us unprompted?
+  </p>
+
+  <div class="process-steps">
+    <div class="process-step reveal">
+      <div class="step-num">01</div>
+      <div class="step-title">Listen first, always</div>
+      <div class="step-body">Ideas don't come from brainstorms. They come from hearing the same frustration from enough different people. We track patterns in what our community tells us — through Labs, through support, through social.</div>
+    </div>
+    <div class="process-step reveal reveal-d1">
+      <div class="step-num">02</div>
+      <div class="step-title">Validate before building</div>
+      <div class="step-body">Before writing a line of code, we talk to potential users. Not "would you use this?" — that question is useless. Instead: "tell us about the last time you struggled with this." Real stories, not hypothetical preferences.</div>
+    </div>
+    <div class="process-step reveal reveal-d2">
+      <div class="step-num">03</div>
+      <div class="step-title">The si187 filter</div>
+      <div class="step-body">The idea has to pass our internal filter: is the existing solution genuinely bad, or just imperfect? Can we build something meaningfully better — not marginally better? Is there a clear "coach not oracle" version of this product?</div>
+    </div>
+  </div>
+</div>
+
+<hr class="section-divider">
+
+
+<!-- ══ IDEAS UNDER RESEARCH ══ -->
+<div class="section-wrap">
+  <span class="eyebrow reveal">Ideas under research</span>
+  <h2 class="section-title reveal reveal-d1">What's in<br>the <em>incubator.</em></h2>
+  <p style="font-size:15px;color:var(--magenta);max-width:520px;line-height:1.75;margin-bottom:40px;" class="reveal reveal-d2">These are directions we're actively exploring — not commitments. They get built only if validation tells us they should. Tell us which resonates with you.</p>
+
+  <div class="ideas-grid">
+    <div class="idea-card reveal">
+      <div class="idea-status"><span class="tag tag-magenta">Researching</span></div>
+      <div class="idea-title">Sports betting decision support</div>
+      <div class="idea-body">Not a tipster. A tool that helps you understand implied probabilities, value, and when the market is wrong — so you can bet more intelligently if you choose to. The coach-not-oracle principle applied to betting markets.</div>
+      <div class="idea-vote">→ Tell us if this resonates: si@si187apps.com</div>
+    </div>
+    <div class="idea-card reveal reveal-d1">
+      <div class="idea-status"><span class="tag tag-magenta">Researching</span></div>
+      <div class="idea-title">Personal finance clarity</div>
+      <div class="idea-body">Not a budgeting app. A tool that cuts through financial noise — helps you understand what your money is doing and what trade-offs you're actually making, without telling you how to live your life.</div>
+      <div class="idea-vote">→ Tell us if this resonates: si@si187apps.com</div>
+    </div>
+    <div class="idea-card reveal reveal-d2">
+      <div class="idea-status"><span class="tag tag-magenta">Researching</span></div>
+      <div class="idea-title">Draft sports (NFL / NBA)</div>
+      <div class="idea-body">Applying the FPL Coach AI philosophy to US daily fantasy and season-long draft sports. A huge market with the same fundamental problem: too much raw data, not enough coaching.</div>
+      <div class="idea-vote">→ Tell us if this resonates: si@si187apps.com</div>
+    </div>
+    <div class="idea-card reveal reveal-d3">
+      <div class="idea-status"><span class="tag tag-dim">Community suggested</span></div>
+      <div class="idea-title">Got an idea? Tell us.</div>
+      <div class="idea-body">The next si187 app might come from something you're frustrated by that you haven't seen a good solution for. We read everything. If you've spotted a gap that deserves a thoughtful product, email us.</div>
+      <div class="idea-vote">→ si@si187apps.com</div>
+    </div>
+  </div>
+</div>
+
+<hr class="section-divider">
+
+
+<!-- ══ FEEDBACK PROMPT ══ -->
+<div class="section-wrap">
+  <div class="feedback-banner reveal">
+    <p>This roadmap is a living document. It changes based on what we learn from the people using our products. <em>If something here doesn't make sense, or you think we're missing something obvious — tell us.</em></p>
+    <a href="mailto:si@si187apps.com" class="btn-primary">si@si187apps.com</a>
+  </div>
+</div>
+
+
+<!-- ══ FOOTER ══ -->
+<footer>
+  <div class="footer-col">
+    <div class="footer-brand">
+      <div class="fp-mark" aria-hidden="true"><svg width="24" height="24" viewBox="0 0 160 160"><path d="M80 148 A69 69 0 0 1 11 79" fill="none" stroke="#39FF7A" stroke-width="4.5" stroke-linecap="round" opacity=".15"/><path d="M80 148 A69 69 0 0 0 149 79" fill="none" stroke="#39FF7A" stroke-width="4.5" stroke-linecap="round" opacity=".15"/><path d="M80 132 A53 53 0 0 1 27 79" fill="none" stroke="#39FF7A" stroke-width="4.5" stroke-linecap="round" opacity=".32"/><path d="M80 132 A53 53 0 0 0 133 79" fill="none" stroke="#39FF7A" stroke-width="4.5" stroke-linecap="round" opacity=".32"/><path d="M80 116 A37 37 0 0 1 43 79" fill="none" stroke="#39FF7A" stroke-width="4.5" stroke-linecap="round" opacity=".55"/><path d="M80 116 A37 37 0 0 0 117 79" fill="none" stroke="#39FF7A" stroke-width="4.5" stroke-linecap="round" opacity=".55"/><path d="M80 100 A21 21 0 0 1 59 79" fill="none" stroke="#39FF7A" stroke-width="4.5" stroke-linecap="round" opacity=".75"/><path d="M80 100 A21 21 0 0 0 101 79" fill="none" stroke="#39FF7A" stroke-width="4.5" stroke-linecap="round" opacity=".75"/><path d="M80 88 A9 9 0 0 1 71 79" fill="none" stroke="#C084C8" stroke-width="4.5" stroke-linecap="round" opacity=".9"/><path d="M80 88 A9 9 0 0 0 89 79" fill="none" stroke="#C084C8" stroke-width="4.5" stroke-linecap="round" opacity=".9"/><circle cx="80" cy="79" r="7" fill="#39FF7A"/></svg></div>
+      <div><p class="footer-name">si187 <em>Apps</em></p><p class="footer-tagline">si187 Enterprises Ltd · London</p></div>
+    </div>
+    <div class="footer-social">
+      <a href="https://twitter.com/si187apps" aria-label="X">𝕏</a>
+      <a href="https://instagram.com/si187apps" aria-label="Instagram">◻</a>
+      <a href="https://tiktok.com/@si187apps" aria-label="TikTok">▷</a>
+    </div>
+  </div>
+  <div class="footer-col">
+    <p class="footer-nav-label">Studio</p>
+    <ul class="footer-nav-links">
+      <li><a href="/about">About</a></li>
+      <li><a href="/roadmap">Roadmap</a></li>
+      <li><a href="/manifesto">Manifesto</a></li>
+      <li><a href="/labs">Labs</a></li>
+    </ul>
+  </div>
+  <div class="footer-col">
+    <p class="footer-nav-label">Apps</p>
+    <ul class="footer-nav-links">
+      <li><a href="/fpl-coach-ai">FPL Coach AI</a></li>
+      <li><a href="/#waitlist">Early access</a></li>
+    </ul>
+  </div>
+  <div class="footer-col">
+    <p class="footer-nav-label">Contact</p>
+    <ul class="footer-nav-links"><li><a href="mailto:si@si187apps.com">si@si187apps.com</a></li></ul>
+  </div>
+  <div class="footer-bottom">
+    <p class="footer-copy">© 2026 si187 Enterprises Ltd. All rights reserved.</p>
+    <div class="footer-legal"><a href="/privacy">Privacy</a><a href="/terms">Terms</a></div>
+  </div>
+</footer>
+
+<script src="../assets/js/site.js"></script>
+<script>
+function togglePhase(header) {
+  const body = header.nextElementSibling;
+  const isOpen = body.classList.contains('open');
+  // Close all
+  document.querySelectorAll('.phase-body').forEach(b => b.classList.remove('open'));
+  // Open this one if it wasn't already open
+  if (!isOpen) body.classList.add('open');
+}
+</script>
+</body>
+</html>

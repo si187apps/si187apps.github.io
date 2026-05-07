@@ -1,0 +1,401 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Manifesto — si187 Apps</title>
+<meta name="description" content="The si187 Apps manifesto. Why we build the way we build, what we believe about software, users, and the relationship between the two.">
+<meta name="robots" content="index, follow">
+<link rel="canonical" href="https://si187apps.com/manifesto">
+<meta property="og:title" content="Manifesto — si187 Apps">
+<meta property="og:description" content="We build apps that respect the intelligence of the person using them. That's the whole brief.">
+<meta property="og:url" content="https://si187apps.com/manifesto">
+<meta property="og:image" content="https://si187apps.com/assets/images/og-card.png">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:site" content="@si187apps">
+<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 160 160'><rect width='160' height='160' fill='%23050E05'/><path d='M80 148 A69 69 0 0 1 11 79' fill='none' stroke='%2339FF7A' stroke-width='4.5' stroke-linecap='round' opacity='.15'/><path d='M80 148 A69 69 0 0 0 149 79' fill='none' stroke='%2339FF7A' stroke-width='4.5' stroke-linecap='round' opacity='.15'/><path d='M80 132 A53 53 0 0 1 27 79' fill='none' stroke='%2339FF7A' stroke-width='4.5' stroke-linecap='round' opacity='.32'/><path d='M80 132 A53 53 0 0 0 133 79' fill='none' stroke='%2339FF7A' stroke-width='4.5' stroke-linecap='round' opacity='.32'/><path d='M80 116 A37 37 0 0 1 43 79' fill='none' stroke='%2339FF7A' stroke-width='4.5' stroke-linecap='round' opacity='.55'/><path d='M80 116 A37 37 0 0 0 117 79' fill='none' stroke='%2339FF7A' stroke-width='4.5' stroke-linecap='round' opacity='.55'/><path d='M80 100 A21 21 0 0 1 59 79' fill='none' stroke='%2339FF7A' stroke-width='4.5' stroke-linecap='round' opacity='.75'/><path d='M80 100 A21 21 0 0 0 101 79' fill='none' stroke='%2339FF7A' stroke-width='4.5' stroke-linecap='round' opacity='.75'/><path d='M80 88 A9 9 0 0 1 71 79' fill='none' stroke='%23C084C8' stroke-width='4.5' stroke-linecap='round' opacity='.92'/><path d='M80 88 A9 9 0 0 0 89 79' fill='none' stroke='%23C084C8' stroke-width='4.5' stroke-linecap='round' opacity='.92'/><circle cx='80' cy='79' r='7' fill='%2339FF7A'/></svg>">
+<meta name="theme-color" content="#050E05">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Syne:wght@700;800&family=Inter:wght@300;400;500;600&family=JetBrains+Mono:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../assets/css/site.css">
+<style>
+
+/* Manifesto is deliberately text-heavy. Typography is the design. */
+
+.manifesto-body {
+  max-width: 720px;
+}
+
+.m-chapter {
+  padding: 72px 56px;
+  border-bottom: 1px solid var(--bg-border);
+  position: relative; z-index: 1;
+}
+.m-chapter:last-of-type { border-bottom: none; }
+
+.m-chapter-num {
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 10px; letter-spacing: 4px; color: var(--magenta-dim);
+  text-transform: uppercase; margin-bottom: 20px;
+}
+
+.m-chapter h2 {
+  font-family: 'Syne', sans-serif;
+  font-size: clamp(28px, 3.5vw, 44px);
+  font-weight: 800; letter-spacing: -1.5px; line-height: 1.05;
+  color: var(--text1); margin-bottom: 32px;
+}
+.m-chapter h2 em { font-style: normal; color: var(--green); }
+
+.m-p {
+  font-size: 17px; color: var(--text1); line-height: 1.85;
+  margin-bottom: 22px; max-width: 680px;
+}
+.m-p-secondary {
+  font-size: 16px; color: var(--magenta); line-height: 1.8;
+  margin-bottom: 18px; max-width: 640px;
+}
+
+.m-pull {
+  font-family: 'Syne', sans-serif;
+  font-size: clamp(20px, 2.5vw, 30px);
+  font-weight: 800; letter-spacing: -0.8px; line-height: 1.25;
+  color: var(--text1);
+  border-left: 3px solid var(--green);
+  padding: 4px 0 4px 28px;
+  margin: 40px 0;
+  max-width: 580px;
+}
+.m-pull em { font-style: normal; color: var(--green); }
+
+/* Counter list — for the "we do / we don't" sections */
+.m-list { list-style: none; display: flex; flex-direction: column; gap: 14px; margin: 28px 0; }
+.m-list li {
+  display: flex; align-items: flex-start; gap: 14px;
+  font-size: 16px; color: var(--text1); line-height: 1.5;
+}
+.m-list-icon { flex-shrink: 0; margin-top: 2px; }
+
+/* Belief statements */
+.beliefs { display: flex; flex-direction: column; gap: 2px; margin-top: 40px; }
+.belief {
+  display: grid; grid-template-columns: 48px 1fr;
+  align-items: start; gap: 24px;
+  background: var(--bg-card); border: 1px solid var(--bg-border);
+  padding: 28px 32px; transition: border-color 0.2s;
+}
+.belief:first-child { border-radius: 14px 14px 0 0; }
+.belief:last-child { border-radius: 0 0 14px 14px; }
+.belief:hover { border-color: var(--text3); }
+.belief-num { font-family: 'JetBrains Mono', monospace; font-size: 11px; font-weight: 700; color: var(--magenta-dim); padding-top: 3px; }
+.belief-text { font-size: 16px; color: var(--text1); line-height: 1.6; }
+.belief-text strong { color: var(--green); font-weight: 600; }
+
+/* Hero decoration */
+.manifesto-fp-deco {
+  position: absolute; right: -120px; top: 40%;
+  transform: translateY(-50%);
+  opacity: 0.04; pointer-events: none;
+  animation: slowspin 120s linear infinite;
+}
+
+@media (max-width: 900px) {
+  .m-chapter { padding: 56px 24px; }
+  .manifesto-fp-deco { display: none; }
+  .belief { grid-template-columns: 36px 1fr; gap: 16px; }
+}
+</style>
+</head>
+<body>
+
+<!-- ══ NAV ══ -->
+<nav id="main-nav">
+  <a href="/" class="nav-logo" aria-label="si187 Apps home">
+    <div class="fp-mark" aria-hidden="true"><svg width="28" height="28" viewBox="0 0 160 160"><path d="M80 148 A69 69 0 0 1 11 79" fill="none" stroke="#39FF7A" stroke-width="4.5" stroke-linecap="round" opacity=".11"/><path d="M80 148 A69 69 0 0 0 149 79" fill="none" stroke="#39FF7A" stroke-width="4.5" stroke-linecap="round" opacity=".11"/><path d="M80 132 A53 53 0 0 1 27 79" fill="none" stroke="#39FF7A" stroke-width="4.5" stroke-linecap="round" opacity=".24"/><path d="M80 132 A53 53 0 0 0 133 79" fill="none" stroke="#39FF7A" stroke-width="4.5" stroke-linecap="round" opacity=".24"/><path d="M80 116 A37 37 0 0 1 43 79" fill="none" stroke="#39FF7A" stroke-width="4.5" stroke-linecap="round" opacity=".44"/><path d="M80 116 A37 37 0 0 0 117 79" fill="none" stroke="#39FF7A" stroke-width="4.5" stroke-linecap="round" opacity=".44"/><path d="M80 100 A21 21 0 0 1 59 79" fill="none" stroke="#39FF7A" stroke-width="4.5" stroke-linecap="round" opacity=".68"/><path d="M80 100 A21 21 0 0 0 101 79" fill="none" stroke="#39FF7A" stroke-width="4.5" stroke-linecap="round" opacity=".68"/><path d="M80 88 A9 9 0 0 1 71 79" fill="none" stroke="#C084C8" stroke-width="4.5" stroke-linecap="round" opacity=".92"/><path d="M80 88 A9 9 0 0 0 89 79" fill="none" stroke="#C084C8" stroke-width="4.5" stroke-linecap="round" opacity=".92"/><circle cx="80" cy="79" r="7" fill="#39FF7A"/></svg></div>
+    <span class="nav-wordmark">si187 <em>Apps</em></span>
+  </a>
+  <ul class="nav-links">
+    <li><a href="/about">About</a></li>
+    <li><a href="/roadmap">Roadmap</a></li>
+    <li><a href="/manifesto" class="active">Manifesto</a></li>
+    <li><a href="/labs">Labs</a></li>
+    <li><a href="/#waitlist" class="nav-cta">Early access</a></li>
+  </ul>
+  <button class="nav-toggle" aria-label="Open menu" id="nav-toggle-btn"><span></span><span></span><span></span></button>
+</nav>
+<div class="mobile-nav" id="mobile-nav">
+  <button class="mobile-nav-close" id="mobile-nav-close" aria-label="Close">✕</button>
+  <a href="/" onclick="closeMobileNav()">Home</a>
+  <a href="/about" onclick="closeMobileNav()">About</a>
+  <a href="/roadmap" onclick="closeMobileNav()">Roadmap</a>
+  <a href="/manifesto" onclick="closeMobileNav()">Manifesto</a>
+  <a href="/labs" onclick="closeMobileNav()">Labs</a>
+  <a href="/#waitlist" onclick="closeMobileNav()" style="color:var(--green)">Early access</a>
+</div>
+
+
+<!-- ══ HERO ══ -->
+<div style="position:relative; overflow:hidden; border-bottom:1px solid var(--bg-border);">
+  <div style="position:absolute;inset:0;background:radial-gradient(ellipse 55% 65% at 85% 50%, rgba(57,255,122,0.04) 0%, transparent 70%);pointer-events:none;"></div>
+  <div class="manifesto-fp-deco" aria-hidden="true">
+    <svg width="700" height="700" viewBox="0 0 160 160"><path d="M80 148 A69 69 0 0 1 11 79" fill="none" stroke="#39FF7A" stroke-width="4.5" stroke-linecap="round" opacity=".11"/><path d="M80 148 A69 69 0 0 0 149 79" fill="none" stroke="#39FF7A" stroke-width="4.5" stroke-linecap="round" opacity=".11"/><path d="M80 132 A53 53 0 0 1 27 79" fill="none" stroke="#39FF7A" stroke-width="4.5" stroke-linecap="round" opacity=".24"/><path d="M80 132 A53 53 0 0 0 133 79" fill="none" stroke="#39FF7A" stroke-width="4.5" stroke-linecap="round" opacity=".24"/><path d="M80 116 A37 37 0 0 1 43 79" fill="none" stroke="#39FF7A" stroke-width="4.5" stroke-linecap="round" opacity=".44"/><path d="M80 116 A37 37 0 0 0 117 79" fill="none" stroke="#39FF7A" stroke-width="4.5" stroke-linecap="round" opacity=".44"/><path d="M80 100 A21 21 0 0 1 59 79" fill="none" stroke="#39FF7A" stroke-width="4.5" stroke-linecap="round" opacity=".68"/><path d="M80 100 A21 21 0 0 0 101 79" fill="none" stroke="#39FF7A" stroke-width="4.5" stroke-linecap="round" opacity=".68"/><path d="M80 88 A9 9 0 0 1 71 79" fill="none" stroke="#C084C8" stroke-width="4.5" stroke-linecap="round" opacity=".92"/><path d="M80 88 A9 9 0 0 0 89 79" fill="none" stroke="#C084C8" stroke-width="4.5" stroke-linecap="round" opacity=".92"/><circle cx="80" cy="79" r="7" fill="#39FF7A"/></svg>
+  </div>
+  <div class="page-hero">
+    <span class="page-hero-eyebrow reveal">The si187 Apps manifesto</span>
+    <h1 class="reveal reveal-d1">What we<br>believe<br>about <em>software.</em></h1>
+    <p class="page-hero-sub reveal reveal-d2">
+      We build apps that respect the intelligence of the person using them. That's the whole brief.
+    </p>
+  </div>
+</div>
+
+
+<!-- ══ CHAPTER 1 ══ -->
+<div class="m-chapter">
+  <p class="m-chapter-num reveal">I — The problem with apps</p>
+  <h2 class="reveal reveal-d1">Most software is built<br>against you, <em>not for you.</em></h2>
+
+  <p class="m-p reveal reveal-d2">
+    Look at the apps dominating the charts and ask an honest question: who is this actually designed to help?
+  </p>
+  <p class="m-p-secondary reveal">
+    The answer, most of the time, is not you. It's the advertiser who needs your eyeballs. The investor who needs a DAU number. The growth team whose metric is time-in-app, not value-from-app. The apps that win at scale have been ruthlessly optimised for engagement — because engagement is what gets measured, and what gets measured is what gets built.
+  </p>
+  <div class="m-pull reveal">
+    The apps that win at scale have been optimised for <em>engagement.</em> Engagement and usefulness are not the same thing.
+  </div>
+  <p class="m-p-secondary reveal">
+    We're not naive about this. We understand the economics. But we also understand that there's a different way — and there are users who are done being treated as product.
+  </p>
+</div>
+
+
+<!-- ══ CHAPTER 2 ══ -->
+<div class="m-chapter">
+  <p class="m-chapter-num reveal">II — The coach not oracle principle</p>
+  <h2 class="reveal reveal-d1">The best tool doesn't<br>think for you. It helps you<br><em>think better.</em></h2>
+
+  <p class="m-p reveal reveal-d2">
+    The idea behind every si187 product is simple: you're smarter than an algorithm that just tells you what to do. The goal isn't to replace your judgement. It's to make your judgement better.
+  </p>
+  <p class="m-p-secondary reveal">
+    A good coach doesn't pick your team. A good coach watches the data you don't have time to watch, identifies the patterns you might miss, explains the reasoning behind each observation — and then stands back and lets you decide. The decision is always yours. The outcome is always yours.
+  </p>
+  <p class="m-p-secondary reveal">
+    This sounds simple. It's actually hard to build. It requires real restraint — the engineering instinct is to add more, to be more certain, to make the recommendation more explicit. "Just tell them what to do" is always the easier product decision. We refuse to take it.
+  </p>
+
+  <div class="m-pull reveal">
+    "Coach not oracle" isn't a feature. It's a <em>constraint</em> we put on every decision we make.
+  </div>
+</div>
+
+
+<!-- ══ CHAPTER 3 ══ -->
+<div class="m-chapter">
+  <p class="m-chapter-num reveal">III — What we do and don't do</p>
+  <h2 class="reveal reveal-d1">Our commitments,<br>stated <em>plainly.</em></h2>
+
+  <div style="display:grid; grid-template-columns:1fr 1fr; gap:40px; margin-top:8px;" class="reveal reveal-d1">
+    <div>
+      <p style="font-family:'JetBrains Mono',monospace;font-size:10px;letter-spacing:3px;color:var(--green);text-transform:uppercase;margin-bottom:20px;">We do</p>
+      <ul class="m-list">
+        <li>
+          <svg class="m-list-icon" width="18" height="18" viewBox="0 0 18 18" fill="none"><circle cx="9" cy="9" r="8" stroke="#39FF7A" stroke-width="1.5"/><path d="M5 9l3 3 5-5" stroke="#39FF7A" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          Build things that make you better at what you're doing
+        </li>
+        <li>
+          <svg class="m-list-icon" width="18" height="18" viewBox="0 0 18 18" fill="none"><circle cx="9" cy="9" r="8" stroke="#39FF7A" stroke-width="1.5"/><path d="M5 9l3 3 5-5" stroke="#39FF7A" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          Show our reasoning, not just our outputs
+        </li>
+        <li>
+          <svg class="m-list-icon" width="18" height="18" viewBox="0 0 18 18" fill="none"><circle cx="9" cy="9" r="8" stroke="#39FF7A" stroke-width="1.5"/><path d="M5 9l3 3 5-5" stroke="#39FF7A" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          Acknowledge what we don't know and when data is inconclusive
+        </li>
+        <li>
+          <svg class="m-list-icon" width="18" height="18" viewBox="0 0 18 18" fill="none"><circle cx="9" cy="9" r="8" stroke="#39FF7A" stroke-width="1.5"/><path d="M5 9l3 3 5-5" stroke="#39FF7A" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          Charge a fair price for something genuinely useful
+        </li>
+        <li>
+          <svg class="m-list-icon" width="18" height="18" viewBox="0 0 18 18" fill="none"><circle cx="9" cy="9" r="8" stroke="#39FF7A" stroke-width="1.5"/><path d="M5 9l3 3 5-5" stroke="#39FF7A" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          Listen to users and change course when they're right
+        </li>
+        <li>
+          <svg class="m-list-icon" width="18" height="18" viewBox="0 0 18 18" fill="none"><circle cx="9" cy="9" r="8" stroke="#39FF7A" stroke-width="1.5"/><path d="M5 9l3 3 5-5" stroke="#39FF7A" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          Share the process openly — build in public
+        </li>
+      </ul>
+    </div>
+    <div>
+      <p style="font-family:'JetBrains Mono',monospace;font-size:10px;letter-spacing:3px;color:var(--magenta);text-transform:uppercase;margin-bottom:20px;">We don't</p>
+      <ul class="m-list">
+        <li>
+          <svg class="m-list-icon" width="18" height="18" viewBox="0 0 18 18" fill="none"><circle cx="9" cy="9" r="8" stroke="#C084C8" stroke-width="1.5"/><path d="M6 12l6-6M12 12L6 6" stroke="#C084C8" stroke-width="1.5" stroke-linecap="round"/></svg>
+          <span style="color:var(--magenta)">Optimise for time-in-app over value-from-app</span>
+        </li>
+        <li>
+          <svg class="m-list-icon" width="18" height="18" viewBox="0 0 18 18" fill="none"><circle cx="9" cy="9" r="8" stroke="#C084C8" stroke-width="1.5"/><path d="M6 12l6-6M12 12L6 6" stroke="#C084C8" stroke-width="1.5" stroke-linecap="round"/></svg>
+          <span style="color:var(--magenta)">Sell advertising or data to third parties</span>
+        </li>
+        <li>
+          <svg class="m-list-icon" width="18" height="18" viewBox="0 0 18 18" fill="none"><circle cx="9" cy="9" r="8" stroke="#C084C8" stroke-width="1.5"/><path d="M6 12l6-6M12 12L6 6" stroke="#C084C8" stroke-width="1.5" stroke-linecap="round"/></svg>
+          <span style="color:var(--magenta)">Use dark patterns: artificial scarcity, guilt messaging, manipulative notifications</span>
+        </li>
+        <li>
+          <svg class="m-list-icon" width="18" height="18" viewBox="0 0 18 18" fill="none"><circle cx="9" cy="9" r="8" stroke="#C084C8" stroke-width="1.5"/><path d="M6 12l6-6M12 12L6 6" stroke="#C084C8" stroke-width="1.5" stroke-linecap="round"/></svg>
+          <span style="color:var(--magenta)">Claim certainty we don't have</span>
+        </li>
+        <li>
+          <svg class="m-list-icon" width="18" height="18" viewBox="0 0 18 18" fill="none"><circle cx="9" cy="9" r="8" stroke="#C084C8" stroke-width="1.5"/><path d="M6 12l6-6M12 12L6 6" stroke="#C084C8" stroke-width="1.5" stroke-linecap="round"/></svg>
+          <span style="color:var(--magenta)">Build features just because competitors have them</span>
+        </li>
+        <li>
+          <svg class="m-list-icon" width="18" height="18" viewBox="0 0 18 18" fill="none"><circle cx="9" cy="9" r="8" stroke="#C084C8" stroke-width="1.5"/><path d="M6 12l6-6M12 12L6 6" stroke="#C084C8" stroke-width="1.5" stroke-linecap="round"/></svg>
+          <span style="color:var(--magenta)">Take VC money that would compromise these decisions</span>
+        </li>
+      </ul>
+    </div>
+  </div>
+</div>
+
+
+<!-- ══ CHAPTER 4 ══ -->
+<div class="m-chapter">
+  <p class="m-chapter-num reveal">IV — On independence</p>
+  <h2 class="reveal reveal-d1">Why we'll always stay<br><em>bootstrapped.</em></h2>
+
+  <p class="m-p reveal reveal-d2">
+    We get asked about funding. The answer is no — not because we couldn't raise, but because we think it would make us worse.
+  </p>
+  <p class="m-p-secondary reveal">
+    Venture capital is a bet on scale, not quality. The pressure it creates — to grow faster, to expand into adjacent markets, to optimise for engagement and retention metrics — is directly at odds with the kind of company we want to build. We've watched too many good products get ruined by the process of scaling them.
+  </p>
+  <div class="m-pull reveal">
+    We don't answer to investors. We answer to the people using our apps. That's a <em>structural choice,</em> not a positioning statement.
+  </div>
+  <p class="m-p-secondary reveal">
+    Independence means we can make the right product call even when it's the harder commercial call. It means we can refuse to add a feature we think is bad, even if users are asking for it. It means we can be honest about what the app can't do without worrying about what that does to our conversion rate.
+  </p>
+  <p class="m-p-secondary reveal">
+    This is only sustainable if what we build is genuinely useful enough that people pay for it. That accountability is exactly the point.
+  </p>
+</div>
+
+
+<!-- ══ CHAPTER 5 — BELIEFS ══ -->
+<div class="m-chapter">
+  <p class="m-chapter-num reveal">V — What we believe</p>
+  <h2 class="reveal reveal-d1">Twelve things we hold<br>to be <em>true.</em></h2>
+
+  <div class="beliefs reveal reveal-d1">
+    <div class="belief">
+      <div class="belief-num">01</div>
+      <div class="belief-text"><strong>Quality beats quantity.</strong> One great app is worth ten mediocre ones. We build one thing at a time and we don't start the next one until the current one is genuinely good.</div>
+    </div>
+    <div class="belief">
+      <div class="belief-num">02</div>
+      <div class="belief-text"><strong>The user is smarter than the algorithm.</strong> Context, intuition, and lived experience are data too. The best product combines machine-level pattern recognition with human-level judgement. In that order.</div>
+    </div>
+    <div class="belief">
+      <div class="belief-num">03</div>
+      <div class="belief-text"><strong>Uncertainty is information.</strong> Saying "we don't know" clearly is more useful than a confident recommendation built on thin data. We tell users when something is within noise.</div>
+    </div>
+    <div class="belief">
+      <div class="belief-num">04</div>
+      <div class="belief-text"><strong>Transparency builds trust.</strong> We share what we're building, why we're building it, and what we've got wrong. People who understand why a product works are far better at using it.</div>
+    </div>
+    <div class="belief">
+      <div class="belief-num">05</div>
+      <div class="belief-text"><strong>Friction is not always the enemy.</strong> The best decisions take a moment's thought. Removing every point of friction from a product sometimes just means removing the thinking. We design for considered decisions.</div>
+    </div>
+    <div class="belief">
+      <div class="belief-num">06</div>
+      <div class="belief-text"><strong>Feedback is the product.</strong> The gap between what we built and what users actually need is the most important information we have. We design our products to surface it quickly.</div>
+    </div>
+    <div class="belief">
+      <div class="belief-num">07</div>
+      <div class="belief-text"><strong>The market is not always right.</strong> What sells at scale is not always what's good. We hold our own bar for quality — not the App Store's top chart.</div>
+    </div>
+    <div class="belief">
+      <div class="belief-num">08</div>
+      <div class="belief-text"><strong>Pricing is a statement of values.</strong> Free-with-ads is a deal where the user is the product. Paid means the product has to be worth it. We choose the harder, more honest model.</div>
+    </div>
+    <div class="belief">
+      <div class="belief-num">09</div>
+      <div class="belief-text"><strong>Community is infrastructure.</strong> The people who use our products and tell us what's wrong with them are as valuable as any engineer. We invest in that relationship.</div>
+    </div>
+    <div class="belief">
+      <div class="belief-num">10</div>
+      <div class="belief-text"><strong>Launch is the beginning, not the end.</strong> V1 is always wrong in some important way. The product gets good in the months after launch, through iteration with real users. We plan for that.</div>
+    </div>
+    <div class="belief">
+      <div class="belief-num">11</div>
+      <div class="belief-text"><strong>Good design is functional, not decorative.</strong> Every visual decision exists to help the user understand something faster or act more confidently. We have strong opinions about what our products look like because those opinions affect whether they work.</div>
+    </div>
+    <div class="belief">
+      <div class="belief-num">12</div>
+      <div class="belief-text"><strong>The best measure of a product is whether someone would genuinely miss it.</strong> Not whether it has good retention metrics. Not whether it won an award. Would you actually notice if it was gone? That's the bar.</div>
+    </div>
+  </div>
+</div>
+
+
+<!-- ══ CLOSING ══ -->
+<div class="m-chapter" style="border-bottom:none;">
+  <p class="m-chapter-num reveal">Closing</p>
+  <div class="m-pull reveal reveal-d1" style="border-color:var(--magenta);font-size:clamp(18px,2.2vw,26px);">
+    "Apps worth using." That's the whole brief. Everything else follows from that.
+  </div>
+  <p class="m-p-secondary reveal reveal-d2">
+    If this resonates with you, follow along. If you disagree with something here, we genuinely want to hear it — manifesto documents should be challenged. Email si@si187apps.com or find us @si187apps everywhere.
+  </p>
+  <div style="display:flex; gap:14px; flex-wrap:wrap; margin-top:32px;" class="reveal reveal-d3">
+    <a href="/labs" class="btn-primary">Join si187 Labs</a>
+    <a href="/roadmap" class="btn-ghost">See the roadmap</a>
+  </div>
+</div>
+
+
+<!-- ══ FOOTER ══ -->
+<footer style="border-top:1px solid var(--bg-border);">
+  <div class="footer-col">
+    <div class="footer-brand">
+      <div class="fp-mark" aria-hidden="true"><svg width="24" height="24" viewBox="0 0 160 160"><path d="M80 148 A69 69 0 0 1 11 79" fill="none" stroke="#39FF7A" stroke-width="4.5" stroke-linecap="round" opacity=".15"/><path d="M80 148 A69 69 0 0 0 149 79" fill="none" stroke="#39FF7A" stroke-width="4.5" stroke-linecap="round" opacity=".15"/><path d="M80 132 A53 53 0 0 1 27 79" fill="none" stroke="#39FF7A" stroke-width="4.5" stroke-linecap="round" opacity=".32"/><path d="M80 132 A53 53 0 0 0 133 79" fill="none" stroke="#39FF7A" stroke-width="4.5" stroke-linecap="round" opacity=".32"/><path d="M80 116 A37 37 0 0 1 43 79" fill="none" stroke="#39FF7A" stroke-width="4.5" stroke-linecap="round" opacity=".55"/><path d="M80 116 A37 37 0 0 0 117 79" fill="none" stroke="#39FF7A" stroke-width="4.5" stroke-linecap="round" opacity=".55"/><path d="M80 100 A21 21 0 0 1 59 79" fill="none" stroke="#39FF7A" stroke-width="4.5" stroke-linecap="round" opacity=".75"/><path d="M80 100 A21 21 0 0 0 101 79" fill="none" stroke="#39FF7A" stroke-width="4.5" stroke-linecap="round" opacity=".75"/><path d="M80 88 A9 9 0 0 1 71 79" fill="none" stroke="#C084C8" stroke-width="4.5" stroke-linecap="round" opacity=".9"/><path d="M80 88 A9 9 0 0 0 89 79" fill="none" stroke="#C084C8" stroke-width="4.5" stroke-linecap="round" opacity=".9"/><circle cx="80" cy="79" r="7" fill="#39FF7A"/></svg></div>
+      <div><p class="footer-name">si187 <em>Apps</em></p><p class="footer-tagline">si187 Enterprises Ltd · London</p></div>
+    </div>
+    <div class="footer-social">
+      <a href="https://twitter.com/si187apps" aria-label="X">𝕏</a>
+      <a href="https://instagram.com/si187apps" aria-label="Instagram">◻</a>
+      <a href="https://tiktok.com/@si187apps" aria-label="TikTok">▷</a>
+    </div>
+  </div>
+  <div class="footer-col">
+    <p class="footer-nav-label">Studio</p>
+    <ul class="footer-nav-links">
+      <li><a href="/about">About</a></li>
+      <li><a href="/roadmap">Roadmap</a></li>
+      <li><a href="/manifesto">Manifesto</a></li>
+      <li><a href="/labs">Labs</a></li>
+    </ul>
+  </div>
+  <div class="footer-col">
+    <p class="footer-nav-label">Apps</p>
+    <ul class="footer-nav-links">
+      <li><a href="/fpl-coach-ai">FPL Coach AI</a></li>
+      <li><a href="/#waitlist">Early access</a></li>
+    </ul>
+  </div>
+  <div class="footer-col">
+    <p class="footer-nav-label">Contact</p>
+    <ul class="footer-nav-links"><li><a href="mailto:enquiries@si187apps.com">si@si187apps.com</a></li></ul>
+  </div>
+  <div class="footer-bottom">
+    <p class="footer-copy">© 2026 si187 Enterprises Ltd. All rights reserved.</p>
+    <div class="footer-legal"><a href="/privacy">Privacy</a><a href="/terms">Terms</a></div>
+  </div>
+</footer>
+
+<script src="../assets/js/site.js"></script>
+</body>
+</html>

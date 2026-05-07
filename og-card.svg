@@ -1,0 +1,74 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="630" viewBox="0 0 1200 630">
+  <defs>
+    <radialGradient id="glow1" cx="80%" cy="45%" r="55%">
+      <stop offset="0%" stop-color="#39FF7A" stop-opacity="0.08"/>
+      <stop offset="100%" stop-color="#050E05" stop-opacity="0"/>
+    </radialGradient>
+    <radialGradient id="glow2" cx="15%" cy="75%" r="40%">
+      <stop offset="0%" stop-color="#C084C8" stop-opacity="0.06"/>
+      <stop offset="100%" stop-color="#050E05" stop-opacity="0"/>
+    </radialGradient>
+    <!-- Scan-line pattern -->
+    <pattern id="scanlines" x="0" y="0" width="1" height="4" patternUnits="userSpaceOnUse">
+      <rect width="1200" height="3" fill="transparent"/>
+      <rect y="3" width="1200" height="1" fill="#39FF7A" fill-opacity="0.018"/>
+    </pattern>
+  </defs>
+
+  <!-- Background -->
+  <rect width="1200" height="630" fill="#050E05"/>
+  <rect width="1200" height="630" fill="url(#glow1)"/>
+  <rect width="1200" height="630" fill="url(#glow2)"/>
+  <rect width="1200" height="630" fill="url(#scanlines)"/>
+
+  <!-- Border -->
+  <rect x="1" y="1" width="1198" height="628" fill="none" stroke="#142014" stroke-width="2"/>
+
+  <!-- Decorative fingerprint — right side, very faint -->
+  <g transform="translate(920, 315)" opacity="0.06">
+    <path d="M0 138 A138 138 0 0 1 -138 0" fill="none" stroke="#39FF7A" stroke-width="6" stroke-linecap="round"/>
+    <path d="M0 138 A138 138 0 0 0 138 0" fill="none" stroke="#39FF7A" stroke-width="6" stroke-linecap="round"/>
+    <path d="M0 104 A104 104 0 0 1 -104 0" fill="none" stroke="#39FF7A" stroke-width="6" stroke-linecap="round"/>
+    <path d="M0 104 A104 104 0 0 0 104 0" fill="none" stroke="#39FF7A" stroke-width="6" stroke-linecap="round"/>
+    <path d="M0 70 A70 70 0 0 1 -70 0" fill="none" stroke="#39FF7A" stroke-width="6" stroke-linecap="round"/>
+    <path d="M0 70 A70 70 0 0 0 70 0" fill="none" stroke="#39FF7A" stroke-width="6" stroke-linecap="round"/>
+    <path d="M0 38 A38 38 0 0 1 -38 0" fill="none" stroke="#39FF7A" stroke-width="6" stroke-linecap="round"/>
+    <path d="M0 38 A38 38 0 0 0 38 0" fill="none" stroke="#39FF7A" stroke-width="6" stroke-linecap="round"/>
+    <path d="M0 16 A16 16 0 0 1 -16 0" fill="none" stroke="#C084C8" stroke-width="6" stroke-linecap="round"/>
+    <path d="M0 16 A16 16 0 0 0 16 0" fill="none" stroke="#C084C8" stroke-width="6" stroke-linecap="round"/>
+    <circle cx="0" cy="0" r="12" fill="#39FF7A"/>
+  </g>
+
+  <!-- Fingerprint mark — small, top left -->
+  <g transform="translate(80, 72) scale(0.5)">
+    <path d="M0 138 A138 138 0 0 1 -138 0" fill="none" stroke="#39FF7A" stroke-width="6" stroke-linecap="round" opacity="0.15"/>
+    <path d="M0 138 A138 138 0 0 0 138 0" fill="none" stroke="#39FF7A" stroke-width="6" stroke-linecap="round" opacity="0.15"/>
+    <path d="M0 104 A104 104 0 0 1 -104 0" fill="none" stroke="#39FF7A" stroke-width="6" stroke-linecap="round" opacity="0.35"/>
+    <path d="M0 104 A104 104 0 0 0 104 0" fill="none" stroke="#39FF7A" stroke-width="6" stroke-linecap="round" opacity="0.35"/>
+    <path d="M0 70 A70 70 0 0 1 -70 0" fill="none" stroke="#39FF7A" stroke-width="6" stroke-linecap="round" opacity="0.6"/>
+    <path d="M0 70 A70 70 0 0 0 70 0" fill="none" stroke="#39FF7A" stroke-width="6" stroke-linecap="round" opacity="0.6"/>
+    <path d="M0 38 A38 38 0 0 1 -38 0" fill="none" stroke="#39FF7A" stroke-width="6" stroke-linecap="round" opacity="0.85"/>
+    <path d="M0 38 A38 38 0 0 0 38 0" fill="none" stroke="#39FF7A" stroke-width="6" stroke-linecap="round" opacity="0.85"/>
+    <path d="M0 16 A16 16 0 0 1 -16 0" fill="none" stroke="#C084C8" stroke-width="6" stroke-linecap="round"/>
+    <path d="M0 16 A16 16 0 0 0 16 0" fill="none" stroke="#C084C8" stroke-width="6" stroke-linecap="round"/>
+    <circle cx="0" cy="0" r="12" fill="#39FF7A"/>
+  </g>
+
+  <!-- Wordmark -->
+  <text x="150" y="96" font-family="'Arial Black', sans-serif" font-size="28" font-weight="900" fill="#F0F5F0" letter-spacing="-0.5">si187</text>
+  <text x="256" y="96" font-family="'Arial Black', sans-serif" font-size="28" font-weight="900" fill="#39FF7A" letter-spacing="-0.5"> Apps</text>
+
+  <!-- Main headline -->
+  <text x="80" y="300" font-family="'Arial Black', sans-serif" font-size="96" font-weight="900" fill="#F0F5F0" letter-spacing="-4">Apps worth</text>
+  <text x="80" y="410" font-family="'Arial Black', sans-serif" font-size="96" font-weight="900" fill="#39FF7A" letter-spacing="-4">using.</text>
+
+  <!-- Subline -->
+  <text x="80" y="476" font-family="'Courier New', monospace" font-size="20" fill="#C084C8" letter-spacing="1">Independent mobile studio · London · Est. 2026</text>
+
+  <!-- Bottom URL -->
+  <text x="80" y="570" font-family="'Courier New', monospace" font-size="16" fill="#C084C8" opacity="0.5" letter-spacing="2">SI187APPS.COM</text>
+
+  <!-- Live dot -->
+  <circle cx="1100" cy="570" r="6" fill="#39FF7A" opacity="0.9"/>
+  <text x="1114" y="575" font-family="'Courier New', monospace" font-size="14" fill="#39FF7A" opacity="0.7">Building in public</text>
+</svg>

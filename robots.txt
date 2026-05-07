@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://si187apps.com/sitemap.xml

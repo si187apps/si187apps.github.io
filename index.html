@@ -1,0 +1,1079 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<!-- ── SEO ── -->
+<title>si187 Apps — Apps worth using.</title>
+<meta name="description" content="Independent mobile studio building thoughtful apps. London-based. Currently: FPL Coach AI — the AI coaching companion for Fantasy Premier League managers. Launching August 2026.">
+<meta name="robots" content="index, follow">
+<link rel="canonical" href="https://si187apps.com/">
+
+<!-- ── Open Graph ── -->
+<meta property="og:type"        content="website">
+<meta property="og:url"         content="https://si187apps.com/">
+<meta property="og:title"       content="si187 Apps — Apps worth using.">
+<meta property="og:description" content="Independent mobile studio. One app at a time, done properly. FPL Coach AI launching August 2026.">
+<meta property="og:image"       content="https://si187apps.com/assets/images/og-card.png">
+<meta property="og:image:width"  content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:site_name"   content="si187 Apps">
+<meta property="og:locale"      content="en_GB">
+
+<!-- ── Twitter/X Card ── -->
+<meta name="twitter:card"        content="summary_large_image">
+<meta name="twitter:site"        content="@si187apps">
+<meta name="twitter:creator"     content="@si187apps">
+<meta name="twitter:title"       content="si187 Apps — Apps worth using.">
+<meta name="twitter:description" content="Independent mobile studio. FPL Coach AI launching August 2026.">
+<meta name="twitter:image"       content="https://si187apps.com/assets/images/og-card.png">
+
+<!-- ── Favicon — inline SVG fingerprint ── -->
+<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 160 160'><rect width='160' height='160' fill='%23050E05'/><path d='M80 148 A69 69 0 0 1 11 79' fill='none' stroke='%2339FF7A' stroke-width='4.5' stroke-linecap='round' opacity='.15'/><path d='M80 148 A69 69 0 0 0 149 79' fill='none' stroke='%2339FF7A' stroke-width='4.5' stroke-linecap='round' opacity='.15'/><path d='M80 132 A53 53 0 0 1 27 79' fill='none' stroke='%2339FF7A' stroke-width='4.5' stroke-linecap='round' opacity='.32'/><path d='M80 132 A53 53 0 0 0 133 79' fill='none' stroke='%2339FF7A' stroke-width='4.5' stroke-linecap='round' opacity='.32'/><path d='M80 116 A37 37 0 0 1 43 79' fill='none' stroke='%2339FF7A' stroke-width='4.5' stroke-linecap='round' opacity='.55'/><path d='M80 116 A37 37 0 0 0 117 79' fill='none' stroke='%2339FF7A' stroke-width='4.5' stroke-linecap='round' opacity='.55'/><path d='M80 100 A21 21 0 0 1 59 79' fill='none' stroke='%2339FF7A' stroke-width='4.5' stroke-linecap='round' opacity='.75'/><path d='M80 100 A21 21 0 0 0 101 79' fill='none' stroke='%2339FF7A' stroke-width='4.5' stroke-linecap='round' opacity='.75'/><path d='M80 88 A9 9 0 0 1 71 79' fill='none' stroke='%23C084C8' stroke-width='4.5' stroke-linecap='round' opacity='.92'/><path d='M80 88 A9 9 0 0 0 89 79' fill='none' stroke='%23C084C8' stroke-width='4.5' stroke-linecap='round' opacity='.92'/><circle cx='80' cy='79' r='7' fill='%2339FF7A'/></svg>">
+<meta name="theme-color" content="#050E05">
+
+<!-- ── Fonts ── -->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Syne:wght@700;800&family=Inter:wght@300;400;500;600&family=JetBrains+Mono:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+<!-- ── Cloudflare Web Analytics ── -->
+<!-- Replace TOKEN with your actual Cloudflare Analytics token after setup -->
+<!-- <script defer src='https://static.cloudflareinsights.com/beacon.min.js' data-cf-beacon='{"token": "REPLACE_WITH_TOKEN"}'></script> -->
+
+<style>
+/* ═══════════════════════════════════════════════
+   LOCKED BRAND PALETTE · si187 Apps
+   ═══════════════════════════════════════════════ */
+:root {
+  --bg:           #050E05;
+  --bg-card:      #091409;
+  --bg-raised:    #0D1A0D;
+  --bg-border:    #142014;
+  --green:        #39FF7A;
+  --green-dim:    #1A7A3A;
+  --magenta:      #C084C8;
+  --magenta-dim:  #7A5080;
+  --text1:        #F0F5F0;
+  --text2:        #8AAA8A;
+  --text3:        #3A5A3A;
+
+  /* FPL Coach AI palette — ISOLATED to app card only */
+  --fpl-bg:       #0A1628;
+  --fpl-card:     #0F1F3A;
+  --fpl-border:   #1A2D45;
+  --fpl-teal:     #00D4A0;
+  --fpl-amber:    #FFB800;
+  --fpl-text1:    #E8F0F5;
+  --fpl-text2:    #8A9AB0;
+  --fpl-text3:    #3A4E60;
+}
+
+/* ═══════════════════════════════════════════════
+   RESET + BASE
+   ═══════════════════════════════════════════════ */
+*, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
+html { scroll-behavior: smooth; -webkit-text-size-adjust: 100%; }
+
+body {
+  background: var(--bg);
+  color: var(--text1);
+  font-family: 'Inter', system-ui, sans-serif;
+  font-size: 16px;
+  line-height: 1.6;
+  overflow-x: hidden;
+  -webkit-font-smoothing: antialiased;
+}
+
+/* Scan-line texture overlay */
+body::before {
+  content: '';
+  position: fixed; inset: 0; pointer-events: none; z-index: 0;
+  background: repeating-linear-gradient(
+    0deg, transparent, transparent 3px,
+    rgba(57,255,122,0.007) 3px, rgba(57,255,122,0.007) 4px
+  );
+}
+
+/* Scroll-reveal base state */
+.reveal {
+  opacity: 0;
+  transform: translateY(24px);
+  transition: opacity 0.55s ease, transform 0.55s ease;
+}
+.reveal.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+.reveal-delay-1 { transition-delay: 0.08s; }
+.reveal-delay-2 { transition-delay: 0.16s; }
+.reveal-delay-3 { transition-delay: 0.24s; }
+.reveal-delay-4 { transition-delay: 0.32s; }
+
+/* ═══════════════════════════════════════════════
+   FINGERPRINT MARK
+   ═══════════════════════════════════════════════ */
+.fp-mark svg { display: block; }
+
+/* ═══════════════════════════════════════════════
+   NAVIGATION
+   ═══════════════════════════════════════════════ */
+nav {
+  position: fixed; top: 0; left: 0; right: 0; z-index: 200;
+  display: flex; align-items: center; justify-content: space-between;
+  padding: 18px 56px;
+  background: rgba(5,14,5,0.90);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  border-bottom: 1px solid rgba(20,32,20,0.8);
+  transition: padding 0.3s;
+}
+nav.scrolled { padding: 12px 56px; }
+
+.nav-logo { display: flex; align-items: center; gap: 12px; text-decoration: none; }
+
+.nav-wordmark {
+  font-family: 'Syne', sans-serif;
+  font-size: 17px; font-weight: 800;
+  color: var(--text1); letter-spacing: -0.3px; line-height: 1;
+}
+.nav-wordmark em { font-style: normal; color: var(--green); }
+
+.nav-links { display: flex; align-items: center; gap: 36px; list-style: none; }
+.nav-links a {
+  font-size: 14px; font-weight: 500; color: var(--text2);
+  text-decoration: none; transition: color 0.15s;
+}
+.nav-links a:hover { color: var(--text1); }
+
+.nav-cta {
+  background: var(--green) !important; color: var(--bg) !important;
+  padding: 9px 18px !important; border-radius: 8px !important;
+  font-weight: 600 !important; font-size: 13px !important;
+  transition: opacity 0.15s !important;
+}
+.nav-cta:hover { opacity: 0.85 !important; }
+
+/* Mobile nav toggle */
+.nav-toggle {
+  display: none; flex-direction: column; gap: 5px;
+  background: none; border: none; cursor: pointer; padding: 4px;
+}
+.nav-toggle span {
+  display: block; width: 22px; height: 2px;
+  background: var(--text2); border-radius: 2px; transition: 0.3s;
+}
+
+/* Mobile drawer */
+.mobile-nav {
+  display: none; position: fixed; top: 0; left: 0; right: 0; bottom: 0;
+  z-index: 300; background: var(--bg);
+  flex-direction: column; align-items: center; justify-content: center;
+  gap: 32px;
+}
+.mobile-nav.open { display: flex; }
+.mobile-nav a {
+  font-family: 'Syne', sans-serif;
+  font-size: 28px; font-weight: 800;
+  color: var(--text1); text-decoration: none; letter-spacing: -1px;
+  transition: color 0.15s;
+}
+.mobile-nav a:hover { color: var(--green); }
+.mobile-nav-close {
+  position: absolute; top: 24px; right: 24px;
+  background: none; border: none; cursor: pointer;
+  color: var(--text2); font-size: 28px; line-height: 1;
+}
+
+/* ═══════════════════════════════════════════════
+   HERO
+   ═══════════════════════════════════════════════ */
+.hero {
+  min-height: 100vh;
+  display: flex; flex-direction: column;
+  justify-content: center; align-items: flex-start;
+  padding: 140px 56px 100px;
+  position: relative; overflow: hidden;
+}
+
+.hero-bg-glow {
+  position: absolute; inset: 0; pointer-events: none; z-index: 0;
+  background:
+    radial-gradient(ellipse 55% 65% at 80% 45%, rgba(57,255,122,0.055) 0%, transparent 70%),
+    radial-gradient(ellipse 40% 50% at 15% 75%, rgba(192,132,200,0.04) 0%, transparent 60%);
+}
+
+/* Decorative fingerprint — right side */
+.hero-fp-deco {
+  position: absolute; right: -80px; top: 50%;
+  transform: translateY(-50%);
+  z-index: 0; pointer-events: none;
+  opacity: 0.05;
+  animation: slowspin 90s linear infinite;
+}
+@keyframes slowspin {
+  from { transform: translateY(-50%) rotate(0deg); }
+  to   { transform: translateY(-50%) rotate(360deg); }
+}
+
+.hero-badge {
+  display: inline-flex; align-items: center; gap: 8px;
+  background: var(--bg-card); border: 1px solid var(--bg-border);
+  border-radius: 100px; padding: 6px 14px; margin-bottom: 36px;
+  position: relative; z-index: 1;
+}
+.badge-dot {
+  width: 7px; height: 7px; border-radius: 50%;
+  background: var(--green); box-shadow: 0 0 8px var(--green);
+  animation: pulse-dot 2.4s ease-in-out infinite;
+}
+@keyframes pulse-dot {
+  0%, 100% { box-shadow: 0 0 8px rgba(57,255,122,0.8); }
+  50%       { box-shadow: 0 0 18px rgba(57,255,122,1); }
+}
+.badge-text {
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 11px; font-weight: 600; letter-spacing: 0.5px; color: var(--magenta);
+}
+
+.hero h1 {
+  font-family: 'Syne', sans-serif;
+  font-size: clamp(60px, 9vw, 112px);
+  font-weight: 800; letter-spacing: -4px; line-height: 0.9;
+  color: var(--text1); margin-bottom: 28px;
+  position: relative; z-index: 1;
+}
+.hero h1 em { font-style: normal; color: var(--green); }
+
+.hero-sub {
+  font-size: clamp(16px, 2vw, 19px); font-weight: 400;
+  color: var(--magenta); max-width: 440px; line-height: 1.65;
+  margin-bottom: 44px; position: relative; z-index: 1;
+}
+
+.hero-actions {
+  display: flex; align-items: center; gap: 16px;
+  position: relative; z-index: 1; flex-wrap: wrap;
+}
+
+.btn-primary {
+  display: inline-flex; align-items: center; gap: 8px;
+  background: var(--green); color: var(--bg);
+  padding: 14px 26px; border-radius: 10px;
+  font-weight: 700; font-size: 15px;
+  text-decoration: none; letter-spacing: -0.2px;
+  transition: opacity 0.15s, transform 0.15s;
+}
+.btn-primary:hover { opacity: 0.88; transform: translateY(-1px); }
+
+.btn-ghost {
+  display: inline-flex; align-items: center; gap: 8px;
+  background: transparent; color: var(--text2);
+  padding: 14px 24px; border-radius: 10px;
+  border: 1px solid var(--bg-border);
+  font-weight: 500; font-size: 15px; text-decoration: none;
+  transition: color 0.15s, border-color 0.15s;
+}
+.btn-ghost:hover { color: var(--text1); border-color: var(--text3); }
+
+/* ═══════════════════════════════════════════════
+   STATS STRIP
+   ═══════════════════════════════════════════════ */
+.stats-strip {
+  display: grid; grid-template-columns: repeat(4, 1fr);
+  border-top: 1px solid var(--bg-border);
+  border-bottom: 1px solid var(--bg-border);
+  position: relative; z-index: 1;
+}
+.stat-item {
+  padding: 32px 40px;
+  border-right: 1px solid var(--bg-border);
+}
+.stat-item:last-child { border-right: none; }
+.stat-num {
+  font-family: 'Syne', sans-serif;
+  font-size: 42px; font-weight: 800; color: var(--green);
+  letter-spacing: -2.5px; line-height: 1; margin-bottom: 6px;
+}
+.stat-label {
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 11px; letter-spacing: 0.5px; color: var(--magenta);
+}
+
+/* ═══════════════════════════════════════════════
+   SECTION COMMONS
+   ═══════════════════════════════════════════════ */
+.section-wrap {
+  padding: 96px 56px; max-width: 1200px;
+  margin: 0 auto; position: relative; z-index: 1;
+}
+.eyebrow {
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 10px; letter-spacing: 4px; text-transform: uppercase;
+  color: var(--magenta); margin-bottom: 16px;
+}
+.section-title {
+  font-family: 'Syne', sans-serif;
+  font-size: clamp(34px, 4.5vw, 56px);
+  font-weight: 800; letter-spacing: -2px; line-height: 1.02;
+  color: var(--text1); margin-bottom: 52px;
+}
+.section-title em { font-style: normal; color: var(--green); }
+
+/* ═══════════════════════════════════════════════
+   APPS SECTION
+   ═══════════════════════════════════════════════ */
+#apps { border-top: 1px solid var(--bg-border); }
+
+/* ── FPL Coach AI card ── */
+.app-card-fpl {
+  background: var(--fpl-bg);
+  border: 1px solid var(--fpl-border);
+  border-radius: 24px; overflow: hidden;
+  margin-bottom: 20px; position: relative;
+}
+.app-card-fpl::before {
+  content: '';
+  position: absolute; top: 0; left: 0; right: 0; height: 1px;
+  background: linear-gradient(90deg, transparent, var(--fpl-teal), transparent);
+  opacity: 0.5;
+}
+
+.fpl-inner {
+  display: grid; grid-template-columns: 1fr 420px; min-height: 500px;
+}
+
+.fpl-content {
+  padding: 56px 52px 56px 56px;
+  display: flex; flex-direction: column; justify-content: center;
+  border-right: 1px solid var(--fpl-border);
+}
+
+.fpl-tag {
+  display: inline-flex; align-items: center; gap: 8px;
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 10px; letter-spacing: 2px; color: var(--fpl-teal);
+  text-transform: uppercase; margin-bottom: 20px;
+}
+.fpl-tag-dot {
+  width: 6px; height: 6px; border-radius: 50%;
+  background: var(--fpl-teal); box-shadow: 0 0 8px var(--fpl-teal);
+  animation: pulse-dot 2.2s ease-in-out infinite;
+}
+
+.fpl-content h2 {
+  font-family: 'Syne', sans-serif;
+  font-size: clamp(34px, 3vw, 46px); font-weight: 800;
+  letter-spacing: -1.5px; line-height: 1.0;
+  color: var(--fpl-text1); margin-bottom: 8px;
+}
+.fpl-content h2 em { font-style: normal; color: var(--fpl-teal); }
+
+.fpl-subtitle {
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 11px; letter-spacing: 2.5px;
+  color: var(--fpl-text3); margin-bottom: 22px; text-transform: uppercase;
+}
+
+.fpl-desc {
+  font-size: 15px; color: var(--fpl-text2);
+  line-height: 1.75; max-width: 380px; margin-bottom: 28px;
+}
+
+.fpl-features { display: flex; flex-direction: column; gap: 11px; margin-bottom: 36px; }
+.fpl-feat { display: flex; align-items: flex-start; gap: 12px; font-size: 14px; color: var(--fpl-text1); line-height: 1.4; }
+.feat-bullet { width: 6px; height: 6px; border-radius: 50%; background: var(--fpl-teal); flex-shrink: 0; margin-top: 6px; }
+
+.fpl-actions { display: flex; align-items: center; gap: 16px; }
+.btn-fpl {
+  display: inline-flex; align-items: center;
+  background: var(--fpl-teal); color: #050E12;
+  padding: 13px 24px; border-radius: 9px;
+  font-weight: 700; font-size: 14px; text-decoration: none;
+  transition: opacity 0.15s;
+}
+.btn-fpl:hover { opacity: 0.88; }
+.btn-fpl-ghost {
+  display: inline-flex; align-items: center;
+  color: var(--fpl-text2); font-size: 14px; font-weight: 500;
+  text-decoration: none; transition: color 0.15s;
+}
+.btn-fpl-ghost:hover { color: var(--fpl-text1); }
+
+/* ── FPL mockup visual ── */
+.fpl-visual {
+  background: #081020;
+  display: flex; align-items: center; justify-content: center;
+  padding: 44px 36px; position: relative; overflow: hidden;
+}
+.fpl-visual::before {
+  content: '';
+  position: absolute; inset: 0;
+  background: radial-gradient(ellipse 60% 50% at 50% 40%, rgba(0,212,160,0.07) 0%, transparent 70%);
+}
+
+.ui-mock {
+  width: 100%; max-width: 280px;
+  background: var(--fpl-bg);
+  border: 1px solid var(--fpl-border);
+  border-radius: 18px; overflow: hidden;
+  box-shadow: 0 28px 72px rgba(0,0,0,0.6), 0 0 0 1px rgba(0,212,160,0.06);
+  position: relative; z-index: 1;
+}
+.mock-header {
+  background: var(--fpl-card); padding: 13px 17px;
+  border-bottom: 1px solid var(--fpl-border);
+  display: flex; align-items: center; justify-content: space-between;
+}
+.mock-title {
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 9px; letter-spacing: 1.5px; color: var(--fpl-teal); font-weight: 700;
+}
+.mock-gw { font-family: 'JetBrains Mono', monospace; font-size: 9px; color: var(--fpl-text3); }
+.mock-body { padding: 14px; display: flex; flex-direction: column; gap: 10px; }
+.mock-card {
+  background: var(--fpl-card); border: 1px solid var(--fpl-border);
+  border-radius: 10px; padding: 12px;
+}
+.mock-card-label {
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 8px; letter-spacing: 1.5px; color: var(--fpl-text3);
+  text-transform: uppercase; margin-bottom: 9px;
+}
+.mock-player-row { display: flex; align-items: center; gap: 8px; margin-bottom: 4px; }
+.mock-pos {
+  font-family: 'JetBrains Mono', monospace; font-size: 8px; font-weight: 700;
+  color: var(--fpl-teal); background: rgba(0,212,160,0.12);
+  padding: 2px 5px; border-radius: 3px;
+}
+.mock-name { font-size: 11px; font-weight: 600; color: var(--fpl-text1); flex: 1; }
+.mock-pts { font-family: 'JetBrains Mono', monospace; font-size: 11px; font-weight: 700; color: var(--fpl-teal); }
+.mock-fixture { font-size: 9px; color: var(--fpl-text3); margin-left: 36px; display: flex; align-items: center; gap: 6px; }
+.mock-fdr { font-family: 'JetBrains Mono', monospace; font-size: 8px; font-weight: 700; background: rgba(0,212,160,0.12); color: var(--fpl-teal); padding: 1px 5px; border-radius: 3px; }
+.mock-transfer-row { display: flex; align-items: center; gap: 6px; font-size: 10px; color: var(--fpl-text1); font-weight: 600; margin-bottom: 6px; }
+.mock-arrow { color: var(--fpl-teal); }
+.mock-pill { display: inline-flex; align-items: center; background: rgba(0,212,160,0.12); color: var(--fpl-teal); font-family: 'JetBrains Mono', monospace; font-size: 8px; font-weight: 700; letter-spacing: 0.5px; padding: 2px 7px; border-radius: 4px; }
+.mock-impact { font-family: 'JetBrains Mono', monospace; font-size: 8px; color: rgba(0,212,160,0.6); margin-left: 8px; }
+.mock-note-text { font-size: 9px; color: var(--fpl-text2); line-height: 1.6; }
+
+/* ── Future app cards ── */
+.future-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 20px; }
+.card-future {
+  background: var(--bg-card);
+  border: 1px dashed var(--magenta-dim);
+  border-radius: 20px; padding: 40px;
+  display: flex; flex-direction: column; gap: 20px;
+  transition: border-color 0.25s, background 0.25s;
+  position: relative; overflow: hidden;
+}
+.card-future::before {
+  content: '';
+  position: absolute; inset: 0; pointer-events: none;
+  background: radial-gradient(ellipse 70% 60% at 100% 0%, rgba(192,132,200,0.06) 0%, transparent 70%);
+}
+.card-future:hover { border-color: var(--magenta); background: var(--bg-raised); }
+.future-icon {
+  width: 52px; height: 52px; border-radius: 14px;
+  background: rgba(192,132,200,0.08);
+  border: 1px solid rgba(192,132,200,0.2);
+  display: flex; align-items: center; justify-content: center;
+  position: relative; z-index: 1;
+}
+.future-name {
+  font-family: 'Syne', sans-serif;
+  font-size: 22px; font-weight: 800; letter-spacing: -0.5px;
+  color: var(--text1);
+  position: relative; z-index: 1;
+}
+.future-desc {
+  font-size: 14px; color: var(--magenta); line-height: 1.7;
+  position: relative; z-index: 1;
+}
+.future-link {
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 11px; color: var(--magenta-dim);
+  text-decoration: none; letter-spacing: 0.5px;
+  transition: color 0.15s;
+  position: relative; z-index: 1;
+  margin-top: auto;
+}
+.future-link:hover { color: var(--green); }
+
+/* ═══════════════════════════════════════════════
+   ABOUT SECTION
+   ═══════════════════════════════════════════════ */
+#about { border-top: 1px solid var(--bg-border); }
+.about-grid {
+  display: grid; grid-template-columns: 1fr 1fr;
+  gap: 80px; align-items: start;
+}
+.about-lede {
+  font-size: clamp(18px, 2vw, 22px); font-weight: 300;
+  color: var(--text1); line-height: 1.6;
+  margin-bottom: 22px; letter-spacing: -0.2px;
+}
+.about-body {
+  font-size: 15px; color: var(--magenta);
+  line-height: 1.8; margin-bottom: 14px;
+}
+.about-link {
+  display: inline-flex; align-items: center; gap: 8px;
+  color: var(--green); font-size: 14px; font-weight: 600;
+  text-decoration: none; margin-top: 10px;
+  transition: gap 0.2s;
+}
+.about-link:hover { gap: 13px; }
+
+.principles { display: flex; flex-direction: column; gap: 3px; }
+.principle {
+  background: var(--bg-card); border: 1px solid var(--bg-border);
+  border-radius: 14px; padding: 24px 28px;
+  transition: border-color 0.2s;
+}
+.principle:hover { border-color: var(--text3); }
+.principle-num {
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 10px; letter-spacing: 1px; color: var(--magenta-dim); margin-bottom: 6px;
+}
+.principle-title { font-size: 15px; font-weight: 600; color: var(--text1); margin-bottom: 5px; }
+.principle-body { font-size: 13px; color: var(--magenta); line-height: 1.6; }
+
+/* ═══════════════════════════════════════════════
+   WAITLIST
+   ═══════════════════════════════════════════════ */
+.waitlist-section {
+  border-top: 1px solid var(--bg-border);
+  padding: 100px 56px;
+  display: flex; flex-direction: column; align-items: center; text-align: center;
+  position: relative; overflow: hidden; z-index: 1;
+}
+.waitlist-section::before {
+  content: '';
+  position: absolute; inset: 0; pointer-events: none;
+  background: radial-gradient(ellipse 60% 80% at 50% 100%, rgba(57,255,122,0.04) 0%, transparent 70%);
+}
+.waitlist-section h2 {
+  font-family: 'Syne', sans-serif;
+  font-size: clamp(32px, 4.5vw, 60px); font-weight: 800;
+  letter-spacing: -2.5px; line-height: 1.0;
+  margin-bottom: 16px; max-width: 660px; position: relative; z-index: 1;
+}
+.waitlist-section h2 em { font-style: normal; color: var(--green); }
+.waitlist-sub {
+  font-size: 16px; color: var(--magenta);
+  max-width: 440px; margin: 0 auto 40px; line-height: 1.7;
+  position: relative; z-index: 1;
+}
+.email-row {
+  display: flex; gap: 10px; flex-wrap: wrap;
+  justify-content: center; max-width: 440px; width: 100%;
+  position: relative; z-index: 1;
+}
+.email-input {
+  flex: 1; min-width: 220px;
+  background: var(--bg-card); border: 1px solid var(--bg-border);
+  border-radius: 10px; padding: 13px 18px;
+  color: var(--text1); font-size: 14px;
+  font-family: 'Inter', sans-serif; outline: none;
+  transition: border-color 0.2s;
+}
+.email-input::placeholder { color: var(--text3); }
+.email-input:focus { border-color: var(--green-dim); }
+.email-submit {
+  background: var(--green); color: var(--bg);
+  border: none; border-radius: 10px;
+  padding: 13px 24px; font-weight: 700; font-size: 14px;
+  cursor: pointer; font-family: 'Inter', sans-serif;
+  transition: opacity 0.15s;
+}
+.email-submit:hover { opacity: 0.85; }
+.waitlist-confirm {
+  display: none; font-family: 'JetBrains Mono', monospace;
+  font-size: 12px; color: var(--green); margin-top: 16px;
+  position: relative; z-index: 1;
+}
+.waitlist-note {
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 10px; color: var(--text3); margin-top: 14px;
+  letter-spacing: 0.5px; position: relative; z-index: 1;
+}
+
+/* ═══════════════════════════════════════════════
+   FOOTER
+   ═══════════════════════════════════════════════ */
+footer {
+  padding: 44px 56px;
+  border-top: 1px solid var(--bg-border);
+  display: flex; justify-content: space-between;
+  align-items: center; flex-wrap: wrap; gap: 24px;
+  position: relative; z-index: 1;
+}
+.footer-brand { display: flex; align-items: center; gap: 14px; }
+.footer-name { font-family: 'Syne', sans-serif; font-size: 16px; font-weight: 800; color: var(--text1); }
+.footer-name em { font-style: normal; color: var(--green); }
+.footer-tagline {
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 9px; letter-spacing: 2px; color: var(--text3);
+  text-transform: uppercase; margin-top: 3px;
+}
+.footer-links { display: flex; gap: 28px; list-style: none; }
+.footer-links a {
+  font-size: 13px; color: var(--text3); text-decoration: none; transition: color 0.15s;
+}
+.footer-links a:hover { color: var(--magenta); }
+.footer-copy {
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 10px; color: var(--text3); letter-spacing: 0.5px;
+}
+
+/* ═══════════════════════════════════════════════
+   RESPONSIVE
+   ═══════════════════════════════════════════════ */
+@media (max-width: 1024px) {
+  .fpl-inner { grid-template-columns: 1fr 360px; }
+}
+@media (max-width: 900px) {
+  nav { padding: 16px 24px; }
+  nav.scrolled { padding: 12px 24px; }
+  .nav-links { display: none; }
+  .nav-toggle { display: flex; }
+  .hero { padding: 110px 24px 80px; }
+  .stats-strip { grid-template-columns: 1fr 1fr; }
+  .stat-item:nth-child(2) { border-right: none; }
+  .section-wrap { padding: 72px 24px; }
+  .fpl-inner { grid-template-columns: 1fr; }
+  .fpl-content { padding: 40px 32px; border-right: none; border-bottom: 1px solid var(--fpl-border); }
+  .fpl-visual { min-height: 340px; padding: 44px 24px; }
+  .future-grid { grid-template-columns: 1fr; }
+  .about-grid { grid-template-columns: 1fr; gap: 48px; }
+  .waitlist-section { padding: 80px 24px; }
+  footer { padding: 36px 24px; flex-direction: column; align-items: flex-start; }
+}
+@media (max-width: 540px) {
+  .hero h1 { letter-spacing: -2.5px; }
+  .stats-strip { grid-template-columns: 1fr 1fr; }
+  .stat-num { font-size: 34px; }
+  .stat-item { padding: 24px 20px; }
+  .hero-fp-deco { display: none; }
+}
+</style>
+</head>
+<body>
+
+<!-- ══════════════════ NAV ══════════════════ -->
+<nav id="main-nav">
+  <a href="/" class="nav-logo" aria-label="si187 Apps — home">
+    <div class="fp-mark" aria-hidden="true">
+      <svg width="28" height="28" viewBox="0 0 160 160">
+        <path d="M80 148 A69 69 0 0 1 11 79" fill="none" stroke="#39FF7A" stroke-width="4.5" stroke-linecap="round" opacity=".11"/>
+        <path d="M80 148 A69 69 0 0 0 149 79" fill="none" stroke="#39FF7A" stroke-width="4.5" stroke-linecap="round" opacity=".11"/>
+        <path d="M80 132 A53 53 0 0 1 27 79" fill="none" stroke="#39FF7A" stroke-width="4.5" stroke-linecap="round" opacity=".24"/>
+        <path d="M80 132 A53 53 0 0 0 133 79" fill="none" stroke="#39FF7A" stroke-width="4.5" stroke-linecap="round" opacity=".24"/>
+        <path d="M80 116 A37 37 0 0 1 43 79" fill="none" stroke="#39FF7A" stroke-width="4.5" stroke-linecap="round" opacity=".44"/>
+        <path d="M80 116 A37 37 0 0 0 117 79" fill="none" stroke="#39FF7A" stroke-width="4.5" stroke-linecap="round" opacity=".44"/>
+        <path d="M80 100 A21 21 0 0 1 59 79" fill="none" stroke="#39FF7A" stroke-width="4.5" stroke-linecap="round" opacity=".68"/>
+        <path d="M80 100 A21 21 0 0 0 101 79" fill="none" stroke="#39FF7A" stroke-width="4.5" stroke-linecap="round" opacity=".68"/>
+        <path d="M80 88 A9 9 0 0 1 71 79" fill="none" stroke="#C084C8" stroke-width="4.5" stroke-linecap="round" opacity=".92"/>
+        <path d="M80 88 A9 9 0 0 0 89 79" fill="none" stroke="#C084C8" stroke-width="4.5" stroke-linecap="round" opacity=".92"/>
+        <circle cx="80" cy="79" r="7" fill="#39FF7A"/>
+      </svg>
+    </div>
+    <span class="nav-wordmark">si187 <em>Apps</em></span>
+  </a>
+
+  <ul class="nav-links" role="navigation" aria-label="Primary navigation">
+    <li><a href="/about">About</a></li>
+    <li><a href="/roadmap">Roadmap</a></li>
+    <li><a href="/manifesto">Manifesto</a></li>
+    <li><a href="/labs">Labs</a></li>
+    <li><a href="#waitlist" class="nav-cta">Early access</a></li>
+  </ul>
+
+  <button class="nav-toggle" aria-label="Open menu" id="nav-toggle-btn">
+    <span></span><span></span><span></span>
+  </button>
+</nav>
+
+<!-- Mobile nav drawer -->
+<div class="mobile-nav" id="mobile-nav" role="dialog" aria-modal="true" aria-label="Navigation">
+  <button class="mobile-nav-close" id="mobile-nav-close" aria-label="Close menu">✕</button>
+  <a href="/about"      onclick="closeMobileNav()">About</a>
+  <a href="/roadmap"    onclick="closeMobileNav()">Roadmap</a>
+  <a href="/manifesto"  onclick="closeMobileNav()">Manifesto</a>
+  <a href="/labs"       onclick="closeMobileNav()">Labs</a>
+  <a href="#waitlist"   onclick="closeMobileNav()" style="color:var(--green)">Early access</a>
+</div>
+
+
+<!-- ══════════════════ HERO ══════════════════ -->
+<section class="hero" aria-label="Hero">
+  <div class="hero-bg-glow" aria-hidden="true"></div>
+
+  <div class="hero-fp-deco" aria-hidden="true">
+    <svg width="660" height="660" viewBox="0 0 160 160">
+      <path d="M80 148 A69 69 0 0 1 11 79" fill="none" stroke="#39FF7A" stroke-width="4.5" stroke-linecap="round" opacity=".11"/>
+      <path d="M80 148 A69 69 0 0 0 149 79" fill="none" stroke="#39FF7A" stroke-width="4.5" stroke-linecap="round" opacity=".11"/>
+      <path d="M80 132 A53 53 0 0 1 27 79" fill="none" stroke="#39FF7A" stroke-width="4.5" stroke-linecap="round" opacity=".24"/>
+      <path d="M80 132 A53 53 0 0 0 133 79" fill="none" stroke="#39FF7A" stroke-width="4.5" stroke-linecap="round" opacity=".24"/>
+      <path d="M80 116 A37 37 0 0 1 43 79" fill="none" stroke="#39FF7A" stroke-width="4.5" stroke-linecap="round" opacity=".44"/>
+      <path d="M80 116 A37 37 0 0 0 117 79" fill="none" stroke="#39FF7A" stroke-width="4.5" stroke-linecap="round" opacity=".44"/>
+      <path d="M80 100 A21 21 0 0 1 59 79" fill="none" stroke="#39FF7A" stroke-width="4.5" stroke-linecap="round" opacity=".68"/>
+      <path d="M80 100 A21 21 0 0 0 101 79" fill="none" stroke="#39FF7A" stroke-width="4.5" stroke-linecap="round" opacity=".68"/>
+      <path d="M80 88 A9 9 0 0 1 71 79" fill="none" stroke="#C084C8" stroke-width="4.5" stroke-linecap="round" opacity=".92"/>
+      <path d="M80 88 A9 9 0 0 0 89 79" fill="none" stroke="#C084C8" stroke-width="4.5" stroke-linecap="round" opacity=".92"/>
+      <circle cx="80" cy="79" r="7" fill="#39FF7A"/>
+      <circle cx="80" cy="79" r="13" fill="none" stroke="#39FF7A" stroke-width="1" opacity=".2"/>
+      <circle cx="80" cy="79" r="58" fill="none" stroke="#C084C8" stroke-width=".8" opacity=".13"/>
+    </svg>
+  </div>
+
+  <div class="hero-badge reveal">
+    <div class="badge-dot"></div>
+    <span class="badge-text">Building in public · 2026</span>
+  </div>
+
+  <h1 class="reveal reveal-delay-1">Apps<br><em>worth</em><br>using.</h1>
+
+  <p class="hero-sub reveal reveal-delay-2">
+    Independent mobile studio. London-based.<br>
+    One app at a time, done properly.
+  </p>
+
+  <div class="hero-actions reveal reveal-delay-3">
+    <a href="#apps" class="btn-primary">
+      See our apps
+      <svg width="14" height="14" viewBox="0 0 14 14" fill="none" aria-hidden="true">
+        <path d="M7 2v10M2 7l5 5 5-5" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/>
+      </svg>
+    </a>
+    <a href="#about" class="btn-ghost">About si187</a>
+  </div>
+</section>
+
+
+<!-- ══════════════════ STATS STRIP ══════════════════ -->
+<div class="stats-strip" aria-label="Studio statistics">
+  <div class="stat-item reveal">
+    <div class="stat-num">1</div>
+    <div class="stat-label">App launching 2026</div>
+  </div>
+  <div class="stat-item reveal reveal-delay-1">
+    <div class="stat-num">11M+</div>
+    <div class="stat-label">Target users · year one</div>
+  </div>
+  <div class="stat-item reveal reveal-delay-2">
+    <div class="stat-num">£0</div>
+    <div class="stat-label">VC funding. Independent.</div>
+  </div>
+  <div class="stat-item reveal reveal-delay-3">
+    <div class="stat-num">∞</div>
+    <div class="stat-label">Ideas in the pipeline</div>
+  </div>
+</div>
+
+
+<!-- ══════════════════ APPS ══════════════════ -->
+<section id="apps">
+  <div class="section-wrap">
+    <p class="eyebrow reveal">Our apps</p>
+    <p class="section-title reveal reveal-delay-1">What we're building</p>
+
+    <!-- FPL Coach AI -->
+    <div class="app-card-fpl reveal">
+      <div class="fpl-inner">
+        <div class="fpl-content">
+          <div class="fpl-tag">
+            <div class="fpl-tag-dot"></div>
+            Launching August 2026
+          </div>
+          <h2>FPL Coach <em>AI</em></h2>
+          <p class="fpl-subtitle">Fantasy Football Coaching</p>
+          <p class="fpl-desc">
+            The AI coaching companion that watches every Premier League game, tracks the underlying numbers, and surfaces the decisions worth making — without ever making them for you.
+          </p>
+          <div class="fpl-features">
+            <div class="fpl-feat"><div class="feat-bullet"></div>Captain analysis with fixture context and FDR</div>
+            <div class="fpl-feat"><div class="feat-bullet"></div>Transfer impact: compelling / marginal / trap</div>
+            <div class="fpl-feat"><div class="feat-bullet"></div>Formation optimiser with alternative scenarios</div>
+            <div class="fpl-feat"><div class="feat-bullet"></div>Coach not manager — you always make the call</div>
+          </div>
+          <div class="fpl-actions">
+            <a href="/fpl-coach-ai" class="btn-fpl">Learn more</a>
+            <a href="#waitlist" class="btn-fpl-ghost">Get early access →</a>
+          </div>
+        </div>
+
+        <div class="fpl-visual" aria-hidden="true">
+          <div class="ui-mock" role="img" aria-label="FPL Coach AI app interface preview">
+            <div class="mock-header">
+              <span class="mock-title">FPL COACH AI</span>
+              <span class="mock-gw">GW35 · BALANCED</span>
+            </div>
+            <div class="mock-body">
+              <div class="mock-card">
+                <p class="mock-card-label">Captain preview</p>
+                <div class="mock-player-row">
+                  <span class="mock-pos">MID</span>
+                  <span class="mock-name">Palmer</span>
+                  <span class="mock-pts">8.68</span>
+                </div>
+                <div class="mock-fixture">vs Nott'm Forest (H) <span class="mock-fdr">FDR 2</span></div>
+                <div style="margin-top:8px;padding-top:8px;border-top:1px solid rgba(26,45,69,0.6)">
+                  <div class="mock-player-row" style="opacity:.6">
+                    <span class="mock-pos">MID</span><span class="mock-name">Fernandes</span><span class="mock-pts">6.79</span>
+                  </div>
+                  <div class="mock-fixture" style="opacity:.6">vs Liverpool (H) <span class="mock-fdr" style="background:rgba(255,184,0,.15);color:#FFB800">FDR 3</span></div>
+                </div>
+              </div>
+              <div class="mock-card">
+                <p class="mock-card-label">Top transfer</p>
+                <div class="mock-transfer-row">
+                  <span style="color:rgba(139,154,176,.6);font-size:8px;font-family:'JetBrains Mono',monospace">OUT</span>
+                  <span>Minteh</span><span class="mock-arrow">→</span><span>Okafor</span>
+                </div>
+                <div style="display:flex;align-items:center">
+                  <span class="mock-pill">★ COMPELLING</span>
+                  <span class="mock-impact">+15.1 pts (3GW)</span>
+                </div>
+              </div>
+              <div class="mock-card">
+                <p class="mock-card-label">Coach's view</p>
+                <p class="mock-note-text">GW35 brings two decisions to weigh. Strong home fixtures align — your call which way to lean.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Future placeholders -->
+    <div class="future-grid">
+      <div class="card-future reveal">
+        <div class="future-icon" aria-hidden="true">
+          <svg width="22" height="22" viewBox="0 0 22 22" fill="none">
+            <path d="M11 5v6l3 3" stroke="#C084C8" stroke-width="1.5" stroke-linecap="round"/>
+            <circle cx="11" cy="11" r="8" stroke="#C084C8" stroke-width="1.5"/>
+          </svg>
+        </div>
+        <p class="future-name">Next app · 2027</p>
+        <p class="future-desc">Heads-down on FPL Coach AI through 2026. More apps are in the pipeline — each with its own brand and problem to solve.</p>
+        <a href="/roadmap" class="future-link">See the roadmap →</a>
+      </div>
+      <div class="card-future reveal reveal-delay-1">
+        <div class="future-icon" aria-hidden="true">
+          <svg width="22" height="22" viewBox="0 0 22 22" fill="none">
+            <path d="M11 3v4M11 15v4M3 11h4M15 11h4" stroke="#C084C8" stroke-width="1.5" stroke-linecap="round"/>
+            <circle cx="11" cy="11" r="3" stroke="#C084C8" stroke-width="1.5"/>
+          </svg>
+        </div>
+        <p class="future-name">Got an idea?</p>
+        <p class="future-desc">Spotted a problem that deserves a thoughtful app? Get in touch — we're always listening for the next thing worth building.</p>
+        <a href="/labs" class="future-link">Join si187 Labs →</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<!-- ══════════════════ ABOUT ══════════════════ -->
+<section id="about">
+  <div class="section-wrap">
+    <div class="about-grid">
+      <div>
+        <p class="eyebrow reveal">About si187</p>
+        <p class="section-title reveal reveal-delay-1">London-based.<br>Independent.<br><em>Building properly.</em></p>
+        <p class="about-lede reveal reveal-delay-2">si187 Apps is an independent mobile studio. We build one product at a time and build it well.</p>
+        <p class="about-body reveal reveal-delay-3">No VC pressure. No feature bloat. No compromises on quality. FPL Coach AI is our first app — born from a simple frustration: every existing FPL tool either drowns you in stats or tells you what to do. We built the thing in between.</p>
+        <p class="about-body reveal reveal-delay-4">si187 Enterprises Ltd is the holding company. si187 Apps is the trading division. Built in public, accountable from day one.</p>
+        <a href="mailto:si@si187apps.com" class="about-link reveal">
+          Get in touch
+          <svg width="14" height="14" viewBox="0 0 14 14" fill="none" aria-hidden="true">
+            <path d="M3 11L11 3M11 3H5M11 3v6" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/>
+          </svg>
+        </a>
+      </div>
+
+      <div class="principles">
+        <div class="principle reveal">
+          <p class="principle-num">01 —</p>
+          <p class="principle-title">One thing at a time</p>
+          <p class="principle-body">We don't build ten mediocre apps. We build one great one, learn from it, then build the next.</p>
+        </div>
+        <div class="principle reveal reveal-delay-1">
+          <p class="principle-num">02 —</p>
+          <p class="principle-title">Honest about what we are</p>
+          <p class="principle-body">Independent studio. No investors, no advertisers. We charge fairly for something worth paying for.</p>
+        </div>
+        <div class="principle reveal reveal-delay-2">
+          <p class="principle-num">03 —</p>
+          <p class="principle-title">Users own the outcome</p>
+          <p class="principle-body">Our apps surface information and trade-offs. They don't make choices for you. That philosophy runs through every product we build.</p>
+        </div>
+        <div class="principle reveal reveal-delay-3">
+          <p class="principle-num">04 —</p>
+          <p class="principle-title">Building in public</p>
+          <p class="principle-body">We share the process, the decisions, the reasoning. No black box. No mystery about how it works.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<!-- ══════════════════ WAITLIST ══════════════════ -->
+<section id="waitlist" class="waitlist-section">
+  <p class="eyebrow">Early access</p>
+  <h2 class="reveal">Be first in when <em>FPL Coach AI</em> launches.</h2>
+  <p class="waitlist-sub reveal reveal-delay-1">
+    Join the waitlist for beta access ahead of the 2026/27 season. Early access pricing and a free season pass for testers who help us improve it.
+  </p>
+  <div class="email-row reveal reveal-delay-2">
+    <label for="waitlist-email" class="sr-only">Email address</label>
+    <input type="email" id="waitlist-email" class="email-input" placeholder="your@email.com" autocomplete="email">
+    <button class="email-submit" id="waitlist-btn" onclick="handleWaitlist()">Join waitlist</button>
+  </div>
+  <p class="waitlist-confirm" id="waitlist-confirm">✓ You're on the list. We'll be in touch before August 2026.</p>
+  <p class="waitlist-note">No spam · Unsubscribe anytime · Launch: August 2026</p>
+</section>
+
+
+<!-- ══════════════════ FOOTER ══════════════════ -->
+<footer>
+  <div class="footer-brand">
+    <div class="fp-mark" aria-hidden="true">
+      <svg width="26" height="26" viewBox="0 0 160 160">
+        <path d="M80 148 A69 69 0 0 1 11 79" fill="none" stroke="#39FF7A" stroke-width="4.5" stroke-linecap="round" opacity=".15"/>
+        <path d="M80 148 A69 69 0 0 0 149 79" fill="none" stroke="#39FF7A" stroke-width="4.5" stroke-linecap="round" opacity=".15"/>
+        <path d="M80 132 A53 53 0 0 1 27 79" fill="none" stroke="#39FF7A" stroke-width="4.5" stroke-linecap="round" opacity=".32"/>
+        <path d="M80 132 A53 53 0 0 0 133 79" fill="none" stroke="#39FF7A" stroke-width="4.5" stroke-linecap="round" opacity=".32"/>
+        <path d="M80 116 A37 37 0 0 1 43 79" fill="none" stroke="#39FF7A" stroke-width="4.5" stroke-linecap="round" opacity=".55"/>
+        <path d="M80 116 A37 37 0 0 0 117 79" fill="none" stroke="#39FF7A" stroke-width="4.5" stroke-linecap="round" opacity=".55"/>
+        <path d="M80 100 A21 21 0 0 1 59 79" fill="none" stroke="#39FF7A" stroke-width="4.5" stroke-linecap="round" opacity=".75"/>
+        <path d="M80 100 A21 21 0 0 0 101 79" fill="none" stroke="#39FF7A" stroke-width="4.5" stroke-linecap="round" opacity=".75"/>
+        <path d="M80 88 A9 9 0 0 1 71 79" fill="none" stroke="#C084C8" stroke-width="4.5" stroke-linecap="round" opacity=".9"/>
+        <path d="M80 88 A9 9 0 0 0 89 79" fill="none" stroke="#C084C8" stroke-width="4.5" stroke-linecap="round" opacity=".9"/>
+        <circle cx="80" cy="79" r="7" fill="#39FF7A"/>
+      </svg>
+    </div>
+    <div>
+      <p class="footer-name">si187 <em>Apps</em></p>
+      <p class="footer-tagline">si187 Enterprises Ltd · London</p>
+    </div>
+  </div>
+
+  <ul class="footer-links">
+    <li><a href="/fpl-coach-ai">FPL Coach AI</a></li>
+    <li><a href="/about">About</a></li>
+    <li><a href="/roadmap">Roadmap</a></li>
+    <li><a href="/manifesto">Manifesto</a></li>
+    <li><a href="/labs">Labs</a></li>
+    <li><a href="mailto:enquiries@si187apps.com">Contact</a></li>
+  </ul>
+
+  <p class="footer-copy">© 2026 si187 Enterprises Ltd. All rights reserved.</p>
+</footer>
+
+<!-- Screen reader only utility -->
+<style>.sr-only{position:absolute;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip:rect(0,0,0,0);white-space:nowrap;border:0}</style>
+
+<script>
+// ── Nav scroll shrink ──
+const nav = document.getElementById('main-nav');
+window.addEventListener('scroll', () => {
+  nav.classList.toggle('scrolled', window.scrollY > 60);
+}, { passive: true });
+
+// ── Mobile nav ──
+const mobileNav = document.getElementById('mobile-nav');
+document.getElementById('nav-toggle-btn').addEventListener('click', () => {
+  mobileNav.classList.add('open');
+  document.body.style.overflow = 'hidden';
+});
+function closeMobileNav() {
+  mobileNav.classList.remove('open');
+  document.body.style.overflow = '';
+}
+document.getElementById('mobile-nav-close').addEventListener('click', closeMobileNav);
+
+// ── Scroll reveal ──
+const revealEls = document.querySelectorAll('.reveal');
+const revealObs = new IntersectionObserver((entries) => {
+  entries.forEach(e => { if (e.isIntersecting) { e.target.classList.add('visible'); } });
+}, { threshold: 0.12 });
+revealEls.forEach(el => revealObs.observe(el));
+
+// ── Waitlist form — Formspree ──
+// SETUP: Replace 'YOUR_FORM_ID' with your Formspree form ID after creating one at formspree.io
+// Instructions:
+//   1. Go to formspree.io → New Form → name it "si187 Apps Waitlist"
+//   2. Copy the form ID from the endpoint URL (e.g. https://formspree.io/f/abcd1234 → ID is abcd1234)
+//   3. Paste the ID below
+const FORMSPREE_WAITLIST_ID = 'xwvynpjr';
+
+async function handleWaitlist() {
+  const input   = document.getElementById('waitlist-email');
+  const confirm = document.getElementById('waitlist-confirm');
+  const btn     = document.getElementById('waitlist-btn');
+  const email   = input.value.trim();
+
+  // Basic validation
+  if (!email || !email.includes('@') || !email.includes('.')) {
+    input.style.borderColor = 'var(--magenta)';
+    input.focus();
+    return;
+  }
+
+  // Loading state
+  btn.textContent = 'Joining...';
+  btn.disabled = true;
+  input.style.borderColor = '';
+
+  if (FORMSPREE_WAITLIST_ID === 'xwvynpjr') {
+    // Dev mode — no real submission, just show confirmation
+    console.warn('Formspree ID not set — running in dev mode');
+    _showWaitlistConfirm(input, btn, confirm);
+    return;
+  }
+
+  try {
+    const res = await fetch(`https://formspree.io/f/${FORMSPREE_WAITLIST_ID}`, {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json', 'Accept': 'application/json' },
+      body: JSON.stringify({
+        email: email,
+        source: 'si187apps.com homepage waitlist',
+        submitted_at: new Date().toISOString()
+      })
+    });
+
+    if (res.ok) {
+      _showWaitlistConfirm(input, btn, confirm);
+    } else {
+      // Formspree returned an error — show fallback
+      btn.textContent = 'Try again';
+      btn.disabled = false;
+      btn.style.background = 'var(--magenta)';
+      console.error('Formspree error:', await res.json());
+    }
+  } catch (err) {
+    // Network error fallback
+    btn.textContent = 'Try again';
+    btn.disabled = false;
+    console.error('Network error:', err);
+  }
+}
+
+function _showWaitlistConfirm(input, btn, confirm) {
+  input.style.display = 'none';
+  btn.style.display = 'none';
+  confirm.style.display = 'block';
+}
+
+document.getElementById('waitlist-email').addEventListener('keydown', e => {
+  if (e.key === 'Enter') handleWaitlist();
+  if (e.key !== 'Enter') document.getElementById('waitlist-email').style.borderColor = '';
+});
+</script>
+</body>
+</html>

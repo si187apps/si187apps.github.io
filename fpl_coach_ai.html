@@ -1,0 +1,1052 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>FPL Coach AI — AI Coaching for Fantasy Premier League</title>
+<meta name="description" content="FPL Coach AI is the coaching companion for Fantasy Premier League managers who think for themselves. Captain analysis, transfer impact, formation scenarios — the information you need, the decision always yours. Launching August 2026.">
+<meta name="robots" content="index, follow">
+<link rel="canonical" href="https://si187apps.com/fpl-coach-ai">
+<meta property="og:type"        content="website">
+<meta property="og:url"         content="https://si187apps.com/fpl-coach-ai">
+<meta property="og:title"       content="FPL Coach AI — Coach not oracle.">
+<meta property="og:description" content="The AI coaching companion for FPL managers who think for themselves. Launching August 2026.">
+<meta property="og:image"       content="https://si187apps.com/assets/images/og-fpl.png">
+<meta property="og:site_name"   content="si187 Apps">
+<meta property="og:locale"      content="en_GB">
+<meta name="twitter:card"       content="summary_large_image">
+<meta name="twitter:site"       content="@si187apps">
+<meta name="twitter:title"      content="FPL Coach AI — Coach not oracle.">
+<meta name="twitter:description" content="The AI coaching companion for FPL managers who think for themselves. Launching August 2026.">
+<meta name="twitter:image"      content="https://si187apps.com/assets/images/og-fpl.png">
+<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 160 160'><rect width='160' height='160' fill='%230A1628'/><path d='M80 148 A69 69 0 0 1 11 79' fill='none' stroke='%2300D4A0' stroke-width='4.5' stroke-linecap='round' opacity='.15'/><path d='M80 148 A69 69 0 0 0 149 79' fill='none' stroke='%2300D4A0' stroke-width='4.5' stroke-linecap='round' opacity='.15'/><path d='M80 132 A53 53 0 0 1 27 79' fill='none' stroke='%2300D4A0' stroke-width='4.5' stroke-linecap='round' opacity='.32'/><path d='M80 132 A53 53 0 0 0 133 79' fill='none' stroke='%2300D4A0' stroke-width='4.5' stroke-linecap='round' opacity='.32'/><path d='M80 116 A37 37 0 0 1 43 79' fill='none' stroke='%2300D4A0' stroke-width='4.5' stroke-linecap='round' opacity='.55'/><path d='M80 116 A37 37 0 0 0 117 79' fill='none' stroke='%2300D4A0' stroke-width='4.5' stroke-linecap='round' opacity='.55'/><path d='M80 100 A21 21 0 0 1 59 79' fill='none' stroke='%2300D4A0' stroke-width='4.5' stroke-linecap='round' opacity='.75'/><path d='M80 100 A21 21 0 0 0 101 79' fill='none' stroke='%2300D4A0' stroke-width='4.5' stroke-linecap='round' opacity='.75'/><path d='M80 88 A9 9 0 0 1 71 79' fill='none' stroke='%23FFB800' stroke-width='4.5' stroke-linecap='round' opacity='.92'/><path d='M80 88 A9 9 0 0 0 89 79' fill='none' stroke='%23FFB800' stroke-width='4.5' stroke-linecap='round' opacity='.92'/><circle cx='80' cy='79' r='7' fill='%2300D4A0'/></svg>">
+<meta name="theme-color" content="#0A1628">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Syne:wght@700;800&family=Inter:wght@300;400;500;600&family=JetBrains+Mono:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+<style>
+/* ═══════════════════════════════════════════════
+   FPL COACH AI — PAGE-LEVEL PALETTE
+   The studio nav/footer uses studio palette.
+   Everything below the nav is FPL's world.
+   ═══════════════════════════════════════════════ */
+:root {
+  /* Studio palette — nav + footer only */
+  --s-bg:        #050E05;
+  --s-bg-card:   #091409;
+  --s-bg-border: #142014;
+  --s-green:     #39FF7A;
+  --s-magenta:   #C084C8;
+  --s-text1:     #F0F5F0;
+  --s-text2:     #8AAA8A;
+  --s-text3:     #3A5A3A;
+
+  /* FPL Coach AI palette — all page content */
+  --bg:      #0A1628;
+  --bg-card: #0F1F3A;
+  --bg-deep: #081020;
+  --border:  #1A2D45;
+  --border2: #243D58;
+  --teal:    #00D4A0;
+  --teal-dim:#007A5A;
+  --teal-glow: rgba(0,212,160,0.12);
+  --amber:   #FFB800;
+  --amber-dim: rgba(255,184,0,0.15);
+  --text1:   #E8F0F5;
+  --text2:   #8A9AB0;
+  --text3:   #3A4E60;
+  --text4:   #243040;
+}
+
+/* ── Reset ── */
+*, *::before, *::after { margin:0; padding:0; box-sizing:border-box; }
+html { scroll-behavior: smooth; -webkit-text-size-adjust: 100%; }
+body {
+  background: var(--s-bg);
+  color: var(--text1);
+  font-family: 'Inter', system-ui, sans-serif;
+  font-size: 16px; line-height: 1.6;
+  overflow-x: hidden;
+  -webkit-font-smoothing: antialiased;
+}
+body::before {
+  content: '';
+  position: fixed; inset: 0; pointer-events: none; z-index: 0;
+  background: repeating-linear-gradient(
+    0deg, transparent, transparent 3px,
+    rgba(0,212,160,0.005) 3px, rgba(0,212,160,0.005) 4px
+  );
+}
+img, svg { display: block; }
+.sr-only { position:absolute; width:1px; height:1px; padding:0; margin:-1px; overflow:hidden; clip:rect(0,0,0,0); white-space:nowrap; border:0; }
+
+/* ── Reveal ── */
+.reveal { opacity:0; transform:translateY(20px); transition: opacity 0.5s ease, transform 0.5s ease; }
+.reveal.visible { opacity:1; transform:translateY(0); }
+.rd1 { transition-delay: 0.08s; } .rd2 { transition-delay: 0.16s; }
+.rd3 { transition-delay: 0.24s; } .rd4 { transition-delay: 0.32s; }
+.rd5 { transition-delay: 0.40s; }
+
+/* ── Animations ── */
+@keyframes pulse-teal {
+  0%,100% { box-shadow: 0 0 8px rgba(0,212,160,0.7); }
+  50%      { box-shadow: 0 0 20px rgba(0,212,160,1); }
+}
+@keyframes slowspin {
+  from { transform: rotate(0deg); }
+  to   { transform: rotate(360deg); }
+}
+@keyframes float {
+  0%,100% { transform: translateY(0px); }
+  50%      { transform: translateY(-8px); }
+}
+
+/* ═══════════════════════════════════════════════
+   STUDIO NAV — uses studio palette
+   ═══════════════════════════════════════════════ */
+nav {
+  position: fixed; top:0; left:0; right:0; z-index:200;
+  display: flex; align-items:center; justify-content:space-between;
+  padding: 18px 56px;
+  background: rgba(5,14,5,0.92);
+  backdrop-filter: blur(20px); -webkit-backdrop-filter: blur(20px);
+  border-bottom: 1px solid rgba(20,32,20,0.8);
+  transition: padding 0.3s;
+}
+nav.scrolled { padding: 12px 56px; }
+.nav-logo { display:flex; align-items:center; gap:12px; text-decoration:none; }
+.nav-wordmark { font-family:'Syne',sans-serif; font-size:17px; font-weight:800; color:var(--s-text1); letter-spacing:-0.3px; }
+.nav-wordmark em { font-style:normal; color:var(--s-green); }
+.nav-links { display:flex; align-items:center; gap:32px; list-style:none; }
+.nav-links a { font-size:14px; font-weight:500; color:var(--s-text2); text-decoration:none; transition:color 0.15s; }
+.nav-links a:hover { color:var(--s-text1); }
+.nav-links a.active { color:var(--s-green); }
+.nav-cta { background:var(--teal) !important; color:#050E12 !important; padding:9px 18px !important; border-radius:8px !important; font-weight:700 !important; font-size:13px !important; transition:opacity 0.15s !important; }
+.nav-cta:hover { opacity:0.85 !important; }
+.nav-toggle { display:none; flex-direction:column; gap:5px; background:none; border:none; cursor:pointer; padding:4px; }
+.nav-toggle span { display:block; width:22px; height:2px; background:var(--s-text2); border-radius:2px; }
+.mobile-nav { display:none; position:fixed; top:0; left:0; right:0; bottom:0; z-index:300; background:var(--s-bg); flex-direction:column; align-items:center; justify-content:center; gap:32px; }
+.mobile-nav.open { display:flex; }
+.mobile-nav a { font-family:'Syne',sans-serif; font-size:28px; font-weight:800; color:var(--s-text1); text-decoration:none; letter-spacing:-1px; }
+.mobile-nav a:hover { color:var(--s-green); }
+.mobile-nav-close { position:absolute; top:24px; right:24px; background:none; border:none; cursor:pointer; color:var(--s-text2); font-size:28px; }
+
+/* ═══════════════════════════════════════════════
+   FPL PAGE — all below nav is FPL's world
+   ═══════════════════════════════════════════════ */
+.fpl-page { background: var(--bg); }
+
+/* ── Eyebrow / util ── */
+.eyebrow { font-family:'JetBrains Mono',monospace; font-size:10px; letter-spacing:4px; text-transform:uppercase; color:var(--teal); margin-bottom:16px; display:block; }
+.eyebrow-amber { color:var(--amber); }
+.section-wrap { padding:80px 56px; max-width:1200px; margin:0 auto; position:relative; z-index:1; }
+.section-wrap--narrow { padding:80px 56px; max-width:860px; margin:0 auto; position:relative; z-index:1; }
+.section-divider { border:none; border-top:1px solid var(--border); position:relative; z-index:1; }
+
+/* Buttons */
+.btn-teal { display:inline-flex; align-items:center; gap:8px; background:var(--teal); color:#050E12; padding:14px 26px; border-radius:10px; font-weight:700; font-size:15px; text-decoration:none; transition:opacity 0.15s, transform 0.15s; }
+.btn-teal:hover { opacity:0.88; transform:translateY(-1px); }
+.btn-outline { display:inline-flex; align-items:center; gap:8px; background:transparent; color:var(--text2); padding:14px 24px; border-radius:10px; border:1px solid var(--border); font-weight:500; font-size:15px; text-decoration:none; transition:color 0.15s, border-color 0.15s; }
+.btn-outline:hover { color:var(--text1); border-color:var(--border2); }
+.btn-text { display:inline-flex; align-items:center; gap:8px; color:var(--teal); font-size:14px; font-weight:600; text-decoration:none; transition:gap 0.2s; }
+.btn-text:hover { gap:13px; }
+
+/* Tags */
+.tag { display:inline-flex; align-items:center; gap:6px; font-family:'JetBrains Mono',monospace; font-size:10px; letter-spacing:1.5px; text-transform:uppercase; padding:4px 10px; border-radius:6px; }
+.tag-teal { background:var(--teal-glow); border:1px solid rgba(0,212,160,0.25); color:var(--teal); }
+.tag-amber { background:var(--amber-dim); border:1px solid rgba(255,184,0,0.25); color:var(--amber); }
+
+/* ── Pull quote ── */
+.pull-quote { font-family:'Syne',sans-serif; font-size:clamp(22px,3vw,36px); font-weight:800; letter-spacing:-1px; line-height:1.2; color:var(--text1); border-left:3px solid var(--teal); padding-left:28px; margin:48px 0; }
+.pull-quote em { font-style:normal; color:var(--teal); }
+
+/* ═══════════════════════════════════════════════
+   HERO
+   ═══════════════════════════════════════════════ */
+.fpl-hero {
+  min-height: 100vh;
+  display: flex; align-items: center;
+  padding: 120px 56px 80px;
+  position: relative; overflow: hidden;
+  background: var(--bg-deep);
+}
+
+/* Background atmosphere */
+.hero-glow {
+  position: absolute; inset: 0; pointer-events: none; z-index: 0;
+  background:
+    radial-gradient(ellipse 60% 70% at 75% 40%, rgba(0,212,160,0.07) 0%, transparent 70%),
+    radial-gradient(ellipse 40% 50% at 20% 80%, rgba(255,184,0,0.03) 0%, transparent 60%),
+    radial-gradient(ellipse 80% 80% at 50% 50%, rgba(0,0,0,0.3) 0%, transparent 100%);
+}
+
+/* Grid overlay */
+.hero-grid {
+  position: absolute; inset: 0; pointer-events: none; z-index: 0;
+  background-image:
+    linear-gradient(rgba(0,212,160,0.025) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(0,212,160,0.025) 1px, transparent 1px);
+  background-size: 60px 60px;
+  mask-image: radial-gradient(ellipse 80% 80% at 50% 50%, black 30%, transparent 80%);
+}
+
+/* Decorative fingerprint — FPL colours */
+.hero-fp {
+  position: absolute; right: -60px; top: 50%;
+  transform: translateY(-50%);
+  opacity: 0.04; pointer-events: none; z-index: 0;
+  animation: slowspin 100s linear infinite;
+}
+
+.hero-content { position: relative; z-index: 1; max-width: 640px; }
+
+.hero-badge {
+  display: inline-flex; align-items: center; gap: 8px;
+  background: rgba(0,212,160,0.06); border: 1px solid rgba(0,212,160,0.2);
+  border-radius: 100px; padding: 7px 16px; margin-bottom: 36px;
+}
+.hero-badge-dot {
+  width: 7px; height: 7px; border-radius: 50%;
+  background: var(--teal);
+  animation: pulse-teal 2.2s ease-in-out infinite;
+}
+.hero-badge-text { font-family:'JetBrains Mono',monospace; font-size:11px; letter-spacing:0.5px; color:var(--teal); }
+
+.fpl-hero h1 {
+  font-family: 'Syne', sans-serif;
+  font-size: clamp(52px, 7.5vw, 96px);
+  font-weight: 800; letter-spacing: -3.5px; line-height: 0.92;
+  color: var(--text1); margin-bottom: 10px;
+}
+.fpl-hero h1 em { font-style: normal; color: var(--teal); }
+
+.hero-sub-title {
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 12px; letter-spacing: 3px; color: var(--text3);
+  text-transform: uppercase; margin-bottom: 28px;
+}
+
+.fpl-hero-desc {
+  font-size: clamp(16px,1.8vw,19px); color: var(--text2);
+  max-width: 480px; line-height: 1.7; margin-bottom: 40px;
+}
+
+.hero-actions { display:flex; align-items:center; gap:16px; flex-wrap:wrap; margin-bottom:48px; }
+
+.hero-social-proof {
+  display: flex; align-items: center; gap: 20px; flex-wrap: wrap;
+}
+.proof-item { display:flex; align-items:center; gap:8px; }
+.proof-dot { width:4px; height:4px; border-radius:50%; background:var(--teal); }
+.proof-text { font-family:'JetBrains Mono',monospace; font-size:11px; color:var(--text3); letter-spacing:0.5px; }
+
+/* ═══════════════════════════════════════════════
+   HERO MOCKUP — right side
+   ═══════════════════════════════════════════════ */
+.hero-visual {
+  position: absolute; right: 56px; top: 50%;
+  transform: translateY(-50%);
+  z-index: 2; width: 320px;
+}
+
+.ui-card {
+  background: var(--bg-card); border: 1px solid var(--border);
+  border-radius: 20px; overflow: hidden;
+  box-shadow: 0 32px 80px rgba(0,0,0,0.6), 0 0 0 1px rgba(0,212,160,0.06);
+  animation: float 6s ease-in-out infinite;
+}
+.ui-card::before {
+  content: '';
+  display: block; height: 1px;
+  background: linear-gradient(90deg, transparent, var(--teal), transparent);
+  opacity: 0.5;
+}
+.ui-header {
+  background: var(--bg-deep); padding: 14px 18px;
+  display: flex; align-items:center; justify-content:space-between;
+  border-bottom: 1px solid var(--border);
+}
+.ui-title { font-family:'JetBrains Mono',monospace; font-size:9px; letter-spacing:2px; color:var(--teal); font-weight:700; }
+.ui-meta { font-family:'JetBrains Mono',monospace; font-size:9px; color:var(--text3); }
+.ui-body { padding:14px; display:flex; flex-direction:column; gap:10px; }
+
+/* Mockup cards */
+.m-card { background: var(--bg-deep); border:1px solid var(--border); border-radius:10px; padding:12px; }
+.m-label { font-family:'JetBrains Mono',monospace; font-size:8px; letter-spacing:1.5px; color:var(--text3); text-transform:uppercase; margin-bottom:9px; }
+.m-row { display:flex; align-items:center; gap:8px; margin-bottom:4px; }
+.m-pos { font-family:'JetBrains Mono',monospace; font-size:8px; font-weight:700; color:var(--teal); background:var(--teal-glow); padding:2px 5px; border-radius:3px; }
+.m-name { font-size:11px; font-weight:600; color:var(--text1); flex:1; }
+.m-pts { font-family:'JetBrains Mono',monospace; font-size:11px; font-weight:700; color:var(--teal); }
+.m-fix { font-size:9px; color:var(--text3); margin-left:36px; display:flex; align-items:center; gap:6px; }
+.m-fdr { font-family:'JetBrains Mono',monospace; font-size:8px; font-weight:700; background:var(--teal-glow); color:var(--teal); padding:1px 5px; border-radius:3px; }
+.m-fdr-amber { background:var(--amber-dim); color:var(--amber); }
+.m-pill { background:var(--teal-glow); color:var(--teal); font-family:'JetBrains Mono',monospace; font-size:8px; font-weight:700; letter-spacing:0.5px; padding:2px 7px; border-radius:4px; }
+.m-impact { font-family:'JetBrains Mono',monospace; font-size:8px; color:rgba(0,212,160,0.6); margin-left:6px; }
+.m-divider { border:none; border-top:1px solid rgba(26,45,69,0.8); margin:7px 0; }
+
+/* Floating secondary card */
+.ui-card-float {
+  position: absolute; bottom: -40px; left: -60px;
+  width: 180px;
+  background: var(--bg-card); border: 1px solid var(--border2);
+  border-radius: 14px; padding: 14px 16px;
+  box-shadow: 0 16px 40px rgba(0,0,0,0.5);
+}
+.float-label { font-family:'JetBrains Mono',monospace; font-size:8px; letter-spacing:1.5px; color:var(--text3); text-transform:uppercase; margin-bottom:8px; }
+.float-score { font-family:'Syne',sans-serif; font-size:28px; font-weight:800; letter-spacing:-1px; color:var(--teal); line-height:1; margin-bottom:2px; }
+.float-desc { font-size:10px; color:var(--text2); line-height:1.4; }
+
+/* ═══════════════════════════════════════════════
+   THE PROBLEM
+   ═══════════════════════════════════════════════ */
+.problem-section { background: var(--bg); }
+
+.problem-grid { display:grid; grid-template-columns:1fr 1fr; gap:20px; margin-bottom:56px; }
+.problem-card {
+  background: var(--bg-card); border:1px solid var(--border);
+  border-radius:16px; padding:32px;
+  position: relative; overflow: hidden;
+}
+.problem-card::before {
+  content: '';
+  position: absolute; top:0; left:0; right:0; height:2px;
+}
+.problem-card.bad::before  { background: linear-gradient(90deg, transparent, rgba(255,80,80,0.4), transparent); }
+.problem-card.bad { border-color: rgba(255,80,80,0.1); }
+.problem-icon { font-family:'JetBrains Mono',monospace; font-size:20px; margin-bottom:14px; }
+.problem-title { font-size:17px; font-weight:700; color:var(--text1); margin-bottom:10px; }
+.problem-body { font-size:14px; color:var(--text2); line-height:1.7; }
+.problem-verdict { display:inline-flex; align-items:center; gap:6px; margin-top:14px; font-family:'JetBrains Mono',monospace; font-size:10px; letter-spacing:1px; }
+.verdict-bad  { color: rgba(255,120,120,0.8); }
+.verdict-good { color: var(--teal); }
+
+/* ── How it's different ── */
+.difference-card {
+  background: var(--bg-card); border: 1px solid rgba(0,212,160,0.2);
+  border-radius: 20px; padding: 48px;
+  position: relative; overflow: hidden;
+}
+.difference-card::before {
+  content: '';
+  position: absolute; top:0; left:0; right:0; height:1px;
+  background: linear-gradient(90deg, transparent, var(--teal), transparent);
+  opacity: 0.5;
+}
+
+/* ═══════════════════════════════════════════════
+   HOW IT WORKS
+   ═══════════════════════════════════════════════ */
+.how-section { background: var(--bg-deep); border-top:1px solid var(--border); border-bottom:1px solid var(--border); }
+
+.features-grid { display:grid; grid-template-columns:1fr 1fr; gap:3px; }
+.feature-card {
+  background: var(--bg-card); border:0;
+  padding:36px 40px;
+  border-radius: 0;
+  transition: background 0.2s;
+}
+.feature-card:nth-child(1) { border-radius:16px 0 0 0; }
+.feature-card:nth-child(2) { border-radius:0 16px 0 0; }
+.feature-card:nth-child(3) { border-radius:0 0 0 16px; }
+.feature-card:nth-child(4) { border-radius:0 0 16px 0; }
+.feature-card:hover { background: var(--bg-deep); }
+.feature-card:nth-child(odd) { border-right:1px solid var(--border); }
+.feature-card:nth-child(1),
+.feature-card:nth-child(2) { border-bottom:1px solid var(--border); }
+
+.feat-icon { margin-bottom:20px; }
+.feat-tag { font-family:'JetBrains Mono',monospace; font-size:9px; letter-spacing:2px; color:var(--teal); text-transform:uppercase; margin-bottom:10px; }
+.feat-title { font-family:'Syne',sans-serif; font-size:22px; font-weight:800; letter-spacing:-0.5px; color:var(--text1); margin-bottom:12px; }
+.feat-body { font-size:14px; color:var(--text2); line-height:1.75; margin-bottom:14px; }
+.feat-detail { font-family:'JetBrains Mono',monospace; font-size:11px; color:var(--text3); line-height:1.6; }
+
+/* ── Decision type grid ── */
+.decision-types { display:flex; flex-direction:column; gap:3px; margin-top:48px; }
+.decision-row {
+  display: grid; grid-template-columns: 140px 1fr auto;
+  align-items: center; gap: 24px;
+  background: var(--bg-card); border:1px solid var(--border);
+  padding: 18px 24px; border-radius:0;
+  transition: background 0.15s;
+}
+.decision-row:first-child { border-radius:12px 12px 0 0; }
+.decision-row:last-child  { border-radius:0 0 12px 12px; }
+.decision-row:hover { background: var(--bg-deep); }
+.decision-type { font-family:'JetBrains Mono',monospace; font-size:10px; font-weight:700; letter-spacing:1.5px; text-transform:uppercase; }
+.type-compelling { color: var(--teal); }
+.type-marginal   { color: var(--amber); }
+.type-trap       { color: rgba(255,120,120,0.8); }
+.decision-desc { font-size:14px; color:var(--text2); line-height:1.4; }
+.decision-action { font-family:'JetBrains Mono',monospace; font-size:10px; color:var(--text2); opacity:0.45; white-space:nowrap; }
+
+/* ═══════════════════════════════════════════════
+   COACH NOT ORACLE
+   ═══════════════════════════════════════════════ */
+.philosophy-section { background: var(--bg); }
+
+.philosophy-grid { display:grid; grid-template-columns:1fr 1fr; gap:48px; align-items:center; }
+.philosophy-text {}
+.philosophy-visual {
+  background: var(--bg-card); border:1px solid var(--border);
+  border-radius:20px; padding:36px;
+  position: relative; overflow: hidden;
+}
+.philosophy-visual::before {
+  content: '';
+  position: absolute; top:0; left:0; right:0; height:1px;
+  background: linear-gradient(90deg, transparent, var(--amber), transparent);
+  opacity: 0.4;
+}
+
+.compare-row { display:flex; align-items:flex-start; gap:16px; margin-bottom:20px; padding-bottom:20px; border-bottom:1px solid var(--border); }
+.compare-row:last-child { margin-bottom:0; padding-bottom:0; border-bottom:none; }
+.compare-icon { width:32px; height:32px; border-radius:8px; flex-shrink:0; display:flex; align-items:center; justify-content:center; font-size:14px; }
+.compare-icon.no  { background:rgba(255,80,80,0.08); }
+.compare-icon.yes { background:var(--teal-glow); }
+.compare-content {}
+.compare-label { font-family:'JetBrains Mono',monospace; font-size:9px; letter-spacing:2px; text-transform:uppercase; margin-bottom:4px; }
+.compare-label.no  { color:rgba(255,120,120,0.6); }
+.compare-label.yes { color:var(--teal); }
+.compare-text { font-size:14px; color:var(--text2); line-height:1.5; }
+.compare-text strong { color:var(--text1); font-weight:600; }
+
+/* ═══════════════════════════════════════════════
+   SEASON OVERVIEW
+   ═══════════════════════════════════════════════ */
+.season-section { background: var(--bg-deep); border-top:1px solid var(--border); }
+
+.season-stats { display:grid; grid-template-columns:repeat(4,1fr); border:1px solid var(--border); border-radius:16px; overflow:hidden; margin-bottom:48px; }
+.s-stat { padding:28px 32px; border-right:1px solid var(--border); }
+.s-stat:last-child { border-right:none; }
+.s-num { font-family:'Syne',sans-serif; font-size:38px; font-weight:800; letter-spacing:-2px; color:var(--teal); line-height:1; margin-bottom:6px; }
+.s-label { font-family:'JetBrains Mono',monospace; font-size:10px; letter-spacing:1px; color:var(--text2); opacity:0.5; }
+
+.use-cases { display:grid; grid-template-columns:1fr 1fr 1fr; gap:16px; }
+.use-case { background:var(--bg-card); border:1px solid var(--border); border-radius:14px; padding:24px; transition:border-color 0.2s; }
+.use-case:hover { border-color: var(--border2); }
+.uc-gw { font-family:'JetBrains Mono',monospace; font-size:9px; letter-spacing:2px; color:var(--text2); opacity:0.45; text-transform:uppercase; margin-bottom:12px; }
+.uc-title { font-size:16px; font-weight:600; color:var(--text1); margin-bottom:8px; line-height:1.3; }
+.uc-body { font-size:13px; color:var(--text2); line-height:1.65; }
+
+/* ═══════════════════════════════════════════════
+   WAITLIST / CTA
+   ═══════════════════════════════════════════════ */
+.fpl-waitlist {
+  background: var(--bg);
+  border-top: 1px solid var(--border);
+  padding: 96px 56px;
+  display: flex; flex-direction:column; align-items:center; text-align:center;
+  position: relative; overflow:hidden; z-index:1;
+}
+.fpl-waitlist::before {
+  content: '';
+  position: absolute; inset:0; pointer-events:none;
+  background: radial-gradient(ellipse 60% 70% at 50% 100%, rgba(0,212,160,0.05) 0%, transparent 70%);
+}
+.fpl-waitlist h2 {
+  font-family:'Syne',sans-serif;
+  font-size: clamp(32px, 5vw, 64px);
+  font-weight:800; letter-spacing:-2.5px; line-height:1.0;
+  margin-bottom:16px; max-width:680px; position:relative; z-index:1;
+}
+.fpl-waitlist h2 em { font-style:normal; color:var(--teal); }
+.waitlist-sub {
+  font-size:16px; color:var(--text2);
+  max-width:440px; margin:0 auto 40px; line-height:1.7;
+  position:relative; z-index:1;
+}
+.waitlist-perks {
+  display:flex; gap:24px; flex-wrap:wrap; justify-content:center;
+  margin-bottom:40px; position:relative; z-index:1;
+}
+.waitlist-perk { display:flex; align-items:center; gap:8px; font-size:14px; color:var(--text2); }
+.waitlist-perk svg { flex-shrink:0; }
+.email-row { display:flex; gap:10px; flex-wrap:wrap; justify-content:center; max-width:440px; width:100%; position:relative; z-index:1; }
+.email-input { flex:1; min-width:220px; background:var(--bg-card); border:1px solid var(--border); border-radius:10px; padding:14px 18px; color:var(--text1); font-size:14px; font-family:'Inter',sans-serif; outline:none; transition:border-color 0.2s; }
+.email-input::placeholder { color:var(--text2); opacity:0.35; }
+.email-input:focus { border-color: var(--teal-dim); }
+.email-submit { background:var(--teal); color:#050E12; border:none; border-radius:10px; padding:14px 24px; font-weight:700; font-size:14px; cursor:pointer; font-family:'Inter',sans-serif; transition:opacity 0.15s; }
+.email-submit:hover { opacity:0.88; }
+.waitlist-confirm { display:none; font-family:'JetBrains Mono',monospace; font-size:13px; color:var(--teal); margin-top:16px; position:relative; z-index:1; }
+.waitlist-note { font-family:'JetBrains Mono',monospace; font-size:10px; color:var(--text2); opacity:0.45; margin-top:14px; letter-spacing:0.5px; position:relative; z-index:1; }
+
+/* ═══════════════════════════════════════════════
+   FOOTER — studio palette
+   --s-text3 (#3A5A3A) was illegible on dark bg.
+   All footer muted text now uses magenta-dim.
+   ═══════════════════════════════════════════════ */
+footer {
+  background: var(--s-bg);
+  padding:44px 56px;
+  border-top:1px solid rgba(192,132,200,0.12);
+  display:flex; justify-content:space-between;
+  align-items:flex-start; flex-wrap:wrap; gap:40px;
+  position:relative; z-index:1;
+}
+.footer-col { display:flex; flex-direction:column; gap:14px; }
+.footer-brand { display:flex; align-items:center; gap:12px; }
+.footer-name { font-family:'Syne',sans-serif; font-size:16px; font-weight:800; color:var(--s-text1); }
+.footer-name em { font-style:normal; color:var(--s-green); }
+.footer-tagline { font-family:'JetBrains Mono',monospace; font-size:9px; letter-spacing:2px; color:var(--s-magenta); opacity:0.5; text-transform:uppercase; margin-top:3px; }
+.footer-nav-label { font-family:'JetBrains Mono',monospace; font-size:9px; letter-spacing:3px; color:var(--s-magenta); opacity:0.45; text-transform:uppercase; }
+.footer-nav-links { list-style:none; display:flex; flex-direction:column; gap:10px; }
+.footer-nav-links a { font-size:14px; color:var(--s-text2); text-decoration:none; transition:color 0.15s; }
+.footer-nav-links a:hover { color:var(--s-magenta); }
+.footer-bottom { width:100%; border-top:1px solid rgba(192,132,200,0.10); padding-top:24px; display:flex; justify-content:space-between; align-items:center; flex-wrap:wrap; gap:12px; }
+.footer-copy { font-family:'JetBrains Mono',monospace; font-size:10px; color:var(--s-magenta); opacity:0.4; letter-spacing:0.5px; }
+.footer-legal { display:flex; gap:20px; }
+.footer-legal a { font-size:12px; color:var(--s-magenta); opacity:0.45; text-decoration:none; transition:opacity 0.15s; }
+.footer-legal a:hover { opacity:1; }
+.footer-social { display:flex; gap:12px; }
+.footer-social a { display:flex; align-items:center; justify-content:center; width:34px; height:34px; border:1px solid rgba(192,132,200,0.2); border-radius:8px; color:var(--s-magenta); opacity:0.5; text-decoration:none; font-size:14px; transition:opacity 0.15s, border-color 0.15s; }
+.footer-social a:hover { opacity:1; border-color:rgba(192,132,200,0.5); }
+
+/* ═══════════════════════════════════════════════
+   RESPONSIVE
+   ═══════════════════════════════════════════════ */
+@media (max-width: 1100px) {
+  .hero-visual { width: 280px; right: 36px; }
+  .fpl-hero { padding-right: 380px; }
+}
+@media (max-width: 900px) {
+  nav { padding: 16px 24px; } nav.scrolled { padding: 12px 24px; }
+  .nav-links { display: none; } .nav-toggle { display: flex; }
+  .fpl-hero { flex-direction: column; padding: 110px 24px 480px; min-height: auto; }
+  .hero-visual { position: absolute; left: 50%; top: auto; bottom: 40px; transform: translateX(-50%); width: 300px; }
+  .ui-card-float { display: none; }
+  .section-wrap { padding: 60px 24px; }
+  .section-wrap--narrow { padding: 60px 24px; }
+  .problem-grid { grid-template-columns: 1fr; }
+  .features-grid { grid-template-columns: 1fr; }
+  .feature-card { border-right: none !important; border-bottom: 1px solid var(--border) !important; border-radius: 0 !important; }
+  .feature-card:first-child { border-radius: 16px 16px 0 0 !important; }
+  .feature-card:last-child  { border-radius: 0 0 16px 16px !important; border-bottom: none !important; }
+  .decision-row { grid-template-columns: 1fr; gap: 8px; }
+  .decision-action { display: none; }
+  .philosophy-grid { grid-template-columns: 1fr; }
+  .season-stats { grid-template-columns: 1fr 1fr; }
+  .s-stat:nth-child(2) { border-right: none; }
+  .use-cases { grid-template-columns: 1fr; }
+  .fpl-waitlist { padding: 72px 24px; }
+  footer { padding: 40px 24px; flex-direction: column; }
+}
+@media (max-width: 540px) {
+  .fpl-hero h1 { letter-spacing: -2px; }
+  .season-stats { grid-template-columns: 1fr; }
+  .s-stat { border-right: none; border-bottom: 1px solid var(--border); }
+  .s-stat:last-child { border-bottom: none; }
+}
+</style>
+</head>
+<body>
+
+<!-- ══ STUDIO NAV ══ -->
+<nav id="main-nav">
+  <a href="/" class="nav-logo" aria-label="si187 Apps home">
+    <div aria-hidden="true"><svg width="28" height="28" viewBox="0 0 160 160"><path d="M80 148 A69 69 0 0 1 11 79" fill="none" stroke="#39FF7A" stroke-width="4.5" stroke-linecap="round" opacity=".11"/><path d="M80 148 A69 69 0 0 0 149 79" fill="none" stroke="#39FF7A" stroke-width="4.5" stroke-linecap="round" opacity=".11"/><path d="M80 132 A53 53 0 0 1 27 79" fill="none" stroke="#39FF7A" stroke-width="4.5" stroke-linecap="round" opacity=".24"/><path d="M80 132 A53 53 0 0 0 133 79" fill="none" stroke="#39FF7A" stroke-width="4.5" stroke-linecap="round" opacity=".24"/><path d="M80 116 A37 37 0 0 1 43 79" fill="none" stroke="#39FF7A" stroke-width="4.5" stroke-linecap="round" opacity=".44"/><path d="M80 116 A37 37 0 0 0 117 79" fill="none" stroke="#39FF7A" stroke-width="4.5" stroke-linecap="round" opacity=".44"/><path d="M80 100 A21 21 0 0 1 59 79" fill="none" stroke="#39FF7A" stroke-width="4.5" stroke-linecap="round" opacity=".68"/><path d="M80 100 A21 21 0 0 0 101 79" fill="none" stroke="#39FF7A" stroke-width="4.5" stroke-linecap="round" opacity=".68"/><path d="M80 88 A9 9 0 0 1 71 79" fill="none" stroke="#C084C8" stroke-width="4.5" stroke-linecap="round" opacity=".92"/><path d="M80 88 A9 9 0 0 0 89 79" fill="none" stroke="#C084C8" stroke-width="4.5" stroke-linecap="round" opacity=".92"/><circle cx="80" cy="79" r="7" fill="#39FF7A"/></svg></div>
+    <span class="nav-wordmark">si187 <em>Apps</em></span>
+  </a>
+  <ul class="nav-links">
+    <li><a href="/about">About</a></li>
+    <li><a href="/roadmap">Roadmap</a></li>
+    <li><a href="/manifesto">Manifesto</a></li>
+    <li><a href="/labs">Labs</a></li>
+    <li><a href="#waitlist" class="nav-cta">Get early access</a></li>
+  </ul>
+  <button class="nav-toggle" aria-label="Open menu" id="nav-toggle-btn"><span></span><span></span><span></span></button>
+</nav>
+<div class="mobile-nav" id="mobile-nav">
+  <button class="mobile-nav-close" id="mobile-nav-close" aria-label="Close">✕</button>
+  <a href="/" onclick="closeMobileNav()">Home</a>
+  <a href="/about" onclick="closeMobileNav()">About</a>
+  <a href="/roadmap" onclick="closeMobileNav()">Roadmap</a>
+  <a href="/manifesto" onclick="closeMobileNav()">Manifesto</a>
+  <a href="/labs" onclick="closeMobileNav()">Labs</a>
+  <a href="#waitlist" onclick="closeMobileNav()" style="color:var(--teal)">Early access</a>
+</div>
+
+
+<!-- ══ FPL PAGE ══ -->
+<div class="fpl-page">
+
+<!-- ── HERO ── -->
+<section class="fpl-hero" aria-label="FPL Coach AI hero">
+  <div class="hero-glow"></div>
+  <div class="hero-grid" aria-hidden="true"></div>
+
+  <div class="hero-fp" aria-hidden="true">
+    <svg width="680" height="680" viewBox="0 0 160 160">
+      <path d="M80 148 A69 69 0 0 1 11 79" fill="none" stroke="#00D4A0" stroke-width="4.5" stroke-linecap="round" opacity=".08"/><path d="M80 148 A69 69 0 0 0 149 79" fill="none" stroke="#00D4A0" stroke-width="4.5" stroke-linecap="round" opacity=".08"/>
+      <path d="M80 132 A53 53 0 0 1 27 79" fill="none" stroke="#00D4A0" stroke-width="4.5" stroke-linecap="round" opacity=".18"/><path d="M80 132 A53 53 0 0 0 133 79" fill="none" stroke="#00D4A0" stroke-width="4.5" stroke-linecap="round" opacity=".18"/>
+      <path d="M80 116 A37 37 0 0 1 43 79" fill="none" stroke="#00D4A0" stroke-width="4.5" stroke-linecap="round" opacity=".32"/><path d="M80 116 A37 37 0 0 0 117 79" fill="none" stroke="#00D4A0" stroke-width="4.5" stroke-linecap="round" opacity=".32"/>
+      <path d="M80 100 A21 21 0 0 1 59 79" fill="none" stroke="#00D4A0" stroke-width="4.5" stroke-linecap="round" opacity=".52"/><path d="M80 100 A21 21 0 0 0 101 79" fill="none" stroke="#00D4A0" stroke-width="4.5" stroke-linecap="round" opacity=".52"/>
+      <path d="M80 88 A9 9 0 0 1 71 79" fill="none" stroke="#FFB800" stroke-width="4.5" stroke-linecap="round" opacity=".85"/><path d="M80 88 A9 9 0 0 0 89 79" fill="none" stroke="#FFB800" stroke-width="4.5" stroke-linecap="round" opacity=".85"/>
+      <circle cx="80" cy="79" r="7" fill="#00D4A0"/>
+    </svg>
+  </div>
+
+  <div class="hero-content">
+    <div class="hero-badge reveal">
+      <div class="hero-badge-dot"></div>
+      <span class="hero-badge-text">Launching GW1 · August 2026</span>
+    </div>
+
+    <h1 class="reveal rd1">FPL<br>Coach <em>AI.</em></h1>
+    <p class="hero-sub-title reveal rd2">Fantasy Premier League Coaching</p>
+
+    <p class="fpl-hero-desc reveal rd3">
+      The AI coaching companion built for the 11 million FPL managers who think for themselves. Every gameweek, in your corner — surfacing the decisions worth making, never making them for you.
+    </p>
+
+    <div class="hero-actions reveal rd4">
+      <a href="#waitlist" class="btn-teal">Join the waitlist</a>
+      <a href="#how-it-works" class="btn-outline">How it works</a>
+    </div>
+
+    <div class="hero-social-proof reveal rd5">
+      <div class="proof-item"><div class="proof-dot"></div><span class="proof-text">Coach not oracle</span></div>
+      <div class="proof-item"><div class="proof-dot"></div><span class="proof-text">iOS · August 2026</span></div>
+      <div class="proof-item"><div class="proof-dot"></div><span class="proof-text">Free beta for testers</span></div>
+    </div>
+  </div>
+
+  <!-- Mockup -->
+  <div class="hero-visual" aria-hidden="true">
+    <div style="position:relative;">
+      <div class="ui-card">
+        <div class="ui-header">
+          <span class="ui-title">FPL COACH AI</span>
+          <span class="ui-meta">GW35 · BALANCED</span>
+        </div>
+        <div class="ui-body">
+          <div class="m-card">
+            <p class="m-label">Captain preview</p>
+            <div class="m-row"><span class="m-pos">MID</span><span class="m-name">Palmer</span><span class="m-pts">8.68</span></div>
+            <div class="m-fix">vs Nott'm Forest (H) <span class="m-fdr">FDR 2</span></div>
+            <div class="m-divider"></div>
+            <div class="m-row" style="opacity:.6"><span class="m-pos">MID</span><span class="m-name">Fernandes</span><span class="m-pts">6.79</span></div>
+            <div class="m-fix" style="opacity:.6">vs Liverpool (H) <span class="m-fdr m-fdr-amber">FDR 3</span></div>
+          </div>
+          <div class="m-card">
+            <p class="m-label">Transfer impact</p>
+            <div style="display:flex;align-items:center;gap:6px;font-size:10px;color:var(--text1);font-weight:600;margin-bottom:6px;">
+              <span style="color:var(--text3);font-size:8px;font-family:'JetBrains Mono',monospace;">OUT</span> Minteh <span style="color:var(--teal)">→</span> Okafor
+            </div>
+            <div style="display:flex;align-items:center;">
+              <span class="m-pill">★ COMPELLING</span>
+              <span class="m-impact">+15.1 pts / 3GW</span>
+            </div>
+          </div>
+          <div class="m-card">
+            <p class="m-label">Coach's view</p>
+            <p style="font-size:9px;color:var(--text2);line-height:1.6;">Two decisions to weigh this week. Fixtures align — your call which way to lean.</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Floating metric card -->
+      <div class="ui-card-float">
+        <p class="float-label">Points impact (3GW)</p>
+        <p class="float-score">+15.1</p>
+        <p class="float-desc">Transfer from Minteh → Okafor</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<!-- ── THE PROBLEM ── -->
+<section class="problem-section">
+  <div class="section-wrap">
+    <span class="eyebrow reveal">The problem</span>
+    <h2 class="section-title reveal rd1" style="margin-bottom:16px;">Every existing FPL tool<br>fails you in one of <em>two ways.</em></h2>
+    <p style="font-size:16px;color:var(--text2);max-width:520px;line-height:1.75;margin-bottom:48px;" class="reveal rd2">Eleven million managers. Two broken solutions. Nothing in between — until now.</p>
+
+    <div class="problem-grid">
+      <div class="problem-card bad reveal">
+        <div class="problem-icon">📊</div>
+        <div class="problem-title">The stats wall</div>
+        <div class="problem-body">Raw xG, xA, BPS, ICT, expected points, FDR adjusted for home/away, underlying metrics for the last 6 gameweeks across 700 players. All correct. All useless without knowing what to do with it. You need a data science degree just to work out whether to captain Salah.</div>
+        <div class="problem-verdict verdict-bad">✗ Tells you everything · Helps you with nothing</div>
+      </div>
+      <div class="problem-card bad reveal rd1">
+        <div class="problem-icon">🤖</div>
+        <div class="problem-title">The black-box oracle</div>
+        <div class="problem-body">"Our AI recommends: Captain Salah, transfer in Okafor, play Wildcard." No reasoning. No trade-offs explained. No acknowledgement that this week's fixtures are unusual. Just instructions — and when it goes wrong, you have no idea why you listened.</div>
+        <div class="problem-verdict verdict-bad">✗ Makes the call · Skips the thinking</div>
+      </div>
+    </div>
+
+    <div class="difference-card reveal" style="margin-top:20px;">
+      <div style="display:grid;grid-template-columns:1fr 1fr;gap:48px;align-items:center;">
+        <div>
+          <span class="eyebrow" style="margin-bottom:14px;">The FPL Coach AI way</span>
+          <h3 style="font-family:'Syne',sans-serif;font-size:clamp(24px,3vw,36px);font-weight:800;letter-spacing:-1px;color:var(--text1);margin-bottom:16px;line-height:1.1;">Coach not oracle.<br><em style="color:var(--teal)">Information, not instruction.</em></h3>
+          <p style="font-size:15px;color:var(--text2);line-height:1.75;margin-bottom:20px;">We watch the data so you don't have to. We surface the patterns that matter. We frame the trade-offs clearly. Then we step back — because the decision is yours, and it should be.</p>
+          <div class="problem-verdict verdict-good" style="font-family:'JetBrains Mono',monospace;font-size:10px;letter-spacing:1px;display:inline-flex;align-items:center;gap:6px;">✓ Surfaces the information · You make the call</div>
+        </div>
+        <div style="display:flex;flex-direction:column;gap:12px;">
+          <div style="background:var(--bg-deep);border:1px solid var(--border);border-radius:12px;padding:16px 20px;">
+            <p style="font-family:'JetBrains Mono',monospace;font-size:9px;color:var(--teal);letter-spacing:2px;text-transform:uppercase;margin-bottom:8px;">What you get</p>
+            <p style="font-size:14px;color:var(--text1);line-height:1.5;">Okafor has 4 goals in his last 5 home starts. Minteh has blanked in 3 of his last 4 away fixtures. The price point makes this a net-gain even with a −4.</p>
+          </div>
+          <div style="background:var(--bg-deep);border:1px solid var(--border);border-radius:12px;padding:16px 20px;">
+            <p style="font-family:'JetBrains Mono',monospace;font-size:9px;color:var(--text3);letter-spacing:2px;text-transform:uppercase;margin-bottom:8px;">Not what you get</p>
+            <p style="font-size:14px;color:var(--text3);line-height:1.5;text-decoration:line-through;opacity:0.5;">"Transfer in Okafor. Do it now."</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<!-- ── HOW IT WORKS ── -->
+<section class="how-section" id="how-it-works">
+  <div class="section-wrap">
+    <span class="eyebrow reveal">How it works</span>
+    <h2 class="section-title reveal rd1">Four coaching tools.<br>One consistent <em>philosophy.</em></h2>
+
+    <div class="features-grid">
+
+      <!-- Captain -->
+      <div class="feature-card reveal">
+        <div class="feat-icon">
+          <svg width="36" height="36" viewBox="0 0 36 36" fill="none">
+            <rect width="36" height="36" rx="9" fill="rgba(0,212,160,0.08)"/>
+            <path d="M18 10l2 6h6l-5 3.5 2 6L18 22l-5 3.5 2-6L10 16h6z" stroke="#00D4A0" stroke-width="1.5" stroke-linejoin="round"/>
+          </svg>
+        </div>
+        <div class="feat-tag">Captain analysis</div>
+        <div class="feat-title">The right captain pick. Explained.</div>
+        <div class="feat-body">Every gameweek, we model expected returns for your captaincy options across the next 3 gameweeks — not just this one. Fixture difficulty, home/away splits, recent form, and ownership context all factored in.</div>
+        <div class="feat-detail">
+          Ceiling vs. floor · differential value · ownership risk<br>
+          FDR adjusted for opponent form · blank/DGW context
+        </div>
+      </div>
+
+      <!-- Transfers -->
+      <div class="feature-card reveal rd1">
+        <div class="feat-icon">
+          <svg width="36" height="36" viewBox="0 0 36 36" fill="none">
+            <rect width="36" height="36" rx="9" fill="rgba(0,212,160,0.08)"/>
+            <path d="M10 18h16M20 12l6 6-6 6" stroke="#00D4A0" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+          </svg>
+        </div>
+        <div class="feat-tag">Transfer impact</div>
+        <div class="feat-title">Compelling, marginal, or trap.</div>
+        <div class="feat-body">We classify every potential transfer across three categories — so you know at a glance whether a move is genuinely worth making, borderline noise, or a week-5 FPL classic trap that will haunt you.</div>
+        <div class="feat-detail">
+          3-gameweek projected points delta · price change risk<br>
+          Bench coverage impact · template vs. differential trade-off
+        </div>
+      </div>
+
+      <!-- Formation -->
+      <div class="feature-card reveal rd2">
+        <div class="feat-icon">
+          <svg width="36" height="36" viewBox="0 0 36 36" fill="none">
+            <rect width="36" height="36" rx="9" fill="rgba(0,212,160,0.08)"/>
+            <circle cx="18" cy="12" r="2" fill="#00D4A0"/>
+            <circle cx="12" cy="20" r="2" fill="#00D4A0"/>
+            <circle cx="24" cy="20" r="2" fill="#00D4A0"/>
+            <circle cx="18" cy="26" r="2" fill="#00D4A0" opacity=".5"/>
+            <path d="M18 14v4M14 20h8" stroke="#00D4A0" stroke-width="1" opacity=".4"/>
+          </svg>
+        </div>
+        <div class="feat-tag">Formation optimiser</div>
+        <div class="feat-title">Your best XI, with alternatives.</div>
+        <div class="feat-body">Given your squad, which formation maximises expected points this week — and what are you trading off by choosing it? We model your top 2–3 lineup options side by side so you can see what each one costs.</div>
+        <div class="feat-detail">
+          Expected points per formation · bench order impact<br>
+          Injury/suspension risk flagging · differential scenarios
+        </div>
+      </div>
+
+      <!-- Chip strategy -->
+      <div class="feature-card reveal rd3">
+        <div class="feat-icon">
+          <svg width="36" height="36" viewBox="0 0 36 36" fill="none">
+            <rect width="36" height="36" rx="9" fill="rgba(255,184,0,0.08)"/>
+            <path d="M18 10v4M18 22v4M10 18h4M22 18h4" stroke="#FFB800" stroke-width="1.5" stroke-linecap="round"/>
+            <circle cx="18" cy="18" r="5" stroke="#FFB800" stroke-width="1.5"/>
+          </svg>
+        </div>
+        <div class="feat-tag">Chip strategy</div>
+        <div class="feat-title">When to play your chips.</div>
+        <div class="feat-body">Wildcard, Triple Captain, Free Hit, Bench Boost — each chip has an optimal window. We track the season-wide fixture calendar and flag when conditions are aligned for each chip, so you don't waste your Wildcard on a bad week.</div>
+        <div class="feat-detail">
+          DGW and BGW tracking · fixture swing windows<br>
+          Template chip timing vs. contrarian plays
+        </div>
+      </div>
+
+    </div>
+
+    <!-- Transfer classification explainer -->
+    <div style="margin-top:48px;" class="reveal">
+      <span class="eyebrow eyebrow-amber" style="margin-bottom:20px;">Transfer classification — how it works</span>
+      <div class="decision-types">
+        <div class="decision-row">
+          <div class="decision-type type-compelling">★ Compelling</div>
+          <div class="decision-desc">Clear points advantage over 3 gameweeks. Fixture swing in favour. Marginal cost justified. Make the transfer.</div>
+          <div class="decision-action">→ Strong signal to act</div>
+        </div>
+        <div class="decision-row">
+          <div class="decision-type type-marginal">◎ Marginal</div>
+          <div class="decision-desc">Within statistical noise — could go either way. The data doesn't support paying a premium for this. Hold unless you have a free hit.</div>
+          <div class="decision-action">→ Hold unless free transfer</div>
+        </div>
+        <div class="decision-row">
+          <div class="decision-type type-trap">✗ Trap</div>
+          <div class="decision-desc">Popular move with weak underlying rationale. High ownership pressure, low points ceiling. The kind of transfer you regret by Sunday night.</div>
+          <div class="decision-action">→ Resist the template</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<!-- ── COACH NOT ORACLE ── -->
+<section class="philosophy-section">
+  <div class="section-wrap">
+    <div class="philosophy-grid">
+      <div class="philosophy-text">
+        <span class="eyebrow reveal">Our philosophy</span>
+        <h2 class="section-title reveal rd1" style="margin-bottom:20px;">We built a coach.<br>Not an <em>oracle.</em></h2>
+        <p style="font-size:16px;color:var(--text2);line-height:1.8;margin-bottom:20px;" class="reveal rd2">The best FPL managers don't want to be told what to do. They want better information so they can make better calls. That's what we built.</p>
+        <p style="font-size:15px;color:var(--text2);line-height:1.8;margin-bottom:28px;" class="reveal rd3">FPL Coach AI watches the data you don't have time to watch, identifies the patterns you might miss, and explains its reasoning at every step. Then it steps back. The decision is always yours. The outcome is always yours.</p>
+        <div class="reveal rd4">
+          <a href="/manifesto" class="btn-text">Read the full manifesto →</a>
+        </div>
+      </div>
+
+      <div class="philosophy-visual reveal rd2">
+        <div class="compare-row">
+          <div class="compare-icon no">✗</div>
+          <div class="compare-content">
+            <div class="compare-label no">What we don't do</div>
+            <div class="compare-text"><strong>"Captain Salah this week."</strong> No reasoning. No trade-off. No context. Just instructions.</div>
+          </div>
+        </div>
+        <div class="compare-row">
+          <div class="compare-icon yes">✓</div>
+          <div class="compare-content">
+            <div class="compare-label yes">What we do</div>
+            <div class="compare-text"><strong>Salah's ceiling is higher (8.9 vs 7.2 xPts)</strong>, but he's facing a top-4 side away. Palmer's floor is safer with a home FDR 2 fixture. If you need a differential, Salah. If you need consistency, Palmer. Your call.</div>
+          </div>
+        </div>
+        <div class="compare-row">
+          <div class="compare-icon no">✗</div>
+          <div class="compare-content">
+            <div class="compare-label no">What we don't do</div>
+            <div class="compare-text"><strong>Pretend certainty we don't have.</strong> When data is inconclusive, we say so clearly.</div>
+          </div>
+        </div>
+        <div class="compare-row">
+          <div class="compare-icon yes">✓</div>
+          <div class="compare-content">
+            <div class="compare-label yes">What we do</div>
+            <div class="compare-text"><strong>Tell you when a transfer is within noise</strong> — because a marginal swap for −4 is the single most common FPL mistake.</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<!-- ── SEASON OVERVIEW ── -->
+<section class="season-section">
+  <div class="section-wrap">
+    <span class="eyebrow reveal">The season ahead</span>
+    <h2 class="section-title reveal rd1">38 gameweeks.<br><em>Every decision matters.</em></h2>
+
+    <div class="season-stats reveal rd2">
+      <div class="s-stat">
+        <div class="s-num">38</div>
+        <div class="s-label">Gameweeks to navigate</div>
+      </div>
+      <div class="s-stat">
+        <div class="s-num">11M</div>
+        <div class="s-label">FPL managers globally</div>
+      </div>
+      <div class="s-stat">
+        <div class="s-num">700+</div>
+        <div class="s-label">Players tracked weekly</div>
+      </div>
+      <div class="s-stat">
+        <div class="s-num">4</div>
+        <div class="s-label">Chips. Use them wisely.</div>
+      </div>
+    </div>
+
+    <div class="use-cases">
+      <div class="use-case reveal">
+        <div class="uc-gw">Thursday night</div>
+        <div class="uc-title">Who should I captain this week?</div>
+        <div class="uc-body">Fixture context, expected returns, ownership differential, ceiling vs. floor — laid out clearly so you can make the call with confidence before the deadline.</div>
+      </div>
+      <div class="use-case reveal rd1">
+        <div class="uc-gw">Transfer window</div>
+        <div class="uc-title">Is this transfer worth a −4?</div>
+        <div class="uc-body">We model the 3-gameweek points swing, flag whether the points premium justifies the hit, and tell you if the popular move is a trap. Compelling, marginal, or trap — clearly labelled.</div>
+      </div>
+      <div class="use-case reveal rd2">
+        <div class="uc-gw">Chip decisions</div>
+        <div class="uc-title">When should I play my Wildcard?</div>
+        <div class="uc-body">We track the fixture calendar all season and flag the optimal windows for each chip. No more wasting your Triple Captain on a blank gameweek because you panicked.</div>
+      </div>
+      <div class="use-case reveal rd3">
+        <div class="uc-gw">DGW / BGW weeks</div>
+        <div class="uc-title">How do I navigate blank and double gameweeks?</div>
+        <div class="uc-body">BGWs and DGWs swing seasons. We analyse your squad coverage and suggest the clearest path through — hold, Free Hit, or restructure — with the rationale explained.</div>
+      </div>
+      <div class="use-case reveal rd4">
+        <div class="uc-gw">Lineup selection</div>
+        <div class="uc-title">What's my best XI this week?</div>
+        <div class="uc-body">Given your squad, injuries, and this week's fixtures, we give you your best formation options — including what you're trading off with each one.</div>
+      </div>
+      <div class="use-case reveal rd5">
+        <div class="uc-gw">Season strategy</div>
+        <div class="uc-title">Am I building for now or the run-in?</div>
+        <div class="uc-body">The best FPL squads are structured around fixture swings. We help you understand whether your current squad is optimised for the next 3 gameweeks or the next 10 — and what that trade-off costs.</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<!-- ── WAITLIST ── -->
+<section class="fpl-waitlist" id="waitlist">
+  <span class="eyebrow" style="position:relative;z-index:1;">Join the waitlist</span>
+  <h2 class="reveal">Get early access to<br><em>FPL Coach AI.</em></h2>
+  <p class="waitlist-sub reveal rd1">Beta testing opens before GW1 of the 2026/27 season. Join the waitlist for early access, launch pricing, and a free season pass if you help us test.</p>
+
+  <div class="waitlist-perks reveal rd2">
+    <div class="waitlist-perk">
+      <svg width="16" height="16" viewBox="0 0 16 16" fill="none"><path d="M3 8l4 4 6-6" stroke="#00D4A0" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+      Early beta access
+    </div>
+    <div class="waitlist-perk">
+      <svg width="16" height="16" viewBox="0 0 16 16" fill="none"><path d="M3 8l4 4 6-6" stroke="#00D4A0" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+      Launch pricing locked
+    </div>
+    <div class="waitlist-perk">
+      <svg width="16" height="16" viewBox="0 0 16 16" fill="none"><path d="M3 8l4 4 6-6" stroke="#00D4A0" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+      Free season pass for testers
+    </div>
+  </div>
+
+  <div class="email-row reveal rd3">
+    <label for="fpl-email" class="sr-only">Email address</label>
+    <input type="email" id="fpl-email" class="email-input" placeholder="your@email.com" autocomplete="email">
+    <button class="email-submit" id="fpl-waitlist-btn" onclick="handleFPLWaitlist()">Join waitlist</button>
+  </div>
+  <p class="waitlist-confirm" id="fpl-waitlist-confirm">✓ You're on the list. We'll be in touch before August 2026.</p>
+  <p class="waitlist-note">No spam · Unsubscribe anytime · iOS launch: August 2026</p>
+</section>
+
+</div><!-- end .fpl-page -->
+
+
+<!-- ══ STUDIO FOOTER ══ -->
+<footer>
+  <div class="footer-col">
+    <div class="footer-brand">
+      <div aria-hidden="true"><svg width="24" height="24" viewBox="0 0 160 160"><path d="M80 148 A69 69 0 0 1 11 79" fill="none" stroke="#39FF7A" stroke-width="4.5" stroke-linecap="round" opacity=".15"/><path d="M80 148 A69 69 0 0 0 149 79" fill="none" stroke="#39FF7A" stroke-width="4.5" stroke-linecap="round" opacity=".15"/><path d="M80 132 A53 53 0 0 1 27 79" fill="none" stroke="#39FF7A" stroke-width="4.5" stroke-linecap="round" opacity=".32"/><path d="M80 132 A53 53 0 0 0 133 79" fill="none" stroke="#39FF7A" stroke-width="4.5" stroke-linecap="round" opacity=".32"/><path d="M80 116 A37 37 0 0 1 43 79" fill="none" stroke="#39FF7A" stroke-width="4.5" stroke-linecap="round" opacity=".55"/><path d="M80 116 A37 37 0 0 0 117 79" fill="none" stroke="#39FF7A" stroke-width="4.5" stroke-linecap="round" opacity=".55"/><path d="M80 100 A21 21 0 0 1 59 79" fill="none" stroke="#39FF7A" stroke-width="4.5" stroke-linecap="round" opacity=".75"/><path d="M80 100 A21 21 0 0 0 101 79" fill="none" stroke="#39FF7A" stroke-width="4.5" stroke-linecap="round" opacity=".75"/><path d="M80 88 A9 9 0 0 1 71 79" fill="none" stroke="#C084C8" stroke-width="4.5" stroke-linecap="round" opacity=".9"/><path d="M80 88 A9 9 0 0 0 89 79" fill="none" stroke="#C084C8" stroke-width="4.5" stroke-linecap="round" opacity=".9"/><circle cx="80" cy="79" r="7" fill="#39FF7A"/></svg></div>
+      <div><p class="footer-name">si187 <em>Apps</em></p><p class="footer-tagline">si187 Enterprises Ltd · London</p></div>
+    </div>
+    <div class="footer-social">
+      <a href="https://twitter.com/si187apps" aria-label="X">𝕏</a>
+      <a href="https://instagram.com/si187apps" aria-label="Instagram">◻</a>
+      <a href="https://tiktok.com/@si187apps" aria-label="TikTok">▷</a>
+    </div>
+  </div>
+  <div class="footer-col">
+    <p class="footer-nav-label">Studio</p>
+    <ul class="footer-nav-links">
+      <li><a href="/about">About</a></li>
+      <li><a href="/roadmap">Roadmap</a></li>
+      <li><a href="/manifesto">Manifesto</a></li>
+      <li><a href="/labs">Labs</a></li>
+    </ul>
+  </div>
+  <div class="footer-col">
+    <p class="footer-nav-label">FPL Coach AI</p>
+    <ul class="footer-nav-links">
+      <li><a href="/fpl-coach-ai">Overview</a></li>
+      <li><a href="#how-it-works">How it works</a></li>
+      <li><a href="#waitlist">Join waitlist</a></li>
+    </ul>
+  </div>
+  <div class="footer-col">
+    <p class="footer-nav-label">Contact</p>
+    <ul class="footer-nav-links"><li><a href="mailto:si@si187apps.com">si@si187apps.com</a></li></ul>
+  </div>
+  <div class="footer-bottom">
+    <p class="footer-copy">© 2026 si187 Enterprises Ltd. All rights reserved.</p>
+    <div class="footer-legal"><a href="/privacy">Privacy</a><a href="/terms">Terms</a></div>
+  </div>
+</footer>
+
+<script>
+// Nav
+const nav = document.getElementById('main-nav');
+window.addEventListener('scroll', () => { nav.classList.toggle('scrolled', window.scrollY > 60); }, { passive:true });
+
+// Mobile nav
+const mobileNav = document.getElementById('mobile-nav');
+function closeMobileNav() { mobileNav.classList.remove('open'); document.body.style.overflow = ''; }
+document.getElementById('nav-toggle-btn').addEventListener('click', () => { mobileNav.classList.add('open'); document.body.style.overflow = 'hidden'; });
+document.getElementById('mobile-nav-close').addEventListener('click', closeMobileNav);
+
+// Scroll reveal
+const revealObs = new IntersectionObserver(entries => {
+  entries.forEach(e => { if (e.isIntersecting) e.target.classList.add('visible'); });
+}, { threshold: 0.10 });
+document.querySelectorAll('.reveal').forEach(el => revealObs.observe(el));
+
+// Waitlist — Formspree
+const FORMSPREE_FPL_ID = 'YOUR_FPL_FORM_ID'; // Replace with Formspree form ID
+
+async function handleFPLWaitlist() {
+  const input   = document.getElementById('fpl-email');
+  const confirm = document.getElementById('fpl-waitlist-confirm');
+  const btn     = document.getElementById('fpl-waitlist-btn');
+  const email   = input.value.trim();
+
+  if (!email || !email.includes('@') || !email.includes('.')) {
+    input.style.borderColor = 'var(--amber)'; input.focus(); return;
+  }
+  btn.textContent = 'Joining...'; btn.disabled = true; input.style.borderColor = '';
+
+  if (FORMSPREE_FPL_ID === 'YOUR_FPL_FORM_ID') {
+    _showConfirm(input, btn, confirm); return;
+  }
+  try {
+    const res = await fetch(`https://formspree.io/f/${FORMSPREE_FPL_ID}`, {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json', 'Accept': 'application/json' },
+      body: JSON.stringify({ email, source: 'si187apps.com/fpl-coach-ai', submitted_at: new Date().toISOString() })
+    });
+    if (res.ok) { _showConfirm(input, btn, confirm); }
+    else { btn.textContent = 'Try again'; btn.disabled = false; }
+  } catch { btn.textContent = 'Try again'; btn.disabled = false; }
+}
+
+function _showConfirm(input, btn, confirm) {
+  input.style.display = 'none'; btn.style.display = 'none';
+  confirm.style.display = 'block';
+}
+
+document.getElementById('fpl-email').addEventListener('keydown', e => {
+  if (e.key === 'Enter') handleFPLWaitlist();
+  else document.getElementById('fpl-email').style.borderColor = '';
+});
+</script>
+</body>
+</html>
