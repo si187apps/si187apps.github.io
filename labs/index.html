@@ -1,0 +1,529 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>si187 Labs — Shape what we build next</title>
+<meta name="description" content="si187 Labs is how we validate ideas before we build them. Join the programme to shape the next si187 app — market testing, honest conversations, and early access to everything we ship.">
+<meta name="robots" content="index, follow">
+<link rel="canonical" href="https://si187apps.com/labs">
+<meta property="og:title" content="si187 Labs — Shape what we build next">
+<meta property="og:description" content="Market testing done right. Join si187 Labs to shape the next app we build.">
+<meta property="og:url" content="https://si187apps.com/labs">
+<meta property="og:image" content="https://si187apps.com/assets/images/og-card.png">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:site" content="@si187apps">
+<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 160 160'><rect width='160' height='160' fill='%23050E05'/><path d='M80 148 A69 69 0 0 1 11 79' fill='none' stroke='%2339FF7A' stroke-width='4.5' stroke-linecap='round' opacity='.15'/><path d='M80 148 A69 69 0 0 0 149 79' fill='none' stroke='%2339FF7A' stroke-width='4.5' stroke-linecap='round' opacity='.15'/><path d='M80 132 A53 53 0 0 1 27 79' fill='none' stroke='%2339FF7A' stroke-width='4.5' stroke-linecap='round' opacity='.32'/><path d='M80 132 A53 53 0 0 0 133 79' fill='none' stroke='%2339FF7A' stroke-width='4.5' stroke-linecap='round' opacity='.32'/><path d='M80 116 A37 37 0 0 1 43 79' fill='none' stroke='%2339FF7A' stroke-width='4.5' stroke-linecap='round' opacity='.55'/><path d='M80 116 A37 37 0 0 0 117 79' fill='none' stroke='%2339FF7A' stroke-width='4.5' stroke-linecap='round' opacity='.55'/><path d='M80 100 A21 21 0 0 1 59 79' fill='none' stroke='%2339FF7A' stroke-width='4.5' stroke-linecap='round' opacity='.75'/><path d='M80 100 A21 21 0 0 0 101 79' fill='none' stroke='%2339FF7A' stroke-width='4.5' stroke-linecap='round' opacity='.75'/><path d='M80 88 A9 9 0 0 1 71 79' fill='none' stroke='%23C084C8' stroke-width='4.5' stroke-linecap='round' opacity='.92'/><path d='M80 88 A9 9 0 0 0 89 79' fill='none' stroke='%23C084C8' stroke-width='4.5' stroke-linecap='round' opacity='.92'/><circle cx='80' cy='79' r='7' fill='%2339FF7A'/></svg>">
+<meta name="theme-color" content="#050E05">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Syne:wght@700;800&family=Inter:wght@300;400;500;600&family=JetBrains+Mono:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="/assets/css/site.css">
+<style>
+
+/* Labs colour accent — slightly warmer green, distinct from main brand */
+.labs-accent { color: var(--green); }
+
+/* Hero badge — Labs specific */
+.labs-badge {
+  display: inline-flex; align-items: center; gap: 10px;
+  background: rgba(57,255,122,0.07); border: 1px solid rgba(57,255,122,0.2);
+  border-radius: 100px; padding: 8px 18px; margin-bottom: 36px;
+}
+.labs-badge-icon { font-family: 'JetBrains Mono', monospace; font-size: 16px; color: var(--green); }
+.labs-badge-text { font-family: 'JetBrains Mono', monospace; font-size: 11px; letter-spacing: 1px; color: var(--green); }
+
+/* What Labs members get */
+.perks-grid { display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 16px; }
+.perk-card {
+  background: var(--bg-card); border: 1px solid var(--bg-border);
+  border-radius: 16px; padding: 28px;
+  display: flex; flex-direction: column; gap: 16px;
+  transition: border-color 0.2s;
+}
+.perk-card:hover { border-color: rgba(57,255,122,0.25); }
+.perk-icon { width: 40px; height: 40px; }
+.perk-title { font-size: 16px; font-weight: 600; color: var(--text1); }
+.perk-body { font-size: 14px; color: var(--magenta); line-height: 1.65; }
+
+/* How Labs works — steps */
+.labs-steps { display: grid; grid-template-columns: 1fr 1fr; gap: 3px; margin-bottom: 3px; }
+.labs-step {
+  background: var(--bg-card); border: 1px solid var(--bg-border);
+  border-radius: 0; padding: 36px 40px;
+  display: flex; gap: 24px;
+}
+.labs-step:nth-child(1) { border-radius: 16px 0 0 0; }
+.labs-step:nth-child(2) { border-radius: 0 16px 0 0; }
+.labs-step:nth-child(3) { border-radius: 0 0 0 16px; }
+.labs-step:nth-child(4) { border-radius: 0 0 16px 0; }
+.step-number { font-family: 'Syne', sans-serif; font-size: 48px; font-weight: 800; color: var(--bg-border); letter-spacing: -2px; line-height: 1; flex-shrink: 0; width: 56px; }
+.step-content {}
+.step-title { font-family: 'Syne', sans-serif; font-size: 18px; font-weight: 800; letter-spacing: -0.3px; color: var(--text1); margin-bottom: 10px; }
+.step-body { font-size: 14px; color: var(--magenta); line-height: 1.7; }
+
+/* The honest bit */
+.honest-block {
+  background: var(--bg-card); border: 1px solid var(--bg-border);
+  border-left: 3px solid var(--magenta);
+  border-radius: 0 16px 16px 0; padding: 36px 40px;
+}
+.honest-block h3 { font-family: 'Syne', sans-serif; font-size: 22px; font-weight: 800; letter-spacing: -0.5px; color: var(--text1); margin-bottom: 16px; }
+.honest-block p { font-size: 15px; color: var(--magenta); line-height: 1.75; margin-bottom: 14px; }
+
+/* Sign-up form */
+.labs-form-wrap {
+  background: var(--bg-card); border: 1px solid var(--bg-border);
+  border-radius: 24px; padding: 56px;
+  display: grid; grid-template-columns: 1fr 1fr; gap: 56px; align-items: center;
+}
+.form-fields { display: flex; flex-direction: column; gap: 14px; }
+.form-row { display: flex; flex-direction: column; gap: 6px; }
+.form-label { font-family: 'JetBrains Mono', monospace; font-size: 10px; letter-spacing: 2px; color: var(--magenta-dim); text-transform: uppercase; }
+.form-input {
+  background: var(--bg-raised); border: 1px solid var(--bg-border);
+  border-radius: 10px; padding: 13px 16px;
+  color: var(--text1); font-size: 14px;
+  font-family: 'Inter', sans-serif; outline: none;
+  transition: border-color 0.2s;
+}
+.form-input::placeholder { color: var(--magenta); opacity: 0.4; }
+.form-input:focus { border-color: var(--green-dim); }
+.form-select {
+  background: var(--bg-raised); border: 1px solid var(--bg-border);
+  border-radius: 10px; padding: 13px 16px;
+  color: var(--text1); font-size: 14px;
+  font-family: 'Inter', sans-serif; outline: none;
+  appearance: none; cursor: pointer;
+  transition: border-color 0.2s;
+}
+.form-select:focus { border-color: var(--green-dim); }
+.form-select option { background: var(--bg-card); }
+.form-textarea {
+  background: var(--bg-raised); border: 1px solid var(--bg-border);
+  border-radius: 10px; padding: 13px 16px;
+  color: var(--text1); font-size: 14px;
+  font-family: 'Inter', sans-serif; outline: none;
+  resize: vertical; min-height: 100px;
+  transition: border-color 0.2s;
+}
+.form-textarea::placeholder { color: var(--magenta); opacity: 0.4; }
+.form-textarea:focus { border-color: var(--green-dim); }
+.form-submit {
+  background: var(--green); color: var(--bg);
+  border: none; border-radius: 10px;
+  padding: 14px 28px; font-weight: 700; font-size: 15px;
+  cursor: pointer; font-family: 'Inter', sans-serif;
+  width: 100%; margin-top: 4px;
+  transition: opacity 0.15s;
+}
+.form-submit:hover { opacity: 0.88; }
+.form-note { font-family: 'JetBrains Mono', monospace; font-size: 10px; color: var(--magenta); opacity: 0.5; text-align: center; margin-top: 10px; }
+.form-confirm { display:none; font-family:'JetBrains Mono',monospace; font-size:13px; color:var(--green); text-align:center; margin-top:16px; }
+
+/* Existing members question block */
+.questions-grid { display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 16px; }
+.question-card {
+  background: var(--bg-card); border: 1px solid var(--bg-border);
+  border-radius: 14px; padding: 24px;
+  transition: border-color 0.2s;
+}
+.question-card:hover { border-color: var(--text3); }
+.question-tag { font-family: 'JetBrains Mono', monospace; font-size: 9px; letter-spacing: 2px; color: var(--magenta-dim); text-transform: uppercase; margin-bottom: 12px; }
+.question-text { font-size: 15px; font-weight: 500; color: var(--text1); line-height: 1.5; margin-bottom: 10px; }
+.question-cta { font-family: 'JetBrains Mono', monospace; font-size: 11px; color: var(--magenta); opacity: 0.55; }
+
+@media (max-width: 900px) {
+  .perks-grid { grid-template-columns: 1fr; }
+  .labs-steps { grid-template-columns: 1fr; }
+  .labs-step { border-radius: 0 !important; }
+  .labs-step:first-child { border-radius: 16px 16px 0 0 !important; }
+  .labs-step:last-child { border-radius: 0 0 16px 16px !important; }
+  .labs-form-wrap { grid-template-columns: 1fr; gap:36px; padding:36px 24px; }
+  .questions-grid { grid-template-columns: 1fr; }
+}
+</style>
+</head>
+<body>
+
+<!-- Skip link (accessibility) -->
+<a href="#main" class="skip-link">Skip to main content</a>
+
+<!-- ══ NAV ══ -->
+<nav id="main-nav">
+  <a href="/" class="nav-logo" aria-label="si187 Apps home">
+    <div class="fp-mark" aria-hidden="true"><svg width="28" height="28" viewBox="0 0 160 160"><path d="M80 148 A69 69 0 0 1 11 79" fill="none" stroke="#39FF7A" stroke-width="4.5" stroke-linecap="round" opacity=".11"/><path d="M80 148 A69 69 0 0 0 149 79" fill="none" stroke="#39FF7A" stroke-width="4.5" stroke-linecap="round" opacity=".11"/><path d="M80 132 A53 53 0 0 1 27 79" fill="none" stroke="#39FF7A" stroke-width="4.5" stroke-linecap="round" opacity=".24"/><path d="M80 132 A53 53 0 0 0 133 79" fill="none" stroke="#39FF7A" stroke-width="4.5" stroke-linecap="round" opacity=".24"/><path d="M80 116 A37 37 0 0 1 43 79" fill="none" stroke="#39FF7A" stroke-width="4.5" stroke-linecap="round" opacity=".44"/><path d="M80 116 A37 37 0 0 0 117 79" fill="none" stroke="#39FF7A" stroke-width="4.5" stroke-linecap="round" opacity=".44"/><path d="M80 100 A21 21 0 0 1 59 79" fill="none" stroke="#39FF7A" stroke-width="4.5" stroke-linecap="round" opacity=".68"/><path d="M80 100 A21 21 0 0 0 101 79" fill="none" stroke="#39FF7A" stroke-width="4.5" stroke-linecap="round" opacity=".68"/><path d="M80 88 A9 9 0 0 1 71 79" fill="none" stroke="#C084C8" stroke-width="4.5" stroke-linecap="round" opacity=".92"/><path d="M80 88 A9 9 0 0 0 89 79" fill="none" stroke="#C084C8" stroke-width="4.5" stroke-linecap="round" opacity=".92"/><circle cx="80" cy="79" r="7" fill="#39FF7A"/></svg></div>
+    <span class="nav-wordmark">si187 <em>Apps</em></span>
+  </a>
+  <ul class="nav-links">
+    <li><a href="/about">About</a></li>
+    <li><a href="/roadmap">Roadmap</a></li>
+    <li><a href="/manifesto">Manifesto</a></li>
+    <li><a href="/labs" class="active">Labs</a></li>
+    <li><a href="/#waitlist" class="nav-cta">Early access</a></li>
+  </ul>
+  <button class="nav-toggle" aria-label="Open menu" id="nav-toggle-btn"><span></span><span></span><span></span></button>
+</nav>
+<div class="mobile-nav" id="mobile-nav">
+  <button class="mobile-nav-close" id="mobile-nav-close" aria-label="Close">✕</button>
+  <a href="/" onclick="closeMobileNav()">Home</a>
+  <a href="/about" onclick="closeMobileNav()">About</a>
+  <a href="/roadmap" onclick="closeMobileNav()">Roadmap</a>
+  <a href="/manifesto" onclick="closeMobileNav()">Manifesto</a>
+  <a href="/labs" onclick="closeMobileNav()">Labs</a>
+  <a href="/#waitlist" onclick="closeMobileNav()" style="color:var(--green)">Early access</a>
+</div>
+
+
+<!-- ══ HERO ══ -->
+<div style="position:relative; overflow:hidden; border-bottom:1px solid var(--bg-border);">
+  <div style="position:absolute;inset:0;background:radial-gradient(ellipse 60% 70% at 80% 50%, rgba(57,255,122,0.06) 0%, transparent 70%);pointer-events:none;"></div>
+  <div class="page-hero">
+    <div class="labs-badge reveal">
+      <span class="labs-badge-icon">⬡</span>
+      <span class="labs-badge-text">si187 Labs · Open now</span>
+    </div>
+    <h1 class="reveal reveal-d1">Shape what<br>we build <em>next.</em></h1>
+    <p class="page-hero-sub reveal reveal-d2">
+      The best apps are built with the people who use them — not shipped to them. Labs is how we make sure the next si187 app is something you actually need.
+    </p>
+    <div style="margin-top:36px;" class="reveal reveal-d3">
+      <a href="#join" class="btn-primary">
+        Join si187 Labs
+        <svg width="14" height="14" viewBox="0 0 14 14" fill="none"><path d="M7 2v10M2 7l5 5 5-5" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>
+      </a>
+    </div>
+  </div>
+</div>
+
+
+<!-- ══ WHAT YOU GET ══ -->
+<div class="section-wrap">
+  <span class="eyebrow reveal">What you get</span>
+  <h2 class="section-title reveal reveal-d1">Labs membership<br>is <em>genuinely useful.</em></h2>
+
+  <div class="perks-grid">
+    <div class="perk-card reveal">
+      <svg class="perk-icon" viewBox="0 0 40 40" fill="none">
+        <rect width="40" height="40" rx="10" fill="rgba(57,255,122,0.08)"/>
+        <path d="M12 20h16M20 12v16" stroke="#39FF7A" stroke-width="2" stroke-linecap="round"/>
+      </svg>
+      <div class="perk-title">Early access to every app</div>
+      <div class="perk-body">Labs members get TestFlight access before public launch — every time. FPL Coach AI, and every si187 app that comes after it. First in, always.</div>
+    </div>
+    <div class="perk-card reveal reveal-d1">
+      <svg class="perk-icon" viewBox="0 0 40 40" fill="none">
+        <rect width="40" height="40" rx="10" fill="rgba(57,255,122,0.08)"/>
+        <path d="M10 20c0-5.5 4.5-10 10-10s10 4.5 10 10-4.5 10-10 10" stroke="#39FF7A" stroke-width="2" stroke-linecap="round"/>
+        <path d="M20 24l-4-4 4-4" stroke="#39FF7A" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+      </svg>
+      <div class="perk-title">Launch pricing — permanent</div>
+      <div class="perk-body">Labs members who join before launch lock in early-access pricing for life. Not a limited-time promotion — a recognition that you're here before the product is proven.</div>
+    </div>
+    <div class="perk-card reveal reveal-d2">
+      <svg class="perk-icon" viewBox="0 0 40 40" fill="none">
+        <rect width="40" height="40" rx="10" fill="rgba(57,255,122,0.08)"/>
+        <circle cx="20" cy="16" r="6" stroke="#39FF7A" stroke-width="2"/>
+        <path d="M10 32c0-5.5 4.5-9 10-9s10 3.5 10 9" stroke="#39FF7A" stroke-width="2" stroke-linecap="round"/>
+      </svg>
+      <div class="perk-title">Direct line to the builder</div>
+      <div class="perk-body">Not a feedback form. Not a support queue. Labs members email studio@si187apps.com and hear back from the person who actually built what they're talking about. We read and respond to everything.</div>
+    </div>
+    <div class="perk-card reveal reveal-d3">
+      <svg class="perk-icon" viewBox="0 0 40 40" fill="none">
+        <rect width="40" height="40" rx="10" fill="rgba(57,255,122,0.08)"/>
+        <path d="M12 28l6-12 6 6 6-10" stroke="#39FF7A" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+      </svg>
+      <div class="perk-title">Roadmap influence</div>
+      <div class="perk-body">Labs members are the first people we talk to when we're deciding what to build next. Your frustrations and suggestions don't go into a backlog — they shape the next product.</div>
+    </div>
+    <div class="perk-card reveal reveal-d4">
+      <svg class="perk-icon" viewBox="0 0 40 40" fill="none">
+        <rect width="40" height="40" rx="10" fill="rgba(57,255,122,0.08)"/>
+        <rect x="10" y="14" width="20" height="16" rx="3" stroke="#39FF7A" stroke-width="2"/>
+        <path d="M10 20h20" stroke="#39FF7A" stroke-width="2"/>
+        <path d="M16 10v4M24 10v4" stroke="#39FF7A" stroke-width="2" stroke-linecap="round"/>
+      </svg>
+      <div class="perk-title">Monthly studio updates</div>
+      <div class="perk-body">Real updates — what shipped, what didn't, what we learned, what we're changing. Not a newsletter. An honest account of what's actually happening inside the studio.</div>
+    </div>
+    <div class="perk-card reveal reveal-d5">
+      <svg class="perk-icon" viewBox="0 0 40 40" fill="none">
+        <rect width="40" height="40" rx="10" fill="rgba(57,255,122,0.08)"/>
+        <path d="M20 12l2.4 7.2H28l-5.2 3.6 2 6.2L20 25l-4.8 4 2-6.2L12 19.2h5.6z" stroke="#39FF7A" stroke-width="1.8" stroke-linejoin="round"/>
+      </svg>
+      <div class="perk-title">Attribution</div>
+      <div class="perk-body">If your idea or feedback shapes a feature that ships, we credit you in the release notes — publicly, with your permission. You're a contributor, not just a user.</div>
+    </div>
+  </div>
+</div>
+
+<hr class="section-divider">
+
+
+<!-- ══ HOW IT WORKS ══ -->
+<div class="section-wrap">
+  <span class="eyebrow reveal">How Labs works</span>
+  <h2 class="section-title reveal reveal-d1">Market testing done <em>honestly.</em></h2>
+  <p style="font-size:16px;color:var(--magenta);max-width:540px;line-height:1.75;margin-bottom:48px;" class="reveal reveal-d2">
+    Most "user research" is confirmation bias in a trench coat. We do it differently. Here's the actual process.
+  </p>
+
+  <div class="labs-steps reveal">
+    <div class="labs-step">
+      <div class="step-number">01</div>
+      <div class="step-content">
+        <div class="step-title">You join and we listen</div>
+        <div class="step-body">When you sign up, you tell us about yourself — what you use, what frustrates you, what you've tried and abandoned. We read every single response. This isn't a database segmentation exercise. We're looking for problems.</div>
+      </div>
+    </div>
+    <div class="labs-step">
+      <div class="step-number">02</div>
+      <div class="step-content">
+        <div class="step-title">We bring you real questions</div>
+        <div class="step-body">Not surveys. Not focus groups. We'll reach out directly when we're working through a specific question — "how do you currently handle X?" or "what would make you switch away from the thing you use for Y?" Real conversations, not checkbox forms.</div>
+      </div>
+    </div>
+    <div class="labs-step">
+      <div class="step-number">03</div>
+      <div class="step-content">
+        <div class="step-title">We show you rough work</div>
+        <div class="step-body">Labs members see concepts before they're polished. Early screen designs, unfinished flows, competing approaches we're unsure about. Your reaction to rough work is more honest than your reaction to a finished product.</div>
+      </div>
+    </div>
+    <div class="labs-step">
+      <div class="step-number">04</div>
+      <div class="step-content">
+        <div class="step-title">We tell you what we did with it</div>
+        <div class="step-body">After every research cycle, we share what we heard, what changed as a result, and what we decided not to do despite hearing it — and why. Accountability goes both ways. If you give us your time, we owe you transparency about what happened to it.</div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<hr class="section-divider">
+
+
+<!-- ══ THE HONEST BIT ══ -->
+<div class="section-wrap">
+  <div class="honest-block reveal">
+    <h3>The honest bit.</h3>
+    <p>Labs isn't an advisory board. We won't always do what you ask. Sometimes what users say they want and what actually helps them are different things — and it's our job to figure out which is which.</p>
+    <p>What we commit to: we'll always tell you what we heard, what we built based on it, and what we chose to ignore and why. You'll never wonder what happened to the thing you suggested.</p>
+    <p style="margin-bottom:0;">We also won't pretend that the research is the decider. The builder is the decider. Research reduces risk. It doesn't eliminate judgement.</p>
+  </div>
+</div>
+
+
+<!-- ══ CURRENT QUESTIONS ══ -->
+<div class="section-wrap">
+  <span class="eyebrow reveal">What we're researching now</span>
+  <h2 class="section-title reveal reveal-d1">Live questions from<br>the <em>studio.</em></h2>
+  <p style="font-size:15px;color:var(--magenta);max-width:500px;line-height:1.75;margin-bottom:40px;" class="reveal reveal-d2">
+    These are the things we're actively trying to understand. If any of these resonate, email us — this is exactly the kind of input we're looking for.
+  </p>
+
+  <div class="questions-grid">
+    <div class="question-card reveal">
+      <div class="question-tag">FPL Coach AI</div>
+      <div class="question-text">What does the Friday night FPL decision-making process actually look like for you?</div>
+      <div class="question-cta">→ studio@si187apps.com</div>
+    </div>
+    <div class="question-card reveal reveal-d1">
+      <div class="question-tag">FPL Coach AI</div>
+      <div class="question-text">Which FPL decision do you most often get wrong despite knowing better?</div>
+      <div class="question-cta">→ studio@si187apps.com</div>
+    </div>
+    <div class="question-card reveal reveal-d2">
+      <div class="question-tag">Future apps</div>
+      <div class="question-text">Outside of FPL, what area of your life has no app that actually helps you think more clearly?</div>
+      <div class="question-cta">→ studio@si187apps.com</div>
+    </div>
+    <div class="question-card reveal">
+      <div class="question-tag">Future apps</div>
+      <div class="question-text">What app have you downloaded, used once, and never opened again — and why did it fail you?</div>
+      <div class="question-cta">→ studio@si187apps.com</div>
+    </div>
+    <div class="question-card reveal reveal-d1">
+      <div class="question-tag">Product philosophy</div>
+      <div class="question-text">When is the last time an app actually made you better at something — not just more efficient?</div>
+      <div class="question-cta">→ studio@si187apps.com</div>
+    </div>
+    <div class="question-card reveal reveal-d2">
+      <div class="question-tag">Open</div>
+      <div class="question-text">What problem would you pay for a genuinely good app to solve — that doesn't exist yet?</div>
+      <div class="question-cta">→ studio@si187apps.com</div>
+    </div>
+  </div>
+</div>
+
+<hr class="section-divider">
+
+
+<!-- ══ SIGN UP FORM ══ -->
+<div class="section-wrap" id="join">
+  <div class="labs-form-wrap reveal">
+    <div>
+      <span class="eyebrow">Join si187 Labs</span>
+      <h2 class="section-title" style="margin-bottom:16px;">Ready to shape<br>what comes <em>next?</em></h2>
+      <p style="font-size:15px;color:var(--magenta);line-height:1.75;margin-bottom:24px;">Fill in the form and we'll be in touch — no long surveys, no onboarding flow. Just a reply from a real person.</p>
+      <div style="display:flex;flex-direction:column;gap:8px;">
+        <div style="display:flex;align-items:center;gap:10px;font-size:14px;color:var(--text2);">
+          <svg width="16" height="16" viewBox="0 0 16 16" fill="none"><path d="M3 8l4 4 6-6" stroke="#39FF7A" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          Early access to FPL Coach AI and every future app
+        </div>
+        <div style="display:flex;align-items:center;gap:10px;font-size:14px;color:var(--text2);">
+          <svg width="16" height="16" viewBox="0 0 16 16" fill="none"><path d="M3 8l4 4 6-6" stroke="#39FF7A" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          Permanent launch pricing
+        </div>
+        <div style="display:flex;align-items:center;gap:10px;font-size:14px;color:var(--text2);">
+          <svg width="16" height="16" viewBox="0 0 16 16" fill="none"><path d="M3 8l4 4 6-6" stroke="#39FF7A" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          Direct input on what we build
+        </div>
+        <div style="display:flex;align-items:center;gap:10px;font-size:14px;color:var(--text2);">
+          <svg width="16" height="16" viewBox="0 0 16 16" fill="none"><path d="M3 8l4 4 6-6" stroke="#39FF7A" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          Monthly studio update from behind the scenes
+        </div>
+      </div>
+    </div>
+
+    <div>
+      <div class="form-fields" id="labs-form">
+        <div class="form-row">
+          <label class="form-label" for="labs-name">Name</label>
+          <input type="text" id="labs-name" class="form-input" placeholder="Your name">
+        </div>
+        <div class="form-row">
+          <label class="form-label" for="labs-email">Email</label>
+          <input type="email" id="labs-email" class="form-input" placeholder="your@email.com" autocomplete="email">
+        </div>
+        <div class="form-row">
+          <label class="form-label" for="labs-interest">Primary interest</label>
+          <select id="labs-interest" class="form-select">
+            <option value="">Select one...</option>
+            <option value="fpl">FPL / Fantasy Football</option>
+            <option value="sports">Sports in general</option>
+            <option value="finance">Personal finance / investing</option>
+            <option value="productivity">Productivity / decision-making</option>
+            <option value="other">Something else</option>
+          </select>
+        </div>
+        <div class="form-row">
+          <label class="form-label" for="labs-problem">What problem do you most want solved? (optional)</label>
+          <textarea id="labs-problem" class="form-textarea" placeholder="Tell us about a frustration — an app that failed you, a decision you make badly, something that has no good solution yet..."></textarea>
+        </div>
+        <button class="form-submit" id="labs-submit" onclick="handleLabsSubmit()">Join si187 Labs</button>
+        <p class="form-confirm" id="labs-confirm">✓ You're in. Expect a reply from studio@si187apps.com within a few days.</p>
+        <p class="form-note">No spam. No bulk emails. Just genuine communication from the studio.</p>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+<!-- ══ FOOTER ══ -->
+<footer>
+  <div class="footer-col">
+    <div class="footer-brand">
+      <div class="fp-mark" aria-hidden="true"><svg width="24" height="24" viewBox="0 0 160 160"><path d="M80 148 A69 69 0 0 1 11 79" fill="none" stroke="#39FF7A" stroke-width="4.5" stroke-linecap="round" opacity=".15"/><path d="M80 148 A69 69 0 0 0 149 79" fill="none" stroke="#39FF7A" stroke-width="4.5" stroke-linecap="round" opacity=".15"/><path d="M80 132 A53 53 0 0 1 27 79" fill="none" stroke="#39FF7A" stroke-width="4.5" stroke-linecap="round" opacity=".32"/><path d="M80 132 A53 53 0 0 0 133 79" fill="none" stroke="#39FF7A" stroke-width="4.5" stroke-linecap="round" opacity=".32"/><path d="M80 116 A37 37 0 0 1 43 79" fill="none" stroke="#39FF7A" stroke-width="4.5" stroke-linecap="round" opacity=".55"/><path d="M80 116 A37 37 0 0 0 117 79" fill="none" stroke="#39FF7A" stroke-width="4.5" stroke-linecap="round" opacity=".55"/><path d="M80 100 A21 21 0 0 1 59 79" fill="none" stroke="#39FF7A" stroke-width="4.5" stroke-linecap="round" opacity=".75"/><path d="M80 100 A21 21 0 0 0 101 79" fill="none" stroke="#39FF7A" stroke-width="4.5" stroke-linecap="round" opacity=".75"/><path d="M80 88 A9 9 0 0 1 71 79" fill="none" stroke="#C084C8" stroke-width="4.5" stroke-linecap="round" opacity=".9"/><path d="M80 88 A9 9 0 0 0 89 79" fill="none" stroke="#C084C8" stroke-width="4.5" stroke-linecap="round" opacity=".9"/><circle cx="80" cy="79" r="7" fill="#39FF7A"/></svg></div>
+      <div><p class="footer-name">si187 <em>Apps</em></p><p class="footer-tagline">si187 Enterprises Ltd · London</p></div>
+    </div>
+    <div class="footer-social">
+      <a href="https://twitter.com/si187apps" aria-label="X">𝕏</a>
+      <a href="https://instagram.com/si187apps" aria-label="Instagram">◻</a>
+      <a href="https://tiktok.com/@si187apps" aria-label="TikTok">▷</a>
+    </div>
+  </div>
+  <div class="footer-col">
+    <p class="footer-nav-label">Studio</p>
+    <ul class="footer-nav-links">
+      <li><a href="/about">About</a></li>
+      <li><a href="/roadmap">Roadmap</a></li>
+      <li><a href="/manifesto">Manifesto</a></li>
+      <li><a href="/labs">Labs</a></li>
+    </ul>
+  </div>
+  <div class="footer-col">
+    <p class="footer-nav-label">Apps</p>
+    <ul class="footer-nav-links">
+      <li><a href="/fpl-coach-ai">FPL Coach AI</a></li>
+      <li><a href="/#waitlist">Early access</a></li>
+    </ul>
+  </div>
+  <div class="footer-col">
+    <p class="footer-nav-label">Contact</p>
+    <ul class="footer-nav-links"><li><a href="mailto:studio@si187apps.com">studio@si187apps.com</a></li></ul>
+  </div>
+  <div class="footer-bottom">
+    <p class="footer-copy">© 2026 si187 Enterprises Ltd. All rights reserved.</p>
+    <div class="footer-legal"><a href="/privacy">Privacy</a><a href="/terms">Terms</a><a href="#" onclick="window.si187CookiePrefs && window.si187CookiePrefs(); return false;" style="cursor:pointer;">Cookie preferences</a></div>
+  </div>
+</footer>
+
+<script src="/assets/js/site.js"></script>
+<script>
+// Formspree Labs endpoint
+// Form: "si187 Labs Sign-up" — submissions land in studio@si187apps.com
+// Dashboard: https://formspree.io/forms/xrejabvo
+const FORMSPREE_LABS_ID = 'xrejabvo';
+
+async function handleLabsSubmit() {
+  const name      = document.getElementById('labs-name').value.trim();
+  const email     = document.getElementById('labs-email').value.trim();
+  const interest  = document.getElementById('labs-interest').value;
+  const problem   = document.getElementById('labs-problem').value.trim();
+  const btn       = document.getElementById('labs-submit');
+  const confirm   = document.getElementById('labs-confirm');
+
+  if (!email || !email.includes('@') || !email.includes('.')) {
+    document.getElementById('labs-email').style.borderColor = 'var(--magenta)';
+    document.getElementById('labs-email').focus();
+    return;
+  }
+
+  btn.textContent = 'Joining...';
+  btn.disabled = true;
+
+  if (!FORMSPREE_LABS_ID) {
+    console.warn('Labs Formspree ID not set — dev mode');
+    _showLabsConfirm(btn, confirm);
+    return;
+  }
+
+  try {
+    const res = await fetch(`https://formspree.io/f/${FORMSPREE_LABS_ID}`, {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json', 'Accept': 'application/json' },
+      body: JSON.stringify({
+        name, email, interest, problem,
+        _replyto: email,
+        _subject: `New Labs signup — ${name || email}`,
+        source: 'si187apps.com/labs',
+        submitted_at: new Date().toISOString()
+      })
+    });
+
+    if (res.ok) {
+      _showLabsConfirm(btn, confirm);
+    } else {
+      btn.textContent = 'Try again';
+      btn.disabled = false;
+      btn.style.background = 'var(--magenta)';
+    }
+  } catch (err) {
+    btn.textContent = 'Try again';
+    btn.disabled = false;
+  }
+}
+
+function _showLabsConfirm(btn, confirm) {
+  btn.style.display = 'none';
+  confirm.style.display = 'block';
+  document.querySelectorAll('.form-row').forEach(r => r.style.opacity = '0.4');
+}
+</script>
+
+<!-- Cookie consent + GA4 (consent-gated) -->
+<script src="/assets/js/cookie-banner.js"></script>
+</body>
+</html>
