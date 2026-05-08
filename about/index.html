@@ -1,0 +1,438 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>About — si187 Apps</title>
+<meta name="description" content="The story behind si187 Apps. An independent London-based mobile studio built on a simple belief: most apps are built for the market, not for the user. We build for the user.">
+<meta name="robots" content="index, follow">
+<link rel="canonical" href="https://si187apps.com/about">
+<meta property="og:title" content="About — si187 Apps">
+<meta property="og:description" content="The story behind si187 Apps. Independent. London-based. Building properly.">
+<meta property="og:url" content="https://si187apps.com/about">
+<meta property="og:image" content="https://si187apps.com/assets/images/og-card.png">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:site" content="@si187apps">
+<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 160 160'><rect width='160' height='160' fill='%23050E05'/><path d='M80 148 A69 69 0 0 1 11 79' fill='none' stroke='%2339FF7A' stroke-width='4.5' stroke-linecap='round' opacity='.15'/><path d='M80 148 A69 69 0 0 0 149 79' fill='none' stroke='%2339FF7A' stroke-width='4.5' stroke-linecap='round' opacity='.15'/><path d='M80 132 A53 53 0 0 1 27 79' fill='none' stroke='%2339FF7A' stroke-width='4.5' stroke-linecap='round' opacity='.32'/><path d='M80 132 A53 53 0 0 0 133 79' fill='none' stroke='%2339FF7A' stroke-width='4.5' stroke-linecap='round' opacity='.32'/><path d='M80 116 A37 37 0 0 1 43 79' fill='none' stroke='%2339FF7A' stroke-width='4.5' stroke-linecap='round' opacity='.55'/><path d='M80 116 A37 37 0 0 0 117 79' fill='none' stroke='%2339FF7A' stroke-width='4.5' stroke-linecap='round' opacity='.55'/><path d='M80 100 A21 21 0 0 1 59 79' fill='none' stroke='%2339FF7A' stroke-width='4.5' stroke-linecap='round' opacity='.75'/><path d='M80 100 A21 21 0 0 0 101 79' fill='none' stroke='%2339FF7A' stroke-width='4.5' stroke-linecap='round' opacity='.75'/><path d='M80 88 A9 9 0 0 1 71 79' fill='none' stroke='%23C084C8' stroke-width='4.5' stroke-linecap='round' opacity='.92'/><path d='M80 88 A9 9 0 0 0 89 79' fill='none' stroke='%23C084C8' stroke-width='4.5' stroke-linecap='round' opacity='.92'/><circle cx='80' cy='79' r='7' fill='%2339FF7A'/></svg>">
+<meta name="theme-color" content="#050E05">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Syne:wght@700;800&family=Inter:wght@300;400;500;600&family=JetBrains+Mono:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="/assets/css/site.css">
+<style>
+
+/* ── Page-specific styles ── */
+
+/* Hero glow */
+.about-hero-glow {
+  position: absolute; inset: 0; pointer-events: none; z-index: 0;
+  background:
+    radial-gradient(ellipse 60% 70% at 90% 40%, rgba(57,255,122,0.05) 0%, transparent 70%),
+    radial-gradient(ellipse 40% 50% at 10% 80%, rgba(192,132,200,0.04) 0%, transparent 60%);
+}
+
+/* Timeline */
+.timeline { position: relative; padding-left: 32px; }
+.timeline::before {
+  content: '';
+  position: absolute; left: 0; top: 8px; bottom: 0;
+  width: 1px; background: var(--bg-border);
+}
+.timeline-item { position: relative; margin-bottom: 52px; }
+.timeline-item:last-child { margin-bottom: 0; }
+.timeline-dot {
+  position: absolute; left: -38px; top: 6px;
+  width: 12px; height: 12px; border-radius: 50%;
+  background: var(--bg-card); border: 2px solid var(--bg-border);
+  transition: border-color 0.2s;
+}
+.timeline-item.active .timeline-dot {
+  background: var(--green);
+  border-color: var(--green);
+  box-shadow: 0 0 12px rgba(57,255,122,0.5);
+}
+.timeline-date {
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 10px; letter-spacing: 2px; color: var(--magenta);
+  text-transform: uppercase; margin-bottom: 8px;
+}
+.timeline-title {
+  font-family: 'Syne', sans-serif;
+  font-size: 22px; font-weight: 800; letter-spacing: -0.5px;
+  color: var(--text1); margin-bottom: 10px;
+}
+.timeline-body { font-size: 15px; color: var(--magenta); line-height: 1.75; max-width: 540px; }
+
+/* Values grid */
+.values-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 3px; }
+.value-card {
+  background: var(--bg-card); border: 1px solid var(--bg-border);
+  padding: 36px; transition: border-color 0.2s;
+}
+.value-card:hover { border-color: var(--text3); }
+.value-card:first-child { border-radius: 16px 0 0 0; }
+.value-card:nth-child(2) { border-radius: 0 16px 0 0; }
+.value-card:nth-child(3) { border-radius: 0 0 0 16px; }
+.value-card:last-child { border-radius: 0 0 16px 0; }
+.value-number {
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 10px; color: var(--magenta-dim); letter-spacing: 1px; margin-bottom: 16px;
+}
+.value-title { font-family: 'Syne', sans-serif; font-size: 20px; font-weight: 800; letter-spacing: -0.3px; color: var(--text1); margin-bottom: 10px; }
+.value-body { font-size: 14px; color: var(--magenta); line-height: 1.7; }
+
+/* Studio facts */
+.facts-strip {
+  display: grid; grid-template-columns: repeat(3, 1fr);
+  border: 1px solid var(--bg-border); border-radius: 16px; overflow: hidden;
+}
+.fact-item { padding: 32px 36px; border-right: 1px solid var(--bg-border); }
+.fact-item:last-child { border-right: none; }
+.fact-label { font-family: 'JetBrains Mono', monospace; font-size: 9px; letter-spacing: 2.5px; color: var(--text3); text-transform: uppercase; margin-bottom: 8px; }
+.fact-value { font-family: 'Syne', sans-serif; font-size: 22px; font-weight: 800; letter-spacing: -0.5px; color: var(--text1); }
+.fact-value em { font-style: normal; color: var(--green); }
+
+/* Commitment section */
+.commitment-grid { display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 16px; }
+.commit-card {
+  background: var(--bg-card); border: 1px solid var(--bg-border);
+  border-radius: 16px; padding: 28px;
+  transition: border-color 0.2s;
+}
+.commit-card:hover { border-color: var(--text3); }
+.commit-icon { margin-bottom: 16px; }
+.commit-title { font-size: 16px; font-weight: 600; color: var(--text1); margin-bottom: 8px; }
+.commit-body { font-size: 14px; color: var(--magenta); line-height: 1.65; }
+
+/* CTA block */
+.about-cta {
+  background: var(--bg-card); border: 1px solid var(--bg-border);
+  border-radius: 20px; padding: 56px;
+  display: flex; align-items: center; justify-content: space-between;
+  gap: 40px; flex-wrap: wrap;
+}
+.about-cta h3 { font-family: 'Syne', sans-serif; font-size: clamp(24px, 3vw, 36px); font-weight: 800; letter-spacing: -1px; color: var(--text1); margin-bottom: 8px; }
+.about-cta h3 em { font-style: normal; color: var(--green); }
+.about-cta p { font-size: 15px; color: var(--magenta); max-width: 400px; line-height: 1.65; }
+.cta-actions { display: flex; gap: 14px; flex-wrap: wrap; }
+
+@media (max-width: 900px) {
+  .values-grid { grid-template-columns: 1fr; }
+  .value-card:first-child, .value-card:nth-child(2), .value-card:nth-child(3), .value-card:last-child { border-radius: 12px; }
+  .facts-strip { grid-template-columns: 1fr; }
+  .fact-item { border-right: none; border-bottom: 1px solid var(--bg-border); }
+  .fact-item:last-child { border-bottom: none; }
+  .commitment-grid { grid-template-columns: 1fr; }
+  .about-cta { padding: 36px 24px; }
+}
+</style>
+</head>
+<body>
+
+<!-- Skip link (accessibility) -->
+<a href="#main" class="skip-link">Skip to main content</a>
+
+<!-- ══ NAV ══ -->
+<nav id="main-nav">
+  <a href="/" class="nav-logo" aria-label="si187 Apps home">
+    <div class="fp-mark" aria-hidden="true"><svg width="28" height="28" viewBox="0 0 160 160"><path d="M80 148 A69 69 0 0 1 11 79" fill="none" stroke="#39FF7A" stroke-width="4.5" stroke-linecap="round" opacity=".11"/><path d="M80 148 A69 69 0 0 0 149 79" fill="none" stroke="#39FF7A" stroke-width="4.5" stroke-linecap="round" opacity=".11"/><path d="M80 132 A53 53 0 0 1 27 79" fill="none" stroke="#39FF7A" stroke-width="4.5" stroke-linecap="round" opacity=".24"/><path d="M80 132 A53 53 0 0 0 133 79" fill="none" stroke="#39FF7A" stroke-width="4.5" stroke-linecap="round" opacity=".24"/><path d="M80 116 A37 37 0 0 1 43 79" fill="none" stroke="#39FF7A" stroke-width="4.5" stroke-linecap="round" opacity=".44"/><path d="M80 116 A37 37 0 0 0 117 79" fill="none" stroke="#39FF7A" stroke-width="4.5" stroke-linecap="round" opacity=".44"/><path d="M80 100 A21 21 0 0 1 59 79" fill="none" stroke="#39FF7A" stroke-width="4.5" stroke-linecap="round" opacity=".68"/><path d="M80 100 A21 21 0 0 0 101 79" fill="none" stroke="#39FF7A" stroke-width="4.5" stroke-linecap="round" opacity=".68"/><path d="M80 88 A9 9 0 0 1 71 79" fill="none" stroke="#C084C8" stroke-width="4.5" stroke-linecap="round" opacity=".92"/><path d="M80 88 A9 9 0 0 0 89 79" fill="none" stroke="#C084C8" stroke-width="4.5" stroke-linecap="round" opacity=".92"/><circle cx="80" cy="79" r="7" fill="#39FF7A"/></svg></div>
+    <span class="nav-wordmark">si187 <em>Apps</em></span>
+  </a>
+  <ul class="nav-links">
+    <li><a href="/about" class="active">About</a></li>
+    <li><a href="/roadmap">Roadmap</a></li>
+    <li><a href="/manifesto">Manifesto</a></li>
+    <li><a href="/labs">Labs</a></li>
+    <li><a href="/#waitlist" class="nav-cta">Early access</a></li>
+  </ul>
+  <button class="nav-toggle" aria-label="Open menu" id="nav-toggle-btn"><span></span><span></span><span></span></button>
+</nav>
+<div class="mobile-nav" id="mobile-nav">
+  <button class="mobile-nav-close" id="mobile-nav-close" aria-label="Close menu">✕</button>
+  <a href="/" onclick="closeMobileNav()">Home</a>
+  <a href="/about" onclick="closeMobileNav()">About</a>
+  <a href="/roadmap" onclick="closeMobileNav()">Roadmap</a>
+  <a href="/manifesto" onclick="closeMobileNav()">Manifesto</a>
+  <a href="/labs" onclick="closeMobileNav()">Labs</a>
+  <a href="/#waitlist" onclick="closeMobileNav()" style="color:var(--green)">Early access</a>
+</div>
+
+
+<!-- ══ HERO ══ -->
+<div style="position:relative; overflow:hidden;">
+  <div class="about-hero-glow"></div>
+  <div class="page-hero">
+    <span class="page-hero-eyebrow reveal">si187 Apps · London · Est. 2026</span>
+    <h1 class="reveal reveal-d1">The<br>studio<br><em>behind</em><br>the apps.</h1>
+    <p class="page-hero-sub reveal reveal-d2">
+      One team. One obsession. Build things people actually want to use — and keep building them until they're genuinely worth it.
+    </p>
+  </div>
+</div>
+
+<hr class="section-divider">
+
+
+<!-- ══ ORIGIN STORY ══ -->
+<div class="section-wrap--narrow">
+  <span class="eyebrow reveal">Origin</span>
+  <h2 class="section-title reveal reveal-d1">Why si187 exists</h2>
+
+  <div class="pull-quote reveal reveal-d2">
+    Most apps are built for the market.<br>We build for <em>the user.</em>
+  </div>
+
+  <p style="font-size:17px; color:var(--text1); line-height:1.85; margin-bottom:24px;" class="reveal reveal-d3">
+    si187 Apps started from a straightforward frustration: the apps that dominate the charts are optimised for engagement metrics, subscription conversion, and investor decks — not for the people who use them every day. They're bloated, they're noisy, and they're designed to keep you opening the app rather than actually helping you.
+  </p>
+  <p style="font-size:16px; color:var(--magenta); line-height:1.8; margin-bottom:24px;" class="reveal">
+    The first problem we chose to solve was Fantasy Premier League. Eleven million people managing FPL squads every gameweek, and the tools available to them fell into two useless camps: raw data dumps that required a statistics degree to interpret, or black-box "AI" that just told you what to do and offered no reasoning. Neither approach respected the intelligence of the manager.
+  </p>
+  <p style="font-size:16px; color:var(--magenta); line-height:1.8;" class="reveal">
+    So we built FPL Coach AI. Not an oracle. Not a stats wall. A coaching companion — something that surfaces the right information at the right moment and trusts you to make the call. That philosophy, <em>coach not oracle</em>, is the founding idea that runs through everything si187 builds.
+  </p>
+</div>
+
+<hr class="section-divider">
+
+
+<!-- ══ TIMELINE ══ -->
+<div class="section-wrap">
+  <div style="display:grid; grid-template-columns:1fr 1fr; gap:80px; align-items:start;">
+    <div>
+      <span class="eyebrow reveal">Story so far</span>
+      <h2 class="section-title reveal reveal-d1" style="margin-bottom:0">How we<br>got here.</h2>
+    </div>
+    <div class="timeline reveal reveal-d2">
+      <div class="timeline-item">
+        <div class="timeline-dot"></div>
+        <div class="timeline-date">Early 2026</div>
+        <div class="timeline-title">The idea</div>
+        <div class="timeline-body">The FPL Coach AI concept is validated through informal market research with active FPL managers. The consistent finding: managers don't want to be told what to do. They want to be better at deciding for themselves.</div>
+      </div>
+      <div class="timeline-item">
+        <div class="timeline-dot"></div>
+        <div class="timeline-date">February 2026</div>
+        <div class="timeline-title">si187 Enterprises Ltd</div>
+        <div class="timeline-body">The holding company is formally established. si187 Apps operates as the product and trading division underneath it — keeping the structure clean and the overhead minimal.</div>
+      </div>
+      <div class="timeline-item">
+        <div class="timeline-dot"></div>
+        <div class="timeline-date">April 2026</div>
+        <div class="timeline-title">Brand locked. Build begins.</div>
+        <div class="timeline-body">The studio identity is finalised — plasma green, signal magenta, the fingerprint mark. The design system is locked. FPL Coach AI v0.5-beta ships to the first internal testers. The build is on.</div>
+      </div>
+      <div class="timeline-item active">
+        <div class="timeline-dot"></div>
+        <div class="timeline-date">May 2026 — now</div>
+        <div class="timeline-title">Building in public</div>
+        <div class="timeline-body">si187apps.com is live. Social presence launches across X, Instagram, and TikTok. The waitlist opens. We're sharing the process as we go — the decisions, the reasoning, the trade-offs.</div>
+      </div>
+      <div class="timeline-item">
+        <div class="timeline-dot"></div>
+        <div class="timeline-date">August 2026</div>
+        <div class="timeline-title">FPL Coach AI — GW1 launch</div>
+        <div class="timeline-body">FPL Coach AI launches on the App Store in time for Gameweek 1 of the 2026/27 Premier League season. The coaching companion goes live for every manager who thinks for themselves.</div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<hr class="section-divider">
+
+
+<!-- ══ STUDIO FACTS ══ -->
+<div class="section-wrap">
+  <div class="facts-strip reveal">
+    <div class="fact-item">
+      <div class="fact-label">Location</div>
+      <div class="fact-value">London, <em>UK</em></div>
+    </div>
+    <div class="fact-item">
+      <div class="fact-label">Structure</div>
+      <div class="fact-value">Independent, <em>bootstrapped</em></div>
+    </div>
+    <div class="fact-item">
+      <div class="fact-label">Approach</div>
+      <div class="fact-value">One app at <em>a time</em></div>
+    </div>
+  </div>
+</div>
+
+
+<!-- ══ VALUES ══ -->
+<div class="section-wrap">
+  <span class="eyebrow reveal">What we believe</span>
+  <h2 class="section-title reveal reveal-d1">The si187<br><em>way of building.</em></h2>
+
+  <div class="values-grid">
+    <div class="value-card reveal">
+      <div class="value-number">01</div>
+      <div class="value-title">One thing at a time</div>
+      <div class="value-body">We don't build ten mediocre apps. We pick one problem, understand it properly, build the best possible solution, and learn everything we can before moving to the next. Breadth is the enemy of quality.</div>
+    </div>
+    <div class="value-card reveal reveal-d1">
+      <div class="value-number">02</div>
+      <div class="value-title">The user owns the outcome</div>
+      <div class="value-body">Our apps don't make decisions on your behalf. They surface information, flag trade-offs, and explain the reasoning — then step back. You're smarter than an algorithm that just tells you what to do. We build tools that respect that.</div>
+    </div>
+    <div class="value-card reveal reveal-d2">
+      <div class="value-number">03</div>
+      <div class="value-title">Honest about uncertainty</div>
+      <div class="value-body">When the data is genuinely inconclusive, we say so. When a recommendation is within statistical noise, we tell you. False confidence is worse than no confidence. Our products tell you what they don't know as clearly as what they do.</div>
+    </div>
+    <div class="value-card reveal reveal-d3">
+      <div class="value-number">04</div>
+      <div class="value-title">Accountable to users, not investors</div>
+      <div class="value-body">No VC round means no pressure to chase engagement metrics over genuine utility. We charge a fair price for something genuinely useful. If it's not useful enough to pay for, we haven't built it right yet.</div>
+    </div>
+  </div>
+</div>
+
+<hr class="section-divider">
+
+
+<!-- ══ COMMITMENT TO USERS ══ -->
+<div class="section-wrap">
+  <span class="eyebrow reveal">Our commitment</span>
+  <h2 class="section-title reveal reveal-d1">How we work<br><em>with you.</em></h2>
+  <p style="font-size:16px; color:var(--magenta); max-width:560px; line-height:1.75; margin-bottom:48px;" class="reveal reveal-d2">
+    We don't disappear after launch. The apps we build get better because the people using them tell us where the gaps are, what's working, and what isn't. Here's what that looks like in practice.
+  </p>
+
+  <div class="commitment-grid">
+    <div class="commit-card reveal">
+      <div class="commit-icon">
+        <svg width="32" height="32" viewBox="0 0 32 32" fill="none">
+          <rect width="32" height="32" rx="8" fill="rgba(57,255,122,0.08)"/>
+          <path d="M8 16h16M16 8v16" stroke="#39FF7A" stroke-width="2" stroke-linecap="round"/>
+        </svg>
+      </div>
+      <div class="commit-title">Regular feature drops</div>
+      <div class="commit-body">We ship improvements on a rolling basis. No big annual updates. Fixes, refinements, and new capabilities based on what testers and users ask for — fast.</div>
+    </div>
+    <div class="commit-card reveal reveal-d1">
+      <div class="commit-icon">
+        <svg width="32" height="32" viewBox="0 0 32 32" fill="none">
+          <rect width="32" height="32" rx="8" fill="rgba(57,255,122,0.08)"/>
+          <path d="M10 22l4-8 4 4 4-10" stroke="#39FF7A" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+        </svg>
+      </div>
+      <div class="commit-title">Transparent roadmap</div>
+      <div class="commit-body">What's coming, why it's coming, and when we expect it — all visible on our public roadmap. If priorities change, we explain why. No black box planning.</div>
+    </div>
+    <div class="commit-card reveal reveal-d2">
+      <div class="commit-icon">
+        <svg width="32" height="32" viewBox="0 0 32 32" fill="none">
+          <rect width="32" height="32" rx="8" fill="rgba(57,255,122,0.08)"/>
+          <circle cx="16" cy="14" r="5" stroke="#39FF7A" stroke-width="2"/>
+          <path d="M8 26c0-4 3.6-7 8-7s8 3 8 7" stroke="#39FF7A" stroke-width="2" stroke-linecap="round"/>
+        </svg>
+      </div>
+      <div class="commit-title">Direct access</div>
+      <div class="commit-body">No ticket system. No support queue. Email studio@si187apps.com and you'll hear back from someone who actually built the thing. We read everything and respond to everyone who makes the effort.</div>
+    </div>
+    <div class="commit-card reveal">
+      <div class="commit-icon">
+        <svg width="32" height="32" viewBox="0 0 32 32" fill="none">
+          <rect width="32" height="32" rx="8" fill="rgba(57,255,122,0.08)"/>
+          <path d="M16 8v4M16 20v4M8 16h4M20 16h4" stroke="#39FF7A" stroke-width="2" stroke-linecap="round"/>
+          <circle cx="16" cy="16" r="4" stroke="#39FF7A" stroke-width="2"/>
+        </svg>
+      </div>
+      <div class="commit-title">Market testing done right</div>
+      <div class="commit-body">Before we build the next thing, we listen. We run structured validation through our Labs programme — real conversations with real users before a line of code gets written.</div>
+    </div>
+    <div class="commit-card reveal reveal-d1">
+      <div class="commit-icon">
+        <svg width="32" height="32" viewBox="0 0 32 32" fill="none">
+          <rect width="32" height="32" rx="8" fill="rgba(57,255,122,0.08)"/>
+          <path d="M10 16l4 4 8-8" stroke="#39FF7A" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+        </svg>
+      </div>
+      <div class="commit-title">No dark patterns</div>
+      <div class="commit-body">We don't use artificial scarcity, guilt messaging, manipulative notifications, or engagement traps. If you use our app, it's because it's useful — not because we tricked you into it.</div>
+    </div>
+    <div class="commit-card reveal reveal-d2">
+      <div class="commit-icon">
+        <svg width="32" height="32" viewBox="0 0 32 32" fill="none">
+          <rect width="32" height="32" rx="8" fill="rgba(57,255,122,0.08)"/>
+          <path d="M12 8h8l4 4v12H8V8h4z" stroke="#39FF7A" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+          <path d="M12 16h8M12 20h5" stroke="#39FF7A" stroke-width="2" stroke-linecap="round"/>
+        </svg>
+      </div>
+      <div class="commit-title">Building in public</div>
+      <div class="commit-body">We share our decisions, our reasoning, and our trade-offs as we go. Follow along on X, Instagram, and TikTok — @si187apps. The process is part of the product.</div>
+    </div>
+  </div>
+</div>
+
+<hr class="section-divider">
+
+
+<!-- ══ CTA ══ -->
+<div class="section-wrap">
+  <div class="about-cta reveal">
+    <div>
+      <h3>Want to help shape<br>what we build <em>next?</em></h3>
+      <p>Join the Labs programme — early access to market testing, honest surveys, and the opportunity to tell us what problem you most want solved.</p>
+    </div>
+    <div class="cta-actions">
+      <a href="/labs" class="btn-primary">Join si187 Labs</a>
+      <a href="mailto:studio@si187apps.com" class="btn-ghost">Get in touch</a>
+    </div>
+  </div>
+</div>
+
+
+<!-- ══ FOOTER ══ -->
+<footer>
+  <div class="footer-col">
+    <div class="footer-brand">
+      <div class="fp-mark" aria-hidden="true"><svg width="24" height="24" viewBox="0 0 160 160"><path d="M80 148 A69 69 0 0 1 11 79" fill="none" stroke="#39FF7A" stroke-width="4.5" stroke-linecap="round" opacity=".15"/><path d="M80 148 A69 69 0 0 0 149 79" fill="none" stroke="#39FF7A" stroke-width="4.5" stroke-linecap="round" opacity=".15"/><path d="M80 132 A53 53 0 0 1 27 79" fill="none" stroke="#39FF7A" stroke-width="4.5" stroke-linecap="round" opacity=".32"/><path d="M80 132 A53 53 0 0 0 133 79" fill="none" stroke="#39FF7A" stroke-width="4.5" stroke-linecap="round" opacity=".32"/><path d="M80 116 A37 37 0 0 1 43 79" fill="none" stroke="#39FF7A" stroke-width="4.5" stroke-linecap="round" opacity=".55"/><path d="M80 116 A37 37 0 0 0 117 79" fill="none" stroke="#39FF7A" stroke-width="4.5" stroke-linecap="round" opacity=".55"/><path d="M80 100 A21 21 0 0 1 59 79" fill="none" stroke="#39FF7A" stroke-width="4.5" stroke-linecap="round" opacity=".75"/><path d="M80 100 A21 21 0 0 0 101 79" fill="none" stroke="#39FF7A" stroke-width="4.5" stroke-linecap="round" opacity=".75"/><path d="M80 88 A9 9 0 0 1 71 79" fill="none" stroke="#C084C8" stroke-width="4.5" stroke-linecap="round" opacity=".9"/><path d="M80 88 A9 9 0 0 0 89 79" fill="none" stroke="#C084C8" stroke-width="4.5" stroke-linecap="round" opacity=".9"/><circle cx="80" cy="79" r="7" fill="#39FF7A"/></svg></div>
+      <div><p class="footer-name">si187 <em>Apps</em></p><p class="footer-tagline">si187 Enterprises Ltd · London</p></div>
+    </div>
+    <div class="footer-social">
+      <a href="https://twitter.com/si187apps" aria-label="X / Twitter">𝕏</a>
+      <a href="https://instagram.com/si187apps" aria-label="Instagram">◻</a>
+      <a href="https://tiktok.com/@si187apps" aria-label="TikTok">▷</a>
+    </div>
+  </div>
+  <div class="footer-col">
+    <p class="footer-nav-label">Studio</p>
+    <ul class="footer-nav-links">
+      <li><a href="/about">About</a></li>
+      <li><a href="/roadmap">Roadmap</a></li>
+      <li><a href="/manifesto">Manifesto</a></li>
+      <li><a href="/labs">Labs</a></li>
+    </ul>
+  </div>
+  <div class="footer-col">
+    <p class="footer-nav-label">Apps</p>
+    <ul class="footer-nav-links">
+      <li><a href="/fpl-coach-ai">FPL Coach AI</a></li>
+      <li><a href="/#waitlist">Early access</a></li>
+    </ul>
+  </div>
+  <div class="footer-col">
+    <p class="footer-nav-label">Contact</p>
+    <ul class="footer-nav-links">
+      <li><a href="mailto:studio@si187apps.com">studio@si187apps.com</a></li>
+    </ul>
+  </div>
+  <div class="footer-bottom">
+    <p class="footer-copy">© 2026 si187 Enterprises Ltd. All rights reserved.</p>
+    <div class="footer-legal">
+      <a href="/privacy">Privacy</a>
+      <a href="/terms">Terms</a>
+      <a href="#" onclick="window.si187CookiePrefs && window.si187CookiePrefs(); return false;" style="cursor:pointer;">Cookie preferences</a>
+    </div>
+  </div>
+</footer>
+
+<script src="/assets/js/site.js"></script>
+
+<!-- Cookie consent + GA4 (consent-gated) -->
+<script src="/assets/js/cookie-banner.js"></script>
+</body>
+</html>
