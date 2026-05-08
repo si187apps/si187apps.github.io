@@ -42,6 +42,56 @@
 <!-- Replace TOKEN with your actual Cloudflare Analytics token after setup -->
 <!-- <script defer src='https://static.cloudflareinsights.com/beacon.min.js' data-cf-beacon='{"token": "REPLACE_WITH_TOKEN"}'></script> -->
 
+<!-- ── JSON-LD Organization schema (SEO) ── -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Organization",
+  "name": "si187 Apps",
+  "legalName": "si187 Enterprises Ltd",
+  "url": "https://si187apps.com",
+  "logo": "https://si187apps.com/assets/images/og-card.png",
+  "description": "Independent mobile studio building thoughtful apps. London-based. Currently building FPL Coach AI.",
+  "foundingDate": "2026",
+  "founders": [{ "@type": "Person", "name": "si187 Apps founder" }],
+  "address": {
+    "@type": "PostalAddress",
+    "addressLocality": "London",
+    "addressCountry": "GB"
+  },
+  "contactPoint": {
+    "@type": "ContactPoint",
+    "email": "studio@si187apps.com",
+    "contactType": "customer support"
+  },
+  "sameAs": [
+    "https://twitter.com/si187apps",
+    "https://instagram.com/si187apps",
+    "https://tiktok.com/@si187apps"
+  ]
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "SoftwareApplication",
+  "name": "FPL Coach AI",
+  "applicationCategory": "SportsApplication",
+  "operatingSystem": "iOS",
+  "description": "AI coaching companion for Fantasy Premier League managers. Captain analysis, transfer impact, formation optimisation, chip strategy — coach not oracle.",
+  "url": "https://si187apps.com/fpl-coach-ai",
+  "publisher": {
+    "@type": "Organization",
+    "name": "si187 Apps"
+  },
+  "offers": {
+    "@type": "Offer",
+    "availability": "https://schema.org/PreOrder",
+    "availabilityStarts": "2026-08-01"
+  }
+}
+</script>
+
 <style>
 /* ═══════════════════════════════════════════════
    LOCKED BRAND PALETTE · si187 Apps
@@ -578,7 +628,7 @@ nav.scrolled { padding: 12px 56px; }
   font-family: 'Inter', sans-serif; outline: none;
   transition: border-color 0.2s;
 }
-.email-input::placeholder { color: var(--text3); }
+.email-input::placeholder { color: var(--magenta); opacity: 0.4; }
 .email-input:focus { border-color: var(--green-dim); }
 .email-submit {
   background: var(--green); color: var(--bg);
@@ -661,6 +711,9 @@ footer {
 </head>
 <body>
 
+<!-- Skip link (accessibility) -->
+<a href="#main" class="skip-link">Skip to main content</a>
+
 <!-- ══════════════════ NAV ══════════════════ -->
 <nav id="main-nav">
   <a href="/" class="nav-logo" aria-label="si187 Apps — home">
@@ -707,7 +760,7 @@ footer {
 
 
 <!-- ══════════════════ HERO ══════════════════ -->
-<section class="hero" aria-label="Hero">
+<section class="hero" id="main" role="main" aria-label="Hero">
   <div class="hero-bg-glow" aria-hidden="true"></div>
 
   <div class="hero-fp-deco" aria-hidden="true">
@@ -886,7 +939,7 @@ footer {
         <p class="about-lede reveal reveal-delay-2">si187 Apps is an independent mobile studio. We build one product at a time and build it well.</p>
         <p class="about-body reveal reveal-delay-3">No VC pressure. No feature bloat. No compromises on quality. FPL Coach AI is our first app — born from a simple frustration: every existing FPL tool either drowns you in stats or tells you what to do. We built the thing in between.</p>
         <p class="about-body reveal reveal-delay-4">si187 Enterprises Ltd is the holding company. si187 Apps is the trading division. Built in public, accountable from day one.</p>
-        <a href="mailto:si@si187apps.com" class="about-link reveal">
+        <a href="mailto:studio@si187apps.com" class="about-link reveal">
           Get in touch
           <svg width="14" height="14" viewBox="0 0 14 14" fill="none" aria-hidden="true">
             <path d="M3 11L11 3M11 3H5M11 3v6" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/>
@@ -968,14 +1021,24 @@ footer {
     <li><a href="/roadmap">Roadmap</a></li>
     <li><a href="/manifesto">Manifesto</a></li>
     <li><a href="/labs">Labs</a></li>
-    <li><a href="mailto:enquiries@si187apps.com">Contact</a></li>
+    <li><a href="mailto:studio@si187apps.com">Contact</a></li>
   </ul>
 
-  <p class="footer-copy">© 2026 si187 Enterprises Ltd. All rights reserved.</p>
+  <div style="display:flex; flex-direction:column; align-items:flex-end; gap:8px;">
+    <p class="footer-copy">© 2026 si187 Enterprises Ltd. All rights reserved.</p>
+    <div style="display:flex; gap:18px;">
+      <a href="/privacy" style="font-size:11px; color:var(--magenta); opacity:0.45; text-decoration:none;">Privacy</a>
+      <a href="/terms" style="font-size:11px; color:var(--magenta); opacity:0.45; text-decoration:none;">Terms</a>
+      <a href="#" onclick="window.si187CookiePrefs && window.si187CookiePrefs(); return false;" style="font-size:11px; color:var(--magenta); opacity:0.45; text-decoration:none; cursor:pointer;">Cookie preferences</a>
+    </div>
+  </div>
 </footer>
 
 <!-- Screen reader only utility -->
 <style>.sr-only{position:absolute;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip:rect(0,0,0,0);white-space:nowrap;border:0}</style>
+
+<!-- Cookie consent + GA4 (consent-gated) -->
+<script src="/assets/js/cookie-banner.js"></script>
 
 <script>
 // ── Nav scroll shrink ──
@@ -1004,11 +1067,9 @@ const revealObs = new IntersectionObserver((entries) => {
 revealEls.forEach(el => revealObs.observe(el));
 
 // ── Waitlist form — Formspree ──
-// SETUP: Replace 'YOUR_FORM_ID' with your Formspree form ID after creating one at formspree.io
-// Instructions:
-//   1. Go to formspree.io → New Form → name it "si187 Apps Waitlist"
-//   2. Copy the form ID from the endpoint URL (e.g. https://formspree.io/f/abcd1234 → ID is abcd1234)
-//   3. Paste the ID below
+// Formspree waitlist endpoint
+// Form: "si187 Apps Waitlist" — submissions land in studio@si187apps.com
+// Dashboard: https://formspree.io/forms/xwvynpjr
 const FORMSPREE_WAITLIST_ID = 'xwvynpjr';
 
 async function handleWaitlist() {
@@ -1029,7 +1090,7 @@ async function handleWaitlist() {
   btn.disabled = true;
   input.style.borderColor = '';
 
-  if (FORMSPREE_WAITLIST_ID === 'xwvynpjr') {
+  if (!FORMSPREE_WAITLIST_ID) {
     // Dev mode — no real submission, just show confirmation
     console.warn('Formspree ID not set — running in dev mode');
     _showWaitlistConfirm(input, btn, confirm);
@@ -1042,6 +1103,8 @@ async function handleWaitlist() {
       headers: { 'Content-Type': 'application/json', 'Accept': 'application/json' },
       body: JSON.stringify({
         email: email,
+        _replyto: email,
+        _subject: 'New waitlist signup — si187apps.com',
         source: 'si187apps.com homepage waitlist',
         submitted_at: new Date().toISOString()
       })
