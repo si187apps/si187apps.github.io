@@ -653,30 +653,55 @@ nav.scrolled { padding: 12px 56px; }
 /* ═══════════════════════════════════════════════
    FOOTER
    ═══════════════════════════════════════════════ */
+/* Footer — mirrors site.css so all pages share one footer layout. */
 footer {
   padding: 44px 56px;
-  border-top: 1px solid var(--bg-border);
-  display: flex; justify-content: space-between;
-  align-items: center; flex-wrap: wrap; gap: 24px;
+  border-top: 1px solid rgba(192,132,200,0.12);
+  display: flex; justify-content: space-between; align-items: flex-start;
+  flex-wrap: wrap; gap: 40px;
   position: relative; z-index: 1;
 }
-.footer-brand { display: flex; align-items: center; gap: 14px; }
+.footer-col { display: flex; flex-direction: column; gap: 16px; }
+.footer-brand { display: flex; align-items: center; gap: 12px; }
 .footer-name { font-family: 'Syne', sans-serif; font-size: 16px; font-weight: 800; color: var(--text1); }
 .footer-name em { font-style: normal; color: var(--green); }
 .footer-tagline {
   font-family: 'JetBrains Mono', monospace;
-  font-size: 9px; letter-spacing: 2px; color: var(--text3);
+  font-size: 9px; letter-spacing: 2px; color: var(--magenta); opacity: 0.5;
   text-transform: uppercase; margin-top: 3px;
 }
-.footer-links { display: flex; gap: 28px; list-style: none; }
-.footer-links a {
-  font-size: 13px; color: var(--text3); text-decoration: none; transition: color 0.15s;
+.footer-nav-label {
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 9px; letter-spacing: 3px; color: var(--magenta); opacity: 0.45;
+  text-transform: uppercase; margin-bottom: 4px;
 }
-.footer-links a:hover { color: var(--magenta); }
+.footer-nav-links { list-style: none; display: flex; flex-direction: column; gap: 10px; padding: 0; margin: 0; }
+.footer-nav-links a { font-size: 14px; color: var(--text2); text-decoration: none; transition: color 0.15s; }
+.footer-nav-links a:hover { color: var(--magenta); }
+.footer-social { display: flex; gap: 16px; }
+.footer-social a {
+  display: flex; align-items: center; justify-content: center;
+  width: 44px; height: 44px;
+  border: 1px solid rgba(192,132,200,0.2); border-radius: 8px;
+  color: var(--magenta); opacity: 0.5; text-decoration: none; font-size: 14px;
+  transition: opacity 0.15s, border-color 0.15s;
+}
+.footer-social a:hover { opacity: 1; border-color: rgba(192,132,200,0.5); }
+.footer-bottom {
+  width: 100%; border-top: 1px solid rgba(192,132,200,0.10);
+  padding-top: 24px; display: flex; justify-content: space-between;
+  align-items: center; flex-wrap: wrap; gap: 12px;
+}
 .footer-copy {
   font-family: 'JetBrains Mono', monospace;
-  font-size: 10px; color: var(--text3); letter-spacing: 0.5px;
+  font-size: 10px; color: var(--magenta); opacity: 0.4; letter-spacing: 0.5px;
 }
+.footer-legal { display: flex; gap: 8px; flex-wrap: wrap; }
+.footer-legal a {
+  font-size: 13px; color: var(--magenta); opacity: 0.45;
+  text-decoration: none; padding: 6px 8px; transition: opacity 0.15s;
+}
+.footer-legal a:hover { opacity: 1; }
 
 /* ═══════════════════════════════════════════════
    RESPONSIVE
@@ -1018,43 +1043,62 @@ footer {
 
 <!-- ══════════════════ FOOTER ══════════════════ -->
 <footer>
-  <div class="footer-brand">
-    <div class="fp-mark" aria-hidden="true">
-      <svg width="26" height="26" viewBox="0 0 160 160">
-        <path d="M80 148 A69 69 0 0 1 11 79" fill="none" stroke="#39FF7A" stroke-width="4.5" stroke-linecap="round" opacity=".15"/>
-        <path d="M80 148 A69 69 0 0 0 149 79" fill="none" stroke="#39FF7A" stroke-width="4.5" stroke-linecap="round" opacity=".15"/>
-        <path d="M80 132 A53 53 0 0 1 27 79" fill="none" stroke="#39FF7A" stroke-width="4.5" stroke-linecap="round" opacity=".32"/>
-        <path d="M80 132 A53 53 0 0 0 133 79" fill="none" stroke="#39FF7A" stroke-width="4.5" stroke-linecap="round" opacity=".32"/>
-        <path d="M80 116 A37 37 0 0 1 43 79" fill="none" stroke="#39FF7A" stroke-width="4.5" stroke-linecap="round" opacity=".55"/>
-        <path d="M80 116 A37 37 0 0 0 117 79" fill="none" stroke="#39FF7A" stroke-width="4.5" stroke-linecap="round" opacity=".55"/>
-        <path d="M80 100 A21 21 0 0 1 59 79" fill="none" stroke="#39FF7A" stroke-width="4.5" stroke-linecap="round" opacity=".75"/>
-        <path d="M80 100 A21 21 0 0 0 101 79" fill="none" stroke="#39FF7A" stroke-width="4.5" stroke-linecap="round" opacity=".75"/>
-        <path d="M80 88 A9 9 0 0 1 71 79" fill="none" stroke="#C084C8" stroke-width="4.5" stroke-linecap="round" opacity=".9"/>
-        <path d="M80 88 A9 9 0 0 0 89 79" fill="none" stroke="#C084C8" stroke-width="4.5" stroke-linecap="round" opacity=".9"/>
-        <circle cx="80" cy="79" r="7" fill="#39FF7A"/>
-      </svg>
+  <div class="footer-col">
+    <div class="footer-brand">
+      <div class="fp-mark" aria-hidden="true">
+        <svg width="24" height="24" viewBox="0 0 160 160">
+          <path d="M80 148 A69 69 0 0 1 11 79" fill="none" stroke="#39FF7A" stroke-width="4.5" stroke-linecap="round" opacity=".15"/>
+          <path d="M80 148 A69 69 0 0 0 149 79" fill="none" stroke="#39FF7A" stroke-width="4.5" stroke-linecap="round" opacity=".15"/>
+          <path d="M80 132 A53 53 0 0 1 27 79" fill="none" stroke="#39FF7A" stroke-width="4.5" stroke-linecap="round" opacity=".32"/>
+          <path d="M80 132 A53 53 0 0 0 133 79" fill="none" stroke="#39FF7A" stroke-width="4.5" stroke-linecap="round" opacity=".32"/>
+          <path d="M80 116 A37 37 0 0 1 43 79" fill="none" stroke="#39FF7A" stroke-width="4.5" stroke-linecap="round" opacity=".55"/>
+          <path d="M80 116 A37 37 0 0 0 117 79" fill="none" stroke="#39FF7A" stroke-width="4.5" stroke-linecap="round" opacity=".55"/>
+          <path d="M80 100 A21 21 0 0 1 59 79" fill="none" stroke="#39FF7A" stroke-width="4.5" stroke-linecap="round" opacity=".75"/>
+          <path d="M80 100 A21 21 0 0 0 101 79" fill="none" stroke="#39FF7A" stroke-width="4.5" stroke-linecap="round" opacity=".75"/>
+          <path d="M80 88 A9 9 0 0 1 71 79" fill="none" stroke="#C084C8" stroke-width="4.5" stroke-linecap="round" opacity=".9"/>
+          <path d="M80 88 A9 9 0 0 0 89 79" fill="none" stroke="#C084C8" stroke-width="4.5" stroke-linecap="round" opacity=".9"/>
+          <circle cx="80" cy="79" r="7" fill="#39FF7A"/>
+        </svg>
+      </div>
+      <div>
+        <p class="footer-name">si187 <em>Apps</em></p>
+        <p class="footer-tagline">si187 Enterprises Ltd · London</p>
+      </div>
     </div>
-    <div>
-      <p class="footer-name">si187 <em>Apps</em></p>
-      <p class="footer-tagline">si187 Enterprises Ltd · London</p>
+    <div class="footer-social">
+      <a href="https://twitter.com/si187apps" aria-label="X / Twitter">𝕏</a>
+      <a href="https://instagram.com/si187apps" aria-label="Instagram">◻</a>
+      <a href="https://tiktok.com/@si187apps" aria-label="TikTok">▷</a>
     </div>
   </div>
-
-  <ul class="footer-links">
-    <li><a href="/fpl-coach-ai">FPL Coach AI</a></li>
-    <li><a href="/about">About</a></li>
-    <li><a href="/roadmap">Roadmap</a></li>
-    <li><a href="/manifesto">Manifesto</a></li>
-    <li><a href="/labs">Labs</a></li>
-    <li><a href="mailto:studio@si187apps.com">Contact</a></li>
-  </ul>
-
-  <div style="display:flex; flex-direction:column; align-items:flex-end; gap:8px;">
+  <div class="footer-col">
+    <p class="footer-nav-label">Studio</p>
+    <ul class="footer-nav-links">
+      <li><a href="/about">About</a></li>
+      <li><a href="/roadmap">Roadmap</a></li>
+      <li><a href="/manifesto">Manifesto</a></li>
+      <li><a href="/labs">Labs</a></li>
+    </ul>
+  </div>
+  <div class="footer-col">
+    <p class="footer-nav-label">Apps</p>
+    <ul class="footer-nav-links">
+      <li><a href="/fpl-coach-ai">FPL Coach AI</a></li>
+      <li><a href="/#waitlist">Early access</a></li>
+    </ul>
+  </div>
+  <div class="footer-col">
+    <p class="footer-nav-label">Contact</p>
+    <ul class="footer-nav-links">
+      <li><a href="mailto:studio@si187apps.com">studio@si187apps.com</a></li>
+    </ul>
+  </div>
+  <div class="footer-bottom">
     <p class="footer-copy">© 2026 si187 Enterprises Ltd. All rights reserved.</p>
-    <div style="display:flex; gap:8px; flex-wrap:wrap; justify-content:flex-end;">
-      <a href="/privacy" style="font-size:13px; color:var(--magenta); opacity:0.45; text-decoration:none; padding:6px 8px;">Privacy</a>
-      <a href="/terms" style="font-size:13px; color:var(--magenta); opacity:0.45; text-decoration:none; padding:6px 8px;">Terms</a>
-      <a href="#" onclick="window.si187CookiePrefs && window.si187CookiePrefs(); return false;" style="font-size:13px; color:var(--magenta); opacity:0.45; text-decoration:none; cursor:pointer; padding:6px 8px;">Cookie preferences</a>
+    <div class="footer-legal">
+      <a href="/privacy">Privacy</a>
+      <a href="/terms">Terms</a>
+      <a href="#" onclick="window.si187CookiePrefs && window.si187CookiePrefs(); return false;" style="cursor:pointer;">Cookie preferences</a>
     </div>
   </div>
 </footer>
