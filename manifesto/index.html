@@ -101,10 +101,16 @@
   animation: slowspin 120s linear infinite;
 }
 
+.manifesto-do-grid {
+  display: grid; grid-template-columns: 1fr 1fr;
+  gap: 40px; margin-top: 8px;
+}
+
 @media (max-width: 900px) {
   .m-chapter { padding: 56px 24px; }
   .manifesto-fp-deco { display: none; }
   .belief { grid-template-columns: 36px 1fr; gap: 16px; }
+  .manifesto-do-grid { grid-template-columns: 1fr; gap: 28px; }
 }
 </style>
 </head>
@@ -201,7 +207,7 @@
   <p class="m-chapter-num reveal">III — What we do and don't do</p>
   <h2 class="reveal reveal-d1">Our commitments,<br>stated <em>plainly.</em></h2>
 
-  <div style="display:grid; grid-template-columns:1fr 1fr; gap:40px; margin-top:8px;" class="reveal reveal-d1">
+  <div class="manifesto-do-grid reveal reveal-d1">
     <div>
       <p style="font-family:'JetBrains Mono',monospace;font-size:10px;letter-spacing:3px;color:var(--green);text-transform:uppercase;margin-bottom:20px;">We do</p>
       <ul class="m-list">

@@ -103,3 +103,17 @@
     font-size: 12px;
   }
 }
+
+@media (max-width: 360px) {
+  .si187-cb-inner {
+    padding: 16px 14px;
+    gap: 12px;
+  }
+  .si187-cb-actions {
+    flex-direction: column;
+    gap: 6px;
+  }
+  .si187-cb-btn {
+    width: 100%;
+  }
+}

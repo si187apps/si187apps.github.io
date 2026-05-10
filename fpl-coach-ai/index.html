@@ -334,6 +334,10 @@ nav.scrolled { padding: 12px 56px; }
   background: linear-gradient(90deg, transparent, var(--teal), transparent);
   opacity: 0.5;
 }
+.difference-grid {
+  display: grid; grid-template-columns: 1fr 1fr;
+  gap: 48px; align-items: center;
+}
 
 /* ═══════════════════════════════════════════════
    HOW IT WORKS
@@ -655,6 +659,8 @@ footer {
   .section-wrap { padding: 60px 24px; }
   .section-wrap--narrow { padding: 60px 24px; }
   .problem-grid { grid-template-columns: 1fr; }
+  .difference-grid { grid-template-columns: 1fr; gap: 24px; }
+  .difference-card { padding: 24px; }
   .features-grid { grid-template-columns: 1fr; }
   .feature-card { border-right: none !important; border-bottom: 1px solid var(--border) !important; border-radius: 0 !important; }
   .feature-card:first-child { border-radius: 16px 16px 0 0 !important; }
@@ -676,6 +682,25 @@ footer {
   .season-stats { grid-template-columns: 1fr; }
   .s-stat { border-right: none; border-bottom: 1px solid var(--border); }
   .s-stat:last-child { border-bottom: none; }
+}
+
+/* Skip-link (accessibility). Hidden via clip technique so iOS overscroll
+   cannot reveal it. Visible only on keyboard focus. Uses studio palette
+   (--s-*) since the skip-link belongs to the site-wide nav layer. */
+.skip-link {
+  position: absolute; width: 1px; height: 1px;
+  padding: 0; margin: -1px; overflow: hidden;
+  clip: rect(0,0,0,0); white-space: nowrap; border: 0;
+}
+.skip-link:focus {
+  position: fixed; top: 12px; left: 16px;
+  width: auto; height: auto; margin: 0;
+  overflow: visible; clip: auto; white-space: normal;
+  z-index: 9999;
+  background: var(--s-green, #39FF7A); color: var(--s-bg, #050E05);
+  padding: 12px 20px; border-radius: 8px;
+  font-size: 14px; font-weight: 600; text-decoration: none;
+  outline: 2px solid var(--s-magenta, #C084C8); outline-offset: 2px;
 }
 </style>
 </head>
@@ -822,7 +847,7 @@ footer {
     </div>
 
     <div class="difference-card reveal" style="margin-top:20px;">
-      <div style="display:grid;grid-template-columns:1fr 1fr;gap:48px;align-items:center;">
+      <div class="difference-grid">
         <div>
           <span class="eyebrow" style="margin-bottom:14px;">The FPL Coach AI way</span>
           <h3 style="font-family:'Syne',sans-serif;font-size:clamp(24px,3vw,36px);font-weight:800;letter-spacing:-1px;color:var(--text1);margin-bottom:16px;line-height:1.1;">Coach not oracle.<br><em style="color:var(--teal)">Information, not instruction.</em></h3>
