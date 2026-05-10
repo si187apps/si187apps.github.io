@@ -625,7 +625,7 @@ nav.scrolled { padding: 12px 56px; }
   flex: 1; min-width: 220px;
   background: var(--bg-card); border: 1px solid var(--bg-border);
   border-radius: 10px; padding: 13px 18px;
-  color: var(--text1); font-size: 14px;
+  color: var(--text1); font-size: 16px;
   font-family: 'Inter', sans-serif; outline: none;
   transition: border-color 0.2s;
 }
@@ -707,6 +707,30 @@ footer {
   .stat-num { font-size: 34px; }
   .stat-item { padding: 24px 20px; }
   .hero-fp-deco { display: none; }
+}
+
+/* Skip-link (accessibility). Hidden via clip technique so iOS overscroll
+   cannot reveal it. Visible only on keyboard focus. */
+.skip-link {
+  position: absolute; width: 1px; height: 1px;
+  padding: 0; margin: -1px; overflow: hidden;
+  clip: rect(0,0,0,0); white-space: nowrap; border: 0;
+}
+.skip-link:focus {
+  position: fixed; top: 12px; left: 16px;
+  width: auto; height: auto; margin: 0;
+  overflow: visible; clip: auto; white-space: normal;
+  z-index: 9999;
+  background: var(--green); color: var(--bg);
+  padding: 12px 20px; border-radius: 8px;
+  font-size: 14px; font-weight: 600; text-decoration: none;
+  outline: 2px solid var(--magenta); outline-offset: 2px;
+}
+
+/* Stack waitlist input + button on very small phones */
+@media (max-width: 380px) {
+  .email-row { flex-direction: column; }
+  .email-input, .email-submit { width: 100%; min-width: 0; }
 }
 </style>
 </head>
@@ -1027,10 +1051,10 @@ footer {
 
   <div style="display:flex; flex-direction:column; align-items:flex-end; gap:8px;">
     <p class="footer-copy">© 2026 si187 Enterprises Ltd. All rights reserved.</p>
-    <div style="display:flex; gap:18px;">
-      <a href="/privacy" style="font-size:11px; color:var(--magenta); opacity:0.45; text-decoration:none;">Privacy</a>
-      <a href="/terms" style="font-size:11px; color:var(--magenta); opacity:0.45; text-decoration:none;">Terms</a>
-      <a href="#" onclick="window.si187CookiePrefs && window.si187CookiePrefs(); return false;" style="font-size:11px; color:var(--magenta); opacity:0.45; text-decoration:none; cursor:pointer;">Cookie preferences</a>
+    <div style="display:flex; gap:8px; flex-wrap:wrap; justify-content:flex-end;">
+      <a href="/privacy" style="font-size:13px; color:var(--magenta); opacity:0.45; text-decoration:none; padding:6px 8px;">Privacy</a>
+      <a href="/terms" style="font-size:13px; color:var(--magenta); opacity:0.45; text-decoration:none; padding:6px 8px;">Terms</a>
+      <a href="#" onclick="window.si187CookiePrefs && window.si187CookiePrefs(); return false;" style="font-size:13px; color:var(--magenta); opacity:0.45; text-decoration:none; cursor:pointer; padding:6px 8px;">Cookie preferences</a>
     </div>
   </div>
 </footer>

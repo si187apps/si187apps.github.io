@@ -677,6 +677,25 @@ footer {
   .s-stat { border-right: none; border-bottom: 1px solid var(--border); }
   .s-stat:last-child { border-bottom: none; }
 }
+
+/* Skip-link (accessibility). Hidden via clip technique so iOS overscroll
+   cannot reveal it. Visible only on keyboard focus. Uses studio palette
+   (--s-*) since the skip-link belongs to the site-wide nav layer. */
+.skip-link {
+  position: absolute; width: 1px; height: 1px;
+  padding: 0; margin: -1px; overflow: hidden;
+  clip: rect(0,0,0,0); white-space: nowrap; border: 0;
+}
+.skip-link:focus {
+  position: fixed; top: 12px; left: 16px;
+  width: auto; height: auto; margin: 0;
+  overflow: visible; clip: auto; white-space: normal;
+  z-index: 9999;
+  background: var(--s-green, #39FF7A); color: var(--s-bg, #050E05);
+  padding: 12px 20px; border-radius: 8px;
+  font-size: 14px; font-weight: 600; text-decoration: none;
+  outline: 2px solid var(--s-magenta, #C084C8); outline-offset: 2px;
+}
 </style>
 </head>
 <body>
