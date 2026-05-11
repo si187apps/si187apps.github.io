@@ -1,0 +1,738 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>FPL Coach AI — Help & FAQ</title>
+<meta name="description" content="FPL Coach AI help and FAQ. How to find your Manager ID, understand transfer classifications, use Simple and Advanced view, and get the most from your AI coaching companion.">
+<meta name="robots" content="index, follow">
+<link rel="canonical" href="https://si187apps.com/fpl-coach-ai/help">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://si187apps.com/fpl-coach-ai/help">
+<meta property="og:title" content="FPL Coach AI — Help & FAQ">
+<meta property="og:description" content="Everything you need to get started with FPL Coach AI. Manager ID setup, transfer classifications explained, and full FAQ.">
+<meta property="og:image" content="https://si187apps.com/assets/images/og-fpl.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:site_name" content="si187 Apps">
+<meta property="og:locale" content="en_GB">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:site" content="@si187apps">
+<meta name="twitter:title" content="FPL Coach AI — Help & FAQ">
+<meta name="twitter:description" content="Everything you need to get the most from FPL Coach AI. Manager ID, transfers, formations and more.">
+<meta name="twitter:image" content="https://si187apps.com/assets/images/og-fpl.png">
+<meta name="theme-color" content="#0A1628">
+<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 160 160'><rect width='160' height='160' fill='%230A1628'/><path d='M80 148 A69 69 0 0 1 11 79' fill='none' stroke='%2300D4A0' stroke-width='4.5' stroke-linecap='round' opacity='.3'/><path d='M80 148 A69 69 0 0 0 149 79' fill='none' stroke='%2300D4A0' stroke-width='4.5' stroke-linecap='round' opacity='.3'/><path d='M80 116 A37 37 0 0 1 43 79' fill='none' stroke='%2300D4A0' stroke-width='4.5' stroke-linecap='round' opacity='.65'/><path d='M80 116 A37 37 0 0 0 117 79' fill='none' stroke='%2300D4A0' stroke-width='4.5' stroke-linecap='round' opacity='.65'/><path d='M80 88 A9 9 0 0 1 71 79' fill='none' stroke='%23FFB800' stroke-width='4.5' stroke-linecap='round'/><path d='M80 88 A9 9 0 0 0 89 79' fill='none' stroke='%23FFB800' stroke-width='4.5' stroke-linecap='round'/><circle cx='80' cy='79' r='7' fill='%2300D4A0'/></svg>">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;700;800&family=JetBrains+Mono:wght@400;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --navy: #0A1628;
+    --navy-mid: #0d1f35;
+    --teal: #00D4A0;
+    --teal-dim: rgba(0,212,160,0.12);
+    --teal-border: rgba(0,212,160,0.2);
+    --amber: #FFB800;
+    --text: #f0f5f0;
+    --text2: #9ca3af;
+    --text3: #4b5563;
+    --border: rgba(255,255,255,0.07);
+    --card: rgba(255,255,255,0.04);
+  }
+
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+
+  body {
+    background: var(--navy);
+    color: var(--text);
+    font-family: 'Inter', sans-serif;
+    font-size: 16px;
+    line-height: 1.6;
+    min-height: 100vh;
+  }
+
+  /* NAV */
+  nav {
+    border-bottom: 1px solid var(--border);
+    padding: 16px 24px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    position: sticky;
+    top: 0;
+    background: rgba(10,22,40,0.95);
+    backdrop-filter: blur(12px);
+    z-index: 100;
+  }
+
+  .nav-brand {
+    font-family: 'Syne', sans-serif;
+    font-weight: 800;
+    font-size: 18px;
+    color: var(--text);
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+  }
+
+  .nav-brand span { color: var(--teal); }
+
+  .nav-back {
+    font-size: 13px;
+    color: var(--text2);
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    transition: color 0.2s;
+  }
+
+  .nav-back:hover { color: var(--teal); }
+
+  /* HERO */
+  .hero {
+    padding: 64px 24px 48px;
+    max-width: 720px;
+    margin: 0 auto;
+    text-align: center;
+  }
+
+  .hero-badge {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    background: var(--teal-dim);
+    border: 1px solid var(--teal-border);
+    border-radius: 100px;
+    padding: 4px 14px;
+    font-size: 12px;
+    color: var(--teal);
+    font-family: 'JetBrains Mono', monospace;
+    letter-spacing: 0.08em;
+    margin-bottom: 24px;
+  }
+
+  .hero h1 {
+    font-family: 'Syne', sans-serif;
+    font-weight: 800;
+    font-size: clamp(32px, 5vw, 48px);
+    line-height: 1.1;
+    margin-bottom: 16px;
+  }
+
+  .hero h1 span { color: var(--teal); }
+
+  .hero p {
+    font-size: 17px;
+    color: var(--text2);
+    max-width: 520px;
+    margin: 0 auto;
+  }
+
+  /* QUICK ANSWER BOX */
+  .quick-box {
+    max-width: 720px;
+    margin: 0 auto 48px;
+    padding: 0 24px;
+  }
+
+  .quick-card {
+    background: linear-gradient(135deg, rgba(0,212,160,0.08) 0%, rgba(0,212,160,0.03) 100%);
+    border: 1px solid var(--teal-border);
+    border-radius: 16px;
+    padding: 28px 32px;
+  }
+
+  .quick-card h2 {
+    font-family: 'Syne', sans-serif;
+    font-weight: 800;
+    font-size: 20px;
+    margin-bottom: 20px;
+    color: var(--teal);
+  }
+
+  .steps {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+  }
+
+  .step {
+    display: flex;
+    gap: 16px;
+    align-items: flex-start;
+  }
+
+  .step-num {
+    width: 28px;
+    height: 28px;
+    border-radius: 50%;
+    background: var(--teal);
+    color: var(--navy);
+    font-family: 'JetBrains Mono', monospace;
+    font-weight: 700;
+    font-size: 13px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+    margin-top: 2px;
+  }
+
+  .step-content h3 {
+    font-weight: 600;
+    font-size: 15px;
+    margin-bottom: 4px;
+  }
+
+  .step-content p {
+    font-size: 14px;
+    color: var(--text2);
+    line-height: 1.5;
+  }
+
+  .step-content code {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 12px;
+    background: rgba(0,212,160,0.1);
+    color: var(--teal);
+    padding: 2px 7px;
+    border-radius: 4px;
+    border: 1px solid rgba(0,212,160,0.2);
+  }
+
+  /* SCREENSHOT STEPS */
+  .screenshot-steps {
+    display: grid;
+    gap: 12px;
+    margin-top: 12px;
+  }
+
+  .ss-step {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    background: rgba(255,255,255,0.03);
+    border: 1px solid var(--border);
+    border-radius: 10px;
+    padding: 12px 16px;
+  }
+
+  .ss-arrow {
+    font-size: 16px;
+    color: var(--teal);
+    flex-shrink: 0;
+  }
+
+  .ss-text {
+    font-size: 14px;
+    color: var(--text2);
+  }
+
+  .ss-text strong {
+    color: var(--text);
+    font-weight: 600;
+  }
+
+  /* MAIN CONTENT */
+  .content {
+    max-width: 720px;
+    margin: 0 auto;
+    padding: 0 24px 80px;
+  }
+
+  /* SECTION */
+  .section {
+    margin-bottom: 48px;
+  }
+
+  .section-header {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    margin-bottom: 24px;
+    padding-bottom: 16px;
+    border-bottom: 1px solid var(--border);
+  }
+
+  .section-icon {
+    width: 36px;
+    height: 36px;
+    border-radius: 10px;
+    background: var(--teal-dim);
+    border: 1px solid var(--teal-border);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 18px;
+    flex-shrink: 0;
+  }
+
+  .section-header h2 {
+    font-family: 'Syne', sans-serif;
+    font-weight: 800;
+    font-size: 22px;
+  }
+
+  /* FAQ ITEM */
+  .faq-item {
+    border: 1px solid var(--border);
+    border-radius: 12px;
+    overflow: hidden;
+    margin-bottom: 10px;
+    transition: border-color 0.2s;
+  }
+
+  .faq-item:hover { border-color: var(--teal-border); }
+
+  .faq-q {
+    padding: 18px 20px;
+    font-weight: 600;
+    font-size: 15px;
+    cursor: pointer;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 16px;
+    background: var(--card);
+    user-select: none;
+    list-style: none;
+  }
+
+  .faq-q::after {
+    content: '+';
+    font-size: 20px;
+    color: var(--teal);
+    flex-shrink: 0;
+    font-weight: 300;
+    transition: transform 0.2s;
+  }
+
+  details[open] .faq-q::after {
+    transform: rotate(45deg);
+  }
+
+  .faq-a {
+    padding: 0 20px 20px;
+    font-size: 15px;
+    color: var(--text2);
+    line-height: 1.65;
+    background: var(--card);
+    border-top: 1px solid var(--border);
+    padding-top: 16px;
+  }
+
+  .faq-a p + p { margin-top: 10px; }
+
+  .faq-a a {
+    color: var(--teal);
+    text-decoration: none;
+  }
+
+  .faq-a a:hover { text-decoration: underline; }
+
+  .faq-a ul {
+    margin: 10px 0 10px 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+  }
+
+  .faq-a ul li { color: var(--text2); }
+
+  .highlight {
+    background: rgba(0,212,160,0.08);
+    border-left: 3px solid var(--teal);
+    border-radius: 0 8px 8px 0;
+    padding: 12px 16px;
+    margin: 12px 0;
+    font-size: 14px;
+  }
+
+  .pill {
+    display: inline-block;
+    font-size: 11px;
+    font-family: 'JetBrains Mono', monospace;
+    font-weight: 700;
+    padding: 2px 8px;
+    border-radius: 4px;
+    letter-spacing: 0.05em;
+  }
+
+  .pill-teal { background: rgba(0,212,160,0.15); color: var(--teal); }
+  .pill-amber { background: rgba(255,184,0,0.15); color: var(--amber); }
+
+  /* CONTACT */
+  .contact-card {
+    background: var(--card);
+    border: 1px solid var(--border);
+    border-radius: 16px;
+    padding: 32px;
+    text-align: center;
+  }
+
+  .contact-card h2 {
+    font-family: 'Syne', sans-serif;
+    font-weight: 800;
+    font-size: 22px;
+    margin-bottom: 10px;
+  }
+
+  .contact-card p {
+    color: var(--text2);
+    margin-bottom: 20px;
+    font-size: 15px;
+  }
+
+  .contact-link {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    background: var(--teal);
+    color: var(--navy);
+    font-weight: 700;
+    font-size: 15px;
+    padding: 12px 24px;
+    border-radius: 10px;
+    text-decoration: none;
+    font-family: 'Syne', sans-serif;
+    transition: opacity 0.2s;
+  }
+
+  .contact-link:hover { opacity: 0.88; }
+
+  /* FOOTER */
+  footer {
+    border-top: 1px solid var(--border);
+    padding: 24px;
+    text-align: center;
+    font-size: 13px;
+    color: var(--text3);
+    font-family: 'JetBrains Mono', monospace;
+  }
+
+  footer a { color: var(--text3); text-decoration: none; }
+  footer a:hover { color: var(--teal); }
+
+  /* RESPONSIVE */
+  @media (max-width: 600px) {
+    nav { padding: 14px 16px; }
+    .hero { padding: 48px 16px 36px; }
+    .quick-box { padding: 0 16px; }
+    .quick-card { padding: 22px 20px; }
+    .content { padding: 0 16px 60px; }
+    .hero h1 { font-size: 28px; }
+  }
+</style>
+</head>
+<body>
+
+<!-- Skip link for keyboard accessibility -->
+<a href="#main-content" style="position:absolute;top:-100px;left:16px;z-index:999;background:#00D4A0;color:#0A1628;padding:10px 18px;border-radius:0 0 8px 8px;font-weight:700;font-size:14px;text-decoration:none;transition:top 0.2s;" onfocus="this.style.top='0'" onblur="this.style.top='-100px'">Skip to main content</a>
+
+<nav aria-label="FPL Coach AI help">
+  <a href="https://si187apps.com" class="nav-brand">
+    si187 <span>Apps</span>
+  </a>
+  <a href="/fpl-coach-ai" class="nav-back">
+    ← FPL Coach AI
+  </a>
+</nav>
+
+<div class="hero" id="main-content">
+  <div class="hero-badge">⚽ Help & FAQ</div>
+  <h1>FPL Coach <span>AI</span></h1>
+  <p>Everything you need to get started and get the most out of your AI coaching assistant.</p>
+</div>
+
+<!-- QUICK START: FINDING YOUR MANAGER ID -->
+<div class="quick-box">
+  <div class="quick-card">
+    <h2>📍 How to find your FPL Manager ID</h2>
+    <div class="steps">
+      <div class="step">
+        <div class="step-num">1</div>
+        <div class="step-content">
+          <h3>Open the FPL website or app</h3>
+          <p>Go to <a href="https://fantasy.premierleague.com" target="_blank" rel="noopener" style="color:var(--teal)">fantasy.premierleague.com</a> or open the official Fantasy Premier League app and sign in to your account.</p>
+        </div>
+      </div>
+      <div class="step">
+        <div class="step-num">2</div>
+        <div class="step-content">
+          <h3>Go to "My Team" or "Points"</h3>
+          <p>Click <strong>My Team</strong> in the top navigation, then click the <strong>Points</strong> tab to see your GW points history.</p>
+        </div>
+      </div>
+      <div class="step">
+        <div class="step-num">3</div>
+        <div class="step-content">
+          <h3>Look at the URL in your browser</h3>
+          <p>The URL will look like this:</p>
+          <code>fantasy.premierleague.com/entry/3477738/event/37</code>
+          <p style="margin-top:8px">The number after <code>/entry/</code> is your Manager ID. In this example it's <code>3477738</code>.</p>
+        </div>
+      </div>
+      <div class="step">
+        <div class="step-num">4</div>
+        <div class="step-content">
+          <h3>Enter it in FPL Coach AI</h3>
+          <p>Type or paste that number into the Manager ID field when you first open the app. That's it — the app loads your squad automatically.</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="highlight" style="margin-top:20px">
+      💡 <strong>Can't see the URL?</strong> On the FPL app, tap your team name or avatar to open your manager profile. Your Manager ID is also visible on your public profile page — look for it in the page address or share link.
+    </div>
+  </div>
+</div>
+
+<div class="content">
+
+  <!-- GETTING STARTED -->
+  <div class="section">
+    <div class="section-header">
+      <div class="section-icon">🚀</div>
+      <h2>Getting started</h2>
+    </div>
+
+    <details class="faq-item">
+      <summary class="faq-q">What is FPL Coach AI?</summary>
+      <div class="faq-a">
+        <p>FPL Coach AI is a Fantasy Premier League coaching app. It connects to your FPL account, analyses your squad, and gives you data-backed recommendations every gameweek.</p>
+        <p>It answers the three questions every FPL manager asks before a deadline:</p>
+        <ul>
+          <li><strong>Who should I captain?</strong> — The player with the best projected return from your squad.</li>
+          <li><strong>Who should I transfer?</strong> — Your weakest players and the best available upgrades within your budget.</li>
+          <li><strong>Who should I start?</strong> — The optimal XI from your 15-player squad for this gameweek.</li>
+        </ul>
+        <p>The app is a coach, not a manager. It shows you the reasoning behind every recommendation so you can make your own informed decision.</p>
+      </div>
+    </details>
+
+    <details class="faq-item">
+      <summary class="faq-q">How do I set up the app for the first time?</summary>
+      <div class="faq-a">
+        <p>When you first open FPL Coach AI, you'll see a setup screen asking for two things:</p>
+        <ul>
+          <li><strong>Your FPL Manager ID</strong> — see the guide above for exactly where to find this.</li>
+          <li><strong>Your preferred view</strong> — Simple (quick decisions, no clutter) or Advanced (full data and analysis).</li>
+        </ul>
+        <p>Once you tap "Get started", the app loads your squad from the FPL API and shows your recommendations immediately. No login, no password — just your Manager ID.</p>
+      </div>
+    </details>
+
+    <details class="faq-item">
+      <summary class="faq-q">Does the app need my FPL login details?</summary>
+      <div class="faq-a">
+        <p>No. FPL Coach AI uses only your public Manager ID to read your squad and points data from the FPL API. This data is publicly available — the same information anyone can see if they search for your team on the FPL website.</p>
+        <p>We never ask for your FPL username or password.</p>
+      </div>
+    </details>
+
+    <details class="faq-item">
+      <summary class="faq-q">How do I change my Manager ID or view preference?</summary>
+      <div class="faq-a">
+        <p>Tap the <strong>⚙ cog icon</strong> in the top-right corner of any screen. This opens the Settings panel where you can:</p>
+        <ul>
+          <li>Update your FPL Manager ID</li>
+          <li>Switch between Simple and Advanced view</li>
+          <li>Manually refresh your recommendations</li>
+        </ul>
+      </div>
+    </details>
+  </div>
+
+  <!-- RECOMMENDATIONS -->
+  <div class="section">
+    <div class="section-header">
+      <div class="section-icon">🏆</div>
+      <h2>Recommendations</h2>
+    </div>
+
+    <details class="faq-item">
+      <summary class="faq-q">How does the captain recommendation work?</summary>
+      <div class="faq-a">
+        <p>The app uses a machine learning model trained on FPL data to predict each player's points return for the upcoming gameweek. The recommended captain is the player in your squad with the highest predicted score.</p>
+        <p>In Advanced view you'll also see:</p>
+        <ul>
+          <li><strong>Vice captain</strong> — your best alternative if the captain blanks or is injured</li>
+          <li><strong>Form, FDR, and ownership</strong> — the key data behind the pick</li>
+          <li><strong>Solio projection</strong> — an independent model's view, where available</li>
+        </ul>
+      </div>
+    </details>
+
+    <details class="faq-item">
+      <summary class="faq-q">What do the transfer classifications mean?</summary>
+      <div class="faq-a">
+        <p>Each transfer option is classified based on its projected 3-gameweek points gain:</p>
+        <ul>
+          <li><span class="pill pill-teal">Compelling</span> — clear positive gain, worth making</li>
+          <li><span class="pill" style="background:rgba(255,184,0,0.15);color:#FFB800">Marginal</span> — small gain, depends on your situation</li>
+          <li><span class="pill" style="background:rgba(239,83,80,0.15);color:#ef5350">Trap</span> — negative gain, avoid</li>
+        </ul>
+        <p>A transfer is never classified as a Trap if it shows a positive points gain. The app will never recommend a move that makes your squad worse.</p>
+      </div>
+    </details>
+
+    <details class="faq-item">
+      <summary class="faq-q">Why isn't the player I want showing as a transfer option?</summary>
+      <div class="faq-a">
+        <p>Transfer options are filtered by several factors:</p>
+        <ul>
+          <li>The player must fit within your current budget (bank balance + price of the player going out)</li>
+          <li>The player must be in the same position as the player going out</li>
+          <li>Players already in your squad won't appear as transfer-in options</li>
+          <li>Injured or suspended players (status: unavailable) are excluded</li>
+        </ul>
+        <p>If you want to bring in a player who costs more than your budget allows, you'd need to sell a more expensive player from your squad first to free up the funds.</p>
+      </div>
+    </details>
+
+    <details class="faq-item">
+      <summary class="faq-q">Should I always follow the recommendations?</summary>
+      <div class="faq-a">
+        <p>No — and the app is designed with this in mind. FPL Coach AI is a coach, not a manager. It gives you the data and reasoning behind each decision, but the final call is always yours.</p>
+        <p>The model is strong on statistical indicators like form, fixture difficulty, and expected goal involvement — but it doesn't know everything. Your knowledge of rotation risk, injuries not yet reported, or specific player situations may lead you to a different decision. That's the game.</p>
+        <div class="highlight">
+          Think of the recommendations as a well-informed second opinion, not instructions to follow blindly.
+        </div>
+      </div>
+    </details>
+
+    <details class="faq-item">
+      <summary class="faq-q">Should I roll my free transfer or use it?</summary>
+      <div class="faq-a">
+        <p>The app tells you directly in the Roll or Use card on the home screen. The recommendation is based on:</p>
+        <ul>
+          <li>The projected 3-gameweek gain of your best available transfer</li>
+          <li>How many free transfers you currently have</li>
+          <li>How many gameweeks are left in the season</li>
+        </ul>
+        <p>In the final 2 weeks of the season, the app will always recommend using your free transfers — banking them at the end of the season means they're wasted.</p>
+      </div>
+    </details>
+  </div>
+
+  <!-- SIMPLE VS ADVANCED -->
+  <div class="section">
+    <div class="section-header">
+      <div class="section-icon">⚙️</div>
+      <h2>Simple vs Advanced view</h2>
+    </div>
+
+    <details class="faq-item">
+      <summary class="faq-q">What's the difference between Simple and Advanced view?</summary>
+      <div class="faq-a">
+        <p><strong>Simple view</strong> (default) shows you the headlines: who to captain, who to transfer, who to start — with one clear number and one clear reason per decision. No data clutter.</p>
+        <p><strong>Advanced view</strong> surfaces all the underlying data: form ratings, fixture difficulty, xGI (expected goal involvement), ownership percentages, Solio projections, doubtful flags, and transfer cost details.</p>
+        <p>Most managers get everything they need from Simple view. Advanced is for managers who want to dig into the numbers behind each recommendation.</p>
+      </div>
+    </details>
+
+    <details class="faq-item">
+      <summary class="faq-q">How do I switch between Simple and Advanced?</summary>
+      <div class="faq-a">
+        <p>Tap the <strong>⚙ cog icon</strong> in the top-right of any screen. At the top of the Settings panel you'll see a <strong>Simple / Advanced</strong> toggle. Tap to switch. Your preference is saved automatically.</p>
+      </div>
+    </details>
+  </div>
+
+  <!-- FORMATION -->
+  <div class="section">
+    <div class="section-header">
+      <div class="section-icon">▦</div>
+      <h2>Formation & Best XI</h2>
+    </div>
+
+    <details class="faq-item">
+      <summary class="faq-q">How does the Best XI recommendation work?</summary>
+      <div class="faq-a">
+        <p>The app evaluates every possible starting lineup from your 15 players and selects the formation and XI that maximises total predicted points — with your recommended captain doubled.</p>
+        <p>The Formation tab shows this lineup as a pitch view with player dots. The <span class="pill pill-amber">C</span> badge marks your captain and the <span class="pill" style="background:rgba(156,163,175,0.2);color:#9ca3af">V</span> badge marks your vice captain.</p>
+      </div>
+    </details>
+
+    <details class="faq-item">
+      <summary class="faq-q">What does "+X.X pts vs current lineup" mean?</summary>
+      <div class="faq-a">
+        <p>This is the points improvement available if you switch to the recommended Best XI formation, compared to the players you currently have set as starters in FPL.</p>
+        <p>If you've already set your FPL team to match the app's recommendation, this delta will be zero or very small.</p>
+      </div>
+    </details>
+  </div>
+
+  <!-- PREDICTIONS & DATA -->
+  <div class="section">
+    <div class="section-header">
+      <div class="section-icon">📊</div>
+      <h2>Predictions & data</h2>
+    </div>
+
+    <details class="faq-item">
+      <summary class="faq-q">When are predictions updated?</summary>
+      <div class="faq-a">
+        <p>Predictions are updated every Monday at 04:00 UTC using the latest FPL data — form, fixtures, injuries, and ownership — from the previous gameweek's results.</p>
+        <p>During the weekend after a gameweek deadline, if predictions haven't updated yet, the app will show a banner letting you know when to check back.</p>
+      </div>
+    </details>
+
+    <details class="faq-item">
+      <summary class="faq-q">What is Solio and why does it sometimes appear?</summary>
+      <div class="faq-a">
+        <p>Solio is an independent FPL projection system. Where Solio data is available for a player, it appears as a secondary data point in Advanced view — showing their projection alongside our model's prediction.</p>
+        <p>When the two models agree, it increases confidence in the recommendation. When they diverge significantly, it's worth noting as you make your decision.</p>
+        <p>Solio data is not available for every player — when it's absent, nothing is shown (no "N/A").</p>
+      </div>
+    </details>
+
+    <details class="faq-item">
+      <summary class="faq-q">Why do predicted points sometimes look different from other FPL tools?</summary>
+      <div class="faq-a">
+        <p>Every FPL prediction model uses different data sources, weightings, and methods. Our model uses a combination of:</p>
+        <ul>
+          <li>Expected goals (xG) and expected assists (xA) data</li>
+          <li>Rolling form over the last 3, 5, and 10 gameweeks</li>
+          <li>Fixture difficulty ratings</li>
+          <li>Team-level attacking and defensive statistics</li>
+        </ul>
+        <p>No model is perfectly accurate — FPL is inherently unpredictable. The predictions are a guide, not a guarantee.</p>
+      </div>
+    </details>
+
+    <details class="faq-item">
+      <summary class="faq-q">My recommendations look the same as last week. Is the app updating?</summary>
+      <div class="faq-a">
+        <p>If you're in the same gameweek with the same squad and fixtures haven't changed, recommendations may look similar. Try pulling down to refresh on any screen to force a fresh fetch from our servers.</p>
+        <p>If you see a "Predictions updating" banner, predictions for the new gameweek haven't been generated yet — check back after Monday 04:00 UTC.</p>
+      </div>
+    </details>
+  </div>
+
+  <!-- CONTACT -->
+  <div class="contact-card">
+    <h2>Still need help?</h2>
+    <p>Can't find the answer you're looking for? Get in touch with the si187 Apps team directly.</p>
+    <a href="mailto:studio@si187apps.com" class="contact-link">
+      ✉ studio@si187apps.com
+    </a>
+  </div>
+
+</div>
+
+<footer>
+  <p>
+    FPL Coach AI · <a href="https://si187apps.com">si187 Apps</a> · si187 Enterprises Ltd
+    &nbsp;·&nbsp;
+    <a href="https://si187apps.com/privacy">Privacy</a>
+    &nbsp;·&nbsp;
+    <a href="https://si187apps.com/terms">Terms</a>
+  </p>
+</footer>
+
+<script src="/assets/js/cookie-banner.js"></script>
+</body>
+</html>
