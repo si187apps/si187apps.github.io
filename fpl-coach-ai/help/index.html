@@ -417,12 +417,52 @@
 
   /* RESPONSIVE */
   @media (max-width: 600px) {
-    nav { padding: 14px 16px; }
-    .hero { padding: 48px 16px 36px; }
+    /* Layout */
+    nav { padding: 12px 16px; }
+    .hero { padding: 44px 16px 32px; }
     .quick-box { padding: 0 16px; }
-    .quick-card { padding: 22px 20px; }
-    .content { padding: 0 16px 60px; }
-    .hero h1 { font-size: 28px; }
+    .quick-card { padding: 20px 18px; }
+    .content { padding: 0 16px 56px; }
+
+    /* Typography */
+    .hero h1 { font-size: 26px; }
+    .hero p { font-size: 15px; }
+    .quick-card h2 { font-size: 17px; }
+    .section-header h2 { font-size: 19px; }
+    .faq-q { font-size: 14px; padding: 14px 16px; }
+    .faq-a { font-size: 14px; padding: 12px 16px 16px; }
+    .faq-a p + p { margin-top: 8px; }
+    .highlight { font-size: 13px; padding: 10px 12px; }
+
+    /* Nav — prevent brand and back link colliding */
+    .nav-brand { font-size: 15px; }
+    .nav-back { font-size: 12px; gap: 4px; }
+
+    /* Steps */
+    .step { gap: 12px; }
+    .step-num { width: 24px; height: 24px; font-size: 11px; flex-shrink: 0; }
+    .step-content h3 { font-size: 14px; }
+    .step-content p { font-size: 13px; }
+    .section-icon { width: 30px; height: 30px; font-size: 15px; }
+
+    /* Code blocks — prevent URL overflow */
+    code {
+      word-break: break-all;
+      white-space: pre-wrap;
+      font-size: 11px;
+      display: inline;
+    }
+
+    /* Contact */
+    .contact-card { padding: 24px 18px; }
+    .contact-link { font-size: 13px; padding: 11px 18px; width: 100%; justify-content: center; }
+  }
+
+  @media (max-width: 380px) {
+    .hero h1 { font-size: 22px; }
+    .nav-brand { font-size: 13px; }
+    .quick-card h2 { font-size: 15px; }
+    code { font-size: 10px; }
   }
 </style>
 </head>
