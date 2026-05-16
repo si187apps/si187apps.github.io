@@ -23,6 +23,8 @@ si187apps.github.io/
 ├── roadmap/index.html
 ├── manifesto/index.html
 ├── labs/index.html
+├── wc26/
+│   └── index.html                WC26: The Journey product landing page
 ├── fpl-coach-ai/
 │   ├── index.html                 FPL Coach AI product landing page
 │   └── help/index.html            FPL Coach AI help & FAQ
@@ -57,6 +59,15 @@ si187apps.github.io/
 --text1:     #F0F5F0   /* near-white body */
 --text2:     #8AAA8A   /* muted */
 ```
+
+### WC26: The Journey palette (wc26/* pages)
+```css
+--bg:    #06080F   /* deep navy background */
+--gold:  #C9A84C   /* primary accent */
+--text:  #EEE8D5   /* parchment body */
+--muted: #7A8EA8
+```
+Fonts: DM Sans + DM Serif Display (self-contained, alongside Syne/Inter/JetBrains Mono for nav/footer chrome)
 
 ### FPL Coach AI palette (fpl-coach-ai/* pages)
 ```css

@@ -1,0 +1,1187 @@
+<!DOCTYPE html>
+<html lang="en-GB">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>WC26: The Journey — World Cup 2026 · si187 Apps</title>
+  <meta name="description" content="Pick your nation. Follow their journey to the Final. World Cup 2026 companion app — live scores, squad profiles, your lineup, your news. Free on iOS and Android."/>
+  <meta name="theme-color" content="#06080F"/>
+  <meta name="robots" content="index, follow"/>
+  <link rel="canonical" href="/wc26"/>
+  <meta property="og:title" content="WC26: The Journey — World Cup 2026"/>
+  <meta property="og:description" content="Pick your nation. Follow their journey to the Final. Free on iOS and Android."/>
+  <meta property="og:image" content="https://si187apps.com/assets/images/og-wc26.png"/>
+  <meta property="og:image:width" content="1200"/>
+  <meta property="og:image:height" content="630"/>
+  <meta property="og:locale" content="en_GB"/>
+  <meta property="og:site_name" content="si187 Apps"/>
+  <meta property="og:type" content="website"/>
+  <meta property="og:url" content="/wc26"/>
+  <meta name="twitter:card" content="summary_large_image"/>
+  <meta name="twitter:site" content="@si187apps"/>
+  <meta name="twitter:title" content="WC26: The Journey — World Cup 2026"/>
+  <meta name="twitter:description" content="Pick your nation. Follow their journey to the Final. Free."/>
+  <meta name="twitter:image" content="https://si187apps.com/assets/images/og-wc26.png"/>
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 160 160'><rect width='160' height='160' fill='%2306080F'/><path d='M80 148 A69 69 0 0 1 11 79' fill='none' stroke='%23C9A84C' stroke-width='4.5' stroke-linecap='round' opacity='.3'/><path d='M80 148 A69 69 0 0 0 149 79' fill='none' stroke='%23C9A84C' stroke-width='4.5' stroke-linecap='round' opacity='.3'/><path d='M80 116 A37 37 0 0 1 43 79' fill='none' stroke='%23C9A84C' stroke-width='4.5' stroke-linecap='round' opacity='.65'/><path d='M80 116 A37 37 0 0 0 117 79' fill='none' stroke='%23C9A84C' stroke-width='4.5' stroke-linecap='round' opacity='.65'/><path d='M80 88 A9 9 0 0 1 71 79' fill='none' stroke='%23C9A84C' stroke-width='4.5' stroke-linecap='round'/><path d='M80 88 A9 9 0 0 0 89 79' fill='none' stroke='%23C9A84C' stroke-width='4.5' stroke-linecap='round'/><circle cx='80' cy='79' r='7' fill='%23C9A84C'/></svg>">
+  <link rel="preconnect" href="https://fonts.googleapis.com"/>
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;0,9..40,600;0,9..40,700;1,9..40,400&family=DM+Serif+Display:ital@0;1&family=Syne:wght@700;800&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500;600;700&display=swap" rel="stylesheet"/>
+
+  <style>
+    /* ─── RESET & BASE ───────────────────────────────────── */
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    html { scroll-behavior: smooth; }
+
+    :root {
+      --bg:      #06080F;
+      --surf:    #0C1220;
+      --surf2:   #111A2E;
+      --border:  #1C2840;
+      --text:    #EEE8D5;
+      --muted:   #7A8EA8;
+      --dim:     #3E4F64;
+      --gold:    #C9A84C;
+      --gold-lt: #F0D97A;
+      --green:   #39FF7A;
+      --font-sans: 'DM Sans', system-ui, sans-serif;
+      --font-serif: 'DM Serif Display', Georgia, serif;
+      /* Studio palette — nav + footer chrome only */
+      --s-bg:        #050E05;
+      --s-bg-card:   #091409;
+      --s-bg-border: #142014;
+      --s-green:     #39FF7A;
+      --s-magenta:   #C084C8;
+      --s-text1:     #F0F5F0;
+      --s-text2:     #8AAA8A;
+    }
+
+    body {
+      background: var(--bg);
+      color: var(--text);
+      font-family: var(--font-sans);
+      font-size: 16px;
+      line-height: 1.6;
+      -webkit-font-smoothing: antialiased;
+      -moz-osx-font-smoothing: grayscale;
+    }
+
+    a { color: inherit; text-decoration: none; }
+    em { font-family: var(--font-serif); font-style: italic; }
+    strong { font-weight: 600; }
+
+
+  /* ═══ STUDIO NAV ═══ */
+  nav {
+    position: fixed; top:0; left:0; right:0; z-index:200;
+    display: flex; align-items:center; justify-content:space-between;
+    padding: 18px 56px;
+    background: rgba(5,14,5,0.92);
+    backdrop-filter: blur(20px); -webkit-backdrop-filter: blur(20px);
+    border-bottom: 1px solid rgba(20,32,20,0.8);
+    transition: padding 0.3s;
+  }
+  nav.scrolled { padding: 12px 56px; }
+  .nav-logo { display:flex; align-items:center; gap:12px; text-decoration:none; }
+  .nav-wordmark { font-family:'Syne',sans-serif; font-size:17px; font-weight:800; color:#F0F5F0; letter-spacing:-0.3px; }
+  .nav-wordmark em { font-style:normal; color:#39FF7A; }
+  .nav-links { display:flex; align-items:center; gap:32px; list-style:none; }
+  .nav-links a { font-size:14px; font-weight:500; color:#8AAA8A; text-decoration:none; transition:color 0.15s; }
+  .nav-links a:hover { color:#F0F5F0; }
+  .nav-links a.active { color:#39FF7A; }
+  .nav-cta { background:var(--gold) !important; color:var(--bg) !important; padding:9px 18px !important; border-radius:8px !important; font-weight:700 !important; font-size:13px !important; transition:opacity 0.15s !important; border:none !important; }
+  .nav-cta:hover { opacity:0.85 !important; }
+  .nav-toggle { display:none; flex-direction:column; gap:5px; background:none; border:none; cursor:pointer; padding:4px; }
+  .nav-toggle span { display:block; width:22px; height:2px; background:#8AAA8A; border-radius:2px; }
+  .mobile-nav { display:none; position:fixed; top:0; left:0; right:0; bottom:0; z-index:300; background:#050E05; flex-direction:column; align-items:center; justify-content:center; gap:32px; }
+  .mobile-nav.open { display:flex; }
+  .mobile-nav a { font-family:'Syne',sans-serif; font-size:28px; font-weight:800; color:#F0F5F0; text-decoration:none; letter-spacing:-1px; }
+  .mobile-nav a:hover { color:#39FF7A; }
+  .mobile-nav-close { position:absolute; top:24px; right:24px; background:none; border:none; cursor:pointer; color:#8AAA8A; font-size:28px; }
+  @media (max-width: 900px) {
+    nav { padding: 16px 24px; }
+    nav.scrolled { padding: 12px 24px; }
+    .nav-links { display: none; }
+    .nav-toggle { display: flex; }
+  }
+
+    /* ─── LAYOUT ─────────────────────────────────────────── */
+    .container {
+      max-width: 1040px;
+      margin: 0 auto;
+      padding: 0 32px;
+    }
+    .section { padding: 80px 0; }
+    .section + .section { padding-top: 0; }
+
+    /* ─── HERO ───────────────────────────────────────────── */
+    .hero {
+      padding: 140px 32px 72px;
+      max-width: 1040px;
+      margin: 0 auto;
+    }
+    .hero-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      font-size: 12px;
+      font-weight: 600;
+      color: var(--muted);
+      letter-spacing: 0.04em;
+      margin-bottom: 24px;
+    }
+    .hero-badge-dot {
+      width: 6px;
+      height: 6px;
+      border-radius: 50%;
+      background: var(--green);
+      display: inline-block;
+      animation: pulse-dot 2s ease-in-out infinite;
+    }
+    @keyframes pulse-dot {
+      0%, 100% { opacity: 1; transform: scale(1); }
+      50% { opacity: 0.5; transform: scale(0.7); }
+    }
+    .hero h1 {
+      font-family: var(--font-sans);
+      font-size: clamp(44px, 6.5vw, 80px);
+      font-weight: 300;
+      line-height: 1.02;
+      letter-spacing: -0.035em;
+      color: var(--text);
+      margin-bottom: 12px;
+    }
+    .hero h1 em {
+      font-family: var(--font-serif);
+      font-style: italic;
+      font-weight: 400;
+    }
+    .hero-descriptor {
+      font-size: 15px;
+      color: var(--muted);
+      margin-bottom: 6px;
+      letter-spacing: 0.01em;
+    }
+    .hero-sub {
+      font-size: 18px;
+      font-weight: 300;
+      color: var(--muted);
+      max-width: 600px;
+      line-height: 1.65;
+      margin-bottom: 36px;
+    }
+    .hero-actions {
+      display: flex;
+      gap: 12px;
+      flex-wrap: wrap;
+      align-items: center;
+      margin-bottom: 24px;
+    }
+    .btn-primary {
+      background: var(--text);
+      color: var(--bg);
+      font-size: 14px;
+      font-weight: 600;
+      padding: 11px 26px;
+      border-radius: 6px;
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      transition: opacity 0.12s;
+    }
+    .btn-primary:hover { opacity: 0.88; }
+    .btn-ghost {
+      font-size: 14px;
+      color: var(--muted);
+      padding: 11px 0;
+      display: inline-flex;
+      align-items: center;
+      gap: 5px;
+      transition: color 0.12s;
+    }
+    .btn-ghost:hover { color: var(--text); }
+    .hero-meta {
+      font-size: 12px;
+      color: var(--dim);
+      display: flex;
+      gap: 3px;
+      align-items: center;
+      flex-wrap: wrap;
+    }
+    .hero-meta .sep { margin: 0 4px; }
+
+    /* Journey Tracker Card */
+    .hero-card {
+      margin-top: 52px;
+      background: var(--surf);
+      border: 1px solid var(--border);
+      border-radius: 14px;
+      padding: 24px 28px;
+      max-width: 520px;
+      position: relative;
+      overflow: hidden;
+    }
+    .hero-card::before {
+      content: '';
+      position: absolute;
+      top: 0; left: 0; right: 0;
+      height: 2px;
+      background: linear-gradient(90deg, var(--gold), transparent);
+    }
+    .hero-card-label {
+      font-size: 10px;
+      font-weight: 700;
+      letter-spacing: 0.18em;
+      text-transform: uppercase;
+      color: var(--gold);
+      margin-bottom: 14px;
+    }
+    .hero-card-row {
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-start;
+      gap: 16px;
+      margin-bottom: 20px;
+    }
+    .hero-card-nation {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+    .hero-card-flag { font-size: 32px; }
+    .hero-card-name {
+      font-size: 20px;
+      font-weight: 600;
+      letter-spacing: -0.02em;
+      color: var(--text);
+    }
+    .hero-card-sub {
+      font-size: 11px;
+      color: var(--gold);
+      font-weight: 600;
+      margin-top: 2px;
+    }
+    .hero-card-next { text-align: right; }
+    .hero-card-next-label { font-size: 10px; color: var(--muted); }
+    .hero-card-countdown {
+      font-size: 28px;
+      font-weight: 300;
+      color: var(--gold);
+      letter-spacing: -0.03em;
+      line-height: 1;
+    }
+    .hero-card-next-sub { font-size: 10px; color: var(--muted); }
+
+    /* Journey tracker bracket */
+    .journey-track {
+      display: flex;
+      align-items: center;
+      gap: 0;
+      margin-bottom: 16px;
+    }
+    .j-stage {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      flex: 1;
+      position: relative;
+    }
+    .j-line {
+      height: 2px;
+      flex: 1;
+      background: var(--border);
+    }
+    .j-line.done { background: #CE1124; }
+    .j-node {
+      width: 28px;
+      height: 28px;
+      border-radius: 50%;
+      border: 2px solid var(--border);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 10px;
+      position: relative;
+      z-index: 1;
+      flex-shrink: 0;
+      background: var(--surf);
+    }
+    .j-node.done {
+      border-color: #CE1124;
+      background: rgba(206,17,36,0.15);
+    }
+    .j-node.current {
+      border-color: #CE1124;
+      background: #CE1124;
+      font-size: 12px;
+      box-shadow: 0 0 12px rgba(206,17,36,0.5);
+    }
+    .j-node.future {
+      border-color: var(--border);
+    }
+    .j-label {
+      font-size: 8px;
+      color: var(--dim);
+      margin-top: 5px;
+      white-space: nowrap;
+      letter-spacing: 0.04em;
+    }
+    .j-label.active { color: #CE1124; font-weight: 600; }
+    .track-row {
+      display: flex;
+      align-items: center;
+      width: 100%;
+      margin-bottom: 8px;
+    }
+
+    .hero-card-match {
+      padding: 10px 12px;
+      background: rgba(201, 168, 76, 0.07);
+      border: 1px solid rgba(201, 168, 76, 0.18);
+      border-radius: 8px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      font-size: 12px;
+      color: var(--muted);
+    }
+    .hero-card-match span { color: var(--gold); font-weight: 600; }
+
+    /* ─── PROBLEM ────────────────────────────────────────── */
+    .section-label {
+      font-size: 13px;
+      color: var(--muted);
+      margin-bottom: 20px;
+    }
+    .section h2 {
+      font-family: var(--font-sans);
+      font-size: clamp(28px, 3.5vw, 46px);
+      font-weight: 300;
+      line-height: 1.1;
+      letter-spacing: -0.03em;
+      color: var(--text);
+      max-width: 640px;
+      margin-bottom: 20px;
+    }
+    .section h2 em { font-family: var(--font-serif); }
+    .section p {
+      font-size: 15px;
+      color: var(--muted);
+      max-width: 560px;
+      line-height: 1.75;
+    }
+
+    .two-col {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 2px;
+      margin-top: 40px;
+      background: var(--border);
+      border: 1px solid var(--border);
+      border-radius: 12px;
+      overflow: hidden;
+    }
+    .two-col-item {
+      background: var(--surf);
+      padding: 28px 26px;
+    }
+    .two-col-tag {
+      font-size: 11px;
+      font-weight: 700;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      margin-bottom: 12px;
+      display: flex;
+      align-items: center;
+      gap: 6px;
+    }
+    .two-col-tag.neg { color: #E05252; }
+    .two-col-tag.pos { color: #6BBFA8; }
+    .two-col-item p { font-size: 14px; color: var(--muted); line-height: 1.7; }
+
+    /* ─── WHAT YOU GET ───────────────────────────────────── */
+    .what-not {
+      padding: 24px 26px;
+      border-radius: 10px;
+      background: var(--surf);
+      border: 1px solid var(--border);
+      font-size: 14px;
+      line-height: 1.7;
+      color: var(--muted);
+      position: relative;
+    }
+    .what-not .wn-label {
+      font-size: 11px;
+      font-weight: 700;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      margin-bottom: 8px;
+    }
+    .what-not .wn-label.neg { color: #E05252; }
+    .what-not .wn-label.pos { color: #6BBFA8; }
+
+    .what-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 12px;
+      margin-top: 32px;
+    }
+
+    /* ─── FEATURES ───────────────────────────────────────── */
+    .how-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 2px;
+      background: var(--border);
+      border: 1px solid var(--border);
+      border-radius: 12px;
+      overflow: hidden;
+      margin-top: 40px;
+    }
+    .how-item {
+      background: var(--surf);
+      padding: 32px 28px;
+    }
+    .how-item h3 {
+      font-size: 17px;
+      font-weight: 500;
+      letter-spacing: -0.01em;
+      color: var(--text);
+      margin-bottom: 8px;
+    }
+    .how-item .how-subtitle {
+      font-size: 12px;
+      color: var(--gold);
+      font-weight: 600;
+      margin-bottom: 14px;
+      letter-spacing: 0.03em;
+    }
+    .how-item p {
+      font-size: 14px;
+      color: var(--muted);
+      line-height: 1.7;
+      margin-bottom: 12px;
+    }
+    .how-item .how-tags {
+      font-size: 11px;
+      color: var(--dim);
+      line-height: 1.8;
+    }
+    .how-item .how-tags span { margin-right: 6px; }
+    .how-item.new-feature {
+      background: var(--surf2);
+      border-left: 2px solid var(--gold);
+    }
+    .new-badge {
+      display: inline-block;
+      font-size: 9px;
+      font-weight: 700;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      color: var(--bg);
+      background: var(--gold);
+      border-radius: 4px;
+      padding: 2px 6px;
+      margin-left: 8px;
+      vertical-align: middle;
+    }
+
+    /* ─── STEPS ──────────────────────────────────────────── */
+    .steps { margin-top: 40px; }
+    .step {
+      display: flex;
+      gap: 24px;
+      padding: 22px 0;
+      border-bottom: 1px solid var(--border);
+      align-items: flex-start;
+    }
+    .step:last-child { border-bottom: none; }
+    .step-num {
+      font-size: 13px;
+      font-weight: 500;
+      color: var(--dim);
+      flex-shrink: 0;
+      width: 24px;
+      padding-top: 3px;
+    }
+    .step h3 {
+      font-size: 16px;
+      font-weight: 500;
+      color: var(--text);
+      margin-bottom: 5px;
+      letter-spacing: -0.01em;
+    }
+    .step p { font-size: 14px; color: var(--muted); line-height: 1.7; }
+
+    /* ─── STATS STRIP ────────────────────────────────────── */
+    .stats-strip {
+      border-top: 1px solid var(--border);
+      border-bottom: 1px solid var(--border);
+    }
+    .stats-strip .container {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      padding: 0;
+    }
+    .stat-item {
+      padding: 36px 32px;
+      border-right: 1px solid var(--border);
+    }
+    .stat-item:last-child { border-right: none; }
+    .stat-num {
+      font-size: 38px;
+      font-weight: 300;
+      letter-spacing: -0.03em;
+      color: var(--text);
+      line-height: 1;
+      margin-bottom: 6px;
+    }
+    .stat-label { font-size: 13px; color: var(--muted); }
+
+    /* ─── Q&A / USE CASES ────────────────────────────────── */
+    .qa-list { margin-top: 40px; }
+    .qa-item {
+      padding: 24px 0;
+      border-bottom: 1px solid var(--border);
+    }
+    .qa-item:last-child { border-bottom: none; }
+    .qa-q {
+      font-size: 13px;
+      color: var(--dim);
+      margin-bottom: 6px;
+      font-weight: 500;
+    }
+    .qa-a { font-size: 15px; color: var(--muted); line-height: 1.7; }
+    .qa-a strong { color: var(--text); font-weight: 500; }
+
+    /* ─── NOTIFY / WAITLIST ──────────────────────────────── */
+    .notify-section {
+      padding: 80px 32px;
+      max-width: 1040px;
+      margin: 0 auto;
+    }
+    .notify-section h2 {
+      font-family: var(--font-sans);
+      font-size: clamp(28px, 3.5vw, 46px);
+      font-weight: 300;
+      letter-spacing: -0.03em;
+      color: var(--text);
+      margin-bottom: 8px;
+    }
+    .notify-section h2 em { font-family: var(--font-serif); }
+    .notify-section p {
+      font-size: 15px;
+      color: var(--muted);
+      margin-bottom: 28px;
+      max-width: 480px;
+    }
+    .notify-benefits {
+      display: flex;
+      flex-direction: column;
+      gap: 7px;
+      margin-bottom: 28px;
+    }
+    .notify-benefit {
+      font-size: 14px;
+      color: var(--muted);
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+    .notify-benefit::before {
+      content: '';
+      width: 5px;
+      height: 5px;
+      background: var(--gold);
+      border-radius: 50%;
+      flex-shrink: 0;
+    }
+    .notify-form {
+      display: flex;
+      gap: 8px;
+      max-width: 440px;
+      margin-bottom: 12px;
+    }
+    .notify-form input {
+      flex: 1;
+      background: var(--surf);
+      border: 1px solid var(--border);
+      border-radius: 6px;
+      padding: 11px 16px;
+      font-size: 14px;
+      color: var(--text);
+      font-family: var(--font-sans);
+      outline: none;
+      transition: border-color 0.12s;
+    }
+    .notify-form input::placeholder { color: var(--dim); }
+    .notify-form input:focus { border-color: var(--gold); }
+    .notify-form button {
+      background: var(--text);
+      color: var(--bg);
+      border: none;
+      border-radius: 6px;
+      padding: 11px 22px;
+      font-size: 14px;
+      font-weight: 600;
+      font-family: var(--font-sans);
+      cursor: pointer;
+      white-space: nowrap;
+      transition: opacity 0.12s;
+    }
+    .notify-form button:hover { opacity: 0.88; }
+    .notify-meta { font-size: 12px; color: var(--dim); }
+
+    /* ─── FPL CROSS-PROMO ────────────────────────────────── */
+    .cross-promo {
+      border-top: 1px solid var(--border);
+      padding: 52px 0;
+    }
+    .cross-promo .container {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 32px;
+      flex-wrap: wrap;
+    }
+    .cross-promo-label {
+      font-size: 11px;
+      color: var(--dim);
+      font-weight: 600;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      margin-bottom: 8px;
+    }
+    .cross-promo h3 {
+      font-size: 22px;
+      font-weight: 400;
+      letter-spacing: -0.02em;
+      color: var(--text);
+      margin-bottom: 6px;
+    }
+    .cross-promo h3 em { font-family: var(--font-serif); }
+    .cross-promo p { font-size: 14px; color: var(--muted); max-width: 440px; line-height: 1.65; }
+    .cross-promo-link {
+      font-size: 14px;
+      color: var(--muted);
+      border: 1px solid var(--border);
+      border-radius: 6px;
+      padding: 10px 20px;
+      flex-shrink: 0;
+      transition: all 0.12s;
+    }
+    .cross-promo-link:hover { border-color: var(--text); color: var(--text); }
+
+
+  /* ═══ STUDIO FOOTER ═══ */
+  footer {
+    background: #050E05;
+    padding: 44px 56px;
+    border-top: 1px solid rgba(192,132,200,0.12);
+    display: flex; justify-content:space-between;
+    align-items:flex-start; flex-wrap:wrap; gap:40px;
+    position:relative; z-index:1;
+  }
+  .footer-col { display:flex; flex-direction:column; gap:14px; }
+  .footer-brand { display:flex; align-items:center; gap:12px; }
+  .footer-name { font-family:'Syne',sans-serif; font-size:16px; font-weight:800; color:#F0F5F0; }
+  .footer-name em { font-style:normal; color:#39FF7A; }
+  .footer-tagline { font-family:'JetBrains Mono',monospace; font-size:9px; letter-spacing:2px; color:#C084C8; opacity:0.5; text-transform:uppercase; margin-top:3px; }
+  .footer-nav-label { font-family:'JetBrains Mono',monospace; font-size:9px; letter-spacing:3px; color:#C084C8; opacity:0.45; text-transform:uppercase; }
+  .footer-nav-links { list-style:none; display:flex; flex-direction:column; gap:10px; }
+  .footer-nav-links a { font-size:14px; color:#8AAA8A; text-decoration:none; transition:color 0.15s; }
+  .footer-nav-links a:hover { color:#C084C8; }
+  .footer-bottom { width:100%; border-top:1px solid rgba(192,132,200,0.10); padding-top:24px; display:flex; justify-content:space-between; align-items:center; flex-wrap:wrap; gap:12px; }
+  .footer-copy { font-family:'JetBrains Mono',monospace; font-size:10px; color:#C084C8; opacity:0.4; letter-spacing:0.5px; }
+  .footer-legal { display:flex; gap:20px; }
+  .footer-legal a { font-size:12px; color:#C084C8; opacity:0.45; text-decoration:none; transition:opacity 0.15s; }
+  .footer-legal a:hover { opacity:1; }
+  .footer-social { display:flex; gap:12px; }
+  .footer-social a { display:flex; align-items:center; justify-content:center; width:34px; height:34px; border:1px solid rgba(192,132,200,0.2); border-radius:8px; color:#C084C8; opacity:0.5; text-decoration:none; font-size:14px; transition:opacity 0.15s, border-color 0.15s; }
+  .footer-social a:hover { opacity:1; border-color:rgba(192,132,200,0.5); }
+  @media (max-width: 900px) {
+    footer { padding: 40px 24px; flex-direction: column; }
+  }
+
+    /* ─── RESPONSIVE ─────────────────────────────────────── */
+    @media (max-width: 768px) {
+      .site-nav { padding: 0 20px; }
+      .nav-links { display: none; }
+      .nav-hamburger { display: block; }
+      .hero { padding: 52px 20px 52px; }
+      .container { padding: 0 20px; }
+      .notify-section { padding: 60px 20px; }
+      .two-col { grid-template-columns: 1fr; }
+      .what-grid { grid-template-columns: 1fr; }
+      .how-grid { grid-template-columns: 1fr; }
+      .stats-strip .container { grid-template-columns: repeat(2, 1fr); }
+      .stat-item:nth-child(2) { border-right: none; }
+      .stat-item:nth-child(3) { border-top: 1px solid var(--border); }
+      .footer-top { grid-template-columns: 1fr; gap: 32px; }
+      .cross-promo .container { flex-direction: column; align-items: flex-start; }
+      .notify-form { flex-direction: column; }
+      .notify-form button { width: 100%; text-align: center; }
+    }
+  </style>
+</head>
+<body>
+
+  <a href="#main-content" style="position:absolute;top:-100px;left:16px;z-index:999;background:#C9A84C;color:#06080F;padding:10px 18px;border-radius:0 0 8px 8px;font-weight:700;font-size:14px;text-decoration:none;transition:top 0.2s;" onfocus="this.style.top='0'" onblur="this.style.top='-100px'">Skip to main content</a>
+
+
+<!-- ══ STUDIO NAV ══ -->
+<nav id="main-nav">
+  <a href="/" class="nav-logo" aria-label="si187 Apps home">
+    <div aria-hidden="true"><svg width="28" height="28" viewBox="0 0 160 160"><path d="M80 148 A69 69 0 0 1 11 79" fill="none" stroke="#39FF7A" stroke-width="4.5" stroke-linecap="round" opacity=".11"/><path d="M80 148 A69 69 0 0 0 149 79" fill="none" stroke="#39FF7A" stroke-width="4.5" stroke-linecap="round" opacity=".11"/><path d="M80 132 A53 53 0 0 1 27 79" fill="none" stroke="#39FF7A" stroke-width="4.5" stroke-linecap="round" opacity=".24"/><path d="M80 132 A53 53 0 0 0 133 79" fill="none" stroke="#39FF7A" stroke-width="4.5" stroke-linecap="round" opacity=".24"/><path d="M80 116 A37 37 0 0 1 43 79" fill="none" stroke="#39FF7A" stroke-width="4.5" stroke-linecap="round" opacity=".44"/><path d="M80 116 A37 37 0 0 0 117 79" fill="none" stroke="#39FF7A" stroke-width="4.5" stroke-linecap="round" opacity=".44"/><path d="M80 100 A21 21 0 0 1 59 79" fill="none" stroke="#39FF7A" stroke-width="4.5" stroke-linecap="round" opacity=".68"/><path d="M80 100 A21 21 0 0 0 101 79" fill="none" stroke="#39FF7A" stroke-width="4.5" stroke-linecap="round" opacity=".68"/><path d="M80 88 A9 9 0 0 1 71 79" fill="none" stroke="#C084C8" stroke-width="4.5" stroke-linecap="round" opacity=".92"/><path d="M80 88 A9 9 0 0 0 89 79" fill="none" stroke="#C084C8" stroke-width="4.5" stroke-linecap="round" opacity=".92"/><circle cx="80" cy="79" r="7" fill="#39FF7A"/></svg></div>
+    <span class="nav-wordmark">si187 <em>Apps</em></span>
+  </a>
+  <ul class="nav-links">
+    <li><a href="/about">About</a></li>
+    <li><a href="/roadmap">Roadmap</a></li>
+    <li><a href="/manifesto">Manifesto</a></li>
+    <li><a href="/labs">Labs</a></li>
+    <li><a href="#notify" class="nav-cta">Get notified</a></li>
+  </ul>
+  <button class="nav-toggle" aria-label="Open menu" id="nav-toggle-btn"><span></span><span></span><span></span></button>
+</nav>
+<div class="mobile-nav" id="mobile-nav">
+  <button class="mobile-nav-close" id="mobile-nav-close" aria-label="Close">✕</button>
+  <a href="/" onclick="closeMobileNav()">Home</a>
+  <a href="/about" onclick="closeMobileNav()">About</a>
+  <a href="/roadmap" onclick="closeMobileNav()">Roadmap</a>
+  <a href="/manifesto" onclick="closeMobileNav()">Manifesto</a>
+  <a href="/labs" onclick="closeMobileNav()">Labs</a>
+  <a href="#notify" onclick="closeMobileNav()" style="color:var(--gold)">Get notified</a>
+</div>
+
+  <!-- ── HERO ─────────────────────────────────────────────── -->
+  <main id="main-content">
+  <section class="hero">
+    <p class="hero-badge">
+      <span class="hero-badge-dot"></span>
+      Launching June 2026 · iOS &amp; Android
+    </p>
+    <h1>WC26:<br/><em>The Journey.</em></h1>
+    <p class="hero-descriptor">World Cup 2026 Companion App</p>
+    <p class="hero-sub">
+      Pick your nation. The whole app becomes yours — colours, news, your squad, your lineup.
+      Follow every step from the group stage to the Final.
+    </p>
+    <div class="hero-actions">
+      <a href="#notify" class="btn-primary">Get notified at launch</a>
+      <a href="#how-it-works" class="btn-ghost">How it works →</a>
+    </div>
+    <p class="hero-meta">
+      <span>48 nations</span><span class="sep">·</span>
+      <span>iOS + Android</span><span class="sep">·</span>
+      <span>Free · £1.99 remove ads</span>
+    </p>
+
+    <!-- Product preview card with Journey Tracker -->
+    <div class="hero-card">
+      <div class="hero-card-label">WC26: The Journey · England · Group Stage</div>
+      <div class="hero-card-row">
+        <div class="hero-card-nation">
+          <span class="hero-card-flag">🏴󠁧󠁢󠁥󠁮󠁧󠁿</span>
+          <div>
+            <div class="hero-card-name">England</div>
+            <div class="hero-card-sub">Group C · 1st · 3 pts</div>
+          </div>
+        </div>
+        <div class="hero-card-next">
+          <div class="hero-card-next-label">Next match</div>
+          <div class="hero-card-countdown">4d 6h</div>
+          <div class="hero-card-next-sub">vs Panama · Jun 19</div>
+        </div>
+      </div>
+
+      <!-- Journey Tracker -->
+      <div style="margin-bottom:16px;">
+        <div style="font-size:9px;color:var(--dim);letter-spacing:0.1em;text-transform:uppercase;margin-bottom:8px;">Your route to the Final</div>
+        <div class="track-row">
+          <div class="j-node current">🏴󠁧󠁢󠁥󠁮󠁧󠁿</div>
+          <div class="j-line done" style="flex:1;"></div>
+          <div class="j-node future">⚽</div>
+          <div class="j-line" style="flex:1;"></div>
+          <div class="j-node future">⚽</div>
+          <div class="j-line" style="flex:1;"></div>
+          <div class="j-node future">⚽</div>
+          <div class="j-line" style="flex:1;"></div>
+          <div class="j-node future">⚽</div>
+          <div class="j-line" style="flex:1;"></div>
+          <div class="j-node future" style="font-size:14px;">🏆</div>
+        </div>
+        <div style="display:flex;justify-content:space-between;padding:0 2px;margin-top:4px;">
+          <span style="font-size:8px;color:#CE1124;font-weight:600;">Group</span>
+          <span style="font-size:8px;color:var(--dim);">R32</span>
+          <span style="font-size:8px;color:var(--dim);">R16</span>
+          <span style="font-size:8px;color:var(--dim);">QF</span>
+          <span style="font-size:8px;color:var(--dim);">SF</span>
+          <span style="font-size:8px;color:var(--dim);">Final</span>
+        </div>
+      </div>
+
+      <div class="hero-card-match">
+        <span>📅 Add all fixtures to Calendar</span>
+        <span>+ Add →</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- ── STATS ─────────────────────────────────────────────── -->
+  <div class="stats-strip">
+    <div class="container">
+      <div class="stat-item">
+        <div class="stat-num">48</div>
+        <div class="stat-label">Nations to follow</div>
+      </div>
+      <div class="stat-item">
+        <div class="stat-num">104</div>
+        <div class="stat-label">Matches tracked</div>
+      </div>
+      <div class="stat-item">
+        <div class="stat-num">5+</div>
+        <div class="stat-label">Live news sources</div>
+      </div>
+      <div class="stat-item">
+        <div class="stat-num">£1.99</div>
+        <div class="stat-label">Remove ads — forever</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ── PROBLEM ───────────────────────────────────────────── -->
+  <section class="section">
+    <div class="container">
+      <p class="section-label">Why this exists</p>
+      <h2>The World Cup deserves a companion built for <em>fans, not organisations.</em></h2>
+      <p>
+        Most football apps treat you as a generic user. WC26: The Journey treats you as a fan of a specific nation — with everything, from the colours to the news feed to the lineup builder, built around who you're supporting.
+      </p>
+
+      <div class="two-col">
+        <div class="two-col-item">
+          <div class="two-col-tag neg">✗ Generic tournament apps</div>
+          <p>The same experience for every fan regardless of who they support. Fixtures buried, no personalisation, no sense of your team's journey — just the raw tournament data with nowhere to put yourself in it.</p>
+        </div>
+        <div class="two-col-item">
+          <div class="two-col-tag pos">✓ WC26: The Journey</div>
+          <p>Pick England and it turns red and white. Pick Brazil and it turns green and gold. Your squad, your news, your lineup — personalised to the nation you're backing, from the first tap to the Final.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ── WHAT YOU GET ──────────────────────────────────────── -->
+  <section class="section" style="padding-top:0;">
+    <div class="container">
+      <p class="section-label">What you get</p>
+      <h2>Everything the tournament needs. <em>Nothing it doesn't.</em></h2>
+
+      <div style="margin-top:16px;margin-bottom:12px;">
+        <div class="what-not">
+          <div class="wn-label pos">✓ What you get</div>
+          <strong style="color:var(--text);">England's next match is in 4 days at SoFi Stadium, Los Angeles.</strong>
+          Bellingham leads the midfield. Your predicted XI is ready to share. The journey tracker shows England in the group stage — five steps from the trophy.
+          One tap adds everything to your calendar.
+        </div>
+      </div>
+      <div class="what-not">
+        <div class="wn-label neg">✗ Generic tournament experience</div>
+        <p style="font-size:14px;color:var(--muted);">"Here are all 104 fixtures. Here are the group tables. Here is the bracket." Useful data, but none of it knows who you're supporting or why you're here.</p>
+      </div>
+
+      <div class="how-grid" style="margin-top:32px;">
+        <div class="how-item">
+          <h3>The Journey Tracker</h3>
+          <div class="how-subtitle">Your path from group stage to Final</div>
+          <p>A visual bracket that follows your nation through every round — group stage, round of 32, all the way to the Final. Your team's position glows in their national colours. Auto-updates as results come in.</p>
+          <div class="how-tags">
+            <span>Group stage</span> · <span>Knockout bracket</span> · <span>Live path updates</span>
+          </div>
+        </div>
+        <div class="how-item">
+          <h3>Nation theming</h3>
+          <div class="how-subtitle">The whole app is your team's</div>
+          <p>Pick your nation and the entire app changes — colours, navigation accents, news feed, lineup builder. When your team gets knocked out, one tap follows a second nation to the Final. New colours, new journey.</p>
+          <div class="how-tags">
+            <span>48 nations</span> · <span>Full palette shift</span> · <span>Follow another team</span>
+          </div>
+        </div>
+        <div class="how-item">
+          <h3>Live scores</h3>
+          <div class="how-subtitle">Real-time, all 104 matches</div>
+          <p>Live scores, goal scorers, match events, stats, and timelines. Persistent live bar across every screen so you never lose track mid-navigation. Goal alerts to your phone within seconds.</p>
+          <div class="how-tags">
+            <span>Goal alerts</span> · <span>Kick-off reminders</span> · <span>Full-time notifications</span>
+          </div>
+        </div>
+        <div class="how-item">
+          <h3>Your news</h3>
+          <div class="how-subtitle">Filtered to your team first</div>
+          <p>Aggregated from BBC Sport, Sky Sports, ESPN FC, The Guardian, and TalkSPORT. Filtered to your nation's coverage first, then the tournament's top headlines — always sorted by latest published.</p>
+          <div class="how-tags">
+            <span>BBC Sport</span> · <span>Sky Sports</span> · <span>ESPN FC</span> · <span>TalkSPORT</span>
+          </div>
+        </div>
+        <div class="how-item new-feature">
+          <h3>Squad &amp; player profiles <span class="new-badge">New</span></h3>
+          <div class="how-subtitle">Your full 26-man squad, in your hand</div>
+          <p>The complete World Cup squad, grouped by position with player photos. Tap any player for their tournament stats — appearances, goals, assists, ratings. Real data from the tournament feed.</p>
+          <div class="how-tags">
+            <span>Full squad</span> · <span>Player photos</span> · <span>Tournament stats</span>
+          </div>
+        </div>
+        <div class="how-item">
+          <h3>Lineup builder</h3>
+          <div class="how-subtitle">Your predicted XI, built from your squad</div>
+          <p>Pick your formation, tap players from the squad roster to fill each position on the pitch. Share the finished lineup as a branded card — nation colours, si187 watermark — to WhatsApp, Instagram, and X.</p>
+          <div class="how-tags">
+            <span>Custom formations</span> · <span>Squad selector</span> · <span>Share to socials</span>
+          </div>
+        </div>
+        <div class="how-item">
+          <h3>Calendar sync</h3>
+          <div class="how-subtitle">Never miss a kick-off</div>
+          <p>One tap adds all your team's remaining fixtures to your phone calendar — iOS or Android — with a 1-hour kick-off alert. Find it in Settings, always one tap away.</p>
+          <div class="how-tags">
+            <span>iOS Calendar</span> · <span>Google Calendar</span> · <span>1h alerts</span>
+          </div>
+        </div>
+        <div class="how-item new-feature">
+          <h3>Light &amp; dark mode <span class="new-badge">New</span></h3>
+          <div class="how-subtitle">The app that fits your preference</div>
+          <p>Switch between a deep dark theme and a warm parchment light theme in Settings. Your nation's accent colours carry across both — England stays red whether the background is midnight or cream.</p>
+          <div class="how-tags">
+            <span>Dark mode</span> · <span>Light mode</span> · <span>Nation colours persist</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ── HOW IT WORKS ──────────────────────────────────────── -->
+  <section class="section" id="how-it-works" style="padding-top:0;">
+    <div class="container">
+      <p class="section-label">How it works</p>
+      <h2>Set up in under 60 seconds. <em>Personal from the first tap.</em></h2>
+      <div class="steps">
+        <div class="step">
+          <div class="step-num">01</div>
+          <div>
+            <h3>Pick your nation</h3>
+            <p>Choose from all 48 qualified nations. The moment you tap, the whole app transforms to their colours — a full theme shift in under half a second. Your World Cup journey starts here.</p>
+          </div>
+        </div>
+        <div class="step">
+          <div class="step-num">02</div>
+          <div>
+            <h3>Explore your squad</h3>
+            <p>Browse the full World Cup squad, grouped by position. Tap any player to see their tournament stats — appearances, goals, assists, and ratings. Then build your own predicted XI from the same squad list.</p>
+          </div>
+        </div>
+        <div class="step">
+          <div class="step-num">03</div>
+          <div>
+            <h3>Follow the wall chart</h3>
+            <p>Track your nation's route through the bracket — from group stage to knockout rounds. The Journey Tracker highlights every step in your team's colours. Every result auto-populates.</p>
+          </div>
+        </div>
+        <div class="step">
+          <div class="step-num">04</div>
+          <div>
+            <h3>Add fixtures and get alerts</h3>
+            <p>One tap adds all your team's remaining matches to your phone calendar with kick-off alerts. Goal notifications arrive within seconds. You'll never miss a moment.</p>
+          </div>
+        </div>
+        <div class="step">
+          <div class="step-num">05</div>
+          <div>
+            <h3>If your team goes out, follow another</h3>
+            <p>When your nation is eliminated, the app surfaces a moment to pick a second team. New colours. New journey. New reason to keep watching all the way to the Final.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ── Q&A ───────────────────────────────────────────────── -->
+  <section class="section" style="padding-top:0;">
+    <div class="container">
+      <p class="section-label">In the app</p>
+      <h2>What the app actually <em>does for you.</em></h2>
+      <div class="qa-list">
+        <div class="qa-item">
+          <div class="qa-q">Match day</div>
+          <div class="qa-a"><strong>Where is the game, what time is kick-off, and who's starting?</strong> Your next fixture is on the home screen. Predicted lineup, venue, time local to you. One tap adds it to your calendar with a 1-hour alert.</div>
+        </div>
+        <div class="qa-item">
+          <div class="qa-q">Squad debate</div>
+          <div class="qa-a"><strong>Who would you start? Who's in form?</strong> Browse the full squad with player stats from the tournament — goals, assists, ratings. Build your predicted XI, pick your formation, and share it as a branded card in your nation's colours.</div>
+        </div>
+        <div class="qa-item">
+          <div class="qa-q">Between matches</div>
+          <div class="qa-a"><strong>What's being written about your team right now?</strong> The news feed filters five live sources to your nation first — manager press conferences, injury updates, player ratings. Always the latest story at the top.</div>
+        </div>
+        <div class="qa-item">
+          <div class="qa-q">Live game</div>
+          <div class="qa-a"><strong>You're away from the TV. What's the score?</strong> A persistent live bar sits at the top of every screen. Goal alerts push to your phone within seconds. Scorers, stats, and the full match timeline in the match centre.</div>
+        </div>
+        <div class="qa-item">
+          <div class="qa-q">Your team's out</div>
+          <div class="qa-a"><strong>The tournament isn't over. Who do you back now?</strong> The app surfaces a team-switch moment when your nation is eliminated. Pick a new team, theme pivots, journey tracker updates. Stay in it to the Final.</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ── NOTIFY ────────────────────────────────────────────── -->
+  <section class="notify-section" id="notify">
+    <p class="section-label">Get the app</p>
+    <h2>Get notified when<br/><em>WC26: The Journey</em> launches.</h2>
+    <p>Launching before the tournament opens on June 11. Free on iOS and Android — one £1.99 purchase removes ads forever.</p>
+
+    <div class="notify-benefits">
+      <div class="notify-benefit">Launch notification the moment it goes live</div>
+      <div class="notify-benefit">Free on iOS and Android</div>
+      <div class="notify-benefit">Remove ads for £1.99 — one-time, no subscription</div>
+      <div class="notify-benefit">Nation theming, squad profiles, live scores, lineup builder</div>
+    </div>
+
+    <form class="notify-form">
+      <input type="email" placeholder="Email address" id="notifyEmail" autocomplete="email" required/>
+      <button type="submit">Notify me</button>
+    </form>
+    <p class="notify-meta">No spam · Unsubscribe anytime · Launching June 2026</p>
+    <p id="notifyConfirm" style="display:none;margin-top:12px;font-size:13px;color:var(--muted);">
+      ✓ You're on the list. We'll be in touch before June 11.
+    </p>
+  </section>
+
+  <!-- ── FPL CROSS-PROMO ───────────────────────────────────── -->
+  <div class="cross-promo">
+    <div class="container">
+      <div>
+        <div class="cross-promo-label">Also from si187 Apps</div>
+        <h3>FPL Coach <em>AI.</em></h3>
+        <p>When the World Cup ends, the Premier League begins. The AI coaching companion built for the 11 million FPL managers who think for themselves — captain picks, transfer calls, chip strategy. Launching August 2026.</p>
+      </div>
+      <a href="/fpl-coach-ai" class="cross-promo-link">Learn more →</a>
+    </div>
+  </div>
+  </main>
+
+<!-- ══ STUDIO FOOTER ══ -->
+<footer>
+  <div class="footer-col">
+    <div class="footer-brand">
+      <div aria-hidden="true"><svg width="24" height="24" viewBox="0 0 160 160"><path d="M80 148 A69 69 0 0 1 11 79" fill="none" stroke="#39FF7A" stroke-width="4.5" stroke-linecap="round" opacity=".15"/><path d="M80 148 A69 69 0 0 0 149 79" fill="none" stroke="#39FF7A" stroke-width="4.5" stroke-linecap="round" opacity=".15"/><path d="M80 132 A53 53 0 0 1 27 79" fill="none" stroke="#39FF7A" stroke-width="4.5" stroke-linecap="round" opacity=".32"/><path d="M80 132 A53 53 0 0 0 133 79" fill="none" stroke="#39FF7A" stroke-width="4.5" stroke-linecap="round" opacity=".32"/><path d="M80 116 A37 37 0 0 1 43 79" fill="none" stroke="#39FF7A" stroke-width="4.5" stroke-linecap="round" opacity=".55"/><path d="M80 116 A37 37 0 0 0 117 79" fill="none" stroke="#39FF7A" stroke-width="4.5" stroke-linecap="round" opacity=".55"/><path d="M80 100 A21 21 0 0 1 59 79" fill="none" stroke="#39FF7A" stroke-width="4.5" stroke-linecap="round" opacity=".75"/><path d="M80 100 A21 21 0 0 0 101 79" fill="none" stroke="#39FF7A" stroke-width="4.5" stroke-linecap="round" opacity=".75"/><path d="M80 88 A9 9 0 0 1 71 79" fill="none" stroke="#C084C8" stroke-width="4.5" stroke-linecap="round" opacity=".9"/><path d="M80 88 A9 9 0 0 0 89 79" fill="none" stroke="#C084C8" stroke-width="4.5" stroke-linecap="round" opacity=".9"/><circle cx="80" cy="79" r="7" fill="#39FF7A"/></svg></div>
+      <div><p class="footer-name">si187 <em>Apps</em></p><p class="footer-tagline">si187 Enterprises Ltd · London</p></div>
+    </div>
+    <div class="footer-social">
+      <a href="https://twitter.com/si187apps" aria-label="X">𝕏</a>
+      <a href="https://instagram.com/si187apps" aria-label="Instagram">◻</a>
+      <a href="https://tiktok.com/@si187apps" aria-label="TikTok">▷</a>
+    </div>
+  </div>
+  <div class="footer-col">
+    <p class="footer-nav-label">Studio</p>
+    <ul class="footer-nav-links">
+      <li><a href="/about">About</a></li>
+      <li><a href="/roadmap">Roadmap</a></li>
+      <li><a href="/manifesto">Manifesto</a></li>
+      <li><a href="/labs">Labs</a></li>
+    </ul>
+  </div>
+  <div class="footer-col">
+    <p class="footer-nav-label">WC26: The Journey</p>
+    <ul class="footer-nav-links">
+      <li><a href="/wc26">Overview</a></li>
+      <li><a href="/wc26#how-it-works">How it works</a></li>
+      <li><a href="/wc26#notify">Get notified</a></li>
+      <li><a href="/fpl-coach-ai">FPL Coach AI</a></li>
+    </ul>
+  </div>
+  <div class="footer-col">
+    <p class="footer-nav-label">Contact</p>
+    <ul class="footer-nav-links"><li><a href="mailto:studio@si187apps.com">studio@si187apps.com</a></li></ul>
+  </div>
+  <div class="footer-bottom">
+    <p class="footer-copy">&copy; 2026 si187 Enterprises Ltd. All rights reserved.</p>
+    <div class="footer-legal">
+      <a href="/privacy">Privacy</a>
+      <a href="/terms">Terms</a>
+      <a href="#" onclick="window.si187CookiePrefs && window.si187CookiePrefs(); return false;" style="cursor:pointer;">Cookie preferences</a>
+    </div>
+  </div>
+</footer>
+
+
+
+<script>
+// Nav scroll shrink
+const nav = document.getElementById('main-nav');
+window.addEventListener('scroll', () => {
+  nav.classList.toggle('scrolled', window.scrollY > 60);
+}, { passive: true });
+
+// Mobile nav
+const mobileNav = document.getElementById('mobile-nav');
+function closeMobileNav() { mobileNav.classList.remove('open'); document.body.style.overflow = ''; }
+window.closeMobileNav = closeMobileNav;
+document.getElementById('nav-toggle-btn').addEventListener('click', () => {
+  mobileNav.classList.add('open'); document.body.style.overflow = 'hidden';
+});
+document.getElementById('mobile-nav-close').addEventListener('click', closeMobileNav);
+document.addEventListener('keydown', (e) => {
+  if (e.key === 'Escape' && mobileNav.classList.contains('open')) closeMobileNav();
+});
+
+// WC26: The Journey — notify form (Formspree xpqbeneg)
+const FORMSPREE_WC26_ID = 'xpqbeneg';
+
+document.querySelector('.notify-form').addEventListener('submit', async function(e) {
+  e.preventDefault();
+  const input   = document.getElementById('notifyEmail');
+  const confirm = document.getElementById('notifyConfirm');
+  const btn     = this.querySelector('button[type="submit"]');
+  const email   = input.value.trim();
+
+  if (!email || !email.includes('@') || !email.includes('.')) {
+    input.style.borderColor = 'var(--gold)';
+    input.focus();
+    return;
+  }
+  btn.textContent = 'Sending...';
+  btn.disabled = true;
+  input.style.borderColor = '';
+
+  try {
+    const res = await fetch('https://formspree.io/f/' + FORMSPREE_WC26_ID, {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json', 'Accept': 'application/json' },
+      body: JSON.stringify({
+        email: email,
+        _replyto: email,
+        _subject: 'WC26: The Journey — launch notification signup',
+        source: 'si187apps.com/wc26',
+        submitted_at: new Date().toISOString()
+      })
+    });
+    if (res.ok) {
+      input.style.display = 'none';
+      btn.style.display = 'none';
+      confirm.style.display = 'block';
+    } else {
+      btn.textContent = 'Try again';
+      btn.disabled = false;
+    }
+  } catch {
+    btn.textContent = 'Try again';
+    btn.disabled = false;
+  }
+});
+</script>
+<script src="/assets/js/cookie-banner.js"></script>
+
+</body>
+</html>
