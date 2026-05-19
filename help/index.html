@@ -4,13 +4,13 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Help & Support — si187 Apps</title>
-<meta name="description" content="Help and support for si187 Apps. Find answers, FAQs, and guidance for FPL Coach AI and future apps.">
+<meta name="description" content="Help and support for si187 Apps. Find answers, FAQs and guidance for WC26: The Journey and FPL Coach AI.">
 <meta name="robots" content="index, follow">
 <link rel="canonical" href="https://si187apps.com/help">
 <meta property="og:type" content="website">
 <meta property="og:url" content="https://si187apps.com/help">
 <meta property="og:title" content="Help & Support — si187 Apps">
-<meta property="og:description" content="Help and support for si187 Apps. Find answers, FAQs, and guidance for FPL Coach AI and future apps.">
+<meta property="og:description" content="Help and support for si187 Apps. Find answers, FAQs and guidance for WC26: The Journey and FPL Coach AI.">
 <meta property="og:image" content="https://si187apps.com/assets/images/og-card.png">
 <meta property="og:image:width" content="1200">
 <meta property="og:image:height" content="630">
@@ -19,7 +19,7 @@
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:site" content="@si187apps">
 <meta name="twitter:title" content="Help & Support — si187 Apps">
-<meta name="twitter:description" content="Help and support for si187 Apps. Find answers and FAQs for every app in the studio.">
+<meta name="twitter:description" content="Help and support for si187 Apps. Find answers, FAQs and guidance for WC26: The Journey and FPL Coach AI.">
 <meta name="twitter:image" content="https://si187apps.com/assets/images/og-card.png">
 <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 160 160'><rect width='160' height='160' fill='%23050E05'/><path d='M80 148 A69 69 0 0 1 11 79' fill='none' stroke='%2339FF7A' stroke-width='4.5' stroke-linecap='round' opacity='.15'/><path d='M80 148 A69 69 0 0 0 149 79' fill='none' stroke='%2339FF7A' stroke-width='4.5' stroke-linecap='round' opacity='.15'/><path d='M80 132 A53 53 0 0 1 27 79' fill='none' stroke='%2339FF7A' stroke-width='4.5' stroke-linecap='round' opacity='.32'/><path d='M80 132 A53 53 0 0 0 133 79' fill='none' stroke='%2339FF7A' stroke-width='4.5' stroke-linecap='round' opacity='.32'/><path d='M80 116 A37 37 0 0 1 43 79' fill='none' stroke='%2339FF7A' stroke-width='4.5' stroke-linecap='round' opacity='.55'/><path d='M80 116 A37 37 0 0 0 117 79' fill='none' stroke='%2339FF7A' stroke-width='4.5' stroke-linecap='round' opacity='.55'/><path d='M80 100 A21 21 0 0 1 59 79' fill='none' stroke='%2339FF7A' stroke-width='4.5' stroke-linecap='round' opacity='.75'/><path d='M80 100 A21 21 0 0 0 101 79' fill='none' stroke='%2339FF7A' stroke-width='4.5' stroke-linecap='round' opacity='.75'/><path d='M80 88 A9 9 0 0 1 71 79' fill='none' stroke='%23C084C8' stroke-width='4.5' stroke-linecap='round' opacity='.92'/><path d='M80 88 A9 9 0 0 0 89 79' fill='none' stroke='%23C084C8' stroke-width='4.5' stroke-linecap='round' opacity='.92'/><circle cx='80' cy='79' r='7' fill='%2339FF7A'/></svg>">
 <meta name="theme-color" content="#050E05">
@@ -150,6 +150,57 @@
     transition: opacity 0.15s;
   }
   .contact-btn:hover { opacity: 0.88; }
+
+  /* ── App help cards ── */
+  .app-cards { display: flex; flex-direction: column; gap: 12px; }
+  .app-card {
+    display: flex; align-items: center; gap: 24px;
+    padding: 28px;
+    background: #0D1A0D;
+    border: 1px solid #1A2A1A;
+    border-radius: 12px;
+    transition: border-color 0.15s;
+    text-decoration: none; color: inherit;
+  }
+  .app-card:hover { border-color: rgba(201,168,76,0.35); }
+  .app-card.featured { border-left: 3px solid #C9A84C; }
+  .app-card-icon {
+    width: 52px; height: 52px; border-radius: 13px;
+    display: flex; align-items: center; justify-content: center;
+    font-size: 26px; flex-shrink: 0;
+  }
+  .app-card-icon.wc { background: linear-gradient(135deg, #1C2E48, #0D1828); border: 1px solid #1A2A1A; }
+  .app-card-icon.fpl { background: linear-gradient(135deg, #0D2010, #081408); border: 1px solid #1A2A1A; }
+  .app-card-body { flex: 1; min-width: 0; }
+  .app-card-name {
+    font-size: 16px; font-weight: 600; color: #EEE8D5;
+    margin-bottom: 4px; display: flex; align-items: center;
+    gap: 10px; flex-wrap: wrap;
+  }
+  .app-card-badge {
+    font-size: 10px; font-weight: 700; letter-spacing: 0.06em;
+    text-transform: uppercase; border-radius: 4px; padding: 2px 7px;
+  }
+  .app-card-badge.gold {
+    color: #C9A84C; background: rgba(201,168,76,0.1);
+    border: 1px solid rgba(201,168,76,0.3);
+  }
+  .app-card-badge.grey {
+    color: #8A9EB8; background: rgba(138,158,184,0.1);
+    border: 1px solid rgba(138,158,184,0.2);
+  }
+  .app-card-desc { font-size: 14px; color: #8A9EB8; line-height: 1.6; margin-bottom: 8px; }
+  .app-card-meta { font-size: 12px; color: #3E5068; }
+  .app-card-arrow {
+    font-size: 13px; color: #8A9EB8; flex-shrink: 0;
+    display: flex; align-items: center; gap: 5px;
+    white-space: nowrap; transition: color 0.15s;
+  }
+  .app-card:hover .app-card-arrow { color: #C9A84C; }
+  @media (max-width: 768px) {
+    .app-card { flex-direction: column; align-items: flex-start; gap: 16px; }
+    .app-card-arrow { display: none; }
+  }
 </style>
 </head>
 <body>
@@ -204,55 +255,37 @@
 
     <p class="reveal" style="font-family: 'JetBrains Mono', monospace; font-size: 11px; letter-spacing: 3px; text-transform: uppercase; color: var(--magenta); opacity: 0.7; margin-bottom: 40px;">Apps</p>
 
-    <div class="help-grid">
+    <div class="app-cards">
 
-      <!-- FPL Coach AI card -->
-      <a href="/fpl-coach-ai/help" class="help-card reveal">
-        <div class="help-card-palette" style="background: #0A1628; border-color: rgba(0,212,160,0.25);">
-          <div class="help-card-inner">
-            <div class="help-card-icon" style="background: rgba(0,212,160,0.1); border-color: rgba(0,212,160,0.2);">
-              <svg width="22" height="22" viewBox="0 0 22 22" fill="none" aria-hidden="true">
-                <circle cx="11" cy="11" r="9" stroke="#00D4A0" stroke-width="1.5" fill="none"/>
-                <path d="M11 7v4l3 2" stroke="#00D4A0" stroke-width="1.5" stroke-linecap="round"/>
-              </svg>
-            </div>
-            <div class="help-card-text">
-              <h2 style="color: #f0f5f0;">FPL Coach AI</h2>
-              <p style="color: #9ca3af;">Manager ID setup, transfer classifications, captain picks, Best XI, and data explained.</p>
-            </div>
-            <div class="help-card-meta" style="border-color: rgba(0,212,160,0.15);">
-              <span class="help-card-badge" style="background: rgba(0,212,160,0.1); border-color: rgba(0,212,160,0.2); color: #00D4A0;">
-                <span style="display:inline-block; width:6px; height:6px; border-radius:50%; background:#00D4A0; margin-right:6px;"></span>
-                iOS · August 2026
-              </span>
-              <span class="help-card-arrow" style="color: #00D4A0;">Help &amp; FAQ →</span>
-            </div>
+      <!-- WC26: The Journey -->
+      <a href="/wc26/help/" class="app-card featured">
+        <div class="app-card-icon wc">⚽</div>
+        <div class="app-card-body">
+          <div class="app-card-name">
+            WC26: The Journey
+            <span class="app-card-badge gold">Launching June 2026</span>
           </div>
+          <div class="app-card-desc">Live scores, nation theming, squad profiles, lineup builder, wall chart, calendar sync and notifications explained.</div>
+          <div class="app-card-meta">iOS + Android · Free</div>
         </div>
+        <div class="app-card-arrow">Help &amp; FAQ →</div>
       </a>
 
-      <!-- Future app placeholder -->
-      <div class="help-card help-card-future reveal reveal-d1">
-        <div class="help-card-palette">
-          <div class="help-card-inner">
-            <div class="help-card-icon">
-              <svg width="22" height="22" viewBox="0 0 22 22" fill="none" aria-hidden="true">
-                <rect x="3" y="3" width="16" height="16" rx="4" stroke="currentColor" stroke-width="1.5" fill="none" opacity="0.4"/>
-                <path d="M11 8v6M8 11h6" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" opacity="0.4"/>
-              </svg>
-            </div>
-            <div class="help-card-text">
-              <h2>Next app</h2>
-              <p>Another app is in development. Help documentation will appear here when it launches.</p>
-            </div>
-            <div class="help-card-meta">
-              <span class="help-card-badge">Coming soon</span>
-            </div>
+      <!-- FPL Coach AI -->
+      <a href="/fpl-coach-ai/help" class="app-card">
+        <div class="app-card-icon fpl">🏆</div>
+        <div class="app-card-body">
+          <div class="app-card-name">
+            FPL Coach AI
+            <span class="app-card-badge grey">August 2026</span>
           </div>
+          <div class="app-card-desc">Manager ID setup, transfer classifications, captain picks, Best XI, and data explained.</div>
+          <div class="app-card-meta">iOS · August 2026</div>
         </div>
-      </div>
+        <div class="app-card-arrow">Help &amp; FAQ →</div>
+      </a>
 
-    </div><!-- .help-grid -->
+    </div><!-- .app-cards -->
 
     <!-- Contact -->
     <div class="help-contact reveal" style="margin-top: 80px;">
@@ -294,6 +327,7 @@
   <div class="footer-col">
     <p class="footer-nav-label">Apps</p>
     <ul class="footer-nav-links">
+      <li><a href="/wc26">WC26: The Journey</a></li>
       <li><a href="/fpl-coach-ai">FPL Coach AI</a></li>
       <li><a href="/#waitlist">Early access</a></li>
     </ul>
