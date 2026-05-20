@@ -488,6 +488,206 @@
     code { font-size: 10px; }
   }
 </style>
+
+
+<!-- ── JSON-LD structured data ── -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Organization",
+  "name": "si187 Apps",
+  "alternateName": "si187 Enterprises Ltd",
+  "url": "https://si187apps.com",
+  "logo": "https://si187apps.com/assets/images/og-card.png",
+  "description": "Independent mobile app studio based in London. Building one app at a time, properly.",
+  "foundingDate": "2026",
+  "address": {
+    "@type": "PostalAddress",
+    "addressLocality": "London",
+    "addressCountry": "GB"
+  },
+  "sameAs": [
+    "https://twitter.com/si187apps",
+    "https://instagram.com/si187apps",
+    "https://tiktok.com/@si187apps"
+  ],
+  "contactPoint": {
+    "@type": "ContactPoint",
+    "email": "studio@si187apps.com",
+    "contactType": "customer support"
+  }
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "What is FPL Coach AI?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "FPL Coach AI is a Fantasy Premier League coaching app. It connects to your FPL account, analyses your squad, and gives you data-backed recommendations every gameweek. It answers the three questions every FPL manager asks before a deadline: Who should I captain? — The player with the best projected return from your squad. Who should I transfer? — Your weakest players and the best available upgrades within your budget. Who should I start? — The optimal XI from your 15-player squad for this gameweek. The app is a coach, not a manager. It shows you the reasoning behind every recommendation so you can make your own informed decision."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "How do I set up the app for the first time?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "When you first open FPL Coach AI, you'll see a setup screen asking for two things: Your FPL Manager ID — see the guide above for exactly where to find this. Your preferred view — Simple (quick decisions, no clutter) or Advanced (full data and analysis). Once you tap \"Get started\", the app loads your squad from the FPL API and shows your recommendations immediately. No login, no password — just your Manager ID."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Does the app need my FPL login details?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "No. FPL Coach AI uses only your public Manager ID to read your squad and points data from the FPL API. This data is publicly available — the same information anyone can see if they search for your team on the FPL website. We never ask for your FPL username or password."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "How do I change my Manager ID or view preference?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Tap the ⚙ cog icon in the top-right corner of any screen. This opens the Settings panel where you can: Update your FPL Manager ID Switch between Simple and Advanced view Manually refresh your recommendations"
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "How does the captain recommendation work?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "The app uses a machine learning model trained on FPL data to predict each player's points return for the upcoming gameweek. The recommended captain is the player in your squad with the highest predicted score. In Advanced view you'll also see: Vice captain — your best alternative if the captain blanks or is injured Form, FDR, and ownership — the key data behind the pick Solio projection — an independent model's view, where available"
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What do the transfer classifications mean?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Each transfer option is classified based on its projected 3-gameweek points gain: Compelling — clear positive gain, worth making Marginal — small gain, depends on your situation Trap — negative gain, avoid A transfer is never classified as a Trap if it shows a positive points gain. The app will never recommend a move that makes your squad worse."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Why isn't the player I want showing as a transfer option?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Transfer options are filtered by several factors: The player must fit within your current budget (bank balance + price of the player going out) The player must be in the same position as the player going out Players already in your squad won't appear as transfer-in options Injured or suspended players (status: unavailable) are excluded If you want to bring in a player who costs more than your budget allows, you'd need to sell a more expensive player from your squad first to free up the funds."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Should I always follow the recommendations?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "No — and the app is designed with this in mind. FPL Coach AI is a coach, not a manager. It gives you the data and reasoning behind each decision, but the final call is always yours. The model is strong on statistical indicators like form, fixture difficulty, and expected goal involvement — but it doesn't know everything. Your knowledge of rotation risk, injuries not yet reported, or specific player situations may lead you to a different decision. That's the game. Think of the recommendations as a well-informed second opinion, not instructions to follow blindly."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Should I roll my free transfer or use it?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "The app tells you directly in the Roll or Use card on the home screen. The recommendation is based on: The projected 3-gameweek gain of your best available transfer How many free transfers you currently have How many gameweeks are left in the season In the final 2 weeks of the season, the app will always recommend using your free transfers — banking them at the end of the season means they're wasted."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What's the difference between Simple and Advanced view?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Simple view (default) shows you the headlines: who to captain, who to transfer, who to start — with one clear number and one clear reason per decision. No data clutter. Advanced view surfaces all the underlying data: form ratings, fixture difficulty, xGI (expected goal involvement), ownership percentages, Solio projections, doubtful flags, and transfer cost details. Most managers get everything they need from Simple view. Advanced is for managers who want to dig into the numbers behind each recommendation."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "How do I switch between Simple and Advanced?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Tap the ⚙ cog icon in the top-right of any screen. At the top of the Settings panel you'll see a Simple / Advanced toggle. Tap to switch. Your preference is saved automatically."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "How does the Best XI recommendation work?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "The app evaluates every possible starting lineup from your 15 players and selects the formation and XI that maximises total predicted points — with your recommended captain doubled. The Formation tab shows this lineup as a pitch view with player dots. The C badge marks your captain and the V badge marks your vice captain."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What does \"+X.X pts vs current lineup\" mean?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "This is the points improvement available if you switch to the recommended Best XI formation, compared to the players you currently have set as starters in FPL. If you've already set your FPL team to match the app's recommendation, this delta will be zero or very small."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "When are predictions updated?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Predictions are updated every Monday at 04:00 UTC using the latest FPL data — form, fixtures, injuries, and ownership — from the previous gameweek's results. During the weekend after a gameweek deadline, if predictions haven't updated yet, the app will show a banner letting you know when to check back."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What is Solio and why does it sometimes appear?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Solio is an independent FPL projection system. Where Solio data is available for a player, it appears as a secondary data point in Advanced view — showing their projection alongside our model's prediction. When the two models agree, it increases confidence in the recommendation. When they diverge significantly, it's worth noting as you make your decision. Solio data is not available for every player — when it's absent, nothing is shown (no \"N/A\")."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Why do predicted points sometimes look different from other FPL tools?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Every FPL prediction model uses different data sources, weightings, and methods. Our model uses a combination of: Expected goals (xG) and expected assists (xA) data Rolling form over the last 3, 5, and 10 gameweeks Fixture difficulty ratings Team-level attacking and defensive statistics No model is perfectly accurate — FPL is inherently unpredictable. The predictions are a guide, not a guarantee."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "My recommendations look the same as last week. Is the app updating?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "If you're in the same gameweek with the same squad and fixtures haven't changed, recommendations may look similar. Try pulling down to refresh on any screen to force a fresh fetch from our servers. If you see a \"Predictions updating\" banner, predictions for the new gameweek haven't been generated yet — check back after Monday 04:00 UTC."
+      }
+    }
+  ]
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position": 1,
+      "name": "Home",
+      "item": "https://si187apps.com/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 2,
+      "name": "FPL Coach AI",
+      "item": "https://si187apps.com/fpl-coach-ai"
+    },
+    {
+      "@type": "ListItem",
+      "position": 3,
+      "name": "Help",
+      "item": "https://si187apps.com/fpl-coach-ai/help"
+    }
+  ]
+}
+</script>
 </head>
 <body>
 
