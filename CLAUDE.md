@@ -24,7 +24,8 @@ si187apps.github.io/
 ├── manifesto/index.html
 ├── labs/index.html
 ├── wc26/
-│   └── index.html                WC26: The Journey product landing page
+│   ├── index.html                WC26: The Journey product landing page
+│   └── help/index.html   WC26: The Journey help & FAQ page
 ├── fpl-coach-ai/
 │   ├── index.html                 FPL Coach AI product landing page
 │   └── help/index.html            FPL Coach AI help & FAQ

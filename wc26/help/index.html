@@ -1,0 +1,854 @@
+<!DOCTYPE html>
+<html lang="en-GB">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Help & Support — WC26: The Journey · si187 Apps</title>
+  <meta name="description" content="Help and FAQs for WC26: The Journey — the World Cup 2026 companion app from si187 Apps."/>
+  <meta name="robots" content="index, follow"/>
+  <link rel="canonical" href="https://si187apps.com/wc26/help/"/>
+  <meta name="theme-color" content="#06080F"/>
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 160 160'><rect width='160' height='160' fill='%2306080F'/><path d='M80 148 A69 69 0 0 1 11 79' fill='none' stroke='%23C9A84C' stroke-width='4.5' stroke-linecap='round' opacity='.3'/><path d='M80 148 A69 69 0 0 0 149 79' fill='none' stroke='%23C9A84C' stroke-width='4.5' stroke-linecap='round' opacity='.3'/><path d='M80 116 A37 37 0 0 1 43 79' fill='none' stroke='%23C9A84C' stroke-width='4.5' stroke-linecap='round' opacity='.65'/><path d='M80 116 A37 37 0 0 0 117 79' fill='none' stroke='%23C9A84C' stroke-width='4.5' stroke-linecap='round' opacity='.65'/><path d='M80 88 A9 9 0 0 1 71 79' fill='none' stroke='%23C9A84C' stroke-width='4.5' stroke-linecap='round'/><path d='M80 88 A9 9 0 0 0 89 79' fill='none' stroke='%23C9A84C' stroke-width='4.5' stroke-linecap='round'/><circle cx='80' cy='79' r='7' fill='%23C9A84C'/></svg>">
+  <meta property="og:type" content="website"/>
+  <meta property="og:url" content="/wc26/help/"/>
+  <meta property="og:title" content="Help &amp; Support — WC26: The Journey"/>
+  <meta property="og:description" content="Help and FAQs for WC26: The Journey — the World Cup 2026 companion app from si187 Apps."/>
+  <meta property="og:image" content="https://si187apps.com/assets/images/og-wc26.png"/>
+  <meta property="og:image:width" content="1200"/>
+  <meta property="og:image:height" content="630"/>
+  <meta property="og:site_name" content="si187 Apps"/>
+  <meta property="og:locale" content="en_GB"/>
+  <meta name="twitter:card" content="summary_large_image"/>
+  <meta name="twitter:site" content="@si187apps"/>
+  <meta name="twitter:title" content="Help &amp; Support — WC26: The Journey"/>
+  <meta name="twitter:description" content="Help and FAQs for WC26: The Journey — World Cup 2026 companion app."/>
+  <meta name="twitter:image" content="https://si187apps.com/assets/images/og-wc26.png"/>
+  <link rel="preconnect" href="https://fonts.googleapis.com"/>
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;0,9..40,600;0,9..40,700;1,9..40,400&family=DM+Serif+Display:ital@0;1&family=Syne:wght@700;800&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500;600;700&display=swap" rel="stylesheet"/>
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    html { scroll-behavior: smooth; scroll-padding-top: 80px; }
+
+    :root {
+      /* these match the live si187apps.com site exactly */
+      --bg:        #06080F;
+      --surf:      #0D1321;
+      --surf2:     #111C2E;
+      --border:    #1A2640;
+      --text:      #EEE8D5;
+      --muted:     #8A9EB8;
+      --dim:       #3E5068;
+      --gold:      #C9A84C;
+      --green:     #39FF7A;
+      --sans:      'DM Sans', system-ui, sans-serif;
+      --serif:     'DM Serif Display', Georgia, serif;
+      --nav-h:     68px;
+      --max-w:     1120px;
+      --pad:       48px;
+      /* Studio palette — nav + footer chrome */
+      --s-bg:        #050E05;
+      --s-green:     #39FF7A;
+      --s-magenta:   #C084C8;
+      --s-text1:     #F0F5F0;
+      --s-text2:     #8AAA8A;
+    }
+
+    body {
+      background: var(--bg);
+      color: var(--text);
+      font-family: var(--sans);
+      font-size: 16px;
+      line-height: 1.6;
+      -webkit-font-smoothing: antialiased;
+    }
+    a { color: inherit; text-decoration: none; }
+    em { font-family: var(--serif); font-style: italic; }
+
+
+    /* ═══ STUDIO NAV ═══ */
+    nav#main-nav {
+      position: fixed; top:0; left:0; right:0; z-index:200;
+      display: flex; align-items:center; justify-content:space-between;
+      padding: 18px 56px;
+      background: rgba(5,14,5,0.92);
+      backdrop-filter: blur(20px); -webkit-backdrop-filter: blur(20px);
+      border-bottom: 1px solid rgba(20,32,20,0.8);
+      transition: padding 0.3s;
+    }
+    nav#main-nav.scrolled { padding: 12px 56px; }
+    .nav-logo { display:flex; align-items:center; gap:12px; text-decoration:none; }
+    .nav-wordmark { font-family:'Syne',sans-serif; font-size:17px; font-weight:800; color:#F0F5F0; letter-spacing:-0.3px; }
+    .nav-wordmark em { font-style:normal; color:#39FF7A; font-family:'Syne',sans-serif; }
+    .nav-links { display:flex; align-items:center; gap:32px; list-style:none; }
+    .nav-links a { font-size:14px; font-weight:500; color:#8AAA8A; text-decoration:none; transition:color 0.15s; }
+    .nav-links a:hover { color:#F0F5F0; }
+    .nav-links a.nav-cta { background:var(--gold); color:#06080F; padding:9px 18px; border-radius:8px; font-weight:700; font-size:13px; transition:opacity 0.15s; }
+    .nav-links a.nav-cta:hover { opacity:0.85; color:#06080F; }
+    .nav-toggle { display:none; flex-direction:column; gap:5px; background:none; border:none; cursor:pointer; padding:4px; }
+    .nav-toggle span { display:block; width:22px; height:2px; background:#8AAA8A; border-radius:2px; }
+    .mobile-nav { display:none; position:fixed; top:0; left:0; right:0; bottom:0; z-index:300; background:#050E05; flex-direction:column; align-items:center; justify-content:center; gap:32px; }
+    .mobile-nav.open { display:flex; }
+    .mobile-nav a { font-family:'Syne',sans-serif; font-size:28px; font-weight:800; color:#F0F5F0; text-decoration:none; letter-spacing:-1px; }
+    .mobile-nav a:hover { color:#39FF7A; }
+    .mobile-nav-close { position:absolute; top:24px; right:24px; background:none; border:none; cursor:pointer; color:#8AAA8A; font-size:28px; }
+    @media (max-width: 860px) {
+      nav#main-nav { padding: 16px 24px; }
+      nav#main-nav.scrolled { padding: 12px 24px; }
+      .nav-links { display: none; }
+      .nav-toggle { display: flex; }
+    }
+
+    /* ════════════════════════════════════════
+       PAGE STRUCTURE
+       ════════════════════════════════════════ */
+    .wrap { max-width: var(--max-w); margin: 0 auto; }
+
+    /* breadcrumb */
+    .breadcrumb {
+      padding: 88px var(--pad) 0;
+      display: flex; align-items: center; gap: 8px;
+      font-size: 13px; color: var(--dim);
+    }
+    .breadcrumb a { color: var(--muted); transition: color 0.15s; }
+    .breadcrumb a:hover { color: var(--text); }
+
+    /* hero */
+    .hero { padding: 52px var(--pad) 44px; }
+    .hero h1 {
+      font-size: clamp(40px, 5.5vw, 68px);
+      font-weight: 300; letter-spacing: -0.035em;
+      line-height: 1.0; margin-bottom: 14px;
+    }
+    .hero p {
+      font-size: 17px; color: var(--muted);
+      max-width: 500px; line-height: 1.7; margin-bottom: 32px;
+    }
+    .topics { display: flex; flex-wrap: wrap; gap: 8px; }
+    .topic-pill {
+      font-size: 13px; color: var(--muted);
+      background: var(--surf); border: 1px solid var(--border);
+      border-radius: 20px; padding: 7px 16px;
+      cursor: pointer; transition: all 0.15s;
+      white-space: nowrap; line-height: 1.4;
+    }
+    .topic-pill:hover { color: var(--text); border-color: rgba(238,232,213,0.25); }
+    .topic-pill.active {
+      color: var(--gold);
+      border-color: rgba(201,168,76,0.45);
+      background: rgba(201,168,76,0.07);
+    }
+
+    /* ════════════════════════════════════════
+       SCREENSHOT GRID
+       ════════════════════════════════════════ */
+    .screens { padding: 0 var(--pad) 56px; }
+    .screens-label {
+      font-size: 11px; font-weight: 600;
+      letter-spacing: 0.14em; text-transform: uppercase;
+      color: var(--dim); margin-bottom: 20px;
+    }
+    .screens-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 16px;
+    }
+    .screen-item { display: flex; flex-direction: column; align-items: center; }
+    .phone-frame {
+      width: 100%; max-width: 200px;
+      aspect-ratio: 9 / 19.5;
+      border-radius: 22px;
+      border: 1.5px solid var(--border);
+      overflow: hidden;
+      background: var(--surf2);
+      box-shadow: 0 12px 36px rgba(0,0,0,0.55);
+      position: relative;
+    }
+    .phone-frame img {
+      width: 100%; height: 100%;
+      object-fit: cover; object-position: top; display: block;
+    }
+    .frame-ph {
+      width: 100%; height: 100%;
+      display: flex; flex-direction: column;
+      align-items: center; justify-content: center;
+      gap: 6px;
+    }
+    .frame-ph span:first-child { font-size: 28px; }
+    .frame-ph span:last-child { font-size: 10px; color: var(--dim); letter-spacing: 0.04em; }
+    .screen-label {
+      font-size: 12px; color: var(--muted);
+      margin-top: 10px; text-align: center;
+    }
+
+    /* ════════════════════════════════════════
+       LAYOUT: SIDEBAR + MAIN
+       ════════════════════════════════════════ */
+    .layout {
+      display: grid;
+      grid-template-columns: 230px 1fr;
+      gap: 56px; align-items: start;
+      padding: 0 var(--pad) 100px;
+    }
+
+    /* sidebar */
+    .sidebar { position: sticky; top: calc(var(--nav-h) + 20px); }
+    .sidebar-app {
+      display: flex; align-items: center; gap: 12px;
+      padding: 14px; background: var(--surf);
+      border: 1px solid var(--border); border-radius: 12px;
+      margin-bottom: 28px; transition: border-color 0.15s;
+    }
+    .sidebar-app:hover { border-color: rgba(201,168,76,0.35); }
+    .app-icon {
+      width: 42px; height: 42px; border-radius: 10px;
+      background: linear-gradient(135deg, #1C2E48, #0D1828);
+      border: 1px solid var(--border);
+      display: flex; align-items: center; justify-content: center;
+      font-size: 20px; flex-shrink: 0;
+    }
+    .app-name  { font-size: 13px; font-weight: 600; color: var(--text); }
+    .app-meta  { font-size: 11px; color: var(--dim); margin-top: 1px; }
+    .sb-heading {
+      font-size: 10px; font-weight: 700;
+      letter-spacing: 0.14em; text-transform: uppercase;
+      color: var(--dim); margin-bottom: 8px;
+    }
+    .sb-links { list-style: none; margin-bottom: 28px; }
+    .sb-links a {
+      display: flex; align-items: center; gap: 9px;
+      font-size: 13px; color: var(--muted);
+      padding: 8px 10px; border-radius: 8px;
+      border-left: 2px solid transparent;
+      transition: all 0.15s;
+    }
+    .sb-links a .ic { font-size: 13px; width: 16px; text-align: center; flex-shrink: 0; }
+    .sb-links a:hover { color: var(--text); background: var(--surf); }
+    .sb-links a.on {
+      color: var(--gold);
+      border-left-color: var(--gold);
+      background: rgba(201,168,76,0.07);
+    }
+    .sb-contact {
+      padding: 14px; background: var(--surf);
+      border: 1px solid var(--border); border-radius: 10px;
+    }
+    .sb-contact p { font-size: 12px; color: var(--muted); line-height: 1.6; margin-bottom: 6px; }
+    .sb-contact a { font-size: 12px; color: var(--gold); }
+
+    /* ════════════════════════════════════════
+       FAQ SECTIONS
+       ════════════════════════════════════════ */
+    section {
+      margin-bottom: 60px;
+      scroll-margin-top: calc(var(--nav-h) + 24px);
+    }
+    .s-title {
+      font-size: 24px; font-weight: 500;
+      letter-spacing: -0.025em; color: var(--text);
+      margin-bottom: 5px;
+    }
+    .s-sub {
+      font-size: 14px; color: var(--muted);
+      margin-bottom: 18px; line-height: 1.65;
+    }
+    .faq-stack { display: flex; flex-direction: column; gap: 3px; }
+    .faq-card {
+      background: var(--surf);
+      border: 1px solid var(--border); border-radius: 10px;
+      overflow: hidden; transition: border-color 0.15s;
+    }
+    .faq-card.open { border-color: rgba(201,168,76,0.3); }
+    .faq-q {
+      display: flex; justify-content: space-between;
+      align-items: center; gap: 16px;
+      padding: 17px 20px; cursor: pointer; user-select: none;
+      font-size: 14px; font-weight: 500; color: var(--text);
+      transition: background 0.12s;
+    }
+    .faq-q:hover { background: var(--surf2); }
+    .faq-chevron {
+      width: 22px; height: 22px; border-radius: 50%;
+      background: var(--surf2); border: 1px solid var(--border);
+      display: flex; align-items: center; justify-content: center;
+      flex-shrink: 0; font-size: 10px; color: var(--muted);
+      transition: transform 0.2s, background 0.15s, border-color 0.15s, color 0.15s;
+    }
+    .faq-card.open .faq-chevron {
+      transform: rotate(180deg);
+      background: rgba(201,168,76,0.12);
+      border-color: rgba(201,168,76,0.35);
+      color: var(--gold);
+    }
+    .faq-body {
+      display: none;
+      padding: 16px 20px 18px;
+      font-size: 14px; color: var(--muted); line-height: 1.8;
+      border-top: 1px solid var(--border);
+    }
+    .faq-card.open .faq-body { display: block; }
+    .faq-body strong { color: var(--text); font-weight: 500; }
+    .faq-body a { color: var(--gold); text-decoration: underline; text-underline-offset: 3px; }
+    .path {
+      display: inline-block;
+      background: var(--surf2); border: 1px solid var(--border);
+      border-radius: 5px; padding: 1px 8px;
+      font-size: 12px; font-family: monospace; color: var(--green); margin: 0 1px;
+    }
+
+    /* contact block */
+    .contact-block {
+      background: var(--surf); border: 1px solid var(--border);
+      border-radius: 14px; padding: 36px;
+      scroll-margin-top: calc(var(--nav-h) + 24px);
+    }
+    .contact-block h2 {
+      font-size: 22px; font-weight: 500;
+      letter-spacing: -0.02em; margin-bottom: 6px;
+    }
+    .contact-block .cs-sub {
+      font-size: 15px; color: var(--muted);
+      margin-bottom: 28px; line-height: 1.65;
+    }
+    .contact-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; }
+    .contact-card {
+      background: var(--bg); border: 1px solid var(--border);
+      border-radius: 10px; padding: 22px; transition: border-color 0.15s;
+    }
+    .contact-card:hover { border-color: rgba(201,168,76,0.4); }
+    .cc-ico { font-size: 24px; margin-bottom: 10px; }
+    .contact-card h3 { font-size: 14px; font-weight: 600; margin-bottom: 5px; }
+    .contact-card p { font-size: 13px; color: var(--muted); margin-bottom: 12px; line-height: 1.6; }
+    .contact-card a { font-size: 13px; color: var(--gold); }
+
+
+    /* ═══ STUDIO FOOTER ═══ */
+    footer.site-footer {
+      background: #050E05;
+      padding: 44px 56px;
+      border-top: 1px solid rgba(192,132,200,0.12);
+      display: flex; justify-content:space-between;
+      align-items:flex-start; flex-wrap:wrap; gap:40px;
+    }
+    .footer-col { display:flex; flex-direction:column; gap:14px; }
+    .footer-brand-row { display:flex; align-items:center; gap:12px; }
+    .footer-name { font-family:'Syne',sans-serif; font-size:16px; font-weight:800; color:#F0F5F0; }
+    .footer-name em { font-style:normal; color:#39FF7A; font-family:'Syne',sans-serif; }
+    .footer-tagline { font-family:'JetBrains Mono',monospace; font-size:9px; letter-spacing:2px; color:#C084C8; opacity:0.5; text-transform:uppercase; margin-top:3px; }
+    .footer-nav-label { font-family:'JetBrains Mono',monospace; font-size:9px; letter-spacing:3px; color:#C084C8; opacity:0.45; text-transform:uppercase; }
+    .footer-nav-links { list-style:none; display:flex; flex-direction:column; gap:10px; }
+    .footer-nav-links a { font-size:14px; color:#8AAA8A; text-decoration:none; transition:color 0.15s; }
+    .footer-nav-links a:hover { color:#C084C8; }
+    .footer-bottom { width:100%; border-top:1px solid rgba(192,132,200,0.10); padding-top:24px; display:flex; justify-content:space-between; align-items:center; flex-wrap:wrap; gap:12px; }
+    .footer-copy { font-family:'JetBrains Mono',monospace; font-size:10px; color:#C084C8; opacity:0.4; letter-spacing:0.5px; }
+    .footer-legal { display:flex; gap:20px; }
+    .footer-legal a { font-size:12px; color:#C084C8; opacity:0.45; text-decoration:none; transition:opacity 0.15s; }
+    .footer-legal a:hover { opacity:1; }
+    .footer-socials-row { display:flex; gap:12px; }
+    .footer-socials-row a { display:flex; align-items:center; justify-content:center; width:34px; height:34px; border:1px solid rgba(192,132,200,0.2); border-radius:8px; color:#C084C8; opacity:0.5; text-decoration:none; font-size:14px; transition:opacity 0.15s, border-color 0.15s; }
+    .footer-socials-row a:hover { opacity:1; border-color:rgba(192,132,200,0.5); }
+    @media (max-width: 860px) {
+      footer.site-footer { padding: 40px 24px; flex-direction: column; }
+    }
+
+    /* ════════════════════════════════════════
+       RESPONSIVE
+       ════════════════════════════════════════ */
+    @media (max-width: 860px) {
+      :root { --pad: 24px; }
+      .nav-ul   { display: none; }
+      .nav-burger { display: block; }
+      .screens-grid { grid-template-columns: repeat(2, 1fr); }
+      .layout {
+        grid-template-columns: 1fr;
+        gap: 0;
+      }
+      .sidebar { display: none; }
+      section { margin-bottom: 44px; }
+      .s-title { font-size: 20px; }
+      .contact-block { padding: 24px; }
+      .contact-grid { grid-template-columns: 1fr; }
+      .footer-grid { grid-template-columns: 1fr 1fr; gap: 32px; }
+      .footer-bottom { flex-direction: column; align-items: flex-start; }
+    }
+    @media (max-width: 480px) {
+      .hero h1 { font-size: 36px; }
+      .screens-grid { grid-template-columns: repeat(2, 1fr); gap: 10px; }
+      .footer-grid { grid-template-columns: 1fr; }
+      .footer-legal { flex-wrap: wrap; gap: 12px; }
+    }
+  </style>
+</head>
+<body>
+
+<a href="#main-content" style="position:absolute;top:-100px;left:16px;z-index:999;background:#C9A84C;color:#06080F;padding:10px 18px;border-radius:0 0 8px 8px;font-weight:700;font-size:14px;text-decoration:none;transition:top 0.2s;" onfocus="this.style.top='0'" onblur="this.style.top='-100px'">Skip to main content</a>
+
+
+<!-- ══ STUDIO NAV ══ -->
+<nav id="main-nav">
+  <a href="/" class="nav-logo" aria-label="si187 Apps home">
+    <div aria-hidden="true"><svg width="28" height="28" viewBox="0 0 160 160"><path d="M80 148 A69 69 0 0 1 11 79" fill="none" stroke="#39FF7A" stroke-width="4.5" stroke-linecap="round" opacity=".11"/><path d="M80 148 A69 69 0 0 0 149 79" fill="none" stroke="#39FF7A" stroke-width="4.5" stroke-linecap="round" opacity=".11"/><path d="M80 132 A53 53 0 0 1 27 79" fill="none" stroke="#39FF7A" stroke-width="4.5" stroke-linecap="round" opacity=".24"/><path d="M80 132 A53 53 0 0 0 133 79" fill="none" stroke="#39FF7A" stroke-width="4.5" stroke-linecap="round" opacity=".24"/><path d="M80 116 A37 37 0 0 1 43 79" fill="none" stroke="#39FF7A" stroke-width="4.5" stroke-linecap="round" opacity=".44"/><path d="M80 116 A37 37 0 0 0 117 79" fill="none" stroke="#39FF7A" stroke-width="4.5" stroke-linecap="round" opacity=".44"/><path d="M80 100 A21 21 0 0 1 59 79" fill="none" stroke="#39FF7A" stroke-width="4.5" stroke-linecap="round" opacity=".68"/><path d="M80 100 A21 21 0 0 0 101 79" fill="none" stroke="#39FF7A" stroke-width="4.5" stroke-linecap="round" opacity=".68"/><path d="M80 88 A9 9 0 0 1 71 79" fill="none" stroke="#C084C8" stroke-width="4.5" stroke-linecap="round" opacity=".92"/><path d="M80 88 A9 9 0 0 0 89 79" fill="none" stroke="#C084C8" stroke-width="4.5" stroke-linecap="round" opacity=".92"/><circle cx="80" cy="79" r="7" fill="#39FF7A"/></svg></div>
+    <span class="nav-wordmark">si187 <em>Apps</em></span>
+  </a>
+  <ul class="nav-links">
+    <li><a href="/about">About</a></li>
+    <li><a href="/roadmap">Roadmap</a></li>
+    <li><a href="/manifesto">Manifesto</a></li>
+    <li><a href="/labs">Labs</a></li>
+    <li><a href="/wc26#notify" class="nav-cta">Get notified</a></li>
+  </ul>
+  <button class="nav-toggle" aria-label="Open menu" id="nav-toggle-btn"><span></span><span></span><span></span></button>
+</nav>
+<div class="mobile-nav" id="mobile-nav">
+  <button class="mobile-nav-close" id="mobile-nav-close" aria-label="Close">✕</button>
+  <a href="/" onclick="closeMobileNav()">Home</a>
+  <a href="/about" onclick="closeMobileNav()">About</a>
+  <a href="/roadmap" onclick="closeMobileNav()">Roadmap</a>
+  <a href="/manifesto" onclick="closeMobileNav()">Manifesto</a>
+  <a href="/labs" onclick="closeMobileNav()">Labs</a>
+  <a href="/wc26#notify" onclick="closeMobileNav()" style="color:var(--gold)">Get notified</a>
+</div>
+
+<!-- ══ PAGE ══ -->
+<div class="wrap">
+
+  <nav class="breadcrumb" aria-label="Breadcrumb">
+    <a href="/">si187 Apps</a>
+    <span>›</span>
+    <a href="/wc26">WC26: The Journey</a>
+    <span>›</span>
+    <span style="color:var(--text)">Help</span>
+  </nav>
+
+  <div class="hero">
+    <h1>Help &amp; <em>support.</em></h1>
+    <p>Common questions about WC26: The Journey — the World Cup 2026 companion app.</p>
+    <div class="topics">
+      <button class="topic-pill" data-target="getting-started">Getting started</button>
+      <button class="topic-pill" data-target="scores">Live scores</button>
+      <button class="topic-pill" data-target="notifications">Notifications</button>
+      <button class="topic-pill" data-target="squad">Squad &amp; lineups</button>
+      <button class="topic-pill" data-target="wall-chart">Wall chart</button>
+      <button class="topic-pill" data-target="calendar">Calendar</button>
+      <button class="topic-pill" data-target="follow">Follow another team</button>
+      <button class="topic-pill" data-target="remove-ads">Remove ads</button>
+      <button class="topic-pill" data-target="settings">Settings</button>
+      <button class="topic-pill" data-target="contact">Contact</button>
+    </div>
+  </div>
+
+  <!-- SCREENSHOTS -->
+  <div class="screens">
+    <div class="screens-label">WC26: The Journey — in the app</div>
+
+    <div class="screens-grid">
+
+      <div class="screen-item">
+        <div class="phone-frame">
+          <img src="/assets/screenshots/ios-screenshot-1.png" alt="Home screen"
+            onerror="this.style.display='none';this.nextElementSibling.style.display='flex'"/>
+          <div class="frame-ph" style="display:none"><span>🏠</span><span>HOME</span></div>
+        </div>
+        <div class="screen-label">Home</div>
+      </div>
+
+      <div class="screen-item">
+        <div class="phone-frame">
+          <img src="/assets/screenshots/ios-screenshot-2.png" alt="Wall Chart"
+            onerror="this.style.display='none';this.nextElementSibling.style.display='flex'"/>
+          <div class="frame-ph" style="display:none"><span>📋</span><span>WALL CHART</span></div>
+        </div>
+        <div class="screen-label">Wall Chart</div>
+      </div>
+
+      <div class="screen-item">
+        <div class="phone-frame">
+          <img src="/assets/screenshots/ios-screenshot-3.png" alt="Scores &amp; Fixtures"
+            onerror="this.style.display='none';this.nextElementSibling.style.display='flex'"/>
+          <div class="frame-ph" style="display:none"><span>⚡</span><span>SCORES</span></div>
+        </div>
+        <div class="screen-label">Scores &amp; Fixtures</div>
+      </div>
+
+      <div class="screen-item">
+        <div class="phone-frame">
+          <img src="/assets/screenshots/ios-screenshot-4.png" alt="News feed"
+            onerror="this.style.display='none';this.nextElementSibling.style.display='flex'"/>
+          <div class="frame-ph" style="display:none"><span>📰</span><span>NEWS</span></div>
+        </div>
+        <div class="screen-label">News</div>
+      </div>
+
+      <div class="screen-item">
+        <div class="phone-frame">
+          <img src="/assets/screenshots/ios-screenshot-5.png" alt="My Team"
+            onerror="this.style.display='none';this.nextElementSibling.style.display='flex'"/>
+          <div class="frame-ph" style="display:none"><span>❤️</span><span>MY TEAM</span></div>
+        </div>
+        <div class="screen-label">My Team</div>
+      </div>
+
+      <div class="screen-item">
+        <div class="phone-frame">
+          <img src="/assets/screenshots/ios-screenshot-6.png" alt="Lineup Builder"
+            onerror="this.style.display='none';this.nextElementSibling.style.display='flex'"/>
+          <div class="frame-ph" style="display:none"><span>🔢</span><span>LINEUP</span></div>
+        </div>
+        <div class="screen-label">Lineup Builder</div>
+      </div>
+
+    </div>
+  </div>
+
+  <!-- CONTENT -->
+  <div class="layout">
+
+    <aside class="sidebar">
+      <a href="/wc26" class="sidebar-app">
+        <div class="app-icon">⚽</div>
+        <div>
+          <div class="app-name">WC26: The Journey</div>
+          <div class="app-meta">iOS + Android · Free</div>
+        </div>
+      </a>
+      <div class="sb-heading">Topics</div>
+      <ul class="sb-links" id="sbNav">
+        <li><a href="#getting-started"><span class="ic">🏁</span>Getting started</a></li>
+        <li><a href="#scores"><span class="ic">⚡</span>Live scores</a></li>
+        <li><a href="#notifications"><span class="ic">🔔</span>Notifications</a></li>
+        <li><a href="#squad"><span class="ic">👥</span>Squad &amp; lineups</a></li>
+        <li><a href="#wall-chart"><span class="ic">📋</span>Wall chart</a></li>
+        <li><a href="#calendar"><span class="ic">📅</span>Calendar sync</a></li>
+        <li><a href="#follow"><span class="ic">🌍</span>Follow another team</a></li>
+        <li><a href="#remove-ads"><span class="ic">🚫</span>Remove ads</a></li>
+        <li><a href="#settings"><span class="ic">⚙️</span>Settings</a></li>
+        <li><a href="#contact"><span class="ic">✉️</span>Contact</a></li>
+      </ul>
+      <div class="sb-contact">
+        <p>Can't find the answer? We read every message.</p>
+        <a href="mailto:studio@si187apps.com">studio@si187apps.com</a>
+      </div>
+    </aside>
+
+    <main id="main-content">
+
+      <!-- GETTING STARTED -->
+      <section id="getting-started">
+        <h2 class="s-title">🏁 Getting started</h2>
+        <p class="s-sub">Setting up the app, picking your nation and understanding the basics.</p>
+        <div class="faq-stack">
+          <div class="faq-card open">
+            <div class="faq-q">How do I pick my nation?<span class="faq-chevron">▼</span></div>
+            <div class="faq-body">When you first open WC26: The Journey you go straight to the nation picker. All 48 qualified nations are shown as a grid of flags — search by name or scroll to find yours, then tap to select. The entire app immediately themes to your nation's colours.</div>
+          </div>
+          <div class="faq-card">
+            <div class="faq-q">Can I change my nation later?<span class="faq-chevron">▼</span></div>
+            <div class="faq-body">Yes — go to <span class="path">Settings → Your Nation → Change nation</span> at any time. Changing nation resets the app theme, fixtures, squad and news feed to the new team.</div>
+          </div>
+          <div class="faq-card">
+            <div class="faq-q">Does the app need an internet connection?<span class="faq-chevron">▼</span></div>
+            <div class="faq-body">Yes for live scores and news. Your nation preference, saved lineup and recently loaded squad are available offline. If you lose connection you'll see the most recently cached data.</div>
+          </div>
+          <div class="faq-card">
+            <div class="faq-q">Is the app free?<span class="faq-chevron">▼</span></div>
+            <div class="faq-body">Yes — free to download on iOS and Android. The app is ad-supported. A one-time <strong>£1.99 purchase</strong> removes all ads permanently. No subscription, no recurring charge.</div>
+          </div>
+          <div class="faq-card">
+            <div class="faq-q">What are the five tabs?<span class="faq-chevron">▼</span></div>
+            <div class="faq-body">Bottom navigation: <strong>Home</strong> (your hub and Journey Tracker), <strong>Wall Chart</strong> (group tables and knockout bracket), <strong>Scores</strong> (all 104 WC 2026 matches), <strong>News</strong> (curated RSS feed) and <strong>My Team</strong> (squad, fixtures and lineup builder).</div>
+          </div>
+        </div>
+      </section>
+
+      <!-- LIVE SCORES -->
+      <section id="scores">
+        <h2 class="s-title">⚡ Live scores</h2>
+        <p class="s-sub">How match data works across all 104 WC 2026 fixtures.</p>
+        <div class="faq-stack">
+          <div class="faq-card">
+            <div class="faq-q">How often do scores update?<span class="faq-chevron">▼</span></div>
+            <div class="faq-body">Scores refresh automatically every 5 minutes. When a match is live a persistent pulsing bar appears across the top of every screen — tap it to jump to the Match Centre.</div>
+          </div>
+          <div class="faq-card">
+            <div class="faq-q">A match has kicked off but still shows as upcoming — why?<span class="faq-chevron">▼</span></div>
+            <div class="faq-body">There can be up to a 5-minute delay before the live status registers. Pull down to refresh the Scores screen to force an immediate update.</div>
+          </div>
+          <div class="faq-card">
+            <div class="faq-q">How do I see all matches, not just my team's?<span class="faq-chevron">▼</span></div>
+            <div class="faq-body">In the <strong>Scores</strong> tab, tap <span class="path">By Date</span> to see every WC 2026 match for any selected date. <span class="path">My Team</span> (default) shows only your nation's fixtures. <span class="path">Live</span> shows only matches in progress.</div>
+          </div>
+          <div class="faq-card">
+            <div class="faq-q">What does the Match Centre show?<span class="faq-chevron">▼</span></div>
+            <div class="faq-body">Tap any match card — score, venue, group, goal scorers, key events (goals, cards, substitutions) and possession and shots stats. Data populates live as the match progresses.</div>
+          </div>
+        </div>
+      </section>
+
+      <!-- NOTIFICATIONS -->
+      <section id="notifications">
+        <h2 class="s-title">🔔 Notifications</h2>
+        <p class="s-sub">Goal alerts, kick-off reminders and how to manage them.</p>
+        <div class="faq-stack">
+          <div class="faq-card">
+            <div class="faq-q">How do I enable goal alerts?<span class="faq-chevron">▼</span></div>
+            <div class="faq-body">During onboarding you're prompted to allow notifications. If you skipped this, go to <span class="path">Settings → Notifications</span>, toggle <strong>Goals</strong> on, and confirm notifications are enabled for WC26 in your phone's Settings app.</div>
+          </div>
+          <div class="faq-card">
+            <div class="faq-q">I'm not receiving notifications — what should I check?<span class="faq-chevron">▼</span></div>
+            <div class="faq-body"><strong>1.</strong> <span class="path">Settings → Notifications</span> — confirm the relevant toggles are on. <strong>2.</strong> Your phone's Settings → WC26 → Notifications — confirm they're allowed. <strong>3.</strong> Do Not Disturb or Focus mode isn't blocking the app.</div>
+          </div>
+          <div class="faq-card">
+            <div class="faq-q">Can I choose which alerts I receive?<span class="faq-chevron">▼</span></div>
+            <div class="faq-body">Yes — in <span class="path">Settings → Notifications</span> toggle independently: <strong>Goals</strong>, <strong>Kick-off reminders</strong> (5 minutes before), <strong>Full time alerts</strong> and <strong>Breaking news</strong> about your nation.</div>
+          </div>
+        </div>
+      </section>
+
+      <!-- SQUAD & LINEUPS -->
+      <section id="squad">
+        <h2 class="s-title">👥 Squad &amp; lineups</h2>
+        <p class="s-sub">Player profiles, the lineup builder and sharing your predicted XI.</p>
+        <div class="faq-stack">
+          <div class="faq-card">
+            <div class="faq-q">Where do I find my nation's squad?<span class="faq-chevron">▼</span></div>
+            <div class="faq-body">Go to the <strong>My Team</strong> tab and scroll to the squad grid. Players are grouped by position — tap any player to open their profile with tournament stats.</div>
+          </div>
+          <div class="faq-card">
+            <div class="faq-q">Why are some players showing initials instead of photos?<span class="faq-chevron">▼</span></div>
+            <div class="faq-body">Official player photos are sourced from our data provider. For some nations, photo data isn't yet available — initials avatars show as placeholders until real squad data is confirmed ahead of the tournament.</div>
+          </div>
+          <div class="faq-card">
+            <div class="faq-q">How do I build and share my predicted lineup?<span class="faq-chevron">▼</span></div>
+            <div class="faq-body">Go to <span class="path">My Team → Build &amp; Share Your Lineup</span>. Pick your formation using the chips at the top, then tap positions to select players from the squad panel. Tap <strong>Share My Lineup</strong> to export a branded card to WhatsApp, Instagram, X and more.</div>
+          </div>
+          <div class="faq-card">
+            <div class="faq-q">Can I use a custom formation?<span class="faq-chevron">▼</span></div>
+            <div class="faq-body">Yes — tap <span class="path">Custom</span> in the formation selector and use the + and − steppers to set your own DEF / MID / FWD split. The total must be 10 outfield players.</div>
+          </div>
+        </div>
+      </section>
+
+      <!-- WALL CHART -->
+      <section id="wall-chart">
+        <h2 class="s-title">📋 Wall chart</h2>
+        <p class="s-sub">The bracket, group tables and your nation's path to the Final.</p>
+        <div class="faq-stack">
+          <div class="faq-card">
+            <div class="faq-q">What is the Journey Tracker?<span class="faq-chevron">▼</span></div>
+            <div class="faq-body">The Journey Tracker on the home screen shows your nation's path — six nodes from Group stage through to the 🏆 Final. Your current stage glows in your nation's colours and updates automatically as results come in.</div>
+          </div>
+          <div class="faq-card">
+            <div class="faq-q">Where do I see the full tournament bracket?<span class="faq-chevron">▼</span></div>
+            <div class="faq-body">Tap the <strong>Wall Chart</strong> tab for all 12 group tables and the knockout bracket. Tap <span class="path">View Full Wall Chart</span> on the home screen to open the full-tournament wall planner in one view.</div>
+          </div>
+          <div class="faq-card">
+            <div class="faq-q">When do knockout brackets fill in?<span class="faq-chevron">▼</span></div>
+            <div class="faq-body">Knockout slots show seeded labels (e.g. <em>1A vs 2B</em>) until group results are confirmed, then automatically switch to the actual team names as each round is settled.</div>
+          </div>
+        </div>
+      </section>
+
+      <!-- CALENDAR -->
+      <section id="calendar">
+        <h2 class="s-title">📅 Calendar sync</h2>
+        <p class="s-sub">Adding your team's fixtures to your phone calendar.</p>
+        <div class="faq-stack">
+          <div class="faq-card">
+            <div class="faq-q">How do I add fixtures to my calendar?<span class="faq-chevron">▼</span></div>
+            <div class="faq-body">Go to <span class="path">My Team → Add all fixtures to Calendar</span>. The app requests calendar permission if needed then adds all your team's remaining matches in one tap — with venue, kick-off time and a 1-hour alert. Events go to your default calendar.</div>
+          </div>
+          <div class="faq-card">
+            <div class="faq-q">The kick-off times look wrong — what timezone?<span class="faq-chevron">▼</span></div>
+            <div class="faq-body">All times are shown in <strong>your local timezone</strong>, converted automatically from UTC. If times appear wrong, check your phone's timezone setting.</div>
+          </div>
+          <div class="faq-card">
+            <div class="faq-q">I can't find the fixtures in my calendar.<span class="faq-chevron">▼</span></div>
+            <div class="faq-body">Events are added to your <strong>default calendar</strong>. Search for your nation name — events are titled with your team's flag emoji and name.</div>
+          </div>
+        </div>
+      </section>
+
+      <!-- FOLLOW ANOTHER TEAM -->
+      <section id="follow">
+        <h2 class="s-title">🌍 Follow another team</h2>
+        <p class="s-sub">What happens when your nation is knocked out of the tournament.</p>
+        <div class="faq-stack">
+          <div class="faq-card">
+            <div class="faq-q">My team has been knocked out — what happens?<span class="faq-chevron">▼</span></div>
+            <div class="faq-body">The next time you open the app a full-screen prompt appears: <em>"[Nation]'s journey is over. The tournament isn't."</em> Pick any remaining nation to follow — the app fully switches to their theme, fixtures, squad and news.</div>
+          </div>
+          <div class="faq-card">
+            <div class="faq-q">I dismissed the prompt — how do I follow another team now?<span class="faq-chevron">▼</span></div>
+            <div class="faq-body">Go to <span class="path">Settings → Your Nation → Change nation</span> to switch to any nation still in the tournament.</div>
+          </div>
+          <div class="faq-card">
+            <div class="faq-q">My nation won the World Cup — what does the app show?<span class="faq-chevron">▼</span></div>
+            <div class="faq-body">🏆 A full-screen champion celebration in your nation's colours. The Journey Tracker shows the complete path all the way to the Final.</div>
+          </div>
+        </div>
+      </section>
+
+      <!-- REMOVE ADS -->
+      <section id="remove-ads">
+        <h2 class="s-title">🚫 Remove ads</h2>
+        <p class="s-sub">The one-time £1.99 purchase and how to restore it.</p>
+        <div class="faq-stack">
+          <div class="faq-card">
+            <div class="faq-q">How do I remove ads?<span class="faq-chevron">▼</span></div>
+            <div class="faq-body">Go to <span class="path">Settings → Subscription → Remove Ads · £1.99</span>. One-time purchase — pay once, ads gone permanently. No subscription.</div>
+          </div>
+          <div class="faq-card">
+            <div class="faq-q">I paid but ads are still showing.<span class="faq-chevron">▼</span></div>
+            <div class="faq-body">Try <span class="path">Settings → Subscription → Restore Purchases</span>. Ensure you're signed into the same App Store or Google Play account you used. If it persists <a href="mailto:studio@si187apps.com">contact us</a>.</div>
+          </div>
+          <div class="faq-card">
+            <div class="faq-q">I've reinstalled — how do I restore Remove Ads?<span class="faq-chevron">▼</span></div>
+            <div class="faq-body">Go to <span class="path">Settings → Subscription → Restore Purchases</span>. Your purchase is linked to your App Store (iOS) or Google Play (Android) account — restore for free on any device.</div>
+          </div>
+        </div>
+      </section>
+
+      <!-- SETTINGS -->
+      <section id="settings">
+        <h2 class="s-title">⚙️ Settings</h2>
+        <p class="s-sub">Appearance, privacy and account preferences.</p>
+        <div class="faq-stack">
+          <div class="faq-card">
+            <div class="faq-q">How do I switch between light and dark mode?<span class="faq-chevron">▼</span></div>
+            <div class="faq-body">Go to <span class="path">Settings → Appearance</span> and toggle between <strong>Dark</strong> and <strong>Light</strong>. Dark is the default. Your nation's accent colours carry across both themes.</div>
+          </div>
+          <div class="faq-card">
+            <div class="faq-q">Is my data private?<span class="faq-chevron">▼</span></div>
+            <div class="faq-body">The app collects anonymous usage analytics and an advertising ID where ads are showing. No name, email, location or personal information is collected. See our full <a href="/privacy">Privacy Policy</a>.</div>
+          </div>
+          <div class="faq-card">
+            <div class="faq-q">How do I request deletion of my data?<span class="faq-chevron">▼</span></div>
+            <div class="faq-body">Email <a href="mailto:studio@si187apps.com">studio@si187apps.com</a> with "Data deletion request" in the subject. We'll process it within 30 days.</div>
+          </div>
+        </div>
+      </section>
+
+      <!-- CONTACT -->
+      <div class="contact-block" id="contact">
+        <h2>Still need help?</h2>
+        <p class="cs-sub">We're a small independent studio and we read every message. Get in touch and we'll get back to you within 24–48 hours on working days.</p>
+        <div class="contact-grid">
+          <div class="contact-card">
+            <div class="cc-ico">✉️</div>
+            <h3>Email support</h3>
+            <p>Questions, bug reports or anything else.</p>
+            <a href="mailto:studio@si187apps.com">studio@si187apps.com</a>
+          </div>
+          <div class="contact-card">
+            <div class="cc-ico">📱</div>
+            <h3>About the app</h3>
+            <p>Learn more about WC26 and what's coming next.</p>
+            <a href="/wc26">si187apps.com/wc26</a>
+          </div>
+        </div>
+      </div>
+
+    </main>
+  </div>
+
+</div><!-- /wrap -->
+
+<!-- ══ STUDIO FOOTER ══ -->
+<footer class="site-footer">
+  <div class="footer-col">
+    <div class="footer-brand-row">
+      <div aria-hidden="true"><svg width="24" height="24" viewBox="0 0 160 160"><path d="M80 148 A69 69 0 0 1 11 79" fill="none" stroke="#39FF7A" stroke-width="4.5" stroke-linecap="round" opacity=".15"/><path d="M80 148 A69 69 0 0 0 149 79" fill="none" stroke="#39FF7A" stroke-width="4.5" stroke-linecap="round" opacity=".15"/><path d="M80 132 A53 53 0 0 1 27 79" fill="none" stroke="#39FF7A" stroke-width="4.5" stroke-linecap="round" opacity=".32"/><path d="M80 132 A53 53 0 0 0 133 79" fill="none" stroke="#39FF7A" stroke-width="4.5" stroke-linecap="round" opacity=".32"/><path d="M80 116 A37 37 0 0 1 43 79" fill="none" stroke="#39FF7A" stroke-width="4.5" stroke-linecap="round" opacity=".55"/><path d="M80 116 A37 37 0 0 0 117 79" fill="none" stroke="#39FF7A" stroke-width="4.5" stroke-linecap="round" opacity=".55"/><path d="M80 100 A21 21 0 0 1 59 79" fill="none" stroke="#39FF7A" stroke-width="4.5" stroke-linecap="round" opacity=".75"/><path d="M80 100 A21 21 0 0 0 101 79" fill="none" stroke="#39FF7A" stroke-width="4.5" stroke-linecap="round" opacity=".75"/><path d="M80 88 A9 9 0 0 1 71 79" fill="none" stroke="#C084C8" stroke-width="4.5" stroke-linecap="round" opacity=".9"/><path d="M80 88 A9 9 0 0 0 89 79" fill="none" stroke="#C084C8" stroke-width="4.5" stroke-linecap="round" opacity=".9"/><circle cx="80" cy="79" r="7" fill="#39FF7A"/></svg></div>
+      <div><p class="footer-name">si187 <em>Apps</em></p><p class="footer-tagline">si187 Enterprises Ltd · London</p></div>
+    </div>
+    <div class="footer-socials-row">
+      <a href="https://twitter.com/si187apps" aria-label="X">𝕏</a>
+      <a href="https://instagram.com/si187apps" aria-label="Instagram">◻</a>
+      <a href="https://tiktok.com/@si187apps" aria-label="TikTok">▷</a>
+    </div>
+  </div>
+  <div class="footer-col">
+    <p class="footer-nav-label">Studio</p>
+    <ul class="footer-nav-links">
+      <li><a href="/about">About</a></li>
+      <li><a href="/roadmap">Roadmap</a></li>
+      <li><a href="/manifesto">Manifesto</a></li>
+      <li><a href="/labs">Labs</a></li>
+    </ul>
+  </div>
+  <div class="footer-col">
+    <p class="footer-nav-label">WC26: The Journey</p>
+    <ul class="footer-nav-links">
+      <li><a href="/wc26">Overview</a></li>
+      <li><a href="/wc26/help/">Help &amp; FAQ</a></li>
+      <li><a href="/wc26#notify">Get notified</a></li>
+      <li><a href="/fpl-coach-ai">FPL Coach AI</a></li>
+    </ul>
+  </div>
+  <div class="footer-col">
+    <p class="footer-nav-label">Contact</p>
+    <ul class="footer-nav-links"><li><a href="mailto:studio@si187apps.com">studio@si187apps.com</a></li></ul>
+  </div>
+  <div class="footer-bottom">
+    <p class="footer-copy">&copy; 2026 si187 Enterprises Ltd. All rights reserved.</p>
+    <div class="footer-legal">
+      <a href="/privacy">Privacy</a>
+      <a href="/terms">Terms</a>
+      <a href="#" onclick="window.si187CookiePrefs && window.si187CookiePrefs(); return false;" style="cursor:pointer;">Cookie preferences</a>
+    </div>
+  </div>
+</footer>
+
+<script>
+// Studio nav — scroll shrink
+const navEl = document.getElementById('main-nav');
+window.addEventListener('scroll', function() {
+  navEl.classList.toggle('scrolled', window.scrollY > 60);
+}, { passive: true });
+
+// Studio mobile nav
+const mobileNav = document.getElementById('mobile-nav');
+function closeMobileNav() { mobileNav.classList.remove('open'); document.body.style.overflow = ''; }
+window.closeMobileNav = closeMobileNav;
+document.getElementById('nav-toggle-btn').addEventListener('click', function() {
+  mobileNav.classList.add('open'); document.body.style.overflow = 'hidden';
+});
+document.getElementById('mobile-nav-close').addEventListener('click', closeMobileNav);
+document.addEventListener('keydown', function(e) {
+  if (e.key === 'Escape' && mobileNav.classList.contains('open')) closeMobileNav();
+});
+
+// Topic pill scroll
+document.querySelectorAll('.topic-pill').forEach(function(pill) {
+  pill.addEventListener('click', function() {
+    var id = this.getAttribute('data-target');
+    var el = document.getElementById(id);
+    if (!el) return;
+    var top = el.getBoundingClientRect().top + window.pageYOffset - 88;
+    window.scrollTo({ top: top, behavior: 'smooth' });
+    document.querySelectorAll('.topic-pill').forEach(function(p) { p.classList.remove('active'); });
+    this.classList.add('active');
+  });
+});
+
+// Sidebar active on scroll
+var sbLinks = document.querySelectorAll('.sb-links a');
+var anchors = document.querySelectorAll('section[id], .contact-block[id]');
+window.addEventListener('scroll', function() {
+  var scrollY = window.pageYOffset + 100;
+  var current = '';
+  anchors.forEach(function(a) { if (a.offsetTop <= scrollY) current = a.id; });
+  sbLinks.forEach(function(a) {
+    a.classList.toggle('on', a.getAttribute('href') === '#' + current);
+  });
+}, { passive: true });
+
+// FAQ accordion
+document.querySelectorAll('.faq-q').forEach(function(q) {
+  q.addEventListener('click', function() {
+    this.closest('.faq-card').classList.toggle('open');
+  });
+});
+</script>
+<script src="/assets/js/cookie-banner.js"></script>
+</body>
+</html>
