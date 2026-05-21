@@ -133,6 +133,56 @@
   .timeline-grid { grid-template-columns: 1fr; gap: 32px; }
 }
 </style>
+
+
+<!-- ── JSON-LD structured data ── -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Organization",
+  "name": "si187 Apps",
+  "alternateName": "si187 Enterprises Ltd",
+  "url": "https://si187apps.com",
+  "logo": "https://si187apps.com/assets/images/og-card.png",
+  "description": "Independent mobile app studio based in London. Building one app at a time, properly.",
+  "foundingDate": "2026",
+  "address": {
+    "@type": "PostalAddress",
+    "addressLocality": "London",
+    "addressCountry": "GB"
+  },
+  "sameAs": [
+    "https://twitter.com/si187apps",
+    "https://instagram.com/si187apps",
+    "https://tiktok.com/@si187apps"
+  ],
+  "contactPoint": {
+    "@type": "ContactPoint",
+    "email": "studio@si187apps.com",
+    "contactType": "customer support"
+  }
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position": 1,
+      "name": "Home",
+      "item": "https://si187apps.com/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 2,
+      "name": "About",
+      "item": "https://si187apps.com/about"
+    }
+  ]
+}
+</script>
 </head>
 <body>
 

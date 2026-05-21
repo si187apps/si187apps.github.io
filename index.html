@@ -43,55 +43,6 @@
 <!-- Replace TOKEN with your actual Cloudflare Analytics token after setup -->
 <!-- <script defer src='https://static.cloudflareinsights.com/beacon.min.js' data-cf-beacon='{"token": "REPLACE_WITH_TOKEN"}'></script> -->
 
-<!-- ── JSON-LD Organization schema (SEO) ── -->
-<script type="application/ld+json">
-{
-  "@context": "https://schema.org",
-  "@type": "Organization",
-  "name": "si187 Apps",
-  "legalName": "si187 Enterprises Ltd",
-  "url": "https://si187apps.com",
-  "logo": "https://si187apps.com/assets/images/og-card.png",
-  "description": "Independent mobile studio building thoughtful apps. London-based. Currently building FPL Coach AI.",
-  "foundingDate": "2026",
-  "founders": [{ "@type": "Person", "name": "si187 Apps founder" }],
-  "address": {
-    "@type": "PostalAddress",
-    "addressLocality": "London",
-    "addressCountry": "GB"
-  },
-  "contactPoint": {
-    "@type": "ContactPoint",
-    "email": "studio@si187apps.com",
-    "contactType": "customer support"
-  },
-  "sameAs": [
-    "https://twitter.com/si187apps",
-    "https://instagram.com/si187apps",
-    "https://tiktok.com/@si187apps"
-  ]
-}
-</script>
-<script type="application/ld+json">
-{
-  "@context": "https://schema.org",
-  "@type": "SoftwareApplication",
-  "name": "FPL Coach AI",
-  "applicationCategory": "SportsApplication",
-  "operatingSystem": "iOS",
-  "description": "AI coaching companion for Fantasy Premier League managers. Captain analysis, transfer impact, formation optimisation, chip strategy — coach not oracle.",
-  "url": "https://si187apps.com/fpl-coach-ai",
-  "publisher": {
-    "@type": "Organization",
-    "name": "si187 Apps"
-  },
-  "offers": {
-    "@type": "Offer",
-    "availability": "https://schema.org/PreOrder",
-    "availabilityStarts": "2026-08-01"
-  }
-}
-</script>
 
 <style>
 /* ═══════════════════════════════════════════════
@@ -758,6 +709,36 @@ footer {
   .email-input, .email-submit { width: 100%; min-width: 0; }
 }
 </style>
+
+
+<!-- ── JSON-LD structured data ── -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Organization",
+  "name": "si187 Apps",
+  "alternateName": "si187 Enterprises Ltd",
+  "url": "https://si187apps.com",
+  "logo": "https://si187apps.com/assets/images/og-card.png",
+  "description": "Independent mobile app studio based in London. Building one app at a time, properly.",
+  "foundingDate": "2026",
+  "address": {
+    "@type": "PostalAddress",
+    "addressLocality": "London",
+    "addressCountry": "GB"
+  },
+  "sameAs": [
+    "https://twitter.com/si187apps",
+    "https://instagram.com/si187apps",
+    "https://tiktok.com/@si187apps"
+  ],
+  "contactPoint": {
+    "@type": "ContactPoint",
+    "email": "studio@si187apps.com",
+    "contactType": "customer support"
+  }
+}
+</script>
 </head>
 <body>
 
