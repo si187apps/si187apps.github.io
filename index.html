@@ -3,6 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="apple-itunes-app" content="app-id=6770287387, app-argument=https://si187apps.com/wc26">
 
 <!-- ── SEO ── -->
 <title>si187 Apps — Apps worth using.</title>
@@ -708,6 +709,35 @@ footer {
   .email-row { flex-direction: column; }
   .email-input, .email-submit { width: 100%; min-width: 0; }
 }
+
+/* ── Store badges ── */
+.store-badges {
+  display: flex;
+  gap: 12px;
+  align-items: center;
+  flex-wrap: wrap;
+  margin-top: 24px;
+}
+.store-badges a {
+  display: inline-block;
+  transition: transform 0.15s ease, opacity 0.15s ease;
+  line-height: 0;
+}
+.store-badges a:hover,
+.store-badges a:focus-visible {
+  transform: translateY(-2px);
+  opacity: 0.9;
+}
+.store-badges img,
+.store-badges svg { height: 56px; width: auto; display: block; }
+.store-badges-compact img,
+.store-badges-compact svg { height: 44px; }
+@media (max-width: 480px) {
+  .store-badges img,
+  .store-badges svg { height: 48px; }
+  .store-badges-compact img,
+  .store-badges-compact svg { height: 40px; }
+}
 </style>
 
 
@@ -867,7 +897,7 @@ footer {
     <div class="app-card-fpl reveal" style="background:#06080F; border-color:rgba(201,168,76,0.25); padding:48px 52px;">
       <div style="display:flex;justify-content:space-between;align-items:flex-start;margin-bottom:20px;flex-wrap:wrap;gap:12px;">
         <div>
-          <p style="font-family:'JetBrains Mono',monospace;font-size:10px;letter-spacing:2px;color:#C9A84C;opacity:0.85;text-transform:uppercase;margin-bottom:10px;">Launching June 2026</p>
+          <p style="font-family:'JetBrains Mono',monospace;font-size:10px;letter-spacing:2px;color:#39FF7A;opacity:0.95;text-transform:uppercase;margin-bottom:10px;">Live on iOS and Android</p>
           <h2 style="font-family:'Syne',sans-serif;font-size:clamp(28px,3.5vw,42px);font-weight:800;letter-spacing:-1.5px;color:#EEE8D5;line-height:1.0;margin-bottom:6px;">WC26: <em style="font-style:normal;color:#C9A84C;">The Journey.</em></h2>
           <p style="font-family:'JetBrains Mono',monospace;font-size:12px;letter-spacing:1px;color:#7A8EA8;text-transform:uppercase;">World Cup 2026 Companion</p>
         </div>
@@ -880,8 +910,23 @@ footer {
         <li style="display:flex;align-items:flex-start;gap:10px;font-size:14px;color:var(--text2);line-height:1.5;"><span style="color:#C9A84C;flex-shrink:0;margin-top:2px;">&#8594;</span><span><strong style="color:var(--text1);font-weight:600;">Live scores</strong> &mdash; all 104 matches with goal alerts and calendar sync</span></li>
       </ul>
       <div style="display:flex;gap:12px;flex-wrap:wrap;">
-        <a href="/wc26" style="display:inline-flex;align-items:center;gap:6px;background:#C9A84C;color:#06080F;padding:11px 22px;border-radius:8px;font-family:'Syne',sans-serif;font-weight:800;font-size:14px;text-decoration:none;transition:opacity 0.15s;">Learn more</a>
-        <a href="/wc26#notify" style="display:inline-flex;align-items:center;gap:6px;color:#C9A84C;font-size:14px;font-weight:600;text-decoration:none;padding:11px 0;transition:opacity 0.15s;">Get notified &#8594;</a>
+        <a href="/wc26" style="display:inline-flex;align-items:center;gap:6px;background:#C9A84C;color:#06080F;padding:11px 22px;border-radius:8px;font-family:'Syne',sans-serif;font-weight:800;font-size:14px;text-decoration:none;transition:opacity 0.15s;">Visit WC26</a>
+      </div>
+      <div class="store-badges store-badges-compact" style="margin-top:20px;">
+        <a href="https://apps.apple.com/app/wc26-the-journey/id6770287387?utm_source=si187apps&amp;utm_medium=website&amp;utm_campaign=homepage_card"
+           target="_blank" rel="noopener noreferrer"
+           aria-label="Download WC26: The Journey on the App Store">
+          <img src="/assets/badges/app-store-badge.svg"
+               alt="Download on the App Store"
+               width="132" height="44" loading="lazy">
+        </a>
+        <a href="https://play.google.com/store/apps/details?id=com.si187apps.routetothefinal&amp;utm_source=si187apps&amp;utm_medium=website&amp;utm_campaign=homepage_card"
+           target="_blank" rel="noopener noreferrer"
+           aria-label="Get WC26: The Journey on Google Play">
+          <img src="/assets/badges/google-play-badge.png"
+               alt="Get it on Google Play"
+               width="114" height="44" loading="lazy">
+        </a>
       </div>
     </div>
 
