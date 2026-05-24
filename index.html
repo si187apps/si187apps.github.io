@@ -38,6 +38,7 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Syne:wght@700;800&family=Inter:wght@300;400;500;600&family=JetBrains+Mono:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="/assets/css/site.css">
 <link rel="stylesheet" href="/assets/css/cookie-banner.css">
 
 <!-- ── Cloudflare Web Analytics ── -->
@@ -710,34 +711,7 @@ footer {
   .email-input, .email-submit { width: 100%; min-width: 0; }
 }
 
-/* ── Store badges ── */
-.store-badges {
-  display: flex;
-  gap: 12px;
-  align-items: center;
-  flex-wrap: wrap;
-  margin-top: 24px;
-}
-.store-badges a {
-  display: inline-block;
-  transition: transform 0.15s ease, opacity 0.15s ease;
-  line-height: 0;
-}
-.store-badges a:hover,
-.store-badges a:focus-visible {
-  transform: translateY(-2px);
-  opacity: 0.9;
-}
-.store-badges img,
-.store-badges svg { height: 56px; width: auto; display: block; }
-.store-badges-compact img,
-.store-badges-compact svg { height: 44px; }
-@media (max-width: 480px) {
-  .store-badges img,
-  .store-badges svg { height: 48px; }
-  .store-badges-compact img,
-  .store-badges-compact svg { height: 40px; }
-}
+/* .store-badges rules moved to /assets/css/site.css (Wave 5/PR #17) */
 </style>
 
 
@@ -917,15 +891,13 @@ footer {
            target="_blank" rel="noopener noreferrer"
            aria-label="Download WC26: The Journey on the App Store">
           <img src="/assets/badges/app-store-badge.svg"
-               alt="Download on the App Store"
-               width="132" height="44" loading="lazy">
+               alt="Download on the App Store" loading="lazy">
         </a>
         <a href="https://play.google.com/store/apps/details?id=com.si187apps.routetothefinal&amp;utm_source=si187apps&amp;utm_medium=website&amp;utm_campaign=homepage_card"
            target="_blank" rel="noopener noreferrer"
            aria-label="Get WC26: The Journey on Google Play">
-          <img src="/assets/badges/google-play-badge.png"
-               alt="Get it on Google Play"
-               width="114" height="44" loading="lazy">
+          <img src="/assets/badges/google-play-badge.svg"
+               alt="Get it on Google Play" loading="lazy">
         </a>
       </div>
     </div>
