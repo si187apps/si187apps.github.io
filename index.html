@@ -719,9 +719,10 @@ footer {
   margin-top: 24px;
 }
 .store-badges a {
-  display: inline-block;
+  display: inline-flex;
+  align-items: center;
+  height: 56px;
   transition: transform 0.15s ease, opacity 0.15s ease;
-  line-height: 0;
 }
 .store-badges a:hover,
 .store-badges a:focus-visible {
@@ -729,14 +730,26 @@ footer {
   opacity: 0.9;
 }
 .store-badges img,
-.store-badges svg { height: 56px; width: auto; display: block; }
+.store-badges svg {
+  width: 165px;
+  height: auto;
+  max-height: 56px;
+  object-fit: contain;
+  display: block;
+}
+.store-badges-compact a { height: 44px; }
 .store-badges-compact img,
-.store-badges-compact svg { height: 44px; }
+.store-badges-compact svg {
+  width: 130px;
+  max-height: 44px;
+}
 @media (max-width: 480px) {
+  .store-badges a { height: 48px; }
   .store-badges img,
-  .store-badges svg { height: 48px; }
+  .store-badges svg { width: 140px; max-height: 48px; }
+  .store-badges-compact a { height: 40px; }
   .store-badges-compact img,
-  .store-badges-compact svg { height: 40px; }
+  .store-badges-compact svg { width: 110px; max-height: 40px; }
 }
 </style>
 
@@ -917,15 +930,13 @@ footer {
            target="_blank" rel="noopener noreferrer"
            aria-label="Download WC26: The Journey on the App Store">
           <img src="/assets/badges/app-store-badge.svg"
-               alt="Download on the App Store"
-               width="132" height="44" loading="lazy">
+               alt="Download on the App Store" loading="lazy">
         </a>
         <a href="https://play.google.com/store/apps/details?id=com.si187apps.routetothefinal&amp;utm_source=si187apps&amp;utm_medium=website&amp;utm_campaign=homepage_card"
            target="_blank" rel="noopener noreferrer"
            aria-label="Get WC26: The Journey on Google Play">
-          <img src="/assets/badges/google-play-badge.png"
-               alt="Get it on Google Play"
-               width="114" height="44" loading="lazy">
+          <img src="/assets/badges/google-play-badge.svg"
+               alt="Get it on Google Play" loading="lazy">
         </a>
       </div>
     </div>

@@ -84,7 +84,8 @@
   nav.scrolled { padding: 12px 56px; }
   .nav-logo { display:flex; align-items:center; gap:12px; text-decoration:none; }
   .nav-wordmark { font-family:'Syne',sans-serif; font-size:17px; font-weight:800; color:#F0F5F0; letter-spacing:-0.3px; }
-  .nav-wordmark em { font-style:normal; color:#39FF7A; }
+  /* Scope wordmark <em> to Syne — overrides global `em { font-family: serif }` */
+  #main-nav .nav-wordmark em { font-family:'Syne',sans-serif; font-style:normal; color:#39FF7A; }
   .nav-links { display:flex; align-items:center; gap:32px; list-style:none; }
   .nav-links a { font-size:14px; font-weight:500; color:#8AAA8A; text-decoration:none; transition:color 0.15s; }
   .nav-links a:hover { color:#F0F5F0; }
@@ -685,7 +686,7 @@
   .footer-col { display:flex; flex-direction:column; gap:14px; }
   .footer-brand { display:flex; align-items:center; gap:12px; }
   .footer-name { font-family:'Syne',sans-serif; font-size:16px; font-weight:800; color:#F0F5F0; }
-  .footer-name em { font-style:normal; color:#39FF7A; }
+  .footer-name em { font-family:'Syne',sans-serif; font-style:normal; color:#39FF7A; }
   .footer-tagline { font-family:'JetBrains Mono',monospace; font-size:9px; letter-spacing:2px; color:#C084C8; opacity:0.5; text-transform:uppercase; margin-top:3px; }
   .footer-nav-label { font-family:'JetBrains Mono',monospace; font-size:9px; letter-spacing:3px; color:#C084C8; opacity:0.45; text-transform:uppercase; }
   .footer-nav-links { list-style:none; display:flex; flex-direction:column; gap:10px; }
@@ -756,9 +757,10 @@
       margin-top: 24px;
     }
     .store-badges a {
-      display: inline-block;
+      display: inline-flex;
+      align-items: center;
+      height: 56px;
       transition: transform 0.15s ease, opacity 0.15s ease;
-      line-height: 0;
     }
     .store-badges a:hover,
     .store-badges a:focus-visible {
@@ -767,11 +769,25 @@
     }
     .store-badges img,
     .store-badges svg {
-      height: 56px; width: auto; display: block;
+      width: 165px;
+      height: auto;
+      max-height: 56px;
+      object-fit: contain;
+      display: block;
+    }
+    .store-badges-compact a { height: 44px; }
+    .store-badges-compact img,
+    .store-badges-compact svg {
+      width: 130px;
+      max-height: 44px;
     }
     @media (max-width: 480px) {
+      .store-badges a { height: 48px; }
       .store-badges img,
-      .store-badges svg { height: 48px; }
+      .store-badges svg { width: 140px; max-height: 48px; }
+      .store-badges-compact a { height: 40px; }
+      .store-badges-compact img,
+      .store-badges-compact svg { width: 110px; max-height: 40px; }
     }
 
     /* ── Sticky download banner ── */
@@ -945,15 +961,13 @@
          target="_blank" rel="noopener noreferrer"
          aria-label="Download WC26: The Journey on the App Store">
         <img src="/assets/badges/app-store-badge.svg"
-             alt="Download on the App Store"
-             width="167" height="56" loading="eager">
+             alt="Download on the App Store" loading="eager">
       </a>
       <a href="https://play.google.com/store/apps/details?id=com.si187apps.routetothefinal&amp;utm_source=si187apps&amp;utm_medium=website&amp;utm_campaign=wc26_hero"
          target="_blank" rel="noopener noreferrer"
          aria-label="Get WC26: The Journey on Google Play">
-        <img src="/assets/badges/google-play-badge.png"
-             alt="Get it on Google Play"
-             width="145" height="56" loading="eager">
+        <img src="/assets/badges/google-play-badge.svg"
+             alt="Get it on Google Play" loading="eager">
       </a>
     </div>
     <p class="hero-meta">
@@ -1238,15 +1252,13 @@
          target="_blank" rel="noopener noreferrer"
          aria-label="Download WC26: The Journey on the App Store">
         <img src="/assets/badges/app-store-badge.svg"
-             alt="Download on the App Store"
-             width="167" height="56" loading="lazy">
+             alt="Download on the App Store" loading="lazy">
       </a>
       <a href="https://play.google.com/store/apps/details?id=com.si187apps.routetothefinal&amp;utm_source=si187apps&amp;utm_medium=website&amp;utm_campaign=wc26_waitlist_replacement"
          target="_blank" rel="noopener noreferrer"
          aria-label="Get WC26: The Journey on Google Play">
-        <img src="/assets/badges/google-play-badge.png"
-             alt="Get it on Google Play"
-             width="145" height="56" loading="lazy">
+        <img src="/assets/badges/google-play-badge.svg"
+             alt="Get it on Google Play" loading="lazy">
       </a>
     </div>
   </section>
@@ -1404,15 +1416,13 @@ document.querySelector('.notify-form').addEventListener('submit', async function
          target="_blank" rel="noopener noreferrer"
          aria-label="Download on the App Store">
         <img src="/assets/badges/app-store-badge.svg"
-             alt="Download on the App Store"
-             width="120" height="40" loading="lazy">
+             alt="Download on the App Store" loading="lazy">
       </a>
       <a href="https://play.google.com/store/apps/details?id=com.si187apps.routetothefinal&amp;utm_source=si187apps&amp;utm_medium=sticky_banner&amp;utm_campaign=wc26"
          target="_blank" rel="noopener noreferrer"
          aria-label="Get it on Google Play">
-        <img src="/assets/badges/google-play-badge.png"
-             alt="Get it on Google Play"
-             width="103" height="40" loading="lazy">
+        <img src="/assets/badges/google-play-badge.svg"
+             alt="Get it on Google Play" loading="lazy">
       </a>
       <button type="button" class="wc26-banner-close"
               aria-label="Dismiss download banner">
