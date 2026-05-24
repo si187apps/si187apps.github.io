@@ -27,6 +27,8 @@
   <link rel="preconnect" href="https://fonts.googleapis.com"/>
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
   <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;0,9..40,600;0,9..40,700;1,9..40,400&family=DM+Serif+Display:ital@0;1&family=Syne:wght@700;800&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500;600;700&display=swap" rel="stylesheet"/>
+  <!-- site.css loaded for canonical .store-badges rules; inline <style> below overrides everything else via source order -->
+  <link rel="stylesheet" href="/assets/css/site.css"/>
 
   <style>
     /* ─── RESET & BASE ───────────────────────────────────── */
@@ -748,47 +750,7 @@
       50%      { opacity: 0.5; }
     }
 
-    /* ── Store badges ── */
-    .store-badges {
-      display: flex;
-      gap: 12px;
-      align-items: center;
-      flex-wrap: wrap;
-      margin-top: 24px;
-    }
-    .store-badges a {
-      display: inline-flex;
-      align-items: center;
-      height: 56px;
-      transition: transform 0.15s ease, opacity 0.15s ease;
-    }
-    .store-badges a:hover,
-    .store-badges a:focus-visible {
-      transform: translateY(-2px);
-      opacity: 0.9;
-    }
-    .store-badges img,
-    .store-badges svg {
-      width: 165px;
-      height: auto;
-      max-height: 56px;
-      object-fit: contain;
-      display: block;
-    }
-    .store-badges-compact a { height: 44px; }
-    .store-badges-compact img,
-    .store-badges-compact svg {
-      width: 130px;
-      max-height: 44px;
-    }
-    @media (max-width: 480px) {
-      .store-badges a { height: 48px; }
-      .store-badges img,
-      .store-badges svg { width: 140px; max-height: 48px; }
-      .store-badges-compact a { height: 40px; }
-      .store-badges-compact img,
-      .store-badges-compact svg { width: 110px; max-height: 40px; }
-    }
+    /* .store-badges rules moved to /assets/css/site.css (Wave 5/PR #17) */
 
     /* ── Sticky download banner ── */
     .wc26-banner {

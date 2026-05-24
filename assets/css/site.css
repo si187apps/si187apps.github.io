@@ -162,6 +162,50 @@ nav.scrolled { padding: 12px 56px; }
 .tag-magenta { background:rgba(192,132,200,0.1); border:1px solid rgba(192,132,200,0.2); color:var(--magenta); }
 .tag-dim { background:var(--bg-raised); border:1px solid var(--bg-border); color:var(--text3); }
 
+/* ───────── Store badges ───────── */
+.store-badges {
+  display: flex;
+  gap: 12px;
+  align-items: center;
+  flex-wrap: wrap;
+  margin-top: 24px;
+}
+.store-badges a {
+  display: inline-flex;
+  align-items: center;
+  height: 56px;
+  transition: transform 0.15s ease, opacity 0.15s ease;
+  line-height: 0;
+}
+.store-badges a:hover,
+.store-badges a:focus-visible {
+  transform: translateY(-2px);
+  opacity: 0.9;
+}
+.store-badges img,
+.store-badges svg {
+  width: 165px;
+  height: auto;
+  max-height: 56px;
+  object-fit: contain;
+  display: block;
+}
+/* Compact variant — used on homepage WC26 card */
+.store-badges-compact a { height: 44px; }
+.store-badges-compact img,
+.store-badges-compact svg {
+  width: 130px;
+  max-height: 44px;
+}
+@media (max-width: 480px) {
+  .store-badges a { height: 48px; }
+  .store-badges img,
+  .store-badges svg { width: 140px; max-height: 48px; }
+  .store-badges-compact a { height: 40px; }
+  .store-badges-compact img,
+  .store-badges-compact svg { width: 110px; max-height: 40px; }
+}
+
 /* ════════════════════════════════════════
    FOOTER
    --text3 (#3A5A3A) is illegible on dark bg.
