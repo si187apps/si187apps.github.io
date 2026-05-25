@@ -175,7 +175,7 @@ nav.scrolled { padding: 12px 56px; }
   display: inline-flex;
   align-items: center;
   gap: 12px;
-  width: 180px;
+  width: 200px;
   height: 56px;
   padding: 0 16px;
   box-sizing: border-box;
@@ -228,7 +228,7 @@ nav.scrolled { padding: 12px 56px; }
 
 /* Compact variant — used on homepage WC26 card */
 .store-badges-compact .dl-btn {
-  width: 152px;
+  width: 170px;
   height: 48px;
   gap: 10px;
   padding: 0 14px;
@@ -242,13 +242,13 @@ nav.scrolled { padding: 12px 56px; }
 
 @media (max-width: 480px) {
   .dl-btn {
-    width: 160px;
+    width: 178px;
     height: 50px;
     gap: 10px;
   }
   .dl-btn-icon { width: 24px; height: 24px; }
   .dl-btn-store { font-size: 15px; }
-  .store-badges-compact .dl-btn { width: 140px; height: 44px; }
+  .store-badges-compact .dl-btn { width: 168px; height: 44px; }
 }
 
 /* ════════════════════════════════════════
