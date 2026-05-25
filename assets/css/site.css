@@ -162,7 +162,7 @@ nav.scrolled { padding: 12px 56px; }
 .tag-magenta { background:rgba(192,132,200,0.1); border:1px solid rgba(192,132,200,0.2); color:var(--magenta); }
 .tag-dim { background:var(--bg-raised); border:1px solid var(--bg-border); color:var(--text3); }
 
-/* ───────── Store badges ───────── */
+/* ───────── Unified download buttons ───────── */
 .store-badges {
   display: flex;
   gap: 12px;
@@ -170,40 +170,85 @@ nav.scrolled { padding: 12px 56px; }
   flex-wrap: wrap;
   margin-top: 24px;
 }
-.store-badges a {
+
+.dl-btn {
   display: inline-flex;
   align-items: center;
+  gap: 12px;
+  width: 180px;
   height: 56px;
-  transition: transform 0.15s ease, opacity 0.15s ease;
-  line-height: 0;
+  padding: 0 16px;
+  box-sizing: border-box;
+  background: #000;
+  color: #fff;
+  border: 1px solid rgba(255, 255, 255, 0.18);
+  border-radius: 10px;
+  text-decoration: none;
+  transition: transform 0.15s ease, border-color 0.15s ease, background 0.15s ease;
+  font-family: 'Inter', system-ui, sans-serif;
 }
-.store-badges a:hover,
-.store-badges a:focus-visible {
+
+.dl-btn:hover,
+.dl-btn:focus-visible {
   transform: translateY(-2px);
-  opacity: 0.9;
+  border-color: rgba(57, 255, 122, 0.4);
+  background: #0a0a0a;
 }
-.store-badges img,
-.store-badges svg {
-  width: 165px;
-  height: auto;
-  max-height: 56px;
-  object-fit: contain;
-  display: block;
+
+.dl-btn-icon {
+  width: 28px;
+  height: 28px;
+  flex-shrink: 0;
+  fill: currentColor;
 }
+
+.dl-btn-text {
+  display: flex;
+  flex-direction: column;
+  line-height: 1.1;
+  overflow: hidden;
+}
+
+.dl-btn-prefix {
+  font-size: 10px;
+  font-weight: 400;
+  letter-spacing: 0.4px;
+  opacity: 0.75;
+  text-transform: uppercase;
+  white-space: nowrap;
+}
+
+.dl-btn-store {
+  font-size: 17px;
+  font-weight: 600;
+  letter-spacing: -0.2px;
+  line-height: 1.15;
+  white-space: nowrap;
+}
+
 /* Compact variant — used on homepage WC26 card */
-.store-badges-compact a { height: 44px; }
-.store-badges-compact img,
-.store-badges-compact svg {
-  width: 130px;
-  max-height: 44px;
+.store-badges-compact .dl-btn {
+  width: 152px;
+  height: 48px;
+  gap: 10px;
+  padding: 0 14px;
 }
+.store-badges-compact .dl-btn-icon {
+  width: 24px;
+  height: 24px;
+}
+.store-badges-compact .dl-btn-store { font-size: 15px; }
+.store-badges-compact .dl-btn-prefix { font-size: 9px; }
+
 @media (max-width: 480px) {
-  .store-badges a { height: 48px; }
-  .store-badges img,
-  .store-badges svg { width: 140px; max-height: 48px; }
-  .store-badges-compact a { height: 40px; }
-  .store-badges-compact img,
-  .store-badges-compact svg { width: 110px; max-height: 40px; }
+  .dl-btn {
+    width: 160px;
+    height: 50px;
+    gap: 10px;
+  }
+  .dl-btn-icon { width: 24px; height: 24px; }
+  .dl-btn-store { font-size: 15px; }
+  .store-badges-compact .dl-btn { width: 140px; height: 44px; }
 }
 
 /* ════════════════════════════════════════
