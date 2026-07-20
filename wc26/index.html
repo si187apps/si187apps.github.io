@@ -429,8 +429,8 @@
         </div>
       </div>
       <div class="cta-group">
-        <a href="https://si187apps.com/fpl-coach-ai" class="cta-primary cta-fpl">Join the waitlist &rarr;</a>
-        <a href="https://si187apps.com/fpl-coach-ai" class="cta-ghost cta-ghost-fpl">Learn more</a>
+        <a href="https://si187apps.com/fpl-coach-ai" target="_blank" rel="noopener noreferrer" class="cta-primary cta-fpl">Join the waitlist &rarr;</a>
+        <a href="https://si187apps.com/fpl-coach-ai" target="_blank" rel="noopener noreferrer" class="cta-ghost cta-ghost-fpl">Learn more</a>
       </div>
     </section>
     <section class="panel panel-seasons">
@@ -497,17 +497,17 @@
         </div>
       </div>
       <div class="cta-group">
-        <a href="https://si187apps.com/seasons" class="cta-primary cta-seasons">Join the waitlist &rarr;</a>
-        <a href="https://si187apps.com" class="cta-ghost cta-ghost-seasons">si187apps.com</a>
+        <a href="https://si187apps.com/seasons" target="_blank" rel="noopener noreferrer" class="cta-primary cta-seasons">Join the waitlist &rarr;</a>
+        <a href="https://si187apps.com" target="_blank" rel="noopener noreferrer" class="cta-ghost cta-ghost-seasons">si187apps.com</a>
       </div>
     </section>
   </main>
   <footer class="footer">
     <p class="footer-text">
       &copy; 2026 si187 Enterprises Ltd &middot;
-      <a href="https://si187apps.com">si187apps.com</a> &middot;
-      <a href="https://si187apps.com/privacy">Privacy</a> &middot;
-      <a href="https://si187apps.com/terms">Terms</a>
+      <a href="https://si187apps.com" target="_blank" rel="noopener noreferrer">si187apps.com</a> &middot;
+      <a href="https://si187apps.com/privacy" target="_blank" rel="noopener noreferrer">Privacy</a> &middot;
+      <a href="https://si187apps.com/terms" target="_blank" rel="noopener noreferrer">Terms</a>
     </p>
   </footer>
 </div>
@@ -534,12 +534,6 @@
   })();
 
   function dismissCelebration() {
-    sessionStorage.setItem("cel_seen", "1");
-    document.getElementById("celebration").style.display = "none";
-    document.getElementById("holding").classList.add("visible");
-  }
-
-  if (sessionStorage.getItem("cel_seen") === "1") {
     document.getElementById("celebration").style.display = "none";
     document.getElementById("holding").classList.add("visible");
   }
