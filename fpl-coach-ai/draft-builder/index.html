@@ -1,0 +1,1452 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>FPL Coach AI — Draft Builder | GW1 squad recommendation</title>
+<meta name="description" content="Build your GW1 Fantasy Premier League squad. Free tool from FPL Coach AI — pick your budget and style, get a full 15-player squad with a coaching note for every pick. Verified 2026/27 PL players only.">
+<meta name="robots" content="index, follow">
+<link rel="canonical" href="https://si187apps.com/fpl-coach-ai/draft-builder/">
+<meta property="og:type"        content="website">
+<meta property="og:url"         content="https://si187apps.com/fpl-coach-ai/draft-builder/">
+<meta property="og:title"       content="FPL Coach AI — Draft Builder: build your GW1 squad">
+<meta property="og:description" content="Free GW1 squad builder. Pick your budget and style; our AI model returns a full 15-player squad with a coaching note for every pick. Verified 2026/27 PL players only.">
+<meta property="og:image"       content="https://si187apps.com/assets/images/og-fpl.png">
+<meta property="og:image:width"  content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:site_name"   content="si187 Apps">
+<meta property="og:locale"      content="en_GB">
+<meta name="twitter:card"       content="summary_large_image">
+<meta name="twitter:site"       content="@si187apps">
+<meta name="twitter:title"      content="FPL Coach AI — Draft Builder">
+<meta name="twitter:description" content="Free GW1 squad builder. Pick your budget and style; our AI model returns a full 15-player squad with a coaching note for every pick.">
+<meta name="twitter:image"      content="https://si187apps.com/assets/images/og-fpl.png">
+<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 160 160'><rect width='160' height='160' fill='%230A1628'/><path d='M80 148 A69 69 0 0 1 11 79' fill='none' stroke='%2300D4A0' stroke-width='4.5' stroke-linecap='round' opacity='.15'/><path d='M80 148 A69 69 0 0 0 149 79' fill='none' stroke='%2300D4A0' stroke-width='4.5' stroke-linecap='round' opacity='.15'/><path d='M80 132 A53 53 0 0 1 27 79' fill='none' stroke='%2300D4A0' stroke-width='4.5' stroke-linecap='round' opacity='.32'/><path d='M80 132 A53 53 0 0 0 133 79' fill='none' stroke='%2300D4A0' stroke-width='4.5' stroke-linecap='round' opacity='.32'/><path d='M80 116 A37 37 0 0 1 43 79' fill='none' stroke='%2300D4A0' stroke-width='4.5' stroke-linecap='round' opacity='.55'/><path d='M80 116 A37 37 0 0 0 117 79' fill='none' stroke='%2300D4A0' stroke-width='4.5' stroke-linecap='round' opacity='.55'/><path d='M80 100 A21 21 0 0 1 59 79' fill='none' stroke='%2300D4A0' stroke-width='4.5' stroke-linecap='round' opacity='.75'/><path d='M80 100 A21 21 0 0 0 101 79' fill='none' stroke='%2300D4A0' stroke-width='4.5' stroke-linecap='round' opacity='.75'/><path d='M80 88 A9 9 0 0 1 71 79' fill='none' stroke='%23FFB800' stroke-width='4.5' stroke-linecap='round' opacity='.92'/><path d='M80 88 A9 9 0 0 0 89 79' fill='none' stroke='%23FFB800' stroke-width='4.5' stroke-linecap='round' opacity='.92'/><circle cx='80' cy='79' r='7' fill='%2300D4A0'/></svg>">
+<meta name="theme-color" content="#0A1628">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Syne:wght@700;800&family=Inter:wght@300;400;500;600&family=JetBrains+Mono:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="/assets/css/cookie-banner.css">
+
+<style>
+/* ═══════════════════════════════════════════════
+   FPL COACH AI — PAGE-LEVEL PALETTE
+   The studio nav/footer uses studio palette.
+   Everything below the nav is FPL's world.
+   ═══════════════════════════════════════════════ */
+:root {
+  /* Studio palette — nav + footer only */
+  --s-bg:        #050E05;
+  --s-bg-card:   #091409;
+  --s-bg-border: #142014;
+  --s-green:     #39FF7A;
+  --s-magenta:   #C084C8;
+  --s-text1:     #F0F5F0;
+  --s-text2:     #8AAA8A;
+  --s-text3:     #3A5A3A;
+
+  /* FPL Coach AI palette — all page content */
+  --bg:      #0A1628;
+  --bg-card: #0F1F3A;
+  --bg-deep: #081020;
+  --border:  #1A2D45;
+  --border2: #243D58;
+  --teal:    #00D4A0;
+  --teal-dim:#007A5A;
+  --teal-glow: rgba(0,212,160,0.12);
+  --amber:   #FFB800;
+  --amber-dim: rgba(255,184,0,0.15);
+  --text1:   #E8F0F5;
+  --text2:   #8A9AB0;
+  --text3:   #3A4E60;
+  --text4:   #243040;
+}
+
+/* ── Reset ── */
+*, *::before, *::after { margin:0; padding:0; box-sizing:border-box; }
+html { scroll-behavior: smooth; -webkit-text-size-adjust: 100%; }
+body {
+  background: var(--s-bg);
+  color: var(--text1);
+  font-family: 'Inter', system-ui, sans-serif;
+  font-size: 16px; line-height: 1.6;
+  overflow-x: hidden;
+  -webkit-font-smoothing: antialiased;
+}
+body::before {
+  content: '';
+  position: fixed; inset: 0; pointer-events: none; z-index: 0;
+  background: repeating-linear-gradient(
+    0deg, transparent, transparent 3px,
+    rgba(0,212,160,0.005) 3px, rgba(0,212,160,0.005) 4px
+  );
+}
+img, svg { display: block; }
+.sr-only { position:absolute; width:1px; height:1px; padding:0; margin:-1px; overflow:hidden; clip:rect(0,0,0,0); white-space:nowrap; border:0; }
+
+/* ── Reveal ── */
+.reveal { opacity:0; transform:translateY(20px); transition: opacity 0.5s ease, transform 0.5s ease; }
+.reveal.visible { opacity:1; transform:translateY(0); }
+.rd1 { transition-delay: 0.08s; } .rd2 { transition-delay: 0.16s; }
+.rd3 { transition-delay: 0.24s; } .rd4 { transition-delay: 0.32s; }
+.rd5 { transition-delay: 0.40s; }
+
+/* ── Animations ── */
+@keyframes pulse-teal {
+  0%,100% { box-shadow: 0 0 8px rgba(0,212,160,0.7); }
+  50%      { box-shadow: 0 0 20px rgba(0,212,160,1); }
+}
+@keyframes slowspin {
+  from { transform: rotate(0deg); }
+  to   { transform: rotate(360deg); }
+}
+@keyframes float {
+  0%,100% { transform: translateY(0px); }
+  50%      { transform: translateY(-8px); }
+}
+
+/* ═══════════════════════════════════════════════
+   STUDIO NAV — uses studio palette
+   ═══════════════════════════════════════════════ */
+nav {
+  position: fixed; top:0; left:0; right:0; z-index:200;
+  display: flex; align-items:center; justify-content:space-between;
+  padding: 18px 56px;
+  background: rgba(5,14,5,0.92);
+  backdrop-filter: blur(20px); -webkit-backdrop-filter: blur(20px);
+  border-bottom: 1px solid rgba(20,32,20,0.8);
+  transition: padding 0.3s;
+}
+nav.scrolled { padding: 12px 56px; }
+.nav-logo { display:flex; align-items:center; gap:12px; text-decoration:none; }
+.nav-wordmark { font-family:'Syne',sans-serif; font-size:17px; font-weight:800; color:var(--s-text1); letter-spacing:-0.3px; }
+.nav-wordmark em { font-style:normal; color:var(--s-green); }
+.nav-links { display:flex; align-items:center; gap:32px; list-style:none; }
+.nav-links a { font-size:14px; font-weight:500; color:var(--s-text2); text-decoration:none; transition:color 0.15s; }
+.nav-links a:hover { color:var(--s-text1); }
+.nav-links a.active { color:var(--s-green); }
+.nav-cta { background:var(--teal) !important; color:#050E12 !important; padding:9px 18px !important; border-radius:8px !important; font-weight:700 !important; font-size:13px !important; transition:opacity 0.15s !important; }
+.nav-cta:hover { opacity:0.85 !important; }
+.nav-toggle { display:none; flex-direction:column; gap:5px; background:none; border:none; cursor:pointer; padding:4px; }
+.nav-toggle span { display:block; width:22px; height:2px; background:var(--s-text2); border-radius:2px; }
+.mobile-nav { display:none; position:fixed; top:0; left:0; right:0; bottom:0; z-index:300; background:var(--s-bg); flex-direction:column; align-items:center; justify-content:center; gap:32px; }
+.mobile-nav.open { display:flex; }
+.mobile-nav a { font-family:'Syne',sans-serif; font-size:28px; font-weight:800; color:var(--s-text1); text-decoration:none; letter-spacing:-1px; }
+.mobile-nav a:hover { color:var(--s-green); }
+.mobile-nav-close { position:absolute; top:24px; right:24px; background:none; border:none; cursor:pointer; color:var(--s-text2); font-size:28px; }
+
+/* ═══════════════════════════════════════════════
+   FPL PAGE — all below nav is FPL's world
+   ═══════════════════════════════════════════════ */
+.fpl-page { background: var(--bg); }
+
+/* ── Eyebrow / util ── */
+.eyebrow { font-family:'JetBrains Mono',monospace; font-size:10px; letter-spacing:4px; text-transform:uppercase; color:var(--teal); margin-bottom:16px; display:block; }
+.eyebrow-amber { color:var(--amber); }
+.section-wrap { padding:80px 56px; max-width:1200px; margin:0 auto; position:relative; z-index:1; }
+.section-wrap--narrow { padding:80px 56px; max-width:860px; margin:0 auto; position:relative; z-index:1; }
+.section-divider { border:none; border-top:1px solid var(--border); position:relative; z-index:1; }
+
+/* Buttons */
+.btn-teal { display:inline-flex; align-items:center; gap:8px; background:var(--teal); color:#050E12; padding:14px 26px; border-radius:10px; font-weight:700; font-size:15px; text-decoration:none; transition:opacity 0.15s, transform 0.15s; }
+.btn-teal:hover { opacity:0.88; transform:translateY(-1px); }
+.btn-outline { display:inline-flex; align-items:center; gap:8px; background:transparent; color:var(--text2); padding:14px 24px; border-radius:10px; border:1px solid var(--border); font-weight:500; font-size:15px; text-decoration:none; transition:color 0.15s, border-color 0.15s; }
+.btn-outline:hover { color:var(--text1); border-color:var(--border2); }
+.btn-text { display:inline-flex; align-items:center; gap:8px; color:var(--teal); font-size:14px; font-weight:600; text-decoration:none; transition:gap 0.2s; }
+.btn-text:hover { gap:13px; }
+
+/* Tags */
+.tag { display:inline-flex; align-items:center; gap:6px; font-family:'JetBrains Mono',monospace; font-size:10px; letter-spacing:1.5px; text-transform:uppercase; padding:4px 10px; border-radius:6px; }
+.tag-teal { background:var(--teal-glow); border:1px solid rgba(0,212,160,0.25); color:var(--teal); }
+.tag-amber { background:var(--amber-dim); border:1px solid rgba(255,184,0,0.25); color:var(--amber); }
+
+/* ── Pull quote ── */
+.pull-quote { font-family:'Syne',sans-serif; font-size:clamp(22px,3vw,36px); font-weight:800; letter-spacing:-1px; line-height:1.2; color:var(--text1); border-left:3px solid var(--teal); padding-left:28px; margin:48px 0; }
+.pull-quote em { font-style:normal; color:var(--teal); }
+
+/* ═══════════════════════════════════════════════
+   HERO
+   ═══════════════════════════════════════════════ */
+.fpl-hero {
+  min-height: 100vh;
+  display: flex; align-items: center;
+  padding: 120px 56px 80px;
+  position: relative; overflow: hidden;
+  background: var(--bg-deep);
+}
+
+/* Background atmosphere */
+.hero-glow {
+  position: absolute; inset: 0; pointer-events: none; z-index: 0;
+  background:
+    radial-gradient(ellipse 60% 70% at 75% 40%, rgba(0,212,160,0.07) 0%, transparent 70%),
+    radial-gradient(ellipse 40% 50% at 20% 80%, rgba(255,184,0,0.03) 0%, transparent 60%),
+    radial-gradient(ellipse 80% 80% at 50% 50%, rgba(0,0,0,0.3) 0%, transparent 100%);
+}
+
+/* Grid overlay */
+.hero-grid {
+  position: absolute; inset: 0; pointer-events: none; z-index: 0;
+  background-image:
+    linear-gradient(rgba(0,212,160,0.025) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(0,212,160,0.025) 1px, transparent 1px);
+  background-size: 60px 60px;
+  mask-image: radial-gradient(ellipse 80% 80% at 50% 50%, black 30%, transparent 80%);
+}
+
+/* Decorative fingerprint — FPL colours */
+.hero-fp {
+  position: absolute; right: -60px; top: 50%;
+  transform: translateY(-50%);
+  opacity: 0.04; pointer-events: none; z-index: 0;
+  animation: slowspin 100s linear infinite;
+}
+
+.hero-content { position: relative; z-index: 1; max-width: 640px; }
+
+.hero-badge {
+  display: inline-flex; align-items: center; gap: 8px;
+  background: rgba(0,212,160,0.06); border: 1px solid rgba(0,212,160,0.2);
+  border-radius: 100px; padding: 7px 16px; margin-bottom: 36px;
+}
+.hero-badge-dot {
+  width: 7px; height: 7px; border-radius: 50%;
+  background: var(--teal);
+  animation: pulse-teal 2.2s ease-in-out infinite;
+}
+.hero-badge-text { font-family:'JetBrains Mono',monospace; font-size:11px; letter-spacing:0.5px; color:var(--teal); }
+
+.fpl-hero h1 {
+  font-family: 'Syne', sans-serif;
+  font-size: clamp(52px, 7.5vw, 96px);
+  font-weight: 800; letter-spacing: -3.5px; line-height: 0.92;
+  color: var(--text1); margin-bottom: 10px;
+}
+.fpl-hero h1 em { font-style: normal; color: var(--teal); }
+
+.hero-sub-title {
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 12px; letter-spacing: 3px; color: var(--text3);
+  text-transform: uppercase; margin-bottom: 28px;
+}
+
+.fpl-hero-desc {
+  font-size: clamp(16px,1.8vw,19px); color: var(--text2);
+  max-width: 480px; line-height: 1.7; margin-bottom: 40px;
+}
+
+.hero-actions { display:flex; align-items:center; gap:16px; flex-wrap:wrap; margin-bottom:48px; }
+
+.hero-social-proof {
+  display: flex; align-items: center; gap: 20px; flex-wrap: wrap;
+}
+.proof-item { display:flex; align-items:center; gap:8px; }
+.proof-dot { width:4px; height:4px; border-radius:50%; background:var(--teal); }
+.proof-text { font-family:'JetBrains Mono',monospace; font-size:11px; color:var(--text3); letter-spacing:0.5px; }
+
+/* ═══════════════════════════════════════════════
+   HERO MOCKUP — right side
+   ═══════════════════════════════════════════════ */
+.hero-visual {
+  position: absolute; right: 56px; top: 50%;
+  transform: translateY(-50%);
+  z-index: 2; width: 320px;
+}
+
+.ui-card {
+  background: var(--bg-card); border: 1px solid var(--border);
+  border-radius: 20px; overflow: hidden;
+  box-shadow: 0 32px 80px rgba(0,0,0,0.6), 0 0 0 1px rgba(0,212,160,0.06);
+  animation: float 6s ease-in-out infinite;
+}
+.ui-card::before {
+  content: '';
+  display: block; height: 1px;
+  background: linear-gradient(90deg, transparent, var(--teal), transparent);
+  opacity: 0.5;
+}
+.ui-header {
+  background: var(--bg-deep); padding: 14px 18px;
+  display: flex; align-items:center; justify-content:space-between;
+  border-bottom: 1px solid var(--border);
+}
+.ui-title { font-family:'JetBrains Mono',monospace; font-size:9px; letter-spacing:2px; color:var(--teal); font-weight:700; }
+.ui-meta { font-family:'JetBrains Mono',monospace; font-size:9px; color:var(--text3); }
+.ui-body { padding:14px; display:flex; flex-direction:column; gap:10px; }
+
+/* Mockup cards */
+.m-card { background: var(--bg-deep); border:1px solid var(--border); border-radius:10px; padding:12px; }
+.m-label { font-family:'JetBrains Mono',monospace; font-size:8px; letter-spacing:1.5px; color:var(--text3); text-transform:uppercase; margin-bottom:9px; }
+.m-row { display:flex; align-items:center; gap:8px; margin-bottom:4px; }
+.m-pos { font-family:'JetBrains Mono',monospace; font-size:8px; font-weight:700; color:var(--teal); background:var(--teal-glow); padding:2px 5px; border-radius:3px; }
+.m-name { font-size:11px; font-weight:600; color:var(--text1); flex:1; }
+.m-pts { font-family:'JetBrains Mono',monospace; font-size:11px; font-weight:700; color:var(--teal); }
+.m-fix { font-size:9px; color:var(--text3); margin-left:36px; display:flex; align-items:center; gap:6px; }
+.m-fdr { font-family:'JetBrains Mono',monospace; font-size:8px; font-weight:700; background:var(--teal-glow); color:var(--teal); padding:1px 5px; border-radius:3px; }
+.m-fdr-amber { background:var(--amber-dim); color:var(--amber); }
+.m-pill { background:var(--teal-glow); color:var(--teal); font-family:'JetBrains Mono',monospace; font-size:8px; font-weight:700; letter-spacing:0.5px; padding:2px 7px; border-radius:4px; }
+.m-impact { font-family:'JetBrains Mono',monospace; font-size:8px; color:rgba(0,212,160,0.6); margin-left:6px; }
+.m-divider { border:none; border-top:1px solid rgba(26,45,69,0.8); margin:7px 0; }
+
+/* Floating secondary card */
+.ui-card-float {
+  position: absolute; bottom: -40px; left: -60px;
+  width: 180px;
+  background: var(--bg-card); border: 1px solid var(--border2);
+  border-radius: 14px; padding: 14px 16px;
+  box-shadow: 0 16px 40px rgba(0,0,0,0.5);
+}
+.float-label { font-family:'JetBrains Mono',monospace; font-size:8px; letter-spacing:1.5px; color:var(--text3); text-transform:uppercase; margin-bottom:8px; }
+.float-score { font-family:'Syne',sans-serif; font-size:28px; font-weight:800; letter-spacing:-1px; color:var(--teal); line-height:1; margin-bottom:2px; }
+.float-desc { font-size:10px; color:var(--text2); line-height:1.4; }
+
+/* ═══════════════════════════════════════════════
+   THE PROBLEM
+   ═══════════════════════════════════════════════ */
+.problem-section { background: var(--bg); }
+
+.problem-grid { display:grid; grid-template-columns:1fr 1fr; gap:20px; margin-bottom:56px; }
+.problem-card {
+  background: var(--bg-card); border:1px solid var(--border);
+  border-radius:16px; padding:32px;
+  position: relative; overflow: hidden;
+}
+.problem-card::before {
+  content: '';
+  position: absolute; top:0; left:0; right:0; height:2px;
+}
+.problem-card.bad::before  { background: linear-gradient(90deg, transparent, rgba(255,80,80,0.4), transparent); }
+.problem-card.bad { border-color: rgba(255,80,80,0.1); }
+.problem-icon { font-family:'JetBrains Mono',monospace; font-size:20px; margin-bottom:14px; }
+.problem-title { font-size:17px; font-weight:700; color:var(--text1); margin-bottom:10px; }
+.problem-body { font-size:14px; color:var(--text2); line-height:1.7; }
+.problem-verdict { display:inline-flex; align-items:center; gap:6px; margin-top:14px; font-family:'JetBrains Mono',monospace; font-size:10px; letter-spacing:1px; }
+.verdict-bad  { color: rgba(255,120,120,0.8); }
+.verdict-good { color: var(--teal); }
+
+/* ── How it's different ── */
+.difference-card {
+  background: var(--bg-card); border: 1px solid rgba(0,212,160,0.2);
+  border-radius: 20px; padding: 48px;
+  position: relative; overflow: hidden;
+}
+.difference-card::before {
+  content: '';
+  position: absolute; top:0; left:0; right:0; height:1px;
+  background: linear-gradient(90deg, transparent, var(--teal), transparent);
+  opacity: 0.5;
+}
+.difference-grid {
+  display: grid; grid-template-columns: 1fr 1fr;
+  gap: 48px; align-items: center;
+}
+
+/* ═══════════════════════════════════════════════
+   HOW IT WORKS
+   ═══════════════════════════════════════════════ */
+.how-section { background: var(--bg-deep); border-top:1px solid var(--border); border-bottom:1px solid var(--border); }
+
+.features-grid { display:grid; grid-template-columns:1fr 1fr; gap:3px; }
+.feature-card {
+  background: var(--bg-card); border:0;
+  padding:36px 40px;
+  border-radius: 0;
+  transition: background 0.2s;
+}
+.feature-card:nth-child(1) { border-radius:16px 0 0 0; }
+.feature-card:nth-child(2) { border-radius:0 16px 0 0; }
+.feature-card:nth-child(3) { border-radius:0 0 0 16px; }
+.feature-card:nth-child(4) { border-radius:0 0 16px 0; }
+.feature-card:hover { background: var(--bg-deep); }
+.feature-card:nth-child(odd) { border-right:1px solid var(--border); }
+.feature-card:nth-child(1),
+.feature-card:nth-child(2) { border-bottom:1px solid var(--border); }
+
+.feat-icon { margin-bottom:20px; }
+.feat-tag { font-family:'JetBrains Mono',monospace; font-size:9px; letter-spacing:2px; color:var(--teal); text-transform:uppercase; margin-bottom:10px; }
+.feat-title { font-family:'Syne',sans-serif; font-size:22px; font-weight:800; letter-spacing:-0.5px; color:var(--text1); margin-bottom:12px; }
+.feat-body { font-size:14px; color:var(--text2); line-height:1.75; margin-bottom:14px; }
+.feat-detail { font-family:'JetBrains Mono',monospace; font-size:11px; color: var(--magenta); opacity: 0.55; line-height:1.6; }
+
+/* ── Decision type grid ── */
+.decision-types { display:flex; flex-direction:column; gap:3px; margin-top:48px; }
+.decision-row {
+  display: grid; grid-template-columns: 140px 1fr auto;
+  align-items: center; gap: 24px;
+  background: var(--bg-card); border:1px solid var(--border);
+  padding: 18px 24px; border-radius:0;
+  transition: background 0.15s;
+}
+.decision-row:first-child { border-radius:12px 12px 0 0; }
+.decision-row:last-child  { border-radius:0 0 12px 12px; }
+.decision-row:hover { background: var(--bg-deep); }
+.decision-type { font-family:'JetBrains Mono',monospace; font-size:10px; font-weight:700; letter-spacing:1.5px; text-transform:uppercase; }
+.type-compelling { color: var(--teal); }
+.type-marginal   { color: var(--amber); }
+.type-trap       { color: rgba(255,120,120,0.8); }
+.decision-desc { font-size:14px; color:var(--text2); line-height:1.4; }
+.decision-action { font-family:'JetBrains Mono',monospace; font-size:10px; color:var(--text2); opacity:0.45; white-space:nowrap; }
+
+/* ═══════════════════════════════════════════════
+   COACH NOT MANAGER
+   ═══════════════════════════════════════════════ */
+.philosophy-section { background: var(--bg); }
+
+.philosophy-grid { display:grid; grid-template-columns:1fr 1fr; gap:48px; align-items:center; }
+.philosophy-text {}
+.philosophy-visual {
+  background: var(--bg-card); border:1px solid var(--border);
+  border-radius:20px; padding:36px;
+  position: relative; overflow: hidden;
+}
+.philosophy-visual::before {
+  content: '';
+  position: absolute; top:0; left:0; right:0; height:1px;
+  background: linear-gradient(90deg, transparent, var(--amber), transparent);
+  opacity: 0.4;
+}
+
+.compare-row { display:flex; align-items:flex-start; gap:16px; margin-bottom:20px; padding-bottom:20px; border-bottom:1px solid var(--border); }
+.compare-row:last-child { margin-bottom:0; padding-bottom:0; border-bottom:none; }
+.compare-icon { width:32px; height:32px; border-radius:8px; flex-shrink:0; display:flex; align-items:center; justify-content:center; font-size:14px; }
+.compare-icon.no  { background:rgba(255,80,80,0.08); }
+.compare-icon.yes { background:var(--teal-glow); }
+.compare-content {}
+.compare-label { font-family:'JetBrains Mono',monospace; font-size:9px; letter-spacing:2px; text-transform:uppercase; margin-bottom:4px; }
+.compare-label.no  { color:rgba(255,120,120,0.6); }
+.compare-label.yes { color:var(--teal); }
+.compare-text { font-size:14px; color:var(--text2); line-height:1.5; }
+.compare-text strong { color:var(--text1); font-weight:600; }
+
+/* ═══════════════════════════════════════════════
+   SEASON OVERVIEW
+   ═══════════════════════════════════════════════ */
+.season-section { background: var(--bg-deep); border-top:1px solid var(--border); }
+
+.season-stats { display:grid; grid-template-columns:repeat(4,1fr); border:1px solid var(--border); border-radius:16px; overflow:hidden; margin-bottom:48px; }
+.s-stat { padding:28px 32px; border-right:1px solid var(--border); }
+.s-stat:last-child { border-right:none; }
+.s-num { font-family:'Syne',sans-serif; font-size:38px; font-weight:800; letter-spacing:-2px; color:var(--teal); line-height:1; margin-bottom:6px; }
+.s-label { font-family:'JetBrains Mono',monospace; font-size:10px; letter-spacing:1px; color:var(--text2); opacity:0.5; }
+
+.use-cases { display:grid; grid-template-columns:1fr 1fr 1fr; gap:16px; }
+.use-case { background:var(--bg-card); border:1px solid var(--border); border-radius:14px; padding:24px; transition:border-color 0.2s; }
+.use-case:hover { border-color: var(--border2); }
+.uc-gw { font-family:'JetBrains Mono',monospace; font-size:9px; letter-spacing:2px; color:var(--text2); opacity:0.45; text-transform:uppercase; margin-bottom:12px; }
+.uc-title { font-size:16px; font-weight:600; color:var(--text1); margin-bottom:8px; line-height:1.3; }
+.uc-body { font-size:13px; color:var(--text2); line-height:1.65; }
+
+/* ═══════════════════════════════════════════════
+   ROADMAP
+   ═══════════════════════════════════════════════ */
+.roadmap-section { background: var(--bg); border-top:1px solid var(--border); }
+
+.roadmap-intro { display:grid; grid-template-columns: 1fr 1fr; gap:60px; align-items:flex-end; margin-bottom:56px; }
+.roadmap-intro-text { font-size:16px; color:var(--text2); line-height:1.75; max-width:480px; }
+
+.bucket-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 20px;
+}
+
+.bucket {
+  background: var(--bg-card);
+  border: 1px solid var(--border);
+  border-radius: 18px;
+  padding: 32px;
+  position: relative;
+  overflow: hidden;
+  transition: border-color 0.2s;
+}
+.bucket:hover { border-color: var(--border2); }
+
+.bucket::before {
+  content: '';
+  position: absolute; top:0; left:0; right:0; height:2px;
+  opacity: 0.55;
+}
+.bucket.b-shipped::before     { background: linear-gradient(90deg, transparent, var(--teal), transparent); }
+.bucket.b-coming::before      { background: linear-gradient(90deg, transparent, var(--amber), transparent); }
+.bucket.b-prelaunch::before   { background: linear-gradient(90deg, transparent, var(--text2), transparent); opacity: 0.3; }
+.bucket.b-postlaunch::before  { background: linear-gradient(90deg, transparent, rgba(192,132,200,0.5), transparent); }
+
+.bucket-head {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 16px;
+  margin-bottom: 20px;
+  padding-bottom: 18px;
+  border-bottom: 1px solid var(--border);
+}
+.bucket-meta {}
+.bucket-period {
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 10px; letter-spacing: 2px;
+  text-transform: uppercase;
+  margin-bottom: 8px;
+}
+.bucket.b-shipped     .bucket-period { color: var(--teal);   opacity: 0.85; }
+.bucket.b-coming      .bucket-period { color: var(--amber);  opacity: 0.85; }
+.bucket.b-prelaunch   .bucket-period { color: var(--text2);  opacity: 0.6; }
+.bucket.b-postlaunch  .bucket-period { color: rgba(192,132,200,0.7); }
+
+.bucket-title {
+  font-family: 'Syne', sans-serif;
+  font-size: 22px; font-weight: 800;
+  letter-spacing: -0.5px;
+  color: var(--text1);
+  line-height: 1.1;
+}
+
+.bucket-badge {
+  display: inline-flex; align-items: center; gap: 6px;
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 9px; font-weight: 700; letter-spacing: 1.5px;
+  text-transform: uppercase;
+  padding: 5px 10px;
+  border-radius: 6px;
+  white-space: nowrap;
+  flex-shrink: 0;
+}
+.bucket-badge-dot {
+  width: 6px; height: 6px; border-radius: 50%;
+}
+.bucket.b-shipped .bucket-badge {
+  background: rgba(0,212,160,0.12);
+  border: 1px solid rgba(0,212,160,0.3);
+  color: var(--teal);
+}
+.bucket.b-shipped .bucket-badge-dot { background: var(--teal); box-shadow: 0 0 8px rgba(0,212,160,0.6); }
+.bucket.b-coming .bucket-badge {
+  background: rgba(255,184,0,0.12);
+  border: 1px solid rgba(255,184,0,0.3);
+  color: var(--amber);
+}
+.bucket.b-coming .bucket-badge-dot {
+  background: var(--amber);
+  animation: pulse-amber 2.2s ease-in-out infinite;
+}
+@keyframes pulse-amber {
+  0%, 100% { box-shadow: 0 0 8px rgba(255,184,0,0.6); }
+  50%      { box-shadow: 0 0 14px rgba(255,184,0,1); }
+}
+.bucket.b-prelaunch .bucket-badge {
+  background: transparent;
+  border: 1px solid var(--border2);
+  color: var(--text2);
+}
+.bucket.b-prelaunch .bucket-badge-dot { background: var(--text2); opacity: 0.5; }
+.bucket.b-postlaunch .bucket-badge {
+  background: rgba(192,132,200,0.08);
+  border: 1px solid rgba(192,132,200,0.25);
+  color: rgba(192,132,200,0.85);
+}
+.bucket.b-postlaunch .bucket-badge-dot { background: rgba(192,132,200,0.7); }
+
+.bucket-list {
+  display: flex; flex-direction: column;
+  gap: 10px;
+  margin: 0; padding: 0;
+  list-style: none;
+}
+.bucket-list li {
+  display: flex; align-items: flex-start; gap: 11px;
+  font-size: 14px;
+  color: var(--text1);
+  line-height: 1.5;
+}
+.bucket-list-icon {
+  flex-shrink: 0;
+  margin-top: 4px;
+}
+
+.roadmap-note {
+  margin-top: 36px;
+  text-align: center;
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 11px;
+  color: var(--text2);
+  opacity: 0.55;
+  letter-spacing: 0.5px;
+}
+
+/* ═══════════════════════════════════════════════
+   WAITLIST / CTA
+   ═══════════════════════════════════════════════ */
+.fpl-waitlist {
+  background: var(--bg);
+  border-top: 1px solid var(--border);
+  padding: 96px 56px;
+  display: flex; flex-direction:column; align-items:center; text-align:center;
+  position: relative; overflow:hidden; z-index:1;
+}
+.fpl-waitlist::before {
+  content: '';
+  position: absolute; inset:0; pointer-events:none;
+  background: radial-gradient(ellipse 60% 70% at 50% 100%, rgba(0,212,160,0.05) 0%, transparent 70%);
+}
+.fpl-waitlist h2 {
+  font-family:'Syne',sans-serif;
+  font-size: clamp(32px, 5vw, 64px);
+  font-weight:800; letter-spacing:-2.5px; line-height:1.0;
+  margin-bottom:16px; max-width:680px; position:relative; z-index:1;
+}
+.fpl-waitlist h2 em { font-style:normal; color:var(--teal); }
+.waitlist-sub {
+  font-size:16px; color:var(--text2);
+  max-width:440px; margin:0 auto 40px; line-height:1.7;
+  position:relative; z-index:1;
+}
+.waitlist-perks {
+  display:flex; gap:24px; flex-wrap:wrap; justify-content:center;
+  margin-bottom:40px; position:relative; z-index:1;
+}
+.waitlist-perk { display:flex; align-items:center; gap:8px; font-size:14px; color:var(--text2); }
+.waitlist-perk svg { flex-shrink:0; }
+.email-row { display:flex; gap:10px; flex-wrap:wrap; justify-content:center; max-width:440px; width:100%; position:relative; z-index:1; }
+.email-input { flex:1; min-width:220px; background:var(--bg-card); border:1px solid var(--border); border-radius:10px; padding:14px 18px; color:var(--text1); font-size:14px; font-family:'Inter',sans-serif; outline:none; transition:border-color 0.2s; }
+.email-input::placeholder { color:var(--text2); opacity:0.35; }
+.email-input:focus { border-color: var(--teal-dim); }
+.email-submit { background:var(--teal); color:#050E12; border:none; border-radius:10px; padding:14px 24px; font-weight:700; font-size:14px; cursor:pointer; font-family:'Inter',sans-serif; transition:opacity 0.15s; }
+.email-submit:hover { opacity:0.88; }
+.waitlist-confirm { display:none; font-family:'JetBrains Mono',monospace; font-size:13px; color:var(--teal); margin-top:16px; position:relative; z-index:1; }
+.waitlist-note { font-family:'JetBrains Mono',monospace; font-size:10px; color:var(--text2); opacity:0.45; margin-top:14px; letter-spacing:0.5px; position:relative; z-index:1; }
+
+/* ═══════════════════════════════════════════════
+   FOOTER — studio palette
+   --s-text3 (#3A5A3A) was illegible on dark bg.
+   All footer muted text now uses magenta-dim.
+   ═══════════════════════════════════════════════ */
+footer {
+  background: var(--s-bg);
+  padding:44px 56px;
+  border-top:1px solid rgba(192,132,200,0.12);
+  display:flex; justify-content:space-between;
+  align-items:flex-start; flex-wrap:wrap; gap:40px;
+  position:relative; z-index:1;
+}
+.footer-col { display:flex; flex-direction:column; gap:14px; }
+.footer-brand { display:flex; align-items:center; gap:12px; }
+.footer-name { font-family:'Syne',sans-serif; font-size:16px; font-weight:800; color:var(--s-text1); }
+.footer-name em { font-style:normal; color:var(--s-green); }
+.footer-tagline { font-family:'JetBrains Mono',monospace; font-size:9px; letter-spacing:2px; color:var(--s-magenta); opacity:0.5; text-transform:uppercase; margin-top:3px; }
+.footer-nav-label { font-family:'JetBrains Mono',monospace; font-size:9px; letter-spacing:3px; color:var(--s-magenta); opacity:0.45; text-transform:uppercase; }
+.footer-nav-links { list-style:none; display:flex; flex-direction:column; gap:10px; }
+.footer-nav-links a { font-size:14px; color:var(--s-text2); text-decoration:none; transition:color 0.15s; }
+.footer-nav-links a:hover { color:var(--s-magenta); }
+.footer-bottom { width:100%; border-top:1px solid rgba(192,132,200,0.10); padding-top:24px; display:flex; justify-content:space-between; align-items:center; flex-wrap:wrap; gap:12px; }
+.footer-copy { font-family:'JetBrains Mono',monospace; font-size:10px; color:var(--s-magenta); opacity:0.4; letter-spacing:0.5px; }
+.footer-legal { display:flex; gap:20px; }
+.footer-legal a { font-size:12px; color:var(--s-magenta); opacity:0.45; text-decoration:none; transition:opacity 0.15s; }
+.footer-legal a:hover { opacity:1; }
+.footer-social { display:flex; gap:12px; }
+.footer-social a { display:flex; align-items:center; justify-content:center; width:34px; height:34px; border:1px solid rgba(192,132,200,0.2); border-radius:8px; color:var(--s-magenta); opacity:0.5; text-decoration:none; font-size:14px; transition:opacity 0.15s, border-color 0.15s; }
+.footer-social a:hover { opacity:1; border-color:rgba(192,132,200,0.5); }
+
+/* ═══════════════════════════════════════════════
+   RESPONSIVE
+   ═══════════════════════════════════════════════ */
+@media (max-width: 1100px) {
+  .hero-visual { width: 280px; right: 36px; }
+  .fpl-hero { padding-right: 380px; }
+}
+@media (max-width: 900px) {
+  nav { padding: 16px 24px; } nav.scrolled { padding: 12px 24px; }
+  .nav-links { display: none; } .nav-toggle { display: flex; }
+  .fpl-hero { flex-direction: column; padding: 110px 24px 480px; min-height: auto; }
+  .hero-visual { position: absolute; left: 50%; top: auto; bottom: 40px; transform: translateX(-50%); width: 300px; }
+  .ui-card-float { display: none; }
+  .section-wrap { padding: 60px 24px; }
+  .section-wrap--narrow { padding: 60px 24px; }
+  .problem-grid { grid-template-columns: 1fr; }
+  .difference-grid { grid-template-columns: 1fr; gap: 24px; }
+  .difference-card { padding: 24px; }
+  .features-grid { grid-template-columns: 1fr; }
+  .feature-card { border-right: none !important; border-bottom: 1px solid var(--border) !important; border-radius: 0 !important; }
+  .feature-card:first-child { border-radius: 16px 16px 0 0 !important; }
+  .feature-card:last-child  { border-radius: 0 0 16px 16px !important; border-bottom: none !important; }
+  .decision-row { grid-template-columns: 1fr; gap: 8px; }
+  .decision-action { display: none; }
+  .philosophy-grid { grid-template-columns: 1fr; }
+  .season-stats { grid-template-columns: 1fr 1fr; }
+  .s-stat:nth-child(2) { border-right: none; }
+  .use-cases { grid-template-columns: 1fr; }
+  .roadmap-intro { grid-template-columns: 1fr; gap: 20px; align-items: flex-start; }
+  .bucket-grid { grid-template-columns: 1fr; }
+  .bucket { padding: 24px; }
+  .fpl-waitlist { padding: 72px 24px; }
+  footer { padding: 40px 24px; flex-direction: column; }
+}
+@media (max-width: 540px) {
+  .fpl-hero h1 { letter-spacing: -2px; }
+  .season-stats { grid-template-columns: 1fr; }
+  .s-stat { border-right: none; border-bottom: 1px solid var(--border); }
+  .s-stat:last-child { border-bottom: none; }
+}
+
+/* Skip-link (accessibility). Hidden via clip technique so iOS overscroll
+   cannot reveal it. Visible only on keyboard focus. Uses studio palette
+   (--s-*) since the skip-link belongs to the site-wide nav layer. */
+.skip-link {
+  position: absolute; width: 1px; height: 1px;
+  padding: 0; margin: -1px; overflow: hidden;
+  clip: rect(0,0,0,0); white-space: nowrap; border: 0;
+}
+.skip-link:focus {
+  position: fixed; top: 12px; left: 16px;
+  width: auto; height: auto; margin: 0;
+  overflow: visible; clip: auto; white-space: normal;
+  z-index: 9999;
+  background: var(--s-green, #39FF7A); color: var(--s-bg, #050E05);
+  padding: 12px 20px; border-radius: 8px;
+  font-size: 14px; font-weight: 600; text-decoration: none;
+  outline: 2px solid var(--s-magenta, #C084C8); outline-offset: 2px;
+}
+</style>
+
+
+<!-- ── JSON-LD structured data ── -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Organization",
+  "name": "si187 Apps",
+  "alternateName": "si187 Enterprises Ltd",
+  "url": "https://si187apps.com",
+  "logo": "https://si187apps.com/assets/images/og-card.png",
+  "description": "Independent mobile app studio based in London. Building one app at a time, properly.",
+  "foundingDate": "2026",
+  "address": {
+    "@type": "PostalAddress",
+    "addressLocality": "London",
+    "addressCountry": "GB"
+  },
+  "sameAs": [
+    "https://twitter.com/si187apps",
+    "https://instagram.com/si187apps",
+    "https://tiktok.com/@si187apps"
+  ],
+  "contactPoint": {
+    "@type": "ContactPoint",
+    "email": "studio@si187apps.com",
+    "contactType": "customer support"
+  }
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "WebPage",
+  "name": "FPL Coach AI Draft Builder",
+  "description": "Free GW1 squad builder. Pick your budget and style; our AI model returns a full 15-player squad with a coaching note for every pick. Verified 2026/27 Premier League players only.",
+  "url": "https://si187apps.com/fpl-coach-ai/draft-builder/",
+  "inLanguage": "en-GB",
+  "isPartOf": {
+    "@type": "WebSite",
+    "name": "si187 Apps",
+    "url": "https://si187apps.com/"
+  },
+  "about": {
+    "@type": "SoftwareApplication",
+    "name": "FPL Coach AI",
+    "url": "https://si187apps.com/fpl-coach-ai/"
+  }
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position": 1,
+      "name": "Home",
+      "item": "https://si187apps.com/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 2,
+      "name": "FPL Coach AI",
+      "item": "https://si187apps.com/fpl-coach-ai/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 3,
+      "name": "Draft Builder",
+      "item": "https://si187apps.com/fpl-coach-ai/draft-builder/"
+    }
+  ]
+}
+</script>
+</head>
+<body>
+
+<!-- Skip link (accessibility) -->
+<a href="#main-content" class="skip-link">Skip to main content</a>
+
+<!-- ══ STUDIO NAV ══ -->
+<nav id="main-nav">
+  <a href="/" class="nav-logo" aria-label="si187 Apps home">
+    <div aria-hidden="true"><svg width="28" height="28" viewBox="0 0 160 160"><path d="M80 148 A69 69 0 0 1 11 79" fill="none" stroke="#39FF7A" stroke-width="4.5" stroke-linecap="round" opacity=".11"/><path d="M80 148 A69 69 0 0 0 149 79" fill="none" stroke="#39FF7A" stroke-width="4.5" stroke-linecap="round" opacity=".11"/><path d="M80 132 A53 53 0 0 1 27 79" fill="none" stroke="#39FF7A" stroke-width="4.5" stroke-linecap="round" opacity=".24"/><path d="M80 132 A53 53 0 0 0 133 79" fill="none" stroke="#39FF7A" stroke-width="4.5" stroke-linecap="round" opacity=".24"/><path d="M80 116 A37 37 0 0 1 43 79" fill="none" stroke="#39FF7A" stroke-width="4.5" stroke-linecap="round" opacity=".44"/><path d="M80 116 A37 37 0 0 0 117 79" fill="none" stroke="#39FF7A" stroke-width="4.5" stroke-linecap="round" opacity=".44"/><path d="M80 100 A21 21 0 0 1 59 79" fill="none" stroke="#39FF7A" stroke-width="4.5" stroke-linecap="round" opacity=".68"/><path d="M80 100 A21 21 0 0 0 101 79" fill="none" stroke="#39FF7A" stroke-width="4.5" stroke-linecap="round" opacity=".68"/><path d="M80 88 A9 9 0 0 1 71 79" fill="none" stroke="#C084C8" stroke-width="4.5" stroke-linecap="round" opacity=".92"/><path d="M80 88 A9 9 0 0 0 89 79" fill="none" stroke="#C084C8" stroke-width="4.5" stroke-linecap="round" opacity=".92"/><circle cx="80" cy="79" r="7" fill="#39FF7A"/></svg></div>
+    <span class="nav-wordmark">si187 <em>Apps</em></span>
+  </a>
+  <ul class="nav-links">
+    <li><a href="/about">About</a></li>
+    <li><a href="/roadmap">Roadmap</a></li>
+    <li><a href="/manifesto">Manifesto</a></li>
+    <li><a href="/labs">Labs</a></li>
+    <li><a href="#waitlist" class="nav-cta">Get early access</a></li>
+  </ul>
+  <button class="nav-toggle" aria-label="Open menu" id="nav-toggle-btn"><span></span><span></span><span></span></button>
+</nav>
+<div class="mobile-nav" id="mobile-nav">
+  <button class="mobile-nav-close" id="mobile-nav-close" aria-label="Close">✕</button>
+  <a href="/" onclick="closeMobileNav()">Home</a>
+  <a href="/about" onclick="closeMobileNav()">About</a>
+  <a href="/roadmap" onclick="closeMobileNav()">Roadmap</a>
+  <a href="/manifesto" onclick="closeMobileNav()">Manifesto</a>
+  <a href="/labs" onclick="closeMobileNav()">Labs</a>
+  <a href="#waitlist" onclick="closeMobileNav()" style="color:var(--teal)">Early access</a>
+</div>
+
+
+<!-- ══ FPL PAGE ══ -->
+<!-- draft-builder body content injected below -->
+
+<!-- ══ DRAFT BUILDER — page-specific styles ══ -->
+<style>
+.db-page { min-height:100vh; padding: 100px 24px 60px; background: var(--bg); position:relative; z-index:1; }
+.db-container { max-width: 900px; margin: 0 auto; }
+
+/* Hero */
+.db-hero {
+  padding: 24px 0 32px;
+  border-bottom: 1px solid var(--border);
+  margin-bottom: 32px;
+}
+.db-hero-eyebrow {
+  font-family:'JetBrains Mono',monospace; font-size:11px; letter-spacing:1.2px;
+  color: var(--teal); text-transform:uppercase; margin-bottom:12px;
+}
+.db-hero h1 {
+  font-family:'Syne',sans-serif; font-weight:800; font-size: clamp(32px, 6vw, 52px);
+  line-height:1.05; letter-spacing:-1.5px; color: var(--text1); margin-bottom: 16px;
+}
+.db-hero h1 span { color: var(--teal); }
+
+/* Intro */
+.db-intro {
+  font-size: 16px; color: var(--text2); line-height:1.6; max-width: 680px;
+  margin-bottom: 24px;
+}
+
+/* Caveat banner */
+.db-caveat {
+  background: rgba(0,212,160,0.04); border-left: 3px solid var(--teal);
+  padding: 14px 18px; margin-bottom: 32px; border-radius: 0 6px 6px 0;
+  font-size: 13px; color: var(--text2); line-height: 1.6;
+}
+.db-caveat p + p { margin-top: 6px; }
+
+/* Controls */
+.db-controls { margin-bottom: 24px; display: grid; gap: 16px; }
+@media (min-width: 640px) { .db-controls { grid-template-columns: 1fr 1fr; align-items: end; } }
+.db-control { display: flex; flex-direction: column; gap: 8px; }
+.db-control-label {
+  font-family:'JetBrains Mono',monospace; font-size:11px; letter-spacing:1px;
+  color: var(--text2); text-transform:uppercase;
+}
+.db-control-label b { color: var(--teal); font-weight:600; }
+.db-slider {
+  -webkit-appearance:none; appearance:none; width:100%; height:6px;
+  background: var(--bg-card); border-radius:3px; outline:none;
+}
+.db-slider::-webkit-slider-thumb {
+  -webkit-appearance:none; appearance:none; width:22px; height:22px;
+  background: var(--teal); border-radius:50%; cursor:pointer;
+  box-shadow: 0 0 12px rgba(0,212,160,0.5);
+}
+.db-slider::-moz-range-thumb {
+  width:22px; height:22px; background:var(--teal); border-radius:50%;
+  cursor:pointer; border:none;
+}
+.db-pills { display: flex; gap: 6px; }
+.db-pill {
+  flex:1; padding: 10px 12px; border: 1px solid var(--border); background: transparent;
+  color: var(--text2); font-size: 13px; font-weight:500; border-radius: 8px;
+  cursor:pointer; transition: all 0.15s; font-family:inherit;
+}
+.db-pill:hover { border-color: var(--teal-dim); color: var(--text1); }
+.db-pill.active { background: var(--teal); color: #061020; border-color: var(--teal); font-weight:700; }
+
+/* Loading */
+.db-loading { text-align:center; padding: 40px; color: var(--text2); font-size:14px; }
+.db-loading::before {
+  content:''; display:inline-block; width:14px; height:14px; border-radius:50%;
+  border: 2px solid var(--border2); border-top-color: var(--teal);
+  animation: slowspin 0.8s linear infinite; margin-right:10px; vertical-align:middle;
+}
+.db-error {
+  padding: 12px 16px; background: rgba(255,184,0,0.08); border-left: 3px solid var(--amber);
+  color: var(--text2); font-size:13px; margin-bottom: 16px; border-radius: 0 6px 6px 0;
+}
+
+/* Pitch */
+.db-pitch-wrap { background: #071810; border: 1px solid #0d2818; border-radius: 12px; padding: 20px; margin-bottom: 20px; overflow:hidden; position:relative; }
+.db-pitch {
+  aspect-ratio: 5/6; max-width: 640px; margin: 0 auto; position: relative;
+  background: linear-gradient(180deg, #082915 0%, #071810 100%);
+  border-radius: 8px; padding: 12px;
+  background-image:
+    linear-gradient(180deg, rgba(255,255,255,0.02) 50%, transparent 50%),
+    linear-gradient(180deg, transparent 0%, rgba(255,255,255,0.02) 4px, transparent 4px);
+  background-size: 100% 40px, 100% 8px;
+}
+.db-pitch-line { position:absolute; left:12px; right:12px; height:1px; background: rgba(255,255,255,0.08); }
+.db-pitch-line.center { top: 50%; }
+.db-pitch-circle { position:absolute; left:50%; top:50%; width:80px; height:80px; margin:-40px 0 0 -40px; border:1px solid rgba(255,255,255,0.08); border-radius:50%; }
+.db-row-wrap { position:absolute; left:12px; right:12px; display:flex; justify-content:space-around; align-items:center; }
+.db-row-wrap.gk  { top: 6%; }
+.db-row-wrap.def { top: 30%; }
+.db-row-wrap.mid { top: 55%; }
+.db-row-wrap.fwd { top: 80%; }
+.db-dot {
+  display:flex; flex-direction:column; align-items:center; gap:4px; position:relative;
+}
+.db-dot-circle {
+  width: 40px; height: 40px; border-radius: 50%;
+  background: var(--teal); box-shadow: 0 0 12px rgba(0,212,160,0.4);
+  display:flex; align-items:center; justify-content:center;
+  font-size:11px; font-weight:700; color:#061020;
+  font-family:'JetBrains Mono',monospace;
+}
+.db-dot.captain .db-dot-circle {
+  background: var(--amber); box-shadow: 0 0 16px rgba(255,184,0,0.6);
+  animation: pulse-teal 2s ease-in-out infinite;
+}
+.db-dot-badge {
+  position:absolute; top:-4px; right:-4px; background: #061020; color: var(--amber);
+  width:16px; height:16px; border-radius:50%; font-size:9px; font-weight:800;
+  display:flex; align-items:center; justify-content:center; border:1px solid var(--amber);
+  font-family:'JetBrains Mono',monospace;
+}
+.db-dot-name {
+  font-size: 10px; color: #E8F5EC; text-align:center;
+  max-width: 60px; overflow:hidden; text-overflow:ellipsis; white-space:nowrap;
+  font-weight: 500;
+}
+
+/* Stats bar */
+.db-stats {
+  display: grid; grid-template-columns: repeat(3, 1fr); gap: 12px;
+  background: var(--bg-card); border: 1px solid var(--border);
+  border-radius: 10px; padding: 14px; margin-bottom: 24px;
+}
+.db-stat { text-align: center; }
+.db-stat-value {
+  font-family:'JetBrains Mono',monospace; font-size: 20px; font-weight:700;
+  color: var(--teal);
+}
+.db-stat-label {
+  font-size: 10px; letter-spacing: 1px; text-transform: uppercase;
+  color: var(--text2); margin-top: 4px;
+}
+
+/* Collapsible explainer */
+.db-explainer {
+  border: 1px solid var(--border); border-radius: 8px; padding: 0;
+  background: var(--bg-card); margin-bottom: 24px;
+}
+.db-explainer summary {
+  padding: 14px 18px; cursor: pointer; font-size:14px; color: var(--text1);
+  font-weight:500; list-style: none; display:flex; align-items:center; justify-content:space-between;
+}
+.db-explainer summary::-webkit-details-marker { display: none; }
+.db-explainer summary::after { content: "+"; color: var(--teal); font-size: 18px; font-weight:400; }
+.db-explainer[open] summary::after { content: "−"; }
+.db-explainer-body { padding: 0 18px 16px; color: var(--text2); font-size:13px; line-height:1.65; }
+.db-explainer-body p + p { margin-top: 10px; }
+
+/* Squad list */
+.db-section-label {
+  font-family:'JetBrains Mono',monospace; font-size:11px; letter-spacing:1.2px;
+  color: var(--teal); text-transform:uppercase; margin-bottom:12px;
+}
+.db-squad-list { display: flex; flex-direction: column; gap: 6px; margin-bottom: 24px; }
+.db-player-row {
+  display: grid; grid-template-columns: 44px 1fr auto;
+  gap: 12px; align-items: center;
+  background: var(--bg-card); border: 1px solid var(--border);
+  border-radius: 8px; padding: 10px 12px;
+}
+.db-player-row.captain { border-color: var(--amber); background: rgba(255,184,0,0.05); }
+.db-player-row.top-pick { border-color: var(--teal); }
+.db-pos-badge {
+  font-family:'JetBrains Mono',monospace; font-size:10px; font-weight:700;
+  color: var(--teal); border: 1px solid var(--teal-dim); border-radius: 4px;
+  padding: 4px 6px; text-align: center;
+}
+.db-player-row.captain .db-pos-badge { color: var(--amber); border-color: var(--amber); }
+.db-player-info { min-width: 0; }
+.db-player-name {
+  font-size: 14px; font-weight: 600; color: var(--text1); display:flex; align-items:center; gap:6px; flex-wrap:wrap;
+}
+.db-cap-badge {
+  font-family:'JetBrains Mono',monospace; font-size:9px; font-weight:800;
+  background: var(--amber); color:#061020; padding: 2px 5px; border-radius: 3px;
+}
+.db-star-badge {
+  font-family:'JetBrains Mono',monospace; font-size:9px; font-weight:800;
+  background: var(--teal); color:#061020; padding: 2px 5px; border-radius: 3px;
+}
+.db-player-note {
+  font-size: 12px; color: var(--text2); margin-top: 2px; line-height:1.4;
+}
+.db-player-meta {
+  font-size: 11px; color: var(--text3); margin-top: 3px;
+  font-family:'JetBrains Mono',monospace;
+}
+.db-player-right { text-align: right; }
+.db-player-pts {
+  font-family:'JetBrains Mono',monospace; font-size: 14px; font-weight: 700;
+  color: var(--teal);
+}
+.db-player-price {
+  font-family:'JetBrains Mono',monospace; font-size: 11px; color: var(--text2); margin-top: 2px;
+}
+
+.db-bench-label {
+  font-family:'JetBrains Mono',monospace; font-size:10px; letter-spacing:1.5px;
+  color: var(--text3); text-transform:uppercase;
+  border-top: 1px dashed var(--border); padding-top: 16px; margin-top: 8px; margin-bottom:10px;
+}
+
+/* CTA */
+.db-cta {
+  text-align: center; padding: 32px 24px;
+  background: var(--bg-card); border: 1px solid var(--border);
+  border-radius: 12px; margin-top: 8px;
+}
+.db-cta-title {
+  font-family:'Syne',sans-serif; font-size: 22px; font-weight:700;
+  color: var(--text1); margin-bottom: 6px; letter-spacing:-0.5px;
+}
+.db-cta-sub {
+  font-size: 13px; color: var(--text2); margin-bottom: 20px;
+}
+.db-cta-buttons {
+  display: flex; flex-direction: column; gap: 10px; max-width: 320px; margin: 0 auto;
+}
+@media (min-width: 480px) { .db-cta-buttons { flex-direction: row; } }
+.db-btn-primary {
+  background: var(--teal); color: #061020; padding: 12px 22px; border-radius: 8px;
+  font-weight:700; text-decoration:none; font-size:14px; flex:1; text-align:center;
+  transition: opacity 0.15s;
+}
+.db-btn-primary:hover { opacity: 0.88; }
+.db-btn-secondary {
+  background: transparent; color: var(--text3); padding: 12px 22px; border: 1px dashed var(--border2);
+  border-radius: 8px; font-weight:600; font-size:14px; flex:1; text-align:center;
+  cursor: not-allowed;
+}
+
+@media (max-width: 480px) {
+  .db-page { padding: 100px 16px 40px; }
+  .db-dot-circle { width: 34px; height: 34px; font-size: 10px; }
+  .db-dot-name { font-size: 9px; max-width: 54px; }
+  .db-player-row { grid-template-columns: 40px 1fr auto; padding: 10px; gap: 10px; }
+  .db-player-name { font-size: 13px; }
+  .db-player-note { font-size: 11px; }
+  .db-stats { grid-template-columns: repeat(3, 1fr); padding: 12px 8px; }
+  .db-stat-value { font-size: 16px; }
+}
+</style>
+
+<div class="db-page">
+  <div class="db-container">
+
+    <!-- Hero -->
+    <section class="db-hero">
+      <div class="db-hero-eyebrow">FPL Coach AI · Draft Builder</div>
+      <h1>Build your <span>GW1 squad</span></h1>
+    </section>
+
+    <!-- Intro copy -->
+    <p class="db-intro">
+      Pick your budget and style, and we'll build a recommended 15-player squad using our AI model — trained on Premier League performance data from the last two seasons. Every pick comes with a coaching note explaining why they're in.
+    </p>
+
+    <!-- Data caveat banner -->
+    <div class="db-caveat">
+      <p>Predictions based on 2025/26 PL data · New signings excluded · Pre-season form not factored · Model confidence highest for established PL players</p>
+      <p>Squad data sourced from the official FPL API — updated daily. Players shown are confirmed 2026/27 Premier League squad members.</p>
+    </div>
+
+    <!-- Controls -->
+    <div class="db-controls">
+      <div class="db-control">
+        <label class="db-control-label" for="db-budget">Budget: <b id="db-budget-val">£100.0m</b></label>
+        <input id="db-budget" class="db-slider" type="range" min="95" max="100" step="0.5" value="100">
+      </div>
+      <div class="db-control">
+        <span class="db-control-label">Style</span>
+        <div class="db-pills" role="radiogroup" aria-label="Squad style">
+          <button class="db-pill" data-style="safe" role="radio" aria-checked="false">Safe</button>
+          <button class="db-pill active" data-style="balanced" role="radio" aria-checked="true">Balanced</button>
+          <button class="db-pill" data-style="differential" role="radio" aria-checked="false">Differential</button>
+        </div>
+      </div>
+    </div>
+
+    <!-- Loading / error placeholder -->
+    <div id="db-status"></div>
+
+    <!-- Pitch -->
+    <div class="db-pitch-wrap" id="db-pitch-wrap">
+      <div class="db-pitch" id="db-pitch">
+        <div class="db-pitch-line center"></div>
+        <div class="db-pitch-circle"></div>
+        <div class="db-row-wrap gk"  id="db-row-gk"></div>
+        <div class="db-row-wrap def" id="db-row-def"></div>
+        <div class="db-row-wrap mid" id="db-row-mid"></div>
+        <div class="db-row-wrap fwd" id="db-row-fwd"></div>
+      </div>
+    </div>
+
+    <!-- Stats bar -->
+    <div class="db-stats">
+      <div class="db-stat"><div class="db-stat-value" id="db-stat-cost">—</div><div class="db-stat-label">Squad cost</div></div>
+      <div class="db-stat"><div class="db-stat-value" id="db-stat-bank">—</div><div class="db-stat-label">In the bank</div></div>
+      <div class="db-stat"><div class="db-stat-value" id="db-stat-proj">—</div><div class="db-stat-label">GW1 projected</div></div>
+    </div>
+
+    <!-- Explainer collapsible -->
+    <details class="db-explainer">
+      <summary>How we picked this squad</summary>
+      <div class="db-explainer-body">
+        <p>This squad is built from proven Premier League performers — players with at least one full season of FPL data. Our model uses expected goals, expected assists, fixture difficulty, and form to predict GW1 returns.</p>
+        <p>New Premier League signings from abroad — players making their PL debut in 2026/27 — are not included. Without match data from the Premier League specifically, any prediction would be a guess. We only recommend players our model can honestly evaluate.</p>
+        <p>Pre-season form doesn't feature in our model. Friendlies and pre-season tournaments don't predict GW1 returns reliably. We weight actual Premier League performance data instead.</p>
+      </div>
+    </details>
+
+    <!-- Starting XI -->
+    <div class="db-section-label">Starting XI</div>
+    <div class="db-squad-list" id="db-starters"></div>
+
+    <!-- Bench -->
+    <div class="db-bench-label">Bench</div>
+    <div class="db-squad-list" id="db-bench"></div>
+
+    <!-- CTA -->
+    <div class="db-cta">
+      <div class="db-cta-title">Get the full GW1 coaching</div>
+      <div class="db-cta-sub">Free during pre-season and GW1 · Full GW1 coaching in the app</div>
+      <div class="db-cta-buttons">
+        <a class="db-btn-primary" href="https://play.google.com/store/apps/details?id=com.si187apps.fplcoachai" target="_blank" rel="noopener">Get it on Google Play</a>
+        <span class="db-btn-secondary" aria-disabled="true">App Store — coming soon</span>
+      </div>
+    </div>
+
+  </div>
+</div>
+
+<!-- ══ DRAFT BUILDER — fetch + render ══ -->
+<script>
+(function() {
+  var API_BASE = 'https://fpl-coach-ai-backend.onrender.com';
+  var status  = document.getElementById('db-status');
+  var budget  = document.getElementById('db-budget');
+  var budgetVal = document.getElementById('db-budget-val');
+  var pills   = document.querySelectorAll('.db-pill');
+  var current = { style: 'balanced', budget: 100 };
+  var inflight = 0;
+
+  // Static fallback squad — VERIFIED against the live players DB 2026-07-24.
+  // Only used when the backend endpoint is unreachable. All names below
+  // are confirmed present in the 2026/27 FPL bootstrap; none is a
+  // departed player (Salah / Gordon / Konaté / Andy Robertson etc.
+  // are NOT in this list).
+  var FALLBACK = {
+    style: 'balanced', budget: 100, source: 'client-fallback', gameweek: null,
+    dataFreshness: 'Backend unreachable · client-side reference squad · reload to retry',
+    totalCost: 99.5, bank: 0.5, projectedGwPoints: 61.4,
+    players: [
+      { name:'Raya', team:'ARS', position:'GKP', price:5.5, predictedPts:4.6, ownership:22, fdr:null, isRecommendedCaptain:false, isBenchRecommended:false, coachNote:'Arsenal #1 keeper, expected consistent returns.' },
+      { name:'Kelleher', team:'BRE', position:'GKP', price:4.5, predictedPts:3.5, ownership:6, fdr:null, isRecommendedCaptain:false, isBenchRecommended:true, coachNote:'Budget bench cover, low-cost enabler.' },
+      { name:'Van Dijk', team:'LIV', position:'DEF', price:6.0, predictedPts:5.0, ownership:30, fdr:null, isRecommendedCaptain:false, isBenchRecommended:false, coachNote:'30% owned, consistent returner — safety hold.' },
+      { name:'Saliba', team:'ARS', position:'DEF', price:6.0, predictedPts:4.9, ownership:25, fdr:null, isRecommendedCaptain:false, isBenchRecommended:false, coachNote:'25% owned, Arsenal clean-sheet anchor.' },
+      { name:'Hall', team:'NEW', position:'DEF', price:5.5, predictedPts:4.5, ownership:14, fdr:null, isRecommendedCaptain:false, isBenchRecommended:false, coachNote:'Attacking full-back, Newcastle set-piece threat.' },
+      { name:'O\u2019Reilly', team:'MCI', position:'DEF', price:5.5, predictedPts:4.4, ownership:25, fdr:null, isRecommendedCaptain:false, isBenchRecommended:false, coachNote:'25% owned, City left-back with attacking upside.' },
+      { name:'Muñoz', team:'CRY', position:'DEF', price:5.0, predictedPts:4.2, ownership:12, fdr:null, isRecommendedCaptain:false, isBenchRecommended:true, coachNote:'12% owned differential, CRY attacking full-back.' },
+      { name:'Palmer', team:'CHE', position:'MID', price:11.0, predictedPts:7.6, ownership:35, fdr:null, isRecommendedCaptain:false, isBenchRecommended:false, coachNote:'Mid-premium MID, 35% owned — ceiling pick.' },
+      { name:'Saka', team:'ARS', position:'MID', price:10.0, predictedPts:6.8, ownership:32, fdr:null, isRecommendedCaptain:false, isBenchRecommended:false, coachNote:'Mid-premium MID, 32% owned — ceiling pick.' },
+      { name:'B.Fernandes', team:'MUN', position:'MID', price:9.0, predictedPts:6.4, ownership:20, fdr:null, isRecommendedCaptain:false, isBenchRecommended:false, coachNote:'Mid-premium MID, 20% owned — ceiling pick.' },
+      { name:'Ndiaye', team:'EVE', position:'MID', price:6.5, predictedPts:5.8, ownership:18, fdr:null, isRecommendedCaptain:false, isBenchRecommended:false, coachNote:'Everton talisman, top-predicted mid-price MID.' },
+      { name:'Cherki', team:'MCI', position:'MID', price:6.5, predictedPts:5.2, ownership:8, fdr:null, isRecommendedCaptain:false, isBenchRecommended:true, coachNote:'8% owned differential — model likes MCI fixtures.' },
+      { name:'Haaland', team:'MCI', position:'FWD', price:15.0, predictedPts:8.5, ownership:55, fdr:null, isRecommendedCaptain:true, isBenchRecommended:false, coachNote:'Highest predicted returner. 55% owned, premium captain pick.' },
+      { name:'Gyökeres', team:'ARS', position:'FWD', price:9.0, predictedPts:6.4, ownership:20, fdr:null, isRecommendedCaptain:false, isBenchRecommended:false, coachNote:'Mid-premium FWD, 20% owned — ceiling pick.' },
+      { name:'Wood', team:'NFO', position:'FWD', price:6.5, predictedPts:5.4, ownership:14, fdr:null, isRecommendedCaptain:false, isBenchRecommended:true, coachNote:'FWD value pick at £6.5m, 14% owned.' }
+    ]
+  };
+
+  function fmtCurrency(n) { return '£' + Number(n).toFixed(1) + 'm'; }
+  function fmtPts(n) { return Number(n).toFixed(1); }
+
+  function setStatus(html) { status.innerHTML = html; }
+  function clearStatus() { status.innerHTML = ''; }
+
+  function renderPitch(players) {
+    var starters = players.filter(function(p){ return !p.isBenchRecommended; });
+    var byPos = { GKP:[], DEF:[], MID:[], FWD:[] };
+    starters.forEach(function(p){ byPos[p.position].push(p); });
+    var slotIds = { GKP:'db-row-gk', DEF:'db-row-def', MID:'db-row-mid', FWD:'db-row-fwd' };
+    Object.keys(slotIds).forEach(function(pos){
+      var el = document.getElementById(slotIds[pos]);
+      el.innerHTML = '';
+      byPos[pos].forEach(function(p){
+        var dot = document.createElement('div');
+        dot.className = 'db-dot' + (p.isRecommendedCaptain ? ' captain' : '');
+        var circle = document.createElement('div');
+        circle.className = 'db-dot-circle';
+        circle.textContent = p.team;
+        if (p.isRecommendedCaptain) {
+          var badge = document.createElement('span');
+          badge.className = 'db-dot-badge';
+          badge.textContent = 'C';
+          circle.appendChild(badge);
+        }
+        var name = document.createElement('div');
+        name.className = 'db-dot-name';
+        name.textContent = p.name;
+        dot.appendChild(circle);
+        dot.appendChild(name);
+        el.appendChild(dot);
+      });
+    });
+  }
+
+  function renderRow(p, isTopPick) {
+    var row = document.createElement('div');
+    row.className = 'db-player-row' + (p.isRecommendedCaptain ? ' captain' : '') + (isTopPick ? ' top-pick' : '');
+    var badges = '';
+    if (p.isRecommendedCaptain) badges += ' <span class="db-cap-badge">C</span>';
+    if (isTopPick) badges += ' <span class="db-star-badge">★ COMPELLING</span>';
+    row.innerHTML =
+      '<div class="db-pos-badge">' + p.position + '</div>' +
+      '<div class="db-player-info">' +
+        '<div class="db-player-name">' + escapeHtml(p.name) + badges + '</div>' +
+        '<div class="db-player-note">' + escapeHtml(p.coachNote || '') + '</div>' +
+        '<div class="db-player-meta">' + escapeHtml(p.team) + ' · ' + Math.round(p.ownership) + '% own</div>' +
+      '</div>' +
+      '<div class="db-player-right">' +
+        '<div class="db-player-pts">' + fmtPts(p.predictedPts) + ' pt</div>' +
+        '<div class="db-player-price">' + fmtCurrency(p.price) + '</div>' +
+      '</div>';
+    return row;
+  }
+
+  function escapeHtml(s) {
+    return String(s).replace(/[&<>"']/g, function(c){
+      return ({ '&':'&amp;', '<':'&lt;', '>':'&gt;', '"':'&quot;', "'":'&#39;' })[c];
+    });
+  }
+
+  function render(payload) {
+    var players = payload.players || [];
+    // Top pick = highest predictedPts starter that is NOT the captain
+    var starters = players.filter(function(p){ return !p.isBenchRecommended; })
+                          .sort(function(a,b){ return b.predictedPts - a.predictedPts; });
+    var topPickName = null;
+    for (var i = 0; i < starters.length; i++) {
+      if (!starters[i].isRecommendedCaptain) { topPickName = starters[i].name; break; }
+    }
+
+    renderPitch(players);
+
+    var startersEl = document.getElementById('db-starters');
+    var benchEl = document.getElementById('db-bench');
+    startersEl.innerHTML = '';
+    benchEl.innerHTML = '';
+    players.forEach(function(p){
+      var target = p.isBenchRecommended ? benchEl : startersEl;
+      target.appendChild(renderRow(p, p.name === topPickName));
+    });
+
+    document.getElementById('db-stat-cost').textContent = fmtCurrency(payload.totalCost);
+    document.getElementById('db-stat-bank').textContent = fmtCurrency(payload.bank);
+    document.getElementById('db-stat-proj').textContent = fmtPts(payload.projectedGwPoints) + ' pt';
+
+    if (payload.source === 'client-fallback') {
+      setStatus('<div class="db-error">' + escapeHtml(payload.dataFreshness) + '</div>');
+    } else if (payload.dataFreshness) {
+      setStatus('<div class="db-error" style="border-left-color:var(--teal);background:rgba(0,212,160,0.04)">' + escapeHtml(payload.dataFreshness) + '</div>');
+    } else {
+      clearStatus();
+    }
+  }
+
+  function fetchSquad() {
+    var reqId = ++inflight;
+    setStatus('<div class="db-loading">Building your squad…</div>');
+    var url = API_BASE + '/api/draft/recommendations?style=' + encodeURIComponent(current.style) + '&budget=' + encodeURIComponent(current.budget);
+    fetch(url, { cache: 'no-store' })
+      .then(function(res){
+        if (!res.ok) throw new Error('HTTP ' + res.status);
+        return res.json();
+      })
+      .then(function(payload){
+        if (reqId !== inflight) return; // stale response — a newer request is inflight
+        render(payload);
+      })
+      .catch(function(err){
+        if (reqId !== inflight) return;
+        console.warn('[draft-builder] fetch failed, using client fallback', err);
+        render(FALLBACK);
+      });
+  }
+
+  budget.addEventListener('input', function(){
+    var v = Number(budget.value);
+    current.budget = v;
+    budgetVal.textContent = '£' + v.toFixed(1) + 'm';
+  });
+  budget.addEventListener('change', fetchSquad);
+
+  pills.forEach(function(btn){
+    btn.addEventListener('click', function(){
+      pills.forEach(function(b){ b.classList.remove('active'); b.setAttribute('aria-checked','false'); });
+      btn.classList.add('active'); btn.setAttribute('aria-checked','true');
+      current.style = btn.getAttribute('data-style');
+      fetchSquad();
+    });
+  });
+
+  // Initial fetch
+  fetchSquad();
+})();
+</script>
+<!-- ══ STUDIO FOOTER ══ -->
+<footer>
+  <div class="footer-col">
+    <div class="footer-brand">
+      <div aria-hidden="true"><svg width="24" height="24" viewBox="0 0 160 160"><path d="M80 148 A69 69 0 0 1 11 79" fill="none" stroke="#39FF7A" stroke-width="4.5" stroke-linecap="round" opacity=".15"/><path d="M80 148 A69 69 0 0 0 149 79" fill="none" stroke="#39FF7A" stroke-width="4.5" stroke-linecap="round" opacity=".15"/><path d="M80 132 A53 53 0 0 1 27 79" fill="none" stroke="#39FF7A" stroke-width="4.5" stroke-linecap="round" opacity=".32"/><path d="M80 132 A53 53 0 0 0 133 79" fill="none" stroke="#39FF7A" stroke-width="4.5" stroke-linecap="round" opacity=".32"/><path d="M80 116 A37 37 0 0 1 43 79" fill="none" stroke="#39FF7A" stroke-width="4.5" stroke-linecap="round" opacity=".55"/><path d="M80 116 A37 37 0 0 0 117 79" fill="none" stroke="#39FF7A" stroke-width="4.5" stroke-linecap="round" opacity=".55"/><path d="M80 100 A21 21 0 0 1 59 79" fill="none" stroke="#39FF7A" stroke-width="4.5" stroke-linecap="round" opacity=".75"/><path d="M80 100 A21 21 0 0 0 101 79" fill="none" stroke="#39FF7A" stroke-width="4.5" stroke-linecap="round" opacity=".75"/><path d="M80 88 A9 9 0 0 1 71 79" fill="none" stroke="#C084C8" stroke-width="4.5" stroke-linecap="round" opacity=".9"/><path d="M80 88 A9 9 0 0 0 89 79" fill="none" stroke="#C084C8" stroke-width="4.5" stroke-linecap="round" opacity=".9"/><circle cx="80" cy="79" r="7" fill="#39FF7A"/></svg></div>
+      <div><p class="footer-name">si187 <em>Apps</em></p><p class="footer-tagline">si187 Enterprises Ltd · London</p></div>
+    </div>
+    <div class="footer-social">
+      <a href="https://twitter.com/si187apps" aria-label="X (formerly Twitter)">
+      <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+      <path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/>
+    </svg>
+    </a>
+      <a href="https://instagram.com/si187apps" aria-label="Instagram">
+      <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+      <rect x="2" y="2" width="20" height="20" rx="5" ry="5"/>
+      <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/>
+      <line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/>
+    </svg>
+    </a>
+      <a href="https://tiktok.com/@si187apps" aria-label="TikTok">
+      <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+      <path d="M19.59 6.69a4.83 4.83 0 0 1-3.77-4.25V2h-3.45v13.67a2.89 2.89 0 0 1-5.2 1.74 2.89 2.89 0 0 1 2.31-4.64 2.93 2.93 0 0 1 .88.13V9.4a6.84 6.84 0 0 0-1-.05A6.33 6.33 0 0 0 5.8 20.1a6.34 6.34 0 0 0 10.86-4.43v-7a8.16 8.16 0 0 0 4.77 1.52v-3.4a4.85 4.85 0 0 1-1.84-.1z"/>
+    </svg>
+    </a>
+    </div>
+  </div>
+  <div class="footer-col">
+    <p class="footer-nav-label">Studio</p>
+    <ul class="footer-nav-links">
+      <li><a href="/about">About</a></li>
+      <li><a href="/roadmap">Roadmap</a></li>
+      <li><a href="/manifesto">Manifesto</a></li>
+      <li><a href="/labs">Labs</a></li>
+    </ul>
+  </div>
+  <div class="footer-col">
+    <p class="footer-nav-label">FPL Coach AI</p>
+    <ul class="footer-nav-links">
+      <li><a href="/fpl-coach-ai">Overview</a></li>
+      <li><a href="#how-it-works">How it works</a></li>
+      <li><a href="#waitlist">Join waitlist</a></li>
+      <li><a href="/fpl-coach-ai/help">Help & FAQ</a></li>
+    </ul>
+  </div>
+  <div class="footer-col">
+    <p class="footer-nav-label">Contact</p>
+    <ul class="footer-nav-links"><li><a href="mailto:studio@si187apps.com">studio@si187apps.com</a></li></ul>
+  </div>
+  <div class="footer-bottom">
+    <p class="footer-copy">© 2026 si187 Enterprises Ltd. All rights reserved.</p>
+    <div class="footer-legal"><a href="/privacy">Privacy</a><a href="/terms">Terms</a><a href="#" onclick="window.si187CookiePrefs && window.si187CookiePrefs(); return false;" style="cursor:pointer;">Cookie preferences</a></div>
+  </div>
+</footer>
+
+<script>
+// Nav
+const nav = document.getElementById('main-nav');
+window.addEventListener('scroll', () => { nav.classList.toggle('scrolled', window.scrollY > 60); }, { passive:true });
+
+// Mobile nav
+const mobileNav = document.getElementById('mobile-nav');
+function closeMobileNav() { mobileNav.classList.remove('open'); document.body.style.overflow = ''; }
+document.getElementById('nav-toggle-btn').addEventListener('click', () => { mobileNav.classList.add('open'); document.body.style.overflow = 'hidden'; });
+document.getElementById('mobile-nav-close').addEventListener('click', closeMobileNav);
+
+// Scroll reveal
+const revealObs = new IntersectionObserver(entries => {
+  entries.forEach(e => { if (e.isIntersecting) e.target.classList.add('visible'); });
+}, { threshold: 0.10 });
+document.querySelectorAll('.reveal').forEach(el => revealObs.observe(el));
+
+// Waitlist — Formspree
+const FORMSPREE_FPL_ID = 'xwvynpjr'; // Same Formspree endpoint as homepage waitlist
+
+async function handleFPLWaitlist() {
+  const input   = document.getElementById('fpl-email');
+  const confirm = document.getElementById('fpl-waitlist-confirm');
+  const btn     = document.getElementById('fpl-waitlist-btn');
+  const email   = input.value.trim();
+
+  if (!email || !email.includes('@') || !email.includes('.')) {
+    input.style.borderColor = 'var(--amber)'; input.focus(); return;
+  }
+  btn.textContent = 'Joining...'; btn.disabled = true; input.style.borderColor = '';
+
+  if (!FORMSPREE_FPL_ID) {
+    _showConfirm(input, btn, confirm); return;
+  }
+  try {
+    const res = await fetch(`https://formspree.io/f/${FORMSPREE_FPL_ID}`, {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json', 'Accept': 'application/json' },
+      body: JSON.stringify({
+        email,
+        _replyto: email,
+        _subject: 'New FPL Coach AI waitlist signup',
+        source: 'si187apps.com/fpl-coach-ai',
+        submitted_at: new Date().toISOString()
+      })
+    });
+    if (res.ok) { _showConfirm(input, btn, confirm); }
+    else { btn.textContent = 'Try again'; btn.disabled = false; }
+  } catch { btn.textContent = 'Try again'; btn.disabled = false; }
+}
+
+function _showConfirm(input, btn, confirm) {
+  input.style.display = 'none'; btn.style.display = 'none';
+  confirm.style.display = 'block';
+}
+
+document.getElementById('fpl-email').addEventListener('keydown', e => {
+  if (e.key === 'Enter') handleFPLWaitlist();
+  else document.getElementById('fpl-email').style.borderColor = '';
+});
+</script>
+
+<!-- Cookie consent + GA4 (consent-gated) -->
+<script src="/assets/js/cookie-banner.js"></script>
+</body>
+</html>
