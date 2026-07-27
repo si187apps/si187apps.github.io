@@ -1120,26 +1120,29 @@ footer {
 
     <!-- Intro copy -->
     <p class="db-intro">
-      Pick a style and we'll build a recommended 15-player squad within the standard £100m FPL budget — using our AI model trained on Premier League performance data from the last two seasons. Every pick comes with a coaching note explaining why they're in.
+      Four £100m squads. Every pick shows the numbers behind it — starts, points per 90, opening fixtures, ownership — so you can decide whether the argument holds. Method is at the bottom, alongside the assumptions we have not yet been able to calibrate against real returns.
     </p>
 
     <!-- Data caveat banner -->
     <div class="db-caveat">
-      <p>Predictions based on 2025/26 PL data · New signings excluded · Pre-season form not factored · Model confidence highest for established PL players</p>
-      <p>Squad data sourced from the official FPL API — updated daily. Players shown are confirmed 2026/27 Premier League squad members.</p>
+      <p>Based on 2025/26 Premier League data · New PL signings from abroad excluded (no PL minutes to price them on) · Pre-season form not factored · Model confidence highest for established PL players</p>
+      <p>Player pool refreshed daily from the official FPL API. Only confirmed 2026/27 Premier League squad members shown.</p>
     </div>
 
-    <!-- Controls -->
+    <!-- Controls: 4 squad flavours -->
     <div class="db-controls">
       <div class="db-control">
-        <span class="db-control-label">Style</span>
-        <div class="db-pills" role="radiogroup" aria-label="Squad style">
-          <button class="db-pill" data-style="safe" role="radio" aria-checked="false">Safe</button>
-          <button class="db-pill active" data-style="balanced" role="radio" aria-checked="true">Balanced</button>
-          <button class="db-pill" data-style="differential" role="radio" aria-checked="false">Differential</button>
+        <span class="db-control-label">Squad</span>
+        <div class="db-pills" role="radiogroup" aria-label="Squad flavour">
+          <button class="db-pill active" data-flavour="template"      role="radio" aria-checked="true">Template</button>
+          <button class="db-pill"        data-flavour="balanced"      role="radio" aria-checked="false">Balanced</button>
+          <button class="db-pill"        data-flavour="differentials" role="radio" aria-checked="false">Differentials</button>
+          <button class="db-pill"        data-flavour="reserve"       role="radio" aria-checked="false">Reserve</button>
         </div>
       </div>
     </div>
+    <p class="db-flavour-desc" id="db-flavour-desc">Ranked by ownership. What the collective FPL manager base is actually doing.</p>
+    <p class="db-flavour-rules" id="db-flavour-rules"></p>
 
     <!-- Loading / error placeholder -->
     <div id="db-status"></div>
@@ -1181,10 +1184,13 @@ footer {
     <div class="db-bench-label">Bench</div>
     <div class="db-squad-list" id="db-bench"></div>
 
-    <!-- Exclusions note — surfaces injured/suspended/doubtful players
-         the model deliberately excluded from the candidate pool.
-         Hidden when the list is empty. Populated by render(). -->
+    <!-- Named-exclusions panel: familiar names our model did NOT pick,
+         with the reason on our own numbers. Populated by render(). -->
     <div id="db-exclusions" hidden></div>
+
+    <!-- Method / transparency panel: how the model works + every
+         uncalibrated assumption labelled as such. Populated by render(). -->
+    <div id="db-method"></div>
 
     <!-- CTA -->
     <div class="db-cta">
@@ -1221,69 +1227,74 @@ footer {
   </div>
 </div>
 
-<!-- ══ DRAFT BUILDER — fetch + render ══ -->
+<!-- ══ DRAFT BUILDER — fetch + render (four squads, evidence-first) ══ -->
+<style>
+.db-flavour-desc { color: var(--text2); font-size: 14px; margin: 12px 0 4px; line-height: 1.5; }
+.db-flavour-rules { color: var(--text3); font-size: 12px; margin: 0 0 24px; font-style: italic; line-height: 1.5; }
+.db-evidence-toggle { background: none; border: none; color: var(--teal); font-size: 12px; cursor: pointer; padding: 0; text-decoration: underline; margin-top: 6px; font-family: inherit; }
+.db-evidence { margin-top: 10px; padding: 12px 14px; background: rgba(0,212,160,0.05); border-left: 3px solid var(--teal); border-radius: 6px; }
+.db-evidence-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(130px, 1fr)); gap: 8px 20px; }
+.db-evidence-cell { color: var(--text2); font-size: 12px; }
+.db-evidence-cell b { color: var(--text1); font-weight: 600; display: block; font-size: 15px; font-family: 'JetBrains Mono', monospace; }
+.db-evidence-cell span { display: block; margin-top: 2px; text-transform: uppercase; letter-spacing: 0.04em; font-size: 10px; color: var(--text3); }
+.db-evidence-note { margin-top: 10px; padding-top: 10px; border-top: 1px solid rgba(255,255,255,0.06); font-size: 12px; color: var(--text2); line-height: 1.5; font-style: italic; }
+.db-method { margin: 40px 0 20px; padding: 24px 24px; background: rgba(0,0,0,0.15); border-radius: 8px; border: 1px solid rgba(255,255,255,0.05); }
+.db-method h3 { color: var(--text1); font-size: 16px; margin: 0 0 16px; font-family: Syne, sans-serif; font-weight: 700; }
+.db-method-section { margin-bottom: 18px; }
+.db-method-section h4 { color: var(--text2); font-size: 11px; text-transform: uppercase; letter-spacing: 0.06em; margin: 0 0 8px; font-weight: 600; }
+.db-method-section p, .db-method-section li { color: var(--text3); font-size: 13px; line-height: 1.6; }
+.db-method-section ul { margin: 0; padding-left: 20px; }
+.db-uncal { background: rgba(255,184,0,0.05); border-left: 3px solid var(--amber); padding: 10px 14px; margin: 8px 0; border-radius: 4px; font-size: 12px; }
+.db-uncal-label { color: var(--amber); font-weight: 700; text-transform: uppercase; font-size: 10px; letter-spacing: 0.06em; }
+.db-uncal-name { color: var(--text1); font-weight: 600; margin-top: 2px; }
+.db-uncal-value { color: var(--text2); font-family: 'JetBrains Mono', monospace; margin-top: 2px; font-size: 11px; }
+.db-uncal-note { color: var(--text3); margin-top: 4px; line-height: 1.5; }
+.db-exclusions { margin-top: 24px; padding: 18px 22px; background: rgba(0,0,0,0.15); border-radius: 8px; border: 1px solid rgba(255,255,255,0.05); }
+.db-exclusions-title { color: var(--text1); font-size: 14px; margin-bottom: 10px; font-weight: 600; }
+.db-exclusions-list { margin: 0; padding-left: 20px; }
+.db-exclusions-item { color: var(--text3); font-size: 12px; line-height: 1.6; margin-bottom: 4px; }
+.db-exclusions-item b { color: var(--text2); }
+</style>
 <script>
 (function() {
   var API_BASE = 'https://fpl-coach-ai-backend.onrender.com';
   var status  = document.getElementById('db-status');
   var pills   = document.querySelectorAll('.db-pill');
-  var current = { style: 'balanced', budget: 100 };
+  var current = { flavour: 'template' };
   var inflight = 0;
-
-  // Static fallback squad — VERIFIED against the live players DB 2026-07-24.
-  // Only used when the backend endpoint is unreachable. All names below
-  // are confirmed present in the 2026/27 FPL bootstrap; none is a
-  // departed player (Salah / Gordon / Konaté / Andy Robertson etc.
-  // are NOT in this list).
-  var FALLBACK = {
-    style: 'balanced', budget: 100, source: 'client-fallback', gameweek: null,
-    dataFreshness: 'Backend unreachable · client-side reference squad · reload to retry',
-    totalCost: 99.5, bank: 0.5, projectedGwPoints: 61.4,
-    players: [
-      { name:'Raya', team:'ARS', position:'GKP', price:5.5, predictedPts:4.6, ownership:22, fdr:null, isRecommendedCaptain:false, isBenchRecommended:false, coachNote:'Arsenal #1 keeper, expected consistent returns.' },
-      { name:'Kelleher', team:'BRE', position:'GKP', price:4.5, predictedPts:3.5, ownership:6, fdr:null, isRecommendedCaptain:false, isBenchRecommended:true, coachNote:'Budget bench cover, low-cost enabler.' },
-      { name:'Van Dijk', team:'LIV', position:'DEF', price:6.0, predictedPts:5.0, ownership:30, fdr:null, isRecommendedCaptain:false, isBenchRecommended:false, coachNote:'30% owned, consistent returner — safety hold.' },
-      { name:'Saliba', team:'ARS', position:'DEF', price:6.0, predictedPts:4.9, ownership:25, fdr:null, isRecommendedCaptain:false, isBenchRecommended:false, coachNote:'25% owned, Arsenal clean-sheet anchor.' },
-      { name:'Hall', team:'NEW', position:'DEF', price:5.5, predictedPts:4.5, ownership:14, fdr:null, isRecommendedCaptain:false, isBenchRecommended:false, coachNote:'Attacking full-back, Newcastle set-piece threat.' },
-      { name:'O\u2019Reilly', team:'MCI', position:'DEF', price:5.5, predictedPts:4.4, ownership:25, fdr:null, isRecommendedCaptain:false, isBenchRecommended:false, coachNote:'25% owned, City left-back with attacking upside.' },
-      { name:'Muñoz', team:'CRY', position:'DEF', price:5.0, predictedPts:4.2, ownership:12, fdr:null, isRecommendedCaptain:false, isBenchRecommended:true, coachNote:'12% owned differential, CRY attacking full-back.' },
-      { name:'Palmer', team:'CHE', position:'MID', price:11.0, predictedPts:7.6, ownership:35, fdr:null, isRecommendedCaptain:false, isBenchRecommended:false, coachNote:'Mid-premium MID, 35% owned — ceiling pick.' },
-      { name:'Saka', team:'ARS', position:'MID', price:10.0, predictedPts:6.8, ownership:32, fdr:null, isRecommendedCaptain:false, isBenchRecommended:false, coachNote:'Mid-premium MID, 32% owned — ceiling pick.' },
-      { name:'B.Fernandes', team:'MUN', position:'MID', price:9.0, predictedPts:6.4, ownership:20, fdr:null, isRecommendedCaptain:false, isBenchRecommended:false, coachNote:'Mid-premium MID, 20% owned — ceiling pick.' },
-      { name:'Ndiaye', team:'EVE', position:'MID', price:6.5, predictedPts:5.8, ownership:18, fdr:null, isRecommendedCaptain:false, isBenchRecommended:false, coachNote:'Everton talisman, top-predicted mid-price MID.' },
-      { name:'Cherki', team:'MCI', position:'MID', price:6.5, predictedPts:5.2, ownership:8, fdr:null, isRecommendedCaptain:false, isBenchRecommended:true, coachNote:'8% owned differential — model likes MCI fixtures.' },
-      { name:'Haaland', team:'MCI', position:'FWD', price:15.0, predictedPts:8.5, ownership:55, fdr:null, isRecommendedCaptain:true, isBenchRecommended:false, coachNote:'Highest predicted returner. 55% owned, premium captain pick.' },
-      { name:'Gyökeres', team:'ARS', position:'FWD', price:9.0, predictedPts:6.4, ownership:20, fdr:null, isRecommendedCaptain:false, isBenchRecommended:false, coachNote:'Mid-premium FWD, 20% owned — ceiling pick.' },
-      { name:'Wood', team:'NFO', position:'FWD', price:6.5, predictedPts:5.4, ownership:14, fdr:null, isRecommendedCaptain:false, isBenchRecommended:true, coachNote:'FWD value pick at £6.5m, 14% owned.' }
-    ]
-  };
+  var cached = null;
 
   function fmtCurrency(n) { return '£' + Number(n).toFixed(1) + 'm'; }
-  function fmtPts(n) { return Number(n).toFixed(1); }
-
   function setStatus(html) { status.innerHTML = html; }
   function clearStatus() { status.innerHTML = ''; }
+  function escapeHtml(s) {
+    return String(s).replace(/[&<>"']/g, function(c){
+      return ({ '&':'&amp;', '<':'&lt;', '>':'&gt;', '"':'&quot;', "'":'&#39;' })[c];
+    });
+  }
 
-  function renderPitch(players) {
-    var starters = players.filter(function(p){ return !p.isBenchRecommended; });
+  function fixtureLabel(score) {
+    if (score >= 0.85) return 'One of the best opening runs';
+    if (score >= 0.65) return 'Above-average opening run';
+    if (score >= 0.35) return 'Middling opening run';
+    if (score >= 0.15) return 'Below-average opening run';
+    return 'A tough opening run';
+  }
+
+  function renderPitch(starters) {
     var byPos = { GKP:[], DEF:[], MID:[], FWD:[] };
     starters.forEach(function(p){ byPos[p.position].push(p); });
     var slotIds = { GKP:'db-row-gk', DEF:'db-row-def', MID:'db-row-mid', FWD:'db-row-fwd' };
     Object.keys(slotIds).forEach(function(pos){
       var el = document.getElementById(slotIds[pos]);
+      if (!el) return;
       el.innerHTML = '';
       byPos[pos].forEach(function(p){
         var dot = document.createElement('div');
-        dot.className = 'db-dot' + (p.isRecommendedCaptain ? ' captain' : '');
+        dot.className = 'db-dot';
         var circle = document.createElement('div');
         circle.className = 'db-dot-circle';
         circle.textContent = p.team;
-        if (p.isRecommendedCaptain) {
-          var badge = document.createElement('span');
-          badge.className = 'db-dot-badge';
-          badge.textContent = 'C';
-          circle.appendChild(badge);
-        }
         var name = document.createElement('div');
         name.className = 'db-dot-name';
         name.textContent = p.name;
@@ -1294,116 +1305,145 @@ footer {
     });
   }
 
-  function renderRow(p, isTopPick) {
+  function renderRow(p) {
     var row = document.createElement('div');
-    row.className = 'db-player-row' + (p.isRecommendedCaptain ? ' captain' : '') + (isTopPick ? ' top-pick' : '');
-    var badges = '';
-    if (p.isRecommendedCaptain) badges += ' <span class="db-cap-badge">C</span>';
-    if (isTopPick) badges += ' <span class="db-star-badge">★ COMPELLING</span>';
+    row.className = 'db-player-row';
+    var ppgRaw = (p.primaryPpgRaw !== null && p.primaryPpgRaw !== undefined) ? Number(p.primaryPpgRaw).toFixed(1) : '—';
+    var starts = p.primaryStarts != null ? p.primaryStarts : 0;
+    var evidenceId = 'ev_' + p.fplId;
+    var evidenceHtml =
+      '<div class="db-evidence" id="' + evidenceId + '" hidden>' +
+        '<div class="db-evidence-grid">' +
+          '<div class="db-evidence-cell"><b>' + starts + '</b><span>25/26 starts</span></div>' +
+          '<div class="db-evidence-cell"><b>' + ppgRaw + '</b><span>Pts per 90</span></div>' +
+          '<div class="db-evidence-cell"><b>' + Math.round(p.ownership) + '%</b><span>Ownership</span></div>' +
+          '<div class="db-evidence-cell"><b>' + fmtCurrency(p.price) + '</b><span>Price</span></div>' +
+          '<div class="db-evidence-cell"><b>' + p.team + '</b><span>Club</span></div>' +
+          '<div class="db-evidence-cell"><b>' + p.position + '</b><span>Position</span></div>' +
+        '</div>' +
+        '<div class="db-evidence-note">' + escapeHtml(fixtureLabel(p.components.openingFixtures)) +
+          (p.euRotation ? '. Midweek ' + p.euRotation + ' fixtures could cost him minutes.' : '') +
+          (starts > 0 && starts < 15 ? '. ' + starts + ' starts is a small sample so we have rated him cautiously.' : '') +
+        '</div>' +
+      '</div>';
     row.innerHTML =
       '<div class="db-pos-badge">' + p.position + '</div>' +
       '<div class="db-player-info">' +
-        '<div class="db-player-name">' + escapeHtml(p.name) + badges + '</div>' +
-        '<div class="db-player-note">' + escapeHtml(p.coachNote || '') + '</div>' +
-        '<div class="db-player-meta">' + escapeHtml(p.team) + ' · ' + Math.round(p.ownership) + '% own</div>' +
+        '<div class="db-player-name">' + escapeHtml(p.name) + '</div>' +
+        '<div class="db-player-note">' + escapeHtml(p.why || '') + '</div>' +
+        '<div class="db-player-meta">' + escapeHtml(p.team) + ' · ' + Math.round(p.ownership) + '% owned</div>' +
+        '<button class="db-evidence-toggle" type="button" aria-controls="' + evidenceId + '">Show the numbers</button>' +
+        evidenceHtml +
       '</div>' +
       '<div class="db-player-right">' +
-        '<div class="db-player-pts">' + fmtPts(p.predictedPts) + ' pt</div>' +
+        '<div class="db-player-pts">' + ppgRaw + ' <span style="font-size:11px;color:var(--text3);">pts/90</span></div>' +
         '<div class="db-player-price">' + fmtCurrency(p.price) + '</div>' +
       '</div>';
+    // Wire toggle
+    var btn = row.querySelector('.db-evidence-toggle');
+    var panel = row.querySelector('.db-evidence');
+    btn.addEventListener('click', function(){
+      var isHidden = panel.hasAttribute('hidden');
+      if (isHidden) { panel.removeAttribute('hidden'); btn.textContent = 'Hide the numbers'; }
+      else { panel.setAttribute('hidden', ''); btn.textContent = 'Show the numbers'; }
+    });
     return row;
   }
 
-  function escapeHtml(s) {
-    return String(s).replace(/[&<>"']/g, function(c){
-      return ({ '&':'&amp;', '<':'&lt;', '>':'&gt;', '"':'&quot;', "'":'&#39;' })[c];
-    });
+  function renderMethod(method) {
+    var el = document.getElementById('db-method');
+    if (!el || !method) return;
+    var uncalHtml = (method.uncalibratedAssumptions || []).map(function(u){
+      return '<div class="db-uncal">' +
+        '<div class="db-uncal-label">Uncalibrated assumption</div>' +
+        '<div class="db-uncal-name">' + escapeHtml(u.name) + '</div>' +
+        '<div class="db-uncal-value">' + escapeHtml(u.value) + '</div>' +
+        '<div class="db-uncal-note">' + escapeHtml(u.note) + '</div>' +
+      '</div>';
+    }).join('');
+    var limitationsHtml = (method.limitations || []).map(function(l){ return '<li>' + escapeHtml(l) + '</li>'; }).join('');
+    var gatesHtml = (method.gates || []).map(function(g){ return '<li>' + escapeHtml(g) + '</li>'; }).join('');
+    var rulesHtml = (method.rulesRecap || []).map(function(r){ return '<li>' + escapeHtml(r) + '</li>'; }).join('');
+    var eu = method.euRotationTeams || { UCL: [], UEL: [], UECL: [] };
+    el.innerHTML =
+      '<div class="db-method">' +
+        '<h3>How the model works</h3>' +
+        '<div class="db-method-section">' +
+          '<h4>Data + gates</h4><ul>' + gatesHtml + '</ul>' +
+        '</div>' +
+        '<div class="db-method-section">' +
+          '<h4>Squad rules</h4><ul>' + rulesHtml + '</ul>' +
+        '</div>' +
+        '<div class="db-method-section">' +
+          '<h4>European rotation penalty (applied to minutes security)</h4>' +
+          '<p>UCL: ' + eu.UCL.join(', ') + ' — 15% cut. UEL: ' + eu.UEL.join(', ') + ' — 10% cut. UECL: ' + eu.UECL.join(', ') + ' — 5% cut.</p>' +
+        '</div>' +
+        '<div class="db-method-section">' +
+          '<h4>Limitations we are up front about</h4>' +
+          '<ul>' + limitationsHtml + '</ul>' +
+        '</div>' +
+        '<div class="db-method-section">' +
+          '<h4>What is fitted, not calibrated</h4>' +
+          '<p>The values below have been chosen so the model behaves in the intended direction, but no live-season evidence has been used to calibrate them. Every one of them will be checked against the actual GW1-6 returns.</p>' +
+          uncalHtml +
+        '</div>' +
+      '</div>';
   }
 
   function renderExclusions(exclusions) {
     var el = document.getElementById('db-exclusions');
     if (!el) return;
     var list = Array.isArray(exclusions) ? exclusions : [];
-    if (list.length === 0) {
-      el.hidden = true;
-      el.innerHTML = '';
-      return;
-    }
-    // Cap the render to 12 names so the box doesn't dominate the
-    // squad; overflow becomes "+ N more" text at the end.
-    var CAP = 12;
-    var visible = list.slice(0, CAP);
-    var overflow = list.length - visible.length;
-    var itemsHtml = visible.map(function(x) {
+    if (list.length === 0) { el.hidden = true; el.innerHTML = ''; return; }
+    var itemsHtml = list.map(function(x) {
       return '<li class="db-exclusions-item"><b>' + escapeHtml(x.name)
-        + '</b> (' + escapeHtml(x.team) + ' ' + escapeHtml(x.position)
-        + ') — ' + escapeHtml(x.reason) + '</li>';
+        + '</b> (' + escapeHtml(x.team) + ') — ' + escapeHtml(x.reason) + '</li>';
     }).join('');
-    var overflowHtml = overflow > 0
-      ? '<div class="db-exclusions-footer">+ ' + overflow + ' more excluded on health grounds.</div>'
-      : '';
     el.innerHTML =
       '<div class="db-exclusions">'
-      + '<div class="db-exclusions-title">Excluded on health grounds (' + list.length + ')</div>'
+      + '<div class="db-exclusions-title">Popular picks the model did not select</div>'
       + '<ul class="db-exclusions-list">' + itemsHtml + '</ul>'
-      + overflowHtml
       + '</div>';
     el.hidden = false;
   }
 
-  function render(payload) {
-    var players = payload.players || [];
-    // Top pick = highest predictedPts starter that is NOT the captain
-    var starters = players.filter(function(p){ return !p.isBenchRecommended; })
-                          .sort(function(a,b){ return b.predictedPts - a.predictedPts; });
-    var topPickName = null;
-    for (var i = 0; i < starters.length; i++) {
-      if (!starters[i].isRecommendedCaptain) { topPickName = starters[i].name; break; }
-    }
+  function renderFlavour(payload, flavour) {
+    var squad = (payload.squads || []).filter(function(s){ return s.flavour === flavour; })[0];
+    if (!squad) return;
+    document.getElementById('db-flavour-desc').textContent = squad.description;
+    document.getElementById('db-flavour-rules').textContent = squad.rules;
 
-    renderPitch(players);
-
+    renderPitch(squad.starters || []);
     var startersEl = document.getElementById('db-starters');
-    var benchEl = document.getElementById('db-bench');
+    var benchEl    = document.getElementById('db-bench');
     startersEl.innerHTML = '';
     benchEl.innerHTML = '';
-    players.forEach(function(p){
-      var target = p.isBenchRecommended ? benchEl : startersEl;
-      target.appendChild(renderRow(p, p.name === topPickName));
-    });
+    (squad.starters || []).forEach(function(p){ startersEl.appendChild(renderRow(p)); });
+    (squad.bench    || []).forEach(function(p){ benchEl.appendChild(renderRow(p)); });
 
-    document.getElementById('db-stat-cost').textContent = fmtCurrency(payload.totalCost);
-    document.getElementById('db-stat-bank').textContent = fmtCurrency(payload.bank);
-    document.getElementById('db-stat-proj').textContent = fmtPts(payload.projectedGwPoints) + ' pt';
-
-    renderExclusions(payload.exclusions);
-
-    if (payload.source === 'client-fallback') {
-      setStatus('<div class="db-error">' + escapeHtml(payload.dataFreshness) + '</div>');
-    } else if (payload.dataFreshness) {
-      setStatus('<div class="db-error" style="border-left-color:var(--teal);background:rgba(0,212,160,0.04)">' + escapeHtml(payload.dataFreshness) + '</div>');
-    } else {
-      clearStatus();
-    }
+    document.getElementById('db-stat-cost').textContent = fmtCurrency(squad.totalCost);
+    document.getElementById('db-stat-bank').textContent = fmtCurrency(squad.remainingBank);
+    document.getElementById('db-stat-proj').textContent = squad.starters.length + '/11 XI';
   }
 
-  function fetchSquad() {
+  function render(payload) {
+    cached = payload;
+    renderFlavour(payload, current.flavour);
+    renderMethod(payload.method);
+    renderExclusions(payload.namedExclusions);
+    clearStatus();
+  }
+
+  function fetchSquads() {
     var reqId = ++inflight;
     setStatus('<div class="db-loading">Building your squad…</div>');
-    var url = API_BASE + '/api/draft/recommendations?style=' + encodeURIComponent(current.style) + '&budget=' + encodeURIComponent(current.budget);
-    fetch(url, { cache: 'no-store' })
-      .then(function(res){
-        if (!res.ok) throw new Error('HTTP ' + res.status);
-        return res.json();
-      })
-      .then(function(payload){
-        if (reqId !== inflight) return; // stale response — a newer request is inflight
-        render(payload);
-      })
+    fetch(API_BASE + '/api/draft-builder/squads', { cache: 'no-store' })
+      .then(function(res){ if (!res.ok) throw new Error('HTTP ' + res.status); return res.json(); })
+      .then(function(payload){ if (reqId !== inflight) return; render(payload); })
       .catch(function(err){
         if (reqId !== inflight) return;
-        console.warn('[draft-builder] fetch failed, using client fallback', err);
-        render(FALLBACK);
+        console.warn('[draft-builder] fetch failed', err);
+        setStatus('<div class="db-error">Squad service is offline. Please refresh to retry.</div>');
       });
   }
 
@@ -1411,13 +1451,13 @@ footer {
     btn.addEventListener('click', function(){
       pills.forEach(function(b){ b.classList.remove('active'); b.setAttribute('aria-checked','false'); });
       btn.classList.add('active'); btn.setAttribute('aria-checked','true');
-      current.style = btn.getAttribute('data-style');
-      fetchSquad();
+      current.flavour = btn.getAttribute('data-flavour');
+      if (cached) renderFlavour(cached, current.flavour); // instant switch
+      else fetchSquads();
     });
   });
 
-  // Initial fetch
-  fetchSquad();
+  fetchSquads();
 })();
 </script>
 <!-- ══ STUDIO FOOTER ══ -->
