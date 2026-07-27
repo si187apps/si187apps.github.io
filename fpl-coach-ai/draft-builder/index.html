@@ -1437,13 +1437,22 @@ footer {
   function fetchSquads() {
     var reqId = ++inflight;
     setStatus('<div class="db-loading">Building your squad…</div>');
-    fetch(API_BASE + '/api/draft-builder/squads', { cache: 'no-store' })
-      .then(function(res){ if (!res.ok) throw new Error('HTTP ' + res.status); return res.json(); })
+    // 30-second AbortController timeout — cold-start on the Render
+    // free tier can take ~22 seconds and we would rather say plainly
+    // "the service may be waking up" than leave a spinner spinning.
+    var ctrl = (typeof AbortController !== 'undefined') ? new AbortController() : null;
+    var to = ctrl ? setTimeout(function(){ ctrl.abort(); }, 30000) : 0;
+    fetch(API_BASE + '/api/draft-builder/squads', { cache: 'no-store', signal: ctrl ? ctrl.signal : undefined })
+      .then(function(res){ if (to) clearTimeout(to); if (!res.ok) throw new Error('HTTP ' + res.status); return res.json(); })
       .then(function(payload){ if (reqId !== inflight) return; render(payload); })
       .catch(function(err){
+        if (to) clearTimeout(to);
         if (reqId !== inflight) return;
         console.warn('[draft-builder] fetch failed', err);
-        setStatus('<div class="db-error">Squad service is offline. Please refresh to retry.</div>');
+        var msg = (err && err.name === 'AbortError')
+          ? 'Taking longer than usual — the service may be waking up. Refresh to retry.'
+          : 'Squad service is offline. Please refresh to retry.';
+        setStatus('<div class="db-error">' + msg + '</div>');
       });
   }
 
