@@ -1193,36 +1193,20 @@ footer {
          uncalibrated assumption labelled as such. Populated by render(). -->
     <div id="db-method"></div>
 
-    <!-- CTA -->
-    <div class="db-cta">
-      <div class="db-cta-title">Get the full GW1 coaching</div>
-      <div class="db-cta-sub">Free during pre-season and GW1 · Full GW1 coaching in the app</div>
-      <div class="store-badges store-badges-compact">
-        <a href="https://play.google.com/store/apps/details?id=com.si187apps.fplcoachai&amp;utm_source=si187apps&amp;utm_medium=website&amp;utm_campaign=draft_builder"
-           target="_blank" rel="noopener noreferrer"
-           class="dl-btn"
-           aria-label="Get FPL Coach AI on Google Play">
-          <svg class="dl-btn-icon" viewBox="0 0 24 24" aria-hidden="true">
-            <path d="M3.61 1.81C3.27 2.16 3.05 2.69 3.05 3.4v17.2c0 .71.22 1.24.56 1.59l.06.05L13.4 12.5v-.25L3.66 2.51z"/>
-            <path d="M16.81 16.06l-3.41-3.42v-.27l3.41-3.41.08.05 4.04 2.3c1.15.65 1.15 1.72 0 2.38l-4.04 2.3z"/>
-            <path d="M16.89 16l-3.49-3.5L3.61 22.19c.38.4 1 .45 1.71.05L16.89 16z"/>
-            <path d="M16.89 9l-11.57-6.24c-.71-.4-1.33-.35-1.71.05l9.79 9.69z"/>
-          </svg>
-          <span class="dl-btn-text">
-            <span class="dl-btn-prefix">Get it on</span>
-            <span class="dl-btn-store">Google Play</span>
-          </span>
-        </a>
-        <span class="dl-btn" aria-disabled="true" style="opacity:0.5;cursor:not-allowed;">
-          <svg class="dl-btn-icon" viewBox="0 0 24 24" aria-hidden="true">
-            <path d="M17.05 20.28c-.98.95-2.05.8-3.08.35-1.09-.46-2.09-.48-3.24 0-1.44.62-2.2.44-3.06-.35C2.79 15.25 3.51 7.59 9.05 7.31c1.35.07 2.29.74 3.08.8 1.18-.24 2.31-.93 3.57-.84 1.51.12 2.65.72 3.4 1.8-3.12 1.87-2.38 5.98.48 7.13-.57 1.5-1.31 2.99-2.54 4.09zM12.03 7.25c-.15-2.23 1.66-4.07 3.74-4.25.29 2.58-2.34 4.5-3.74 4.25z"/>
-          </svg>
-          <span class="dl-btn-text">
-            <span class="dl-btn-prefix">Coming soon to</span>
-            <span class="dl-btn-store">App Store</span>
-          </span>
-        </span>
+    <!-- CTA — waitlist only pre-launch. Sending Facebook traffic to a
+         Play Store install that opens to an empty app risks a one-star
+         review, and early ratings are hard to recover. Store links
+         return with the GW1 build. -->
+    <div class="db-cta" id="waitlist">
+      <div class="db-cta-title">Get told when it's ready</div>
+      <div class="db-cta-sub">One email at Gameweek 1, nothing else.</div>
+      <div class="email-row" style="margin-top:20px;">
+        <label for="fpl-email" class="sr-only">Email address</label>
+        <input type="email" id="fpl-email" class="email-input" placeholder="your@email.com" autocomplete="email">
+        <button class="email-submit" id="fpl-waitlist-btn" onclick="handleFPLWaitlist()">Join waitlist</button>
       </div>
+      <p class="waitlist-confirm" id="fpl-waitlist-confirm">✓ You're on the list. We'll email you at Gameweek 1 — that's it.</p>
+      <p class="waitlist-note">Your email goes to Formspree, our form provider, and to no one else. We keep it until you ask us to remove it. See our <a href="https://si187apps.com/privacy" style="color:var(--teal);text-decoration:underline;">privacy notice</a>.</p>
     </div>
 
   </div>
