@@ -4,13 +4,13 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>FPL Coach AI — Fantasy Premier League AI Coaching App</title>
-<meta name="description" content="FPL Coach AI — the AI coaching companion for Fantasy Premier League. Captain analysis, transfer impact, formation scenarios, chip strategy. Coach not manager. Launching August 2026.">
+<meta name="description" content="FPL Coach AI — the AI coaching companion for Fantasy Premier League. Captain analysis, transfer impact, formation scenarios, chip strategy. Coach not manager. Live on iOS and Android — free right now, paid plans arrive later this season.">
 <meta name="robots" content="index, follow">
 <link rel="canonical" href="https://si187apps.com/fpl-coach-ai/">
 <meta property="og:type"        content="website">
 <meta property="og:url"         content="https://si187apps.com/fpl-coach-ai/">
 <meta property="og:title"       content="FPL Coach AI — Coach not manager.">
-<meta property="og:description" content="FPL Coach AI — the AI coaching companion for Fantasy Premier League. Captain analysis, transfer impact, formation scenarios, chip strategy. Coach not manager. Launching August 2026.">
+<meta property="og:description" content="FPL Coach AI — the AI coaching companion for Fantasy Premier League. Captain analysis, transfer impact, formation scenarios, chip strategy. Coach not manager. Live on iOS and Android — free right now, paid plans arrive later this season.">
 <meta property="og:image"       content="https://si187apps.com/assets/images/og-fpl.png">
 <meta property="og:image:width"  content="1200">
 <meta property="og:image:height" content="630">
@@ -19,7 +19,7 @@
 <meta name="twitter:card"       content="summary_large_image">
 <meta name="twitter:site"       content="@si187apps">
 <meta name="twitter:title"      content="FPL Coach AI — Coach not manager.">
-<meta name="twitter:description" content="FPL Coach AI — the AI coaching companion for Fantasy Premier League. Captain analysis, transfer impact, formation scenarios, chip strategy. Coach not manager. Launching August 2026.">
+<meta name="twitter:description" content="FPL Coach AI — the AI coaching companion for Fantasy Premier League. Captain analysis, transfer impact, formation scenarios, chip strategy. Coach not manager. Live on iOS and Android — free right now, paid plans arrive later this season.">
 <meta name="twitter:image"      content="https://si187apps.com/assets/images/og-fpl.png">
 <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 160 160'><rect width='160' height='160' fill='%230A1628'/><path d='M80 148 A69 69 0 0 1 11 79' fill='none' stroke='%2300D4A0' stroke-width='4.5' stroke-linecap='round' opacity='.15'/><path d='M80 148 A69 69 0 0 0 149 79' fill='none' stroke='%2300D4A0' stroke-width='4.5' stroke-linecap='round' opacity='.15'/><path d='M80 132 A53 53 0 0 1 27 79' fill='none' stroke='%2300D4A0' stroke-width='4.5' stroke-linecap='round' opacity='.32'/><path d='M80 132 A53 53 0 0 0 133 79' fill='none' stroke='%2300D4A0' stroke-width='4.5' stroke-linecap='round' opacity='.32'/><path d='M80 116 A37 37 0 0 1 43 79' fill='none' stroke='%2300D4A0' stroke-width='4.5' stroke-linecap='round' opacity='.55'/><path d='M80 116 A37 37 0 0 0 117 79' fill='none' stroke='%2300D4A0' stroke-width='4.5' stroke-linecap='round' opacity='.55'/><path d='M80 100 A21 21 0 0 1 59 79' fill='none' stroke='%2300D4A0' stroke-width='4.5' stroke-linecap='round' opacity='.75'/><path d='M80 100 A21 21 0 0 0 101 79' fill='none' stroke='%2300D4A0' stroke-width='4.5' stroke-linecap='round' opacity='.75'/><path d='M80 88 A9 9 0 0 1 71 79' fill='none' stroke='%23FFB800' stroke-width='4.5' stroke-linecap='round' opacity='.92'/><path d='M80 88 A9 9 0 0 0 89 79' fill='none' stroke='%23FFB800' stroke-width='4.5' stroke-linecap='round' opacity='.92'/><circle cx='80' cy='79' r='7' fill='%2300D4A0'/></svg>">
 <meta name="theme-color" content="#0A1628">
@@ -27,6 +27,16 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Syne:wght@700;800&family=Inter:wght@300;400;500;600&family=JetBrains+Mono:wght@400;500;600;700&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="/assets/css/cookie-banner.css">
+<!-- Store-badge styles (matches homepage .dl-btn from site.css). Kept inline
+     rather than loading site.css to avoid palette collisions with FPL page. -->
+<style>
+.dl-btn { display:inline-flex; align-items:center; gap:12px; width:200px; height:56px; padding:0 16px; box-sizing:border-box; background:#000; color:#fff; border:1px solid rgba(255,255,255,0.18); border-radius:10px; text-decoration:none; transition:transform 0.15s ease, border-color 0.15s ease, background 0.15s ease; font-family:'Inter', system-ui, sans-serif; }
+.dl-btn:hover, .dl-btn:focus-visible { transform:translateY(-2px); border-color:rgba(0,212,160,0.4); background:#0a0a0a; }
+.dl-btn-icon { width:28px; height:28px; flex-shrink:0; fill:currentColor; }
+.dl-btn-text { display:flex; flex-direction:column; line-height:1.1; overflow:hidden; }
+.dl-btn-prefix { font-size:10px; font-weight:400; letter-spacing:0.4px; opacity:0.75; text-transform:uppercase; white-space:nowrap; }
+.dl-btn-store { font-size:17px; font-weight:600; letter-spacing:-0.2px; line-height:1.15; white-space:nowrap; }
+</style>
 
 <style>
 /* ═══════════════════════════════════════════════
@@ -798,7 +808,7 @@ footer {
     <li><a href="/roadmap">Roadmap</a></li>
     <li><a href="/manifesto">Manifesto</a></li>
     <li><a href="/labs">Labs</a></li>
-    <li><a href="#waitlist" class="nav-cta">Get early access</a></li>
+    <li><a href="#download" class="nav-cta">Download</a></li>
   </ul>
   <button class="nav-toggle" aria-label="Open menu" id="nav-toggle-btn"><span></span><span></span><span></span></button>
 </nav>
@@ -809,7 +819,7 @@ footer {
   <a href="/roadmap" onclick="closeMobileNav()">Roadmap</a>
   <a href="/manifesto" onclick="closeMobileNav()">Manifesto</a>
   <a href="/labs" onclick="closeMobileNav()">Labs</a>
-  <a href="#waitlist" onclick="closeMobileNav()" style="color:var(--teal)">Early access</a>
+  <a href="#download" onclick="closeMobileNav()" style="color:var(--teal)">Download</a>
 </div>
 
 
@@ -835,7 +845,7 @@ footer {
   <div class="hero-content">
     <div class="hero-badge reveal">
       <div class="hero-badge-dot"></div>
-      <span class="hero-badge-text">Launching GW1 · August 2026</span>
+      <span class="hero-badge-text">Live on iOS + Android</span>
     </div>
 
     <h1 class="reveal rd1">FPL<br>Coach <em>AI.</em></h1>
@@ -845,15 +855,41 @@ footer {
       The AI coaching companion built for the 11 million FPL managers who think for themselves. Every gameweek, in your corner — surfacing the decisions worth making, never making them for you.
     </p>
 
-    <div class="hero-actions reveal rd4">
-      <a href="#waitlist" class="btn-teal">Join the waitlist</a>
+    <div class="hero-actions reveal rd4" id="download">
+      <a href="https://apps.apple.com/gb/app/fpl-coach-ai/id6770571590?utm_source=si187apps&amp;utm_medium=website&amp;utm_campaign=fpl_launch"
+         target="_blank" rel="noopener noreferrer"
+         class="dl-btn"
+         aria-label="Download FPL Coach AI on the App Store">
+        <svg class="dl-btn-icon" viewBox="0 0 24 24" aria-hidden="true">
+          <path d="M17.05 20.28c-.98.95-2.05.8-3.08.35-1.09-.46-2.09-.48-3.24 0-1.44.62-2.2.44-3.06-.35C2.79 15.25 3.51 7.59 9.05 7.31c1.35.07 2.29.74 3.08.8 1.18-.24 2.31-.93 3.57-.84 1.51.12 2.65.72 3.4 1.8-3.12 1.87-2.38 5.98.48 7.13-.57 1.5-1.31 2.99-2.54 4.09zM12.03 7.25c-.15-2.23 1.66-4.07 3.74-4.25.29 2.58-2.34 4.5-3.74 4.25z"/>
+        </svg>
+        <span class="dl-btn-text">
+          <span class="dl-btn-prefix">Download on the</span>
+          <span class="dl-btn-store">App Store</span>
+        </span>
+      </a>
+      <a href="https://play.google.com/store/apps/details?id=com.si187apps.fplcoachai&amp;utm_source=si187apps&amp;utm_medium=website&amp;utm_campaign=fpl_launch"
+         target="_blank" rel="noopener noreferrer"
+         class="dl-btn"
+         aria-label="Get FPL Coach AI on Google Play">
+        <svg class="dl-btn-icon" viewBox="0 0 24 24" aria-hidden="true">
+          <path d="M3.61 1.81C3.27 2.16 3.05 2.69 3.05 3.4v17.2c0 .71.22 1.24.56 1.59l.06.05L13.4 12.5v-.25L3.66 2.51z"/>
+          <path d="M16.81 16.06l-3.41-3.42v-.27l3.41-3.41.08.05 4.04 2.3c1.15.65 1.15 1.72 0 2.38l-4.04 2.3z"/>
+          <path d="M16.89 16l-3.49-3.5L3.61 22.19c.38.4 1 .45 1.71.05L16.89 16z"/>
+          <path d="M16.89 9l-11.57-6.24c-.71-.4-1.33-.35-1.71.05l9.79 9.69z"/>
+        </svg>
+        <span class="dl-btn-text">
+          <span class="dl-btn-prefix">Get it on</span>
+          <span class="dl-btn-store">Google Play</span>
+        </span>
+      </a>
       <a href="#how-it-works" class="btn-outline">How it works</a>
     </div>
 
     <div class="hero-social-proof reveal rd5">
       <div class="proof-item"><div class="proof-dot"></div><span class="proof-text">Coach not manager</span></div>
-      <div class="proof-item"><div class="proof-dot"></div><span class="proof-text">iOS · August 2026</span></div>
-      <div class="proof-item"><div class="proof-dot"></div><span class="proof-text">Free beta for testers</span></div>
+      <div class="proof-item"><div class="proof-dot"></div><span class="proof-text">iOS + Android · Out now</span></div>
+      <div class="proof-item"><div class="proof-dot"></div><span class="proof-text">Free right now — every feature</span></div>
     </div>
   </div>
 
@@ -1096,27 +1132,27 @@ footer {
   <div class="section-wrap">
     <span class="eyebrow reveal">Pricing</span>
     <h2 class="section-title reveal rd1">Built like a football pass.<br><em>Pay how you play.</em></h2>
-    <p style="font-size:16px;color:var(--text2);line-height:1.75;max-width:640px;margin-bottom:48px;" class="reveal rd2">Free during pre-season and GW1 so you can take it for a spin. From GW2 onwards, pick the pass that matches your season.</p>
+    <p style="font-size:16px;color:var(--text2);line-height:1.75;max-width:640px;margin-bottom:48px;" class="reveal rd2">Free right now — every feature, no charge. Paid plans (£3.99/month or £34.99/season) arrive later this season.</p>
 
     <div class="features-grid">
 
-      <!-- Match Day Pass -->
+      <!-- Monthly -->
       <div class="feature-card reveal">
-        <div class="feat-tag">Match Day Pass</div>
-        <div class="feat-title" style="font-family:'Syne',sans-serif;font-size:32px;font-weight:800;color:var(--text1);letter-spacing:-1px;">£2.99<span style="font-size:14px;color:var(--text2);font-weight:500;letter-spacing:0;">/month</span></div>
+        <div class="feat-tag">Monthly</div>
+        <div class="feat-title" style="font-family:'Syne',sans-serif;font-size:32px;font-weight:800;color:var(--text1);letter-spacing:-1px;">£3.99<span style="font-size:14px;color:var(--text2);font-weight:500;letter-spacing:0;">/month</span></div>
         <div class="feat-body">Cancel anytime. Pay only for the months you play.</div>
       </div>
 
-      <!-- Season Ticket -->
+      <!-- Season -->
       <div class="feature-card reveal rd1">
-        <div class="feat-tag">Season Ticket</div>
-        <div class="feat-title" style="font-family:'Syne',sans-serif;font-size:32px;font-weight:800;color:var(--text1);letter-spacing:-1px;">£19.99<span style="font-size:14px;color:var(--text2);font-weight:500;letter-spacing:0;">/year · auto-renewing</span></div>
-        <div class="feat-body">Full season access from GW1 to GW38.</div>
+        <div class="feat-tag">Season</div>
+        <div class="feat-title" style="font-family:'Syne',sans-serif;font-size:32px;font-weight:800;color:var(--text1);letter-spacing:-1px;">£34.99<span style="font-size:14px;color:var(--text2);font-weight:500;letter-spacing:0;">/season</span></div>
+        <div class="feat-body">Full-season access. Better value if you're in for the run-in.</div>
       </div>
 
     </div>
 
-    <p style="margin-top:32px;font-size:14px;color:var(--text2);" class="reveal rd3">→ All passes unlock the same features. The choice is yours.</p>
+    <p style="margin-top:32px;font-size:14px;color:var(--text2);" class="reveal rd3">→ All plans unlock the same features. The choice is yours.</p>
   </div>
 </section>
 
@@ -1239,7 +1275,7 @@ footer {
         <span class="eyebrow reveal">Product roadmap</span>
         <h2 class="section-title reveal rd1" style="margin-bottom:0;">Built openly.<br><em>Shipped continuously.</em></h2>
       </div>
-      <p class="roadmap-intro-text reveal rd2">We build in public. What's working today, what's coming next, what we're targeting for launch, and what's planned once the app is in your hands. No fixed dates — we ship when it's ready.</p>
+      <p class="roadmap-intro-text reveal rd2">We build in public. What's live in your hands today, what's next up in the build, and what's on the horizon for later this season. No fixed dates — we ship when it's ready.</p>
     </div>
 
     <div class="bucket-grid">
@@ -1248,7 +1284,7 @@ footer {
       <article class="bucket b-shipped reveal">
         <div class="bucket-head">
           <div class="bucket-meta">
-            <p class="bucket-period">Spring 2026</p>
+            <p class="bucket-period">Season 2026/27</p>
             <h3 class="bucket-title">In your hands</h3>
           </div>
           <span class="bucket-badge">
@@ -1257,6 +1293,14 @@ footer {
           </span>
         </div>
         <ul class="bucket-list">
+          <li>
+            <svg class="bucket-list-icon" width="14" height="14" viewBox="0 0 14 14" fill="none"><path d="M3 7l3 3 5-6" stroke="#00D4A0" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            <span>Live on iOS App Store and Google Play — out now for the 2026/27 season</span>
+          </li>
+          <li>
+            <svg class="bucket-list-icon" width="14" height="14" viewBox="0 0 14 14" fill="none"><path d="M3 7l3 3 5-6" stroke="#00D4A0" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            <span>Push notifications — 24h and 1h deadline reminders, gameweek results, chip + captain nudges</span>
+          </li>
           <li>
             <svg class="bucket-list-icon" width="14" height="14" viewBox="0 0 14 14" fill="none"><path d="M3 7l3 3 5-6" stroke="#00D4A0" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg>
             <span>Real-time per-fixture xG data — every shot, every save, every match</span>
@@ -1300,7 +1344,7 @@ footer {
       <article class="bucket b-coming reveal rd1">
         <div class="bucket-head">
           <div class="bucket-meta">
-            <p class="bucket-period">May–July 2026</p>
+            <p class="bucket-period">Now</p>
             <h3 class="bucket-title">In the build</h3>
           </div>
           <span class="bucket-badge">
@@ -1333,55 +1377,31 @@ footer {
             <svg class="bucket-list-icon" width="14" height="14" viewBox="0 0 14 14" fill="none"><circle cx="7" cy="7" r="3" fill="#FFB800"/><circle cx="7" cy="7" r="5.5" stroke="#FFB800" stroke-width="1" stroke-opacity="0.4"/></svg>
             <span>Momentum and breakout detection — catch the rising stars early</span>
           </li>
-        </ul>
-      </article>
-
-      <!-- ── PRE-LAUNCH ── -->
-      <article class="bucket b-prelaunch reveal rd2">
-        <div class="bucket-head">
-          <div class="bucket-meta">
-            <p class="bucket-period">July 2026</p>
-            <h3 class="bucket-title">Before launch day</h3>
-          </div>
-          <span class="bucket-badge">
-            <span class="bucket-badge-dot"></span>
-            Pre-launch
-          </span>
-        </div>
-        <ul class="bucket-list">
           <li>
-            <svg class="bucket-list-icon" width="14" height="14" viewBox="0 0 14 14" fill="none"><circle cx="7" cy="7" r="5.5" stroke="#8A9AB0" stroke-width="1" fill="none"/></svg>
-            <span>Push notifications — 24h and 1h before the deadline</span>
-          </li>
-          <li>
-            <svg class="bucket-list-icon" width="14" height="14" viewBox="0 0 14 14" fill="none"><circle cx="7" cy="7" r="5.5" stroke="#8A9AB0" stroke-width="1" fill="none"/></svg>
+            <svg class="bucket-list-icon" width="14" height="14" viewBox="0 0 14 14" fill="none"><circle cx="7" cy="7" r="3" fill="#FFB800"/><circle cx="7" cy="7" r="5.5" stroke="#FFB800" stroke-width="1" stroke-opacity="0.4"/></svg>
             <span>Fixture calendar awareness — know what's coming weeks ahead</span>
           </li>
           <li>
-            <svg class="bucket-list-icon" width="14" height="14" viewBox="0 0 14 14" fill="none"><circle cx="7" cy="7" r="5.5" stroke="#8A9AB0" stroke-width="1" fill="none"/></svg>
+            <svg class="bucket-list-icon" width="14" height="14" viewBox="0 0 14 14" fill="none"><circle cx="7" cy="7" r="3" fill="#FFB800"/><circle cx="7" cy="7" r="5.5" stroke="#FFB800" stroke-width="1" stroke-opacity="0.4"/></svg>
             <span>Tiered recommendation categories — clearer signal hierarchy</span>
           </li>
           <li>
-            <svg class="bucket-list-icon" width="14" height="14" viewBox="0 0 14 14" fill="none"><circle cx="7" cy="7" r="5.5" stroke="#8A9AB0" stroke-width="1" fill="none"/></svg>
+            <svg class="bucket-list-icon" width="14" height="14" viewBox="0 0 14 14" fill="none"><circle cx="7" cy="7" r="3" fill="#FFB800"/><circle cx="7" cy="7" r="5.5" stroke="#FFB800" stroke-width="1" stroke-opacity="0.4"/></svg>
             <span>Differentials surface — find the picks no one else is making</span>
-          </li>
-          <li>
-            <svg class="bucket-list-icon" width="14" height="14" viewBox="0 0 14 14" fill="none"><circle cx="7" cy="7" r="5.5" stroke="#8A9AB0" stroke-width="1" fill="none"/></svg>
-            <span>iOS App Store launch — GW1 of the 2026/27 season</span>
           </li>
         </ul>
       </article>
 
-      <!-- ── POST-LAUNCH ── -->
-      <article class="bucket b-postlaunch reveal rd3">
+      <!-- ── LATER THIS SEASON ── -->
+      <article class="bucket b-postlaunch reveal rd2">
         <div class="bucket-head">
           <div class="bucket-meta">
-            <p class="bucket-period">August 2026 onwards</p>
+            <p class="bucket-period">Later this season</p>
             <h3 class="bucket-title">As the season unfolds</h3>
           </div>
           <span class="bucket-badge">
             <span class="bucket-badge-dot"></span>
-            Post-launch
+            On the horizon
           </span>
         </div>
         <ul class="bucket-list">
@@ -1419,7 +1439,7 @@ footer {
 </section>
 
 
-<!-- ── WAITLIST ── -->
+<!-- ── UPDATES ── -->
 <div style="text-align:center;padding:16px 0;position:relative;z-index:1;">
   <a href="/fpl-coach-ai/help"
      style="font-family:'JetBrains Mono',monospace;font-size:13px;color:rgba(138,154,176,0.7);text-decoration:none;letter-spacing:0.5px;transition:color 0.15s;"
@@ -1429,32 +1449,32 @@ footer {
   </a>
 </div>
 <section class="fpl-waitlist" id="waitlist">
-  <span class="eyebrow" style="position:relative;z-index:1;">Join the waitlist</span>
-  <h2 class="reveal">Get early access to<br><em>FPL Coach AI.</em></h2>
-  <p class="waitlist-sub reveal rd1">Beta testing opens before GW1 of the 2026/27 season. Join the waitlist for early access, launch pricing, and a free season pass if you help us test.</p>
+  <span class="eyebrow" style="position:relative;z-index:1;">Product updates</span>
+  <h2 class="reveal">Stay in the loop on<br><em>what we ship next.</em></h2>
+  <p class="waitlist-sub reveal rd1">Already got the app? Sign up for product updates — new features, roadmap notes, and behind-the-scenes as we build through the 2026/27 season.</p>
 
   <div class="waitlist-perks reveal rd2">
     <div class="waitlist-perk">
       <svg width="16" height="16" viewBox="0 0 16 16" fill="none"><path d="M3 8l4 4 6-6" stroke="#00D4A0" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
-      Early beta access
+      Feature launches, first
     </div>
     <div class="waitlist-perk">
       <svg width="16" height="16" viewBox="0 0 16 16" fill="none"><path d="M3 8l4 4 6-6" stroke="#00D4A0" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
-      Launch pricing locked
+      Roadmap notes as they land
     </div>
     <div class="waitlist-perk">
       <svg width="16" height="16" viewBox="0 0 16 16" fill="none"><path d="M3 8l4 4 6-6" stroke="#00D4A0" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
-      Free season pass for testers
+      Building-in-public reasoning
     </div>
   </div>
 
   <div class="email-row reveal rd3">
     <label for="fpl-email" class="sr-only">Email address</label>
     <input type="email" id="fpl-email" class="email-input" placeholder="your@email.com" autocomplete="email">
-    <button class="email-submit" id="fpl-waitlist-btn" onclick="handleFPLWaitlist()">Join waitlist</button>
+    <button class="email-submit" id="fpl-waitlist-btn" onclick="handleFPLWaitlist()">Get updates</button>
   </div>
-  <p class="waitlist-confirm" id="fpl-waitlist-confirm">✓ You're on the list. We'll be in touch before August 2026.</p>
-  <p class="waitlist-note">No spam · Unsubscribe anytime · iOS launch: August 2026</p>
+  <p class="waitlist-confirm" id="fpl-waitlist-confirm">✓ Thanks. We'll keep you in the loop.</p>
+  <p class="waitlist-note">No spam · Unsubscribe anytime</p>
 </section>
 
 </div><!-- end .fpl-page -->
@@ -1501,7 +1521,7 @@ footer {
     <ul class="footer-nav-links">
       <li><a href="/fpl-coach-ai">Overview</a></li>
       <li><a href="#how-it-works">How it works</a></li>
-      <li><a href="#waitlist">Join waitlist</a></li>
+      <li><a href="#waitlist">Product updates</a></li>
       <li><a href="/fpl-coach-ai/help">Help & FAQ</a></li>
     </ul>
   </div>
