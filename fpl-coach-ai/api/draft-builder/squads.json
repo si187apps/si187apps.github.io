@@ -1,0 +1,5 @@
+{
+  "_fetchedAt": null,
+  "_note": "Placeholder — real data written daily by .github/workflows/prefetch-draft-builder-squads.yml at 03:30 UTC. If _fetchedAt is null in prod, the workflow has not yet run for the first time; the marketing page falls back to hitting Render directly.",
+  "squads": []
+}

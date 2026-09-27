@@ -1,0 +1,93 @@
+name: Prefetch draft-builder squads
+
+# Fetches the current draft-builder squads from the FPL Coach AI Render
+# backend and commits the JSON to /fpl-coach-ai/api/draft-builder/squads.json
+# so GitHub Pages (Fastly CDN) can serve it from edge, dropping ~500 MB/mo
+# of Render egress from marketing-site visitors and crawlers hitting the
+# public draft-builder page.
+#
+# 2026-09-27 — added alongside the mobile-repo bandwidth hygiene work.
+# The web page at /fpl-coach-ai/draft-builder/ falls back to Render if
+# the static file is stale (>30h) or the fetch fails, so a broken
+# prefetch never breaks the marketing page — just quietly returns to
+# origin traffic (and the freshness canary will alert).
+#
+# Cadence: 30 3 * * * — 30 min after Render's refresh-draft-builder
+# cron at 03:00 UTC so we grab freshly-computed squads, not the
+# previous day's cache.
+
+on:
+  schedule:
+    - cron: "30 3 * * *"
+  workflow_dispatch: {}
+
+permissions:
+  contents: write
+
+concurrency:
+  group: prefetch-draft-builder-squads
+  cancel-in-progress: false
+
+jobs:
+  prefetch:
+    name: Fetch + commit if changed
+    runs-on: ubuntu-latest
+    timeout-minutes: 3
+    env:
+      RENDER_URL: https://fpl-coach-ai-backend.onrender.com/api/draft-builder/squads
+      OUT_PATH: fpl-coach-ai/api/draft-builder/squads.json
+    steps:
+      - uses: actions/checkout@v4
+      - name: Fetch + write + diff
+        id: fetch
+        run: |
+          set -euo pipefail
+          mkdir -p "$(dirname "$OUT_PATH")"
+
+          # --compressed so we don't pay raw bytes for our own probe.
+          # Fail-soft: on any HTTP error, keep the prior file so the
+          # marketing page keeps working from whatever we last shipped.
+          HTTP=$(curl -sS --compressed --max-time 20 -o /tmp/squads-raw.json \
+            -w "%{http_code}" "$RENDER_URL" || echo "000")
+          echo "http=$HTTP"
+
+          if [ "$HTTP" != "200" ]; then
+            echo "::warning title=Prefetch skipped::Render returned $HTTP — keeping prior $OUT_PATH"
+            exit 0
+          fi
+
+          # Validate JSON parseable before overwriting.
+          if ! jq empty /tmp/squads-raw.json 2>/dev/null; then
+            echo "::warning title=Prefetch skipped::Response is not valid JSON — keeping prior $OUT_PATH"
+            exit 0
+          fi
+
+          # Enrich with _fetchedAt + _source so the client can check
+          # staleness client-side and the freshness canary can alert.
+          NOW=$(date -u +%FT%TZ)
+          jq --arg t "$NOW" --arg s "prefetch-draft-builder-squads.yml" \
+            '. + {_fetchedAt:$t, _source:$s}' /tmp/squads-raw.json > "$OUT_PATH"
+
+          BYTES=$(wc -c < "$OUT_PATH" | tr -d ' ')
+          echo "wrote $OUT_PATH — $BYTES bytes at $NOW"
+          echo "bytes=$BYTES" >> "$GITHUB_OUTPUT"
+          echo "fetched_at=$NOW" >> "$GITHUB_OUTPUT"
+
+      - name: Commit + push if changed
+        run: |
+          set -euo pipefail
+          git config user.name  "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+
+          # If nothing has changed since last commit (identical bytes)
+          # skip — avoids commit noise on days when squads didn't move.
+          # (_fetchedAt always changes so this rarely no-ops in practice,
+          # but the guard keeps the log clean if the cron misfires.)
+          if git diff --quiet -- "$OUT_PATH"; then
+            echo "no diff — nothing to commit"
+            exit 0
+          fi
+
+          git add "$OUT_PATH"
+          git commit -m "chore(draft-builder): daily prefetch — ${{ steps.fetch.outputs.bytes }} bytes @ ${{ steps.fetch.outputs.fetched_at }}"
+          git push origin main

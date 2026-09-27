@@ -1,0 +1,77 @@
+name: Draft-builder static freshness canary
+
+# Fetches the deployed squads.json from si187apps.com and alerts (via
+# workflow failure → GitHub email) if _fetchedAt is stale beyond the
+# threshold. Correctness net (client-side fallback to Render when
+# _fetchedAt >30h) is unchanged; this canary gives VISIBILITY so a
+# broken prefetch cron doesn't silently push all marketing traffic
+# back onto Render bandwidth.
+#
+# 2026-09-27 — installed alongside the prefetch workflow.
+
+on:
+  schedule:
+    # 6-hourly — catches a broken daily prefetch within a fraction of
+    # the client fallback threshold, giving time to react.
+    - cron: "42 */6 * * *"
+  workflow_dispatch: {}
+
+permissions:
+  contents: read
+
+jobs:
+  freshness:
+    name: Check squads.json _fetchedAt
+    runs-on: ubuntu-latest
+    timeout-minutes: 3
+    env:
+      STATIC_URL: https://si187apps.com/fpl-coach-ai/api/draft-builder/squads.json
+      STALE_ALERT_HOURS: "30"
+    steps:
+      - name: Fetch + evaluate
+        run: |
+          set -euo pipefail
+
+          echo "Fetching: $STATIC_URL"
+          BODY=$(curl -sS --compressed --max-time 20 "$STATIC_URL")
+          HTTP=$(curl -sS --compressed --max-time 20 -o /dev/null -w "%{http_code}" "$STATIC_URL")
+
+          if [ "$HTTP" != "200" ]; then
+            echo "::error title=Static squads unreachable::HTTP $HTTP from $STATIC_URL — GitHub Pages deploy may have failed"
+            exit 1
+          fi
+
+          FETCHED_AT=$(printf '%s' "$BODY" | jq -r '._fetchedAt // "null"')
+          if [ "$FETCHED_AT" = "null" ] || [ -z "$FETCHED_AT" ]; then
+            echo "::error title=Static squads placeholder still live::_fetchedAt is null — prefetch workflow has not run successfully. Marketing traffic falling back to Render."
+            exit 1
+          fi
+
+          NOW_TS=$(date -u +%s)
+          FETCHED_TS=$(date -u -d "$FETCHED_AT" +%s 2>/dev/null || echo 0)
+          if [ "$FETCHED_TS" = "0" ]; then
+            echo "::error title=Static squads bad _fetchedAt::Could not parse '$FETCHED_AT' as ISO date"
+            exit 1
+          fi
+          AGE_SEC=$(( NOW_TS - FETCHED_TS ))
+          AGE_HOURS=$(awk -v s="$AGE_SEC" 'BEGIN{printf "%.1f", s/3600}')
+
+          {
+            echo "## Draft-builder static freshness"
+            echo ""
+            echo "| field | value |"
+            echo "|---|---|"
+            echo "| URL | $STATIC_URL |"
+            echo "| HTTP | $HTTP |"
+            echo "| _fetchedAt | $FETCHED_AT |"
+            echo "| age | ${AGE_HOURS}h |"
+            echo "| threshold | ${STALE_ALERT_HOURS}h |"
+          } >> "$GITHUB_STEP_SUMMARY"
+
+          THRESHOLD_SEC=$(( STALE_ALERT_HOURS * 3600 ))
+          if [ "$AGE_SEC" -gt "$THRESHOLD_SEC" ]; then
+            echo "::error title=Static squads stale::Age ${AGE_HOURS}h > threshold ${STALE_ALERT_HOURS}h. Daily prefetch cron may have failed. Marketing traffic will fall back to Render (bandwidth-hungry path)."
+            exit 1
+          fi
+
+          echo "::notice title=Static squads fresh::age=${AGE_HOURS}h under threshold ${STALE_ALERT_HOURS}h"

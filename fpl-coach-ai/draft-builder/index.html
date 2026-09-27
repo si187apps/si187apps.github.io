@@ -1448,6 +1448,29 @@ footer {
     el.hidden = false;
   }
 
+  // 2026-09-27 — try the static JSON (Fastly-cached via GitHub Pages)
+  // first; fall back to Render if the file is missing, stale (>30h old
+  // per _fetchedAt), or errors. Saves ~500 MB/mo Render egress while
+  // keeping the page functional if the daily prefetch cron ever fails.
+  var STATIC_SQUADS_URL = '/fpl-coach-ai/api/draft-builder/squads.json';
+  var STATIC_STALE_MS = 30 * 60 * 60 * 1000; // 30 hours
+
+  function fetchStaticSquads() {
+    return fetch(STATIC_SQUADS_URL)
+      .then(function(res){ if (!res.ok) throw new Error('static_http_' + res.status); return res.json(); })
+      .then(function(payload){
+        if (!payload || !payload._fetchedAt) throw new Error('static_no_fetched_at');
+        var ageMs = Date.now() - new Date(payload._fetchedAt).getTime();
+        if (!isFinite(ageMs) || ageMs > STATIC_STALE_MS) throw new Error('static_stale');
+        return payload;
+      });
+  }
+
+  function fetchRenderSquads(signal) {
+    return fetch(API_BASE + '/api/draft-builder/squads', { cache: 'no-store', signal: signal })
+      .then(function(res){ if (!res.ok) throw new Error('HTTP ' + res.status); return res.json(); });
+  }
+
   function fetchSquads() {
     var reqId = ++inflight;
     setStatus('<div class="db-loading">Building your squad…</div>');
@@ -1456,9 +1479,13 @@ footer {
     // "the service may be waking up" than leave a spinner spinning.
     var ctrl = (typeof AbortController !== 'undefined') ? new AbortController() : null;
     var to = ctrl ? setTimeout(function(){ ctrl.abort(); }, 30000) : 0;
-    fetch(API_BASE + '/api/draft-builder/squads', { cache: 'no-store', signal: ctrl ? ctrl.signal : undefined })
-      .then(function(res){ if (to) clearTimeout(to); if (!res.ok) throw new Error('HTTP ' + res.status); return res.json(); })
-      .then(function(payload){ if (reqId !== inflight) return; render(payload); })
+
+    fetchStaticSquads()
+      .catch(function(err){
+        console.info('[draft-builder] static miss (' + (err && err.message) + ') — falling back to Render');
+        return fetchRenderSquads(ctrl ? ctrl.signal : undefined);
+      })
+      .then(function(payload){ if (to) clearTimeout(to); if (reqId !== inflight) return; render(payload); })
       .catch(function(err){
         if (to) clearTimeout(to);
         if (reqId !== inflight) return;
