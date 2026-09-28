@@ -23,6 +23,7 @@ on:
 
 permissions:
   contents: write
+  actions: write   # to dispatch the Pages deploy after committing (GITHUB_TOKEN pushes don't trigger downstream workflows on their own)
 
 concurrency:
   group: prefetch-draft-builder-squads
@@ -91,3 +92,12 @@ jobs:
           git add "$OUT_PATH"
           git commit -m "chore(draft-builder): daily prefetch — ${{ steps.fetch.outputs.bytes }} bytes @ ${{ steps.fetch.outputs.fetched_at }}"
           git push origin main
+
+      # GitHub Actions security rule: pushes made using GITHUB_TOKEN do
+      # NOT trigger other workflows (prevents infinite loops). So the
+      # push above does NOT auto-trigger deploy.yml. Dispatch it here so
+      # the fresh JSON actually reaches Pages.
+      - name: Dispatch Pages deploy
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: gh workflow run deploy.yml --repo ${{ github.repository }} --ref main
