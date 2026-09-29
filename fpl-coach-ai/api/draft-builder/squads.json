@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-09-28T09:19:33.458Z",
+  "generatedAt": "2026-09-29T09:26:40.400Z",
   "poolSize": 458,
   "scoredPool": [
     {
@@ -2341,7 +2341,7 @@
           "position": "GKP",
           "team": "ARS",
           "price": 6.1,
-          "ownership": 42.2,
+          "ownership": 42.3,
           "role": "start",
           "primarySeasonLabel": "2025/26",
           "primaryStarts": 37,
@@ -2366,7 +2366,7 @@
           "position": "DEF",
           "team": "EVE",
           "price": 6.1,
-          "ownership": 16.3,
+          "ownership": 16.4,
           "role": "start",
           "primarySeasonLabel": "2025/26",
           "primaryStarts": 37,
@@ -2541,7 +2541,7 @@
           "position": "MID",
           "team": "LIV",
           "price": 7,
-          "ownership": 32.9,
+          "ownership": 32.8,
           "role": "start",
           "primarySeasonLabel": "2025/26",
           "primaryStarts": 36,
@@ -2722,7 +2722,7 @@
       "totalCost": 87.2,
       "remainingBank": 12.8,
       "budgetCap": 100,
-      "objectiveValue": 9.35608487,
+      "objectiveValue": 9.35618487,
       "clubDistribution": {
         "EVE": 3,
         "BRE": 3,
@@ -3023,7 +3023,7 @@
           "position": "GKP",
           "team": "FUL",
           "price": 4.5,
-          "ownership": 3.3,
+          "ownership": 3.4,
           "role": "bench",
           "primarySeasonLabel": "2025/26",
           "primaryStarts": 38,
@@ -3048,7 +3048,7 @@
           "position": "DEF",
           "team": "MUN",
           "price": 4.8,
-          "ownership": 8.7,
+          "ownership": 8.6,
           "role": "bench",
           "primarySeasonLabel": "2025/26",
           "primaryStarts": 19,
@@ -3176,7 +3176,7 @@
           "position": "DEF",
           "team": "EVE",
           "price": 6.1,
-          "ownership": 16.3,
+          "ownership": 16.4,
           "role": "start",
           "primarySeasonLabel": "2025/26",
           "primaryStarts": 37,
@@ -3226,7 +3226,7 @@
           "position": "DEF",
           "team": "MUN",
           "price": 4.8,
-          "ownership": 8.7,
+          "ownership": 8.6,
           "role": "start",
           "primarySeasonLabel": "2025/26",
           "primaryStarts": 19,
@@ -3633,6 +3633,6 @@
       "reason": "Ownership 13.7% falls in the gap between Balanced (≥15%) and Differentials (≤12%)"
     }
   ],
-  "_fetchedAt": "2026-09-28T10:02:09Z",
+  "_fetchedAt": "2026-09-29T10:01:06Z",
   "_source": "prefetch-draft-builder-squads.yml"
 }
