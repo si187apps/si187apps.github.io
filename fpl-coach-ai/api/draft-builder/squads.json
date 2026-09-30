@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-09-29T09:26:40.400Z",
+  "generatedAt": "2026-09-30T09:16:57.092Z",
   "poolSize": 458,
   "scoredPool": [
     {
@@ -2300,7 +2300,7 @@
       "description": "Ranked by ownership. What the collective FPL manager base is actually doing.",
       "rules": "Objective = ownership. Composite quality floor = 0.55 for starters to prevent an indefensible pick.",
       "feasible": false,
-      "reason": "solver-timeout after 60004ms — LP relaxation likely degenerate for this flavour on today's pool",
+      "reason": "solver-timeout after 60003ms — LP relaxation likely degenerate for this flavour on today's pool",
       "totalCost": 0,
       "remainingBank": 100,
       "budgetCap": 100,
@@ -2366,7 +2366,7 @@
           "position": "DEF",
           "team": "EVE",
           "price": 6.1,
-          "ownership": 16.4,
+          "ownership": 16.5,
           "role": "start",
           "primarySeasonLabel": "2025/26",
           "primaryStarts": 37,
@@ -2921,7 +2921,7 @@
           "position": "MID",
           "team": "NEW",
           "price": 6.1,
-          "ownership": 5.6,
+          "ownership": 5.7,
           "role": "start",
           "primarySeasonLabel": "2025/26",
           "primaryStarts": 19,
@@ -3176,7 +3176,7 @@
           "position": "DEF",
           "team": "EVE",
           "price": 6.1,
-          "ownership": 16.4,
+          "ownership": 16.5,
           "role": "start",
           "primarySeasonLabel": "2025/26",
           "primaryStarts": 37,
@@ -3633,6 +3633,6 @@
       "reason": "Ownership 13.7% falls in the gap between Balanced (≥15%) and Differentials (≤12%)"
     }
   ],
-  "_fetchedAt": "2026-09-29T10:01:06Z",
+  "_fetchedAt": "2026-09-30T09:53:54Z",
   "_source": "prefetch-draft-builder-squads.yml"
 }
