@@ -1,6 +1,6 @@
 {
-  "generatedAt": "2026-09-30T09:16:57.092Z",
-  "poolSize": 458,
+  "generatedAt": "2026-10-01T09:44:48.007Z",
+  "poolSize": 457,
   "scoredPool": [
     {
       "fplId": 1,
@@ -24,7 +24,7 @@
     },
     {
       "fplId": 5,
-      "composite": 0.7575713981924508,
+      "composite": 0.7573858694354935,
       "position": "DEF"
     },
     {
@@ -34,17 +34,17 @@
     },
     {
       "fplId": 8,
-      "composite": 0.7561960659223818,
+      "composite": 0.7561496837331424,
       "position": "DEF"
     },
     {
       "fplId": 9,
-      "composite": 0.6398037214247742,
+      "composite": 0.6385514023153122,
       "position": "DEF"
     },
     {
       "fplId": 11,
-      "composite": 0.44505013290802764,
+      "composite": 0.44713733142379763,
       "position": "DEF"
     },
     {
@@ -89,7 +89,7 @@
     },
     {
       "fplId": 31,
-      "composite": 0.428254120148857,
+      "composite": 0.4291817639336437,
       "position": "DEF"
     },
     {
@@ -104,12 +104,12 @@
     },
     {
       "fplId": 32,
-      "composite": 0.5033024787347156,
+      "composite": 0.5051113841150495,
       "position": "DEF"
     },
     {
       "fplId": 33,
-      "composite": 0.4259387892078681,
+      "composite": 0.42756216583124473,
       "position": "DEF"
     },
     {
@@ -119,12 +119,12 @@
     },
     {
       "fplId": 37,
-      "composite": 0.2798014154704944,
+      "composite": 0.2802188551736484,
       "position": "DEF"
     },
     {
       "fplId": 38,
-      "composite": 0.2208127923976608,
+      "composite": 0.22132299647929346,
       "position": "DEF"
     },
     {
@@ -199,12 +199,12 @@
     },
     {
       "fplId": 611,
-      "composite": 0.3801464978734716,
+      "composite": 0.3808886129013009,
       "position": "DEF"
     },
     {
       "fplId": 630,
-      "composite": 0.1822443181818182,
+      "composite": 0.1824298469387755,
       "position": "DEF"
     },
     {
@@ -229,22 +229,22 @@
     },
     {
       "fplId": 60,
-      "composite": 0.5158889952153111,
+      "composite": 0.5150077336197637,
       "position": "DEF"
     },
     {
       "fplId": 61,
-      "composite": 0.510933971291866,
+      "composite": 0.5097280343716435,
       "position": "DEF"
     },
     {
       "fplId": 62,
-      "composite": 0.2260239234449761,
+      "composite": 0.22722986036519874,
       "position": "DEF"
     },
     {
       "fplId": 64,
-      "composite": 0.4845531100478469,
+      "composite": 0.4839037593984962,
       "position": "DEF"
     },
     {
@@ -344,22 +344,22 @@
     },
     {
       "fplId": 87,
-      "composite": 0.623727904040404,
+      "composite": 0.6260933956916099,
       "position": "DEF"
     },
     {
       "fplId": 88,
-      "composite": 0.5349889354066986,
+      "composite": 0.5361021079484425,
       "position": "DEF"
     },
     {
       "fplId": 89,
-      "composite": 0.5309751129718234,
+      "composite": 0.532876782730636,
       "position": "DEF"
     },
     {
       "fplId": 90,
-      "composite": 0.5617523591174907,
+      "composite": 0.5644889082826112,
       "position": "DEF"
     },
     {
@@ -424,7 +424,7 @@
     },
     {
       "fplId": 620,
-      "composite": 0.5857130183413077,
+      "composite": 0.5874755415324023,
       "position": "DEF"
     },
     {
@@ -454,22 +454,22 @@
     },
     {
       "fplId": 113,
-      "composite": 0.4976180555555556,
+      "composite": 0.4991486678004535,
       "position": "DEF"
     },
     {
       "fplId": 114,
-      "composite": 0.5103907828282829,
+      "composite": 0.5132200963718822,
       "position": "DEF"
     },
     {
       "fplId": 115,
-      "composite": 0.7148897727272728,
+      "composite": 0.7146114795918367,
       "position": "DEF"
     },
     {
       "fplId": 117,
-      "composite": 0.23884229797979797,
+      "composite": 0.2394452664399093,
       "position": "DEF"
     },
     {
@@ -574,27 +574,27 @@
     },
     {
       "fplId": 144,
-      "composite": 0.6132314925571504,
+      "composite": 0.615828895154553,
       "position": "DEF"
     },
     {
       "fplId": 145,
-      "composite": 0.5097609981392877,
+      "composite": 0.5114307569519035,
       "position": "DEF"
     },
     {
       "fplId": 148,
-      "composite": 0.2891262293992557,
+      "composite": 0.28917261158849505,
       "position": "DEF"
     },
     {
       "fplId": 149,
-      "composite": 0.2577461124401914,
+      "composite": 0.25830269871106337,
       "position": "DEF"
     },
     {
       "fplId": 151,
-      "composite": 0.544760466507177,
+      "composite": 0.5477753088077335,
       "position": "DEF"
     },
     {
@@ -624,7 +624,7 @@
     },
     {
       "fplId": 200,
-      "composite": 0.7190103335991493,
+      "composite": 0.7178971610574054,
       "position": "DEF"
     },
     {
@@ -654,7 +654,7 @@
     },
     {
       "fplId": 91,
-      "composite": 0.19436473285486447,
+      "composite": 0.19524599445041177,
       "position": "DEF"
     },
     {
@@ -779,17 +779,17 @@
     },
     {
       "fplId": 202,
-      "composite": 0.7021330077086657,
+      "composite": 0.7050550856307436,
       "position": "DEF"
     },
     {
       "fplId": 203,
-      "composite": 0.7357310938330676,
+      "composite": 0.7351281253729562,
       "position": "DEF"
     },
     {
       "fplId": 204,
-      "composite": 0.6439628854332802,
+      "composite": 0.6461892305167681,
       "position": "DEF"
     },
     {
@@ -874,7 +874,7 @@
     },
     {
       "fplId": 643,
-      "composite": 0.31150568181818183,
+      "composite": 0.31234056122448983,
       "position": "DEF"
     },
     {
@@ -909,27 +909,27 @@
     },
     {
       "fplId": 229,
-      "composite": 0.8978947368421052,
+      "composite": 0.89687432867884,
       "position": "DEF"
     },
     {
       "fplId": 230,
-      "composite": 0.6033141945773525,
+      "composite": 0.6053086287146437,
       "position": "DEF"
     },
     {
       "fplId": 231,
-      "composite": 0.8759925571504519,
+      "composite": 0.8749257667979472,
       "position": "DEF"
     },
     {
       "fplId": 232,
-      "composite": 0.6838447634237108,
+      "composite": 0.68528261129013,
       "position": "DEF"
     },
     {
       "fplId": 233,
-      "composite": 0.607398192450824,
+      "composite": 0.608093925289414,
       "position": "DEF"
     },
     {
@@ -999,32 +999,32 @@
     },
     {
       "fplId": 253,
-      "composite": 0.6105686137692716,
+      "composite": 0.6132123985559136,
       "position": "DEF"
     },
     {
       "fplId": 254,
-      "composite": 0.5644824893673579,
+      "composite": 0.5671726563432391,
       "position": "DEF"
     },
     {
       "fplId": 255,
-      "composite": 0.47920657230196706,
+      "composite": 0.4815256817639336,
       "position": "DEF"
     },
     {
       "fplId": 256,
-      "composite": 0.6077754186602872,
+      "composite": 0.6106511143931257,
       "position": "DEF"
     },
     {
       "fplId": 257,
-      "composite": 0.5523814792663477,
+      "composite": 0.554515059971357,
       "position": "DEF"
     },
     {
       "fplId": 258,
-      "composite": 0.4225111975013291,
+      "composite": 0.42348522347535505,
       "position": "DEF"
     },
     {
@@ -1059,7 +1059,7 @@
     },
     {
       "fplId": 269,
-      "composite": 0.6856329412546518,
+      "composite": 0.6847052974698651,
       "position": "DEF"
     },
     {
@@ -1244,7 +1244,7 @@
     },
     {
       "fplId": 259,
-      "composite": 0.37835778841042,
+      "composite": 0.37974925408759996,
       "position": "DEF"
     },
     {
@@ -1279,12 +1279,12 @@
     },
     {
       "fplId": 305,
-      "composite": 0.1886363636363636,
+      "composite": 0.1887755102040816,
       "position": "DEF"
     },
     {
       "fplId": 306,
-      "composite": 0.18409090909090906,
+      "composite": 0.18418367346938772,
       "position": "DEF"
     },
     {
@@ -1374,22 +1374,22 @@
     },
     {
       "fplId": 327,
-      "composite": 0.6635955608718768,
+      "composite": 0.6627606814655688,
       "position": "DEF"
     },
     {
       "fplId": 330,
-      "composite": 0.4211755715045189,
+      "composite": 0.4222423618570236,
       "position": "DEF"
     },
     {
       "fplId": 331,
-      "composite": 0.3402069377990431,
+      "composite": 0.340485230934479,
       "position": "DEF"
     },
     {
       "fplId": 332,
-      "composite": 0.6318943381180224,
+      "composite": 0.6307347833870391,
       "position": "DEF"
     },
     {
@@ -1509,22 +1509,22 @@
     },
     {
       "fplId": 356,
-      "composite": 0.8089204545454546,
+      "composite": 0.8079464285714285,
       "position": "DEF"
     },
     {
       "fplId": 357,
-      "composite": 0.8024579346092504,
+      "composite": 0.8023187880415323,
       "position": "DEF"
     },
     {
       "fplId": 358,
-      "composite": 0.5856771796916533,
+      "composite": 0.5872541741257906,
       "position": "DEF"
     },
     {
       "fplId": 359,
-      "composite": 0.5546127990430622,
+      "composite": 0.5568855263157894,
       "position": "DEF"
     },
     {
@@ -1539,7 +1539,7 @@
     },
     {
       "fplId": 364,
-      "composite": 0.6071022727272726,
+      "composite": 0.6058035714285714,
       "position": "DEF"
     },
     {
@@ -1629,42 +1629,42 @@
     },
     {
       "fplId": 387,
-      "composite": 0.7677611044657098,
+      "composite": 0.767529193519513,
       "position": "DEF"
     },
     {
       "fplId": 388,
-      "composite": 0.7642054425837321,
+      "composite": 0.7638343850698175,
       "position": "DEF"
     },
     {
       "fplId": 389,
-      "composite": 0.7266410619351409,
+      "composite": 0.7259453290965509,
       "position": "DEF"
     },
     {
       "fplId": 390,
-      "composite": 0.7031945972886762,
+      "composite": 0.7024061000716075,
       "position": "DEF"
     },
     {
       "fplId": 391,
-      "composite": 0.7129590842636895,
+      "composite": 0.7126344089390142,
       "position": "DEF"
     },
     {
       "fplId": 392,
-      "composite": 0.7073530236576289,
+      "composite": 0.7072602592791504,
       "position": "DEF"
     },
     {
       "fplId": 393,
-      "composite": 0.5999015085061137,
+      "composite": 0.5984636606396945,
       "position": "DEF"
     },
     {
       "fplId": 395,
-      "composite": 0.3143105994152046,
+      "composite": 0.31533100757846994,
       "position": "DEF"
     },
     {
@@ -1749,42 +1749,42 @@
     },
     {
       "fplId": 417,
-      "composite": 0.7538748538011695,
+      "composite": 0.7564258742093328,
       "position": "DEF"
     },
     {
       "fplId": 418,
-      "composite": 0.8842325890483784,
+      "composite": 0.8837687671559852,
       "position": "DEF"
     },
     {
       "fplId": 419,
-      "composite": 0.6543726209463051,
+      "composite": 0.6565525838405537,
       "position": "DEF"
     },
     {
       "fplId": 420,
-      "composite": 0.5534703880914407,
+      "composite": 0.5542588853085093,
       "position": "DEF"
     },
     {
       "fplId": 421,
-      "composite": 0.7153014885699096,
+      "composite": 0.7182699486812267,
       "position": "DEF"
     },
     {
       "fplId": 422,
-      "composite": 0.8255257309941519,
+      "composite": 0.8250155269125193,
       "position": "DEF"
     },
     {
       "fplId": 423,
-      "composite": 0.6296597554492291,
+      "composite": 0.6308193101802124,
       "position": "DEF"
     },
     {
       "fplId": 424,
-      "composite": 0.3818181818181817,
+      "composite": 0.38214285714285706,
       "position": "DEF"
     },
     {
@@ -1849,22 +1849,22 @@
     },
     {
       "fplId": 445,
-      "composite": 0.7191394869750133,
+      "composite": 0.7216441251939372,
       "position": "DEF"
     },
     {
       "fplId": 446,
-      "composite": 0.6803941387559809,
+      "composite": 0.6789099087003221,
       "position": "DEF"
     },
     {
       "fplId": 447,
-      "composite": 0.7654574029771398,
+      "composite": 0.7641123194891991,
       "position": "DEF"
     },
     {
       "fplId": 449,
-      "composite": 0.5825483120680488,
+      "composite": 0.5838470133667502,
       "position": "DEF"
     },
     {
@@ -1949,7 +1949,7 @@
     },
     {
       "fplId": 201,
-      "composite": 0.8914812599681021,
+      "composite": 0.8910638202649481,
       "position": "DEF"
     },
     {
@@ -1964,22 +1964,22 @@
     },
     {
       "fplId": 469,
-      "composite": 0.692083067517278,
+      "composite": 0.6940311194653299,
       "position": "DEF"
     },
     {
       "fplId": 472,
-      "composite": 0.6578927432216906,
+      "composite": 0.6597480307912639,
       "position": "DEF"
     },
     {
       "fplId": 473,
-      "composite": 0.6877364433811802,
+      "composite": 0.6901483172216255,
       "position": "DEF"
     },
     {
       "fplId": 474,
-      "composite": 0.3906370281765018,
+      "composite": 0.39100808569041645,
       "position": "DEF"
     },
     {
@@ -1989,7 +1989,7 @@
     },
     {
       "fplId": 478,
-      "composite": 0.3779618553960659,
+      "composite": 0.3784256772884592,
       "position": "DEF"
     },
     {
@@ -2058,13 +2058,8 @@
       "position": "GKP"
     },
     {
-      "fplId": 112,
-      "composite": 0.6700877192982456,
-      "position": "DEF"
-    },
-    {
       "fplId": 147,
-      "composite": 0.44143274853801173,
+      "composite": 0.44347356486454237,
       "position": "DEF"
     },
     {
@@ -2099,27 +2094,27 @@
     },
     {
       "fplId": 498,
-      "composite": 0.7491850079744816,
+      "composite": 0.7484428929466523,
       "position": "DEF"
     },
     {
       "fplId": 502,
-      "composite": 0.5818878256246678,
+      "composite": 0.5804963599474878,
       "position": "DEF"
     },
     {
       "fplId": 503,
-      "composite": 0.5343163211057949,
+      "composite": 0.5360324621076501,
       "position": "DEF"
     },
     {
       "fplId": 506,
-      "composite": 0.3129553429027113,
+      "composite": 0.313187253848908,
       "position": "DEF"
     },
     {
       "fplId": 508,
-      "composite": 0.2538176501860713,
+      "composite": 0.2544670008354219,
       "position": "DEF"
     },
     {
@@ -2189,7 +2184,7 @@
     },
     {
       "fplId": 501,
-      "composite": 0.5390564593301436,
+      "composite": 0.5415147153598282,
       "position": "DEF"
     },
     {
@@ -2204,27 +2199,27 @@
     },
     {
       "fplId": 533,
-      "composite": 0.7370650717703349,
+      "composite": 0.736508485499463,
       "position": "DEF"
     },
     {
       "fplId": 534,
-      "composite": 0.4695588516746411,
+      "composite": 0.47081117078410306,
       "position": "DEF"
     },
     {
       "fplId": 535,
-      "composite": 0.6146114832535885,
+      "composite": 0.6173944146079484,
       "position": "DEF"
     },
     {
       "fplId": 536,
-      "composite": 0.46984401913875595,
+      "composite": 0.4713282491944145,
       "position": "DEF"
     },
     {
       "fplId": 539,
-      "composite": 0.345712918660287,
+      "composite": 0.3470580021482277,
       "position": "DEF"
     },
     {
@@ -2300,7 +2295,7 @@
       "description": "Ranked by ownership. What the collective FPL manager base is actually doing.",
       "rules": "Objective = ownership. Composite quality floor = 0.55 for starters to prevent an indefensible pick.",
       "feasible": false,
-      "reason": "solver-timeout after 60003ms — LP relaxation likely degenerate for this flavour on today's pool",
+      "reason": "solver-timeout after 60012ms — LP relaxation likely degenerate for this flavour on today's pool",
       "totalCost": 0,
       "remainingBank": 100,
       "budgetCap": 100,
@@ -2316,10 +2311,10 @@
       "description": "Highly-owned players (≥ 15%) sorted by our composite quality score.",
       "rules": "Starter ownership ≥ 15% AND composite ≥ 0.55. Objective = composite.",
       "feasible": true,
-      "totalCost": 99.8,
-      "remainingBank": 0.2,
+      "totalCost": 99.9,
+      "remainingBank": 0.1,
       "budgetCap": 100,
-      "objectiveValue": 8.92437439,
+      "objectiveValue": 8.92168423,
       "clubDistribution": {
         "EVE": 1,
         "LIV": 2,
@@ -2365,7 +2360,7 @@
           "name": "Tarkowski",
           "position": "DEF",
           "team": "EVE",
-          "price": 6.1,
+          "price": 6.2,
           "ownership": 16.5,
           "role": "start",
           "primarySeasonLabel": "2025/26",
@@ -2374,11 +2369,11 @@
           "primaryPpgRaw": 4.594594594594595,
           "primaryPpgShrunk": 4.594594594594595,
           "components": {
-            "provenOutput": 0.7777777777777778,
+            "provenOutput": 0.7755102040816326,
             "openingFixtures": 1,
             "minutesSecurity": 0.9894736842105263
           },
-          "composite": 0.8978947368421052,
+          "composite": 0.89687432867884,
           "euRotation": null,
           "isFirstChoiceGkp": false,
           "dataTier": 1,
@@ -2399,11 +2394,11 @@
           "primaryPpgRaw": 4.605263157894737,
           "primaryPpgShrunk": 4.605263157894737,
           "components": {
-            "provenOutput": 0.7878787878787878,
+            "provenOutput": 0.7857142857142857,
             "openingFixtures": 0.8124999999999999,
             "minutesSecurity": 0.85
           },
-          "composite": 0.8089204545454546,
+          "composite": 0.8079464285714285,
           "euRotation": "UCL",
           "isFirstChoiceGkp": false,
           "dataTier": 1,
@@ -2424,11 +2419,11 @@
           "primaryPpgRaw": 5.114285714285714,
           "primaryPpgShrunk": 5.114285714285714,
           "components": {
-            "provenOutput": 0.9191919191919192,
+            "provenOutput": 0.9183673469387755,
             "openingFixtures": 0.53125,
             "minutesSecurity": 0.8231578947368421
           },
-          "composite": 0.7642054425837321,
+          "composite": 0.7638343850698175,
           "euRotation": "UCL",
           "isFirstChoiceGkp": false,
           "dataTier": 1,
@@ -2449,11 +2444,11 @@
           "primaryPpgRaw": 5.780789628756629,
           "primaryPpgShrunk": 5.780789628756629,
           "components": {
-            "provenOutput": 0.98989898989899,
+            "provenOutput": 0.9897959183673469,
             "openingFixtures": 0.5000000000000001,
             "minutesSecurity": 0.6787076023391813
           },
-          "composite": 0.7561960659223818,
+          "composite": 0.7561496837331424,
           "euRotation": "UCL",
           "isFirstChoiceGkp": false,
           "dataTier": 1,
@@ -2466,7 +2461,7 @@
           "position": "DEF",
           "team": "BHA",
           "price": 5,
-          "ownership": 27.7,
+          "ownership": 27.8,
           "role": "start",
           "primarySeasonLabel": "2025/26",
           "primaryStarts": 17,
@@ -2474,11 +2469,11 @@
           "primaryPpgRaw": 5.384615384615385,
           "primaryPpgShrunk": 5.384615384615385,
           "components": {
-            "provenOutput": 0.9393939393939394,
+            "provenOutput": 0.9387755102040817,
             "openingFixtures": 0.46875,
             "minutesSecurity": 0.6405
           },
-          "composite": 0.7148897727272728,
+          "composite": 0.7146114795918367,
           "euRotation": "UECL",
           "isFirstChoiceGkp": false,
           "dataTier": 1,
@@ -2722,7 +2717,7 @@
       "totalCost": 87.2,
       "remainingBank": 12.8,
       "budgetCap": 100,
-      "objectiveValue": 9.35618487,
+      "objectiveValue": 9.35437133,
       "clubDistribution": {
         "EVE": 3,
         "BRE": 3,
@@ -2779,11 +2774,11 @@
           "primaryPpgRaw": 5.1,
           "primaryPpgShrunk": 5.1,
           "components": {
-            "provenOutput": 0.9090909090909091,
+            "provenOutput": 0.9081632653061225,
             "openingFixtures": 0.8749999999999999,
             "minutesSecurity": 0.8807017543859649
           },
-          "composite": 0.8914812599681021,
+          "composite": 0.8910638202649481,
           "euRotation": null,
           "isFirstChoiceGkp": false,
           "dataTier": 1,
@@ -2804,11 +2799,11 @@
           "primaryPpgRaw": 4.55564142194745,
           "primaryPpgShrunk": 4.55564142194745,
           "components": {
-            "provenOutput": 0.7676767676767676,
+            "provenOutput": 0.7653061224489796,
             "openingFixtures": 1,
             "minutesSecurity": 0.9026900584795321
           },
-          "composite": 0.8759925571504519,
+          "composite": 0.8749257667979472,
           "euRotation": null,
           "isFirstChoiceGkp": false,
           "dataTier": 1,
@@ -2829,11 +2824,11 @@
           "primaryPpgRaw": 5.448354143019296,
           "primaryPpgShrunk": 5.448354143019296,
           "components": {
-            "provenOutput": 0.9494949494949495,
+            "provenOutput": 0.9489795918367347,
             "openingFixtures": 0.53125,
             "minutesSecurity": 0.7727543859649123
           },
-          "composite": 0.7677611044657098,
+          "composite": 0.767529193519513,
           "euRotation": "UCL",
           "isFirstChoiceGkp": false,
           "dataTier": 1,
@@ -3056,11 +3051,11 @@
           "primaryPpgRaw": 4.912067919951486,
           "primaryPpgShrunk": 4.912067919951486,
           "components": {
-            "provenOutput": 0.898989898989899,
+            "provenOutput": 0.8979591836734694,
             "openingFixtures": 0.9999999999999998,
             "minutesSecurity": 0.6484356725146199
           },
-          "composite": 0.8842325890483784,
+          "composite": 0.8837687671559852,
           "euRotation": "UCL",
           "isFirstChoiceGkp": false,
           "dataTier": 1,
@@ -3081,11 +3076,11 @@
           "primaryPpgRaw": 4.882292732855681,
           "primaryPpgShrunk": 4.882292732855681,
           "components": {
-            "provenOutput": 0.8888888888888888,
+            "provenOutput": 0.8877551020408163,
             "openingFixtures": 0.9999999999999998,
             "minutesSecurity": 0.37762865497076026
           },
-          "composite": 0.8255257309941519,
+          "composite": 0.8250155269125193,
           "euRotation": "UCL",
           "isFirstChoiceGkp": false,
           "dataTier": 1,
@@ -3124,14 +3119,14 @@
       "description": "Deliberately spends less to preserve early-transfer flexibility. Cap set so the hold (£8m ≈ two early transfers without hits) strictly exceeds Differentials' natural bank.",
       "rules": "Budget cap £92.0m (£8.0m held for GW1-3). Otherwise identical rules to Balanced.",
       "feasible": true,
-      "totalCost": 91.9,
-      "remainingBank": 8.1,
+      "totalCost": 92,
+      "remainingBank": 8,
       "budgetCap": 92,
-      "objectiveValue": 9.77847104,
+      "objectiveValue": 9.77544228,
       "clubDistribution": {
         "MUN": 3,
-        "EVE": 3,
         "BRE": 3,
+        "EVE": 3,
         "NFO": 3,
         "BHA": 1,
         "CRY": 1,
@@ -3139,8 +3134,8 @@
       },
       "clubsAtCap": [
         "MUN",
-        "EVE",
         "BRE",
+        "EVE",
         "NFO"
       ],
       "starters": [
@@ -3175,7 +3170,7 @@
           "name": "Tarkowski",
           "position": "DEF",
           "team": "EVE",
-          "price": 6.1,
+          "price": 6.2,
           "ownership": 16.5,
           "role": "start",
           "primarySeasonLabel": "2025/26",
@@ -3184,11 +3179,11 @@
           "primaryPpgRaw": 4.594594594594595,
           "primaryPpgShrunk": 4.594594594594595,
           "components": {
-            "provenOutput": 0.7777777777777778,
+            "provenOutput": 0.7755102040816326,
             "openingFixtures": 1,
             "minutesSecurity": 0.9894736842105263
           },
-          "composite": 0.8978947368421052,
+          "composite": 0.89687432867884,
           "euRotation": null,
           "isFirstChoiceGkp": false,
           "dataTier": 1,
@@ -3209,11 +3204,11 @@
           "primaryPpgRaw": 5.1,
           "primaryPpgShrunk": 5.1,
           "components": {
-            "provenOutput": 0.9090909090909091,
+            "provenOutput": 0.9081632653061225,
             "openingFixtures": 0.8749999999999999,
             "minutesSecurity": 0.8807017543859649
           },
-          "composite": 0.8914812599681021,
+          "composite": 0.8910638202649481,
           "euRotation": null,
           "isFirstChoiceGkp": false,
           "dataTier": 1,
@@ -3234,11 +3229,11 @@
           "primaryPpgRaw": 4.912067919951486,
           "primaryPpgShrunk": 4.912067919951486,
           "components": {
-            "provenOutput": 0.898989898989899,
+            "provenOutput": 0.8979591836734694,
             "openingFixtures": 0.9999999999999998,
             "minutesSecurity": 0.6484356725146199
           },
-          "composite": 0.8842325890483784,
+          "composite": 0.8837687671559852,
           "euRotation": "UCL",
           "isFirstChoiceGkp": false,
           "dataTier": 1,
@@ -3259,11 +3254,11 @@
           "primaryPpgRaw": 4.55564142194745,
           "primaryPpgShrunk": 4.55564142194745,
           "components": {
-            "provenOutput": 0.7676767676767676,
+            "provenOutput": 0.7653061224489796,
             "openingFixtures": 1,
             "minutesSecurity": 0.9026900584795321
           },
-          "composite": 0.8759925571504519,
+          "composite": 0.8749257667979472,
           "euRotation": null,
           "isFirstChoiceGkp": false,
           "dataTier": 1,
@@ -3461,11 +3456,11 @@
           "primaryPpgRaw": 4.868519909842224,
           "primaryPpgShrunk": 4.868519909842224,
           "components": {
-            "provenOutput": 0.8686868686868687,
+            "provenOutput": 0.8673469387755102,
             "openingFixtures": 0.6562500000000001,
             "minutesSecurity": 0.5756725146198831
           },
-          "composite": 0.7357310938330676,
+          "composite": 0.7351281253729562,
           "euRotation": null,
           "isFirstChoiceGkp": false,
           "dataTier": 1,
@@ -3633,6 +3628,6 @@
       "reason": "Ownership 13.7% falls in the gap between Balanced (≥15%) and Differentials (≤12%)"
     }
   ],
-  "_fetchedAt": "2026-09-30T09:53:54Z",
+  "_fetchedAt": "2026-10-01T10:20:48Z",
   "_source": "prefetch-draft-builder-squads.yml"
 }
