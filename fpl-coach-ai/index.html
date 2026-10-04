@@ -714,6 +714,10 @@ footer {
   font-size: 14px; font-weight: 600; text-decoration: none;
   outline: 2px solid var(--s-magenta, #C084C8); outline-offset: 2px;
 }
+.wc-callout { display:inline-flex; align-items:center; gap:10px; margin:0 0 22px; padding:9px 16px; border:1px solid var(--teal); border-radius:999px; background:rgba(0,212,160,0.08); color:var(--text); text-decoration:none; font-size:14px; line-height:1.35; transition:background 0.15s; }
+.wc-callout:hover, .wc-callout:focus-visible { background:rgba(0,212,160,0.18); }
+.wc-callout-tag { font-family:'JetBrains Mono',monospace; font-size:11px; font-weight:700; letter-spacing:0.06em; color:#050E12; background:var(--teal); border-radius:999px; padding:2px 8px; }
+.wc-callout-arrow { color:var(--teal); font-weight:700; }
 </style>
 
 
@@ -808,6 +812,7 @@ footer {
     <li><a href="/roadmap">Roadmap</a></li>
     <li><a href="/manifesto">Manifesto</a></li>
     <li><a href="/labs">Labs</a></li>
+    <li><a href="/fpl-coach-ai/draft-builder/">Free Wildcard squad</a></li>
     <li><a href="#download" class="nav-cta">Download</a></li>
   </ul>
   <button class="nav-toggle" aria-label="Open menu" id="nav-toggle-btn"><span></span><span></span><span></span></button>
@@ -819,6 +824,7 @@ footer {
   <a href="/roadmap" onclick="closeMobileNav()">Roadmap</a>
   <a href="/manifesto" onclick="closeMobileNav()">Manifesto</a>
   <a href="/labs" onclick="closeMobileNav()">Labs</a>
+  <a href="/fpl-coach-ai/draft-builder/" onclick="closeMobileNav()">Free Wildcard squad</a>
   <a href="#download" onclick="closeMobileNav()" style="color:var(--teal)">Download</a>
 </div>
 
@@ -843,6 +849,11 @@ footer {
   </div>
 
   <div class="hero-content">
+    <a class="wc-callout reveal" href="/fpl-coach-ai/draft-builder/">
+      <span class="wc-callout-tag">FREE</span>
+      <span>Our Wildcard squad, built on this season's form + the next six fixtures</span>
+      <span class="wc-callout-arrow" aria-hidden="true">→</span>
+    </a>
     <div class="hero-badge reveal">
       <div class="hero-badge-dot"></div>
       <span class="hero-badge-text">Live on iOS + Android</span>
