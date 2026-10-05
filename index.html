@@ -712,6 +712,10 @@ footer {
 }
 
 /* .store-badges rules moved to /assets/css/site.css (Wave 5/PR #17) */
+.wc-callout { display:inline-flex; align-items:center; gap:10px; margin:0 0 22px; padding:9px 16px; border:1px solid var(--green); border-radius:999px; background:rgba(57,255,122,0.07); color:var(--text1); text-decoration:none; font-size:14px; line-height:1.35; transition:background 0.15s; }
+.wc-callout:hover, .wc-callout:focus-visible { background:rgba(57,255,122,0.16); }
+.wc-callout-tag { font-family:'JetBrains Mono',monospace; font-size:11px; font-weight:700; letter-spacing:0.06em; color:var(--bg); background:var(--green); border-radius:999px; padding:2px 8px; }
+.wc-callout-arrow { color:var(--green); font-weight:700; }
 </style>
 
 
@@ -816,6 +820,11 @@ footer {
     </svg>
   </div>
 
+  <a class="wc-callout reveal" href="/fpl-coach-ai/draft-builder/">
+    <span class="wc-callout-tag">FREE</span>
+    <span>FPL Wildcard squad from FPL Coach AI, updated daily</span>
+    <span class="wc-callout-arrow" aria-hidden="true">→</span>
+  </a>
   <div class="hero-badge reveal">
     <div class="badge-dot"></div>
     <span class="badge-text">Building in public · 2026</span>
@@ -945,6 +954,7 @@ footer {
           </div>
           <div class="fpl-actions" style="margin-bottom:18px;">
             <a href="/fpl-coach-ai" class="btn-fpl">Learn more</a>
+            <a href="/fpl-coach-ai/draft-builder/" class="btn-fpl">Free Wildcard squad</a>
           </div>
           <div class="store-badges store-badges-compact">
             <a href="https://apps.apple.com/gb/app/fpl-coach-ai/id6770571590?utm_source=si187apps&amp;utm_medium=website&amp;utm_campaign=fpl_launch"
