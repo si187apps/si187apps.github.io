@@ -1,6 +1,6 @@
 {
-  "generatedAt": "2026-10-05T09:57:42.461Z",
-  "poolSize": 448,
+  "generatedAt": "2026-10-06T09:44:22.897Z",
+  "poolSize": 446,
   "scoredPool": [
     {
       "fplId": 1,
@@ -29,7 +29,7 @@
     },
     {
       "fplId": 7,
-      "composite": 0.33675847953216376,
+      "composite": 0.33411654404829283,
       "position": "MID"
     },
     {
@@ -49,37 +49,32 @@
     },
     {
       "fplId": 12,
-      "composite": 0.7603005847953216,
+      "composite": 0.7602134880211281,
       "position": "MID"
     },
     {
       "fplId": 14,
-      "composite": 0.7212795321637426,
+      "composite": 0.7209311450669684,
       "position": "MID"
     },
     {
       "fplId": 15,
-      "composite": 0.6437005847953217,
+      "composite": 0.6429747783437088,
       "position": "MID"
     },
     {
       "fplId": 16,
-      "composite": 0.6801590643274854,
+      "composite": 0.6797526127145822,
       "position": "MID"
     },
     {
       "fplId": 17,
-      "composite": 0.6747602339181287,
+      "composite": 0.6745860403697416,
       "position": "MID"
     },
     {
       "fplId": 19,
-      "composite": 0.5344701754385965,
-      "position": "MID"
-    },
-    {
-      "fplId": 20,
-      "composite": 0.28392222222222224,
+      "composite": 0.5324379173740804,
       "position": "MID"
     },
     {
@@ -89,7 +84,7 @@
     },
     {
       "fplId": 452,
-      "composite": 0.7434327485380117,
+      "composite": 0.743171458215431,
       "position": "MID"
     },
     {
@@ -104,7 +99,7 @@
     },
     {
       "fplId": 35,
-      "composite": 0.30208062865497076,
+      "composite": 0.30257417704206757,
       "position": "MID"
     },
     {
@@ -119,22 +114,22 @@
     },
     {
       "fplId": 41,
-      "composite": 0.6897174707602339,
+      "composite": 0.6892239223731371,
       "position": "MID"
     },
     {
       "fplId": 45,
-      "composite": 0.5821326754385965,
+      "composite": 0.5807100947934353,
       "position": "MID"
     },
     {
       "fplId": 46,
-      "composite": 0.6377437865497076,
+      "composite": 0.6375115284851914,
       "position": "MID"
     },
     {
       "fplId": 47,
-      "composite": 0.46239758771929823,
+      "composite": 0.46024920062252406,
       "position": "MID"
     },
     {
@@ -154,7 +149,7 @@
     },
     {
       "fplId": 54,
-      "composite": 0.3691116228070176,
+      "composite": 0.3694890421618563,
       "position": "MID"
     },
     {
@@ -164,7 +159,7 @@
     },
     {
       "fplId": 160,
-      "composite": 0.45493501461988306,
+      "composite": 0.45287372429730244,
       "position": "MID"
     },
     {
@@ -244,17 +239,17 @@
     },
     {
       "fplId": 67,
-      "composite": 0.5039684210526316,
+      "composite": 0.5036490662139219,
       "position": "MID"
     },
     {
       "fplId": 68,
-      "composite": 0.46791578947368423,
+      "composite": 0.46672546689303906,
       "position": "MID"
     },
     {
       "fplId": 71,
-      "composite": 0.2739578947368421,
+      "composite": 0.27204176570458405,
       "position": "MID"
     },
     {
@@ -264,22 +259,22 @@
     },
     {
       "fplId": 73,
-      "composite": 0.3324421052631579,
+      "composite": 0.33032275042444825,
       "position": "MID"
     },
     {
       "fplId": 74,
-      "composite": 0.3904105263157895,
+      "composite": 0.38916213921901527,
       "position": "MID"
     },
     {
       "fplId": 75,
-      "composite": 0.3355894736842105,
+      "composite": 0.33410882852292023,
       "position": "MID"
     },
     {
       "fplId": 76,
-      "composite": 0.06764210526315789,
+      "composite": 0.06807758913412564,
       "position": "MID"
     },
     {
@@ -324,7 +319,7 @@
     },
     {
       "fplId": 86,
-      "composite": 0.7915354532163742,
+      "composite": 0.7910999693454065,
       "position": "MID"
     },
     {
@@ -359,32 +354,32 @@
     },
     {
       "fplId": 94,
-      "composite": 0.6298746345029239,
+      "composite": 0.6279875377287304,
       "position": "MID"
     },
     {
       "fplId": 95,
-      "composite": 0.8060103070175438,
+      "composite": 0.8056328876627051,
       "position": "MID"
     },
     {
       "fplId": 98,
-      "composite": 0.6916313596491228,
+      "composite": 0.6907313596491228,
       "position": "MID"
     },
     {
       "fplId": 100,
-      "composite": 0.31002668128654964,
+      "composite": 0.31060732644783995,
       "position": "MID"
     },
     {
       "fplId": 102,
-      "composite": 0.5053225877192982,
+      "composite": 0.5060774264289756,
       "position": "MID"
     },
     {
       "fplId": 105,
-      "composite": 0.6580430555555555,
+      "composite": 0.6563882168458781,
       "position": "MID"
     },
     {
@@ -464,7 +459,7 @@
     },
     {
       "fplId": 124,
-      "composite": 0.5622180555555556,
+      "composite": 0.5606793458781363,
       "position": "MID"
     },
     {
@@ -474,17 +469,17 @@
     },
     {
       "fplId": 126,
-      "composite": 0.29155138888888893,
+      "composite": 0.2888223566308244,
       "position": "MID"
     },
     {
       "fplId": 127,
-      "composite": 0.5555069444444445,
+      "composite": 0.553735976702509,
       "position": "MID"
     },
     {
       "fplId": 129,
-      "composite": 0.6339513888888889,
+      "composite": 0.6328481630824373,
       "position": "MID"
     },
     {
@@ -539,12 +534,12 @@
     },
     {
       "fplId": 40,
-      "composite": 0.7174626461988304,
+      "composite": 0.7165336139407659,
       "position": "MID"
     },
     {
       "fplId": 101,
-      "composite": 0.4550392543859649,
+      "composite": 0.45225215761177134,
       "position": "MID"
     },
     {
@@ -579,17 +574,17 @@
     },
     {
       "fplId": 156,
-      "composite": 0.6194345760233919,
+      "composite": 0.6178378018298434,
       "position": "MID"
     },
     {
       "fplId": 157,
-      "composite": 0.702363230994152,
+      "composite": 0.7021600051877005,
       "position": "MID"
     },
     {
       "fplId": 161,
-      "composite": 0.2510860380116959,
+      "composite": 0.25134732833427653,
       "position": "MID"
     },
     {
@@ -704,7 +699,7 @@
     },
     {
       "fplId": 190,
-      "composite": 0.43841279239766084,
+      "composite": 0.4367869859460479,
       "position": "MID"
     },
     {
@@ -749,7 +744,7 @@
     },
     {
       "fplId": 42,
-      "composite": 0.5821506578947369,
+      "composite": 0.58075710950764,
       "position": "MID"
     },
     {
@@ -779,37 +774,37 @@
     },
     {
       "fplId": 208,
-      "composite": 0.7533179093567252,
+      "composite": 0.7525340383889831,
       "position": "MID"
     },
     {
       "fplId": 210,
-      "composite": 0.6001834064327486,
+      "composite": 0.5980930838521035,
       "position": "MID"
     },
     {
       "fplId": 211,
-      "composite": 0.427002119883041,
+      "composite": 0.4272343779475571,
       "position": "MID"
     },
     {
       "fplId": 212,
-      "composite": 0.38377872807017543,
+      "composite": 0.38380776032824,
       "position": "MID"
     },
     {
       "fplId": 213,
-      "composite": 0.5039682017543861,
+      "composite": 0.5013552985285795,
       "position": "MID"
     },
     {
       "fplId": 214,
-      "composite": 0.412108552631579,
+      "composite": 0.4122537139219016,
       "position": "MID"
     },
     {
       "fplId": 218,
-      "composite": 0.31248750000000003,
+      "composite": 0.3131552419354839,
       "position": "MID"
     },
     {
@@ -829,7 +824,7 @@
     },
     {
       "fplId": 241,
-      "composite": 0.5604453947368421,
+      "composite": 0.558587330220713,
       "position": "MID"
     },
     {
@@ -864,7 +859,7 @@
     },
     {
       "fplId": 209,
-      "composite": 0.5544,
+      "composite": 0.5548064516129032,
       "position": "MID"
     },
     {
@@ -904,37 +899,37 @@
     },
     {
       "fplId": 236,
-      "composite": 0.9130970760233919,
+      "composite": 0.9125454631201659,
       "position": "MID"
     },
     {
       "fplId": 238,
-      "composite": 0.7768584795321638,
+      "composite": 0.7754939634031315,
       "position": "MID"
     },
     {
       "fplId": 239,
-      "composite": 0.7910362573099414,
+      "composite": 0.7893523863421996,
       "position": "MID"
     },
     {
       "fplId": 242,
-      "composite": 0.4434105263157894,
+      "composite": 0.4440492359932088,
       "position": "MID"
     },
     {
       "fplId": 243,
-      "composite": 0.5350830409356725,
+      "composite": 0.5325282022259951,
       "position": "MID"
     },
     {
       "fplId": 244,
-      "composite": 0.4630573099415204,
+      "composite": 0.4635798905866817,
       "position": "MID"
     },
     {
       "fplId": 245,
-      "composite": 0.49016374269005847,
+      "composite": 0.48740567817392944,
       "position": "MID"
     },
     {
@@ -999,32 +994,32 @@
     },
     {
       "fplId": 261,
-      "composite": 0.502670687134503,
+      "composite": 0.5003481064893416,
       "position": "MID"
     },
     {
       "fplId": 262,
-      "composite": 0.48351747076023394,
+      "composite": 0.4811368255989436,
       "position": "MID"
     },
     {
       "fplId": 263,
-      "composite": 0.497756067251462,
+      "composite": 0.4961883253159782,
       "position": "MID"
     },
     {
       "fplId": 264,
-      "composite": 0.394556067251462,
+      "composite": 0.39205929305791365,
       "position": "MID"
     },
     {
       "fplId": 265,
-      "composite": 0.3591923245614035,
+      "composite": 0.35925038907753254,
       "position": "MID"
     },
     {
       "fplId": 268,
-      "composite": 0.5686379385964913,
+      "composite": 0.5673024547255235,
       "position": "MID"
     },
     {
@@ -1034,7 +1029,7 @@
     },
     {
       "fplId": 270,
-      "composite": 0.2585443713450293,
+      "composite": 0.25924114553857763,
       "position": "MID"
     },
     {
@@ -1084,7 +1079,7 @@
     },
     {
       "fplId": 240,
-      "composite": 0.5382122076023392,
+      "composite": 0.5364993043765327,
       "position": "MID"
     },
     {
@@ -1219,7 +1214,7 @@
     },
     {
       "fplId": 267,
-      "composite": 0.40386783625730993,
+      "composite": 0.40441944916053574,
       "position": "MID"
     },
     {
@@ -1274,7 +1269,7 @@
     },
     {
       "fplId": 313,
-      "composite": 0.39459999999999995,
+      "composite": 0.39274193548387093,
       "position": "MID"
     },
     {
@@ -1284,7 +1279,7 @@
     },
     {
       "fplId": 318,
-      "composite": 0.37659999999999993,
+      "composite": 0.3745967741935483,
       "position": "MID"
     },
     {
@@ -1299,7 +1294,7 @@
     },
     {
       "fplId": 323,
-      "composite": 0.31899999999999995,
+      "composite": 0.3165322580645161,
       "position": "MID"
     },
     {
@@ -1319,12 +1314,12 @@
     },
     {
       "fplId": 571,
-      "composite": 0.46292280701754385,
+      "composite": 0.4602518392756083,
       "position": "MID"
     },
     {
       "fplId": 591,
-      "composite": 0.49539999999999995,
+      "composite": 0.49435483870967745,
       "position": "MID"
     },
     {
@@ -1369,42 +1364,42 @@
     },
     {
       "fplId": 335,
-      "composite": 0.6918652046783625,
+      "composite": 0.6913426240332013,
       "position": "MID"
     },
     {
       "fplId": 336,
-      "composite": 0.7171774853801169,
+      "composite": 0.717061356347859,
       "position": "MID"
     },
     {
       "fplId": 337,
-      "composite": 0.6397365497076024,
+      "composite": 0.6387784851914734,
       "position": "MID"
     },
     {
       "fplId": 338,
-      "composite": 0.5006090643274854,
+      "composite": 0.49840261271458214,
       "position": "MID"
     },
     {
       "fplId": 339,
-      "composite": 0.5819119883040935,
+      "composite": 0.5812442463686097,
       "position": "MID"
     },
     {
       "fplId": 343,
-      "composite": 0.2772453216374269,
+      "composite": 0.27802919260516884,
       "position": "MID"
     },
     {
       "fplId": 344,
-      "composite": 0.4104804093567251,
+      "composite": 0.40812879645349937,
       "position": "MID"
     },
     {
       "fplId": 345,
-      "composite": 0.5698230994152047,
+      "composite": 0.5688069703829466,
       "position": "MID"
     },
     {
@@ -1503,43 +1498,38 @@
       "position": "DEF"
     },
     {
-      "fplId": 362,
-      "composite": 0.28437499999999993,
-      "position": "DEF"
-    },
-    {
       "fplId": 364,
       "composite": 0.6099069148936169,
       "position": "DEF"
     },
     {
       "fplId": 366,
-      "composite": 0.7755773391812865,
+      "composite": 0.7747063714393511,
       "position": "MID"
     },
     {
       "fplId": 368,
-      "composite": 0.7422369883040935,
+      "composite": 0.7409595689492549,
       "position": "MID"
     },
     {
       "fplId": 369,
-      "composite": 0.6663510233918128,
+      "composite": 0.6655090879079419,
       "position": "MID"
     },
     {
       "fplId": 371,
-      "composite": 0.7158451754385965,
+      "composite": 0.7143935625353707,
       "position": "MID"
     },
     {
       "fplId": 372,
-      "composite": 0.5759445906432749,
+      "composite": 0.5734187841916619,
       "position": "MID"
     },
     {
       "fplId": 374,
-      "composite": 0.36845511695906424,
+      "composite": 0.36906479437841905,
       "position": "MID"
     },
     {
@@ -1579,12 +1569,12 @@
     },
     {
       "fplId": 155,
-      "composite": 0.6594532894736842,
+      "composite": 0.6583210314091681,
       "position": "MID"
     },
     {
       "fplId": 237,
-      "composite": 0.5772322368421052,
+      "composite": 0.5754903013582343,
       "position": "MID"
     },
     {
@@ -1639,17 +1629,17 @@
     },
     {
       "fplId": 399,
-      "composite": 0.7644702485380117,
+      "composite": 0.7644412162799472,
       "position": "MID"
     },
     {
       "fplId": 400,
-      "composite": 0.7500901315789474,
+      "composite": 0.7499449702886247,
       "position": "MID"
     },
     {
       "fplId": 406,
-      "composite": 0.25112288011695905,
+      "composite": 0.2515873962459913,
       "position": "MID"
     },
     {
@@ -1659,7 +1649,7 @@
     },
     {
       "fplId": 481,
-      "composite": 0.7105877923976609,
+      "composite": 0.7098329536879834,
       "position": "MID"
     },
     {
@@ -1694,17 +1684,17 @@
     },
     {
       "fplId": 43,
-      "composite": 0.5105228070175438,
+      "composite": 0.5106970005659309,
       "position": "MID"
     },
     {
       "fplId": 131,
-      "composite": 0.4991274853801169,
+      "composite": 0.49924361441237497,
       "position": "MID"
     },
     {
       "fplId": 162,
-      "composite": 0.48429415204678355,
+      "composite": 0.4846425391435577,
       "position": "MID"
     },
     {
@@ -1754,17 +1744,17 @@
     },
     {
       "fplId": 427,
-      "composite": 0.8747146198830408,
+      "composite": 0.8740759102056215,
       "position": "MID"
     },
     {
       "fplId": 428,
-      "composite": 0.8759684210526315,
+      "composite": 0.8753587436332767,
       "position": "MID"
     },
     {
       "fplId": 430,
-      "composite": 0.8092818713450292,
+      "composite": 0.8087012261837387,
       "position": "MID"
     },
     {
@@ -1794,7 +1784,7 @@
     },
     {
       "fplId": 405,
-      "composite": 0.5524896198830409,
+      "composite": 0.549905748915299,
       "position": "MID"
     },
     {
@@ -1829,17 +1819,17 @@
     },
     {
       "fplId": 453,
-      "composite": 0.8076124269005848,
+      "composite": 0.8069156527070364,
       "position": "MID"
     },
     {
       "fplId": 457,
-      "composite": 0.7527422514619883,
+      "composite": 0.7516680579136013,
       "position": "MID"
     },
     {
       "fplId": 460,
-      "composite": 0.4571118421052631,
+      "composite": 0.457837648556876,
       "position": "MID"
     },
     {
@@ -1949,37 +1939,37 @@
     },
     {
       "fplId": 480,
-      "composite": 0.9127880116959065,
+      "composite": 0.9124976891152613,
       "position": "MID"
     },
     {
       "fplId": 482,
-      "composite": 0.7320441520467835,
+      "composite": 0.7305344746274287,
       "position": "MID"
     },
     {
       "fplId": 483,
-      "composite": 0.586748245614035,
+      "composite": 0.5844837294850028,
       "position": "MID"
     },
     {
       "fplId": 486,
-      "composite": 0.44018684210526315,
+      "composite": 0.4374868421052631,
       "position": "MID"
     },
     {
       "fplId": 487,
-      "composite": 0.5831716374269006,
+      "composite": 0.5807329277494813,
       "position": "MID"
     },
     {
       "fplId": 488,
-      "composite": 0.6475412280701754,
+      "composite": 0.6453057441992077,
       "position": "MID"
     },
     {
       "fplId": 489,
-      "composite": 0.5123318713450292,
+      "composite": 0.5101544519901905,
       "position": "MID"
     },
     {
@@ -2024,12 +2014,12 @@
     },
     {
       "fplId": 403,
-      "composite": 0.5349111111111111,
+      "composite": 0.5336917562724014,
       "position": "MID"
     },
     {
       "fplId": 455,
-      "composite": 0.3650748538011696,
+      "composite": 0.36516195057536316,
       "position": "MID"
     },
     {
@@ -2084,37 +2074,37 @@
     },
     {
       "fplId": 512,
-      "composite": 0.6129064327485381,
+      "composite": 0.6115999811356347,
       "position": "MID"
     },
     {
       "fplId": 514,
-      "composite": 0.6766046783625731,
+      "composite": 0.6761401622335409,
       "position": "MID"
     },
     {
       "fplId": 515,
-      "composite": 0.6178,
+      "composite": 0.617741935483871,
       "position": "MID"
     },
     {
       "fplId": 516,
-      "composite": 0.5657766081871346,
+      "composite": 0.5639766081871346,
       "position": "MID"
     },
     {
       "fplId": 519,
-      "composite": 0.32267251461988306,
+      "composite": 0.3229628372005282,
       "position": "MID"
     },
     {
       "fplId": 520,
-      "composite": 0.5909391812865498,
+      "composite": 0.5899520845123563,
       "position": "MID"
     },
     {
       "fplId": 522,
-      "composite": 0.46860935672514625,
+      "composite": 0.46619967930579137,
       "position": "MID"
     },
     {
@@ -2124,7 +2114,7 @@
     },
     {
       "fplId": 525,
-      "composite": 0.5743730994152048,
+      "composite": 0.5724279381248821,
       "position": "MID"
     },
     {
@@ -2184,12 +2174,12 @@
     },
     {
       "fplId": 542,
-      "composite": 0.6506842105263158,
+      "composite": 0.649522920203735,
       "position": "MID"
     },
     {
       "fplId": 544,
-      "composite": 0.5096736842105263,
+      "composite": 0.5073801358234296,
       "position": "MID"
     },
     {
@@ -2199,22 +2189,22 @@
     },
     {
       "fplId": 548,
-      "composite": 0.4555578947368421,
+      "composite": 0.453583701188455,
       "position": "MID"
     },
     {
       "fplId": 549,
-      "composite": 0.6432947368421053,
+      "composite": 0.6424818336162987,
       "position": "MID"
     },
     {
       "fplId": 550,
-      "composite": 0.22079999999999997,
+      "composite": 0.22111935483870965,
       "position": "MID"
     },
     {
       "fplId": 551,
-      "composite": 0.23564210526315787,
+      "composite": 0.23584533106960948,
       "position": "MID"
     },
     {
@@ -2253,17 +2243,18 @@
       "totalCost": 100,
       "remainingBank": 0,
       "budgetCap": 100,
-      "objectiveValue": 63.69862217,
+      "objectiveValue": 63.67062089,
       "clubDistribution": {
         "MCI": 3,
-        "EVE": 2,
+        "EVE": 1,
         "BHA": 3,
-        "ARS": 2,
         "BRE": 1,
         "CHE": 1,
+        "ARS": 2,
         "IPS": 1,
         "LEE": 1,
-        "COV": 1
+        "COV": 1,
+        "FUL": 1
       },
       "clubsAtCap": [
         "MCI",
@@ -2310,11 +2301,11 @@
           "primaryPpgRaw": 7.6728110599078345,
           "primaryPpgShrunk": 6.408825180830333,
           "components": {
-            "provenOutput": 0.9795918367346939,
+            "provenOutput": 0.979381443298969,
             "openingFixtures": 0.7741935483870966,
             "minutesSecurity": 0.837911111111111
           },
-          "composite": 0.8793662906883183,
+          "composite": 0.879271613642242,
           "euRotation": "UCL",
           "isFirstChoiceGkp": false,
           "dataTier": 1,
@@ -2327,7 +2318,7 @@
           "position": "DEF",
           "team": "BHA",
           "price": 5,
-          "ownership": 27.9,
+          "ownership": 28,
           "role": "start",
           "primarySeasonLabel": "2026/27",
           "primaryStarts": 5,
@@ -2352,7 +2343,7 @@
           "position": "DEF",
           "team": "EVE",
           "price": 6.2,
-          "ownership": 16.7,
+          "ownership": 16.8,
           "role": "start",
           "primarySeasonLabel": "2026/27",
           "primaryStarts": 5,
@@ -2360,11 +2351,11 @@
           "primaryPpgRaw": 8.6,
           "primaryPpgShrunk": 6.597297297297297,
           "components": {
-            "provenOutput": 0.9897959183673469,
+            "provenOutput": 0.9896907216494846,
             "openingFixtures": 0.32258064516129037,
             "minutesSecurity": 1
           },
-          "composite": 0.7583113890717577,
+          "composite": 0.7582640505487197,
           "euRotation": null,
           "isFirstChoiceGkp": false,
           "dataTier": 1,
@@ -2402,7 +2393,7 @@
           "position": "MID",
           "team": "CHE",
           "price": 7.7,
-          "ownership": 40.6,
+          "ownership": 40.7,
           "role": "start",
           "primarySeasonLabel": "2026/27",
           "primaryStarts": 5,
@@ -2426,8 +2417,8 @@
           "name": "Saka",
           "position": "MID",
           "team": "ARS",
-          "price": 9.5,
-          "ownership": 13.9,
+          "price": 9.6,
+          "ownership": 14.1,
           "role": "start",
           "primarySeasonLabel": "2026/27",
           "primaryStarts": 5,
@@ -2452,7 +2443,7 @@
           "position": "MID",
           "team": "BHA",
           "price": 5.9,
-          "ownership": 29.4,
+          "ownership": 29.5,
           "role": "start",
           "primarySeasonLabel": "2026/27",
           "primaryStarts": 5,
@@ -2477,7 +2468,7 @@
           "position": "MID",
           "team": "BRE",
           "price": 6.2,
-          "ownership": 11.8,
+          "ownership": 12,
           "role": "start",
           "primarySeasonLabel": "2026/27",
           "primaryStarts": 5,
@@ -2521,56 +2512,56 @@
           "why": "5 starts, 7.8 pts/90 this season, 74% owned across the game, midweek Champions League fixtures may cost him minutes"
         },
         {
-          "fplId": 249,
-          "fplCode": 586309,
-          "name": "Barry",
+          "fplId": 138,
+          "fplCode": 647850,
+          "name": "Kostoulas",
           "position": "FWD",
-          "team": "EVE",
-          "price": 5.7,
-          "ownership": 8.3,
+          "team": "BHA",
+          "price": 5.6,
+          "ownership": 4.5,
           "role": "start",
           "primarySeasonLabel": "2026/27",
-          "primaryStarts": 5,
-          "primaryMinutes": 417,
-          "primaryPpgRaw": 4.316546762589928,
-          "primaryPpgShrunk": 4.414225865143057,
+          "primaryStarts": 4,
+          "primaryMinutes": 353,
+          "primaryPpgRaw": 7.138810198300283,
+          "primaryPpgShrunk": 5.618905595990961,
           "components": {
-            "provenOutput": 0.7619047619047619,
-            "openingFixtures": 0.32258064516129037,
-            "minutesSecurity": 0.9706666666666667
+            "provenOutput": 0.9523809523809523,
+            "openingFixtures": 0.35483870967741926,
+            "minutesSecurity": 0.7540888888888889
           },
-          "composite": 0.6498937019969279,
-          "euRotation": null,
+          "composite": 0.703582754736303,
+          "euRotation": "UECL",
           "isFirstChoiceGkp": false,
           "dataTier": 1,
-          "why": "5 starts, 4.3 pts/90 this season"
+          "why": "4 starts, 7.1 pts/90 this season"
         }
       ],
       "bench": [
         {
-          "fplId": 109,
-          "fplCode": 489639,
-          "name": "Verbruggen",
+          "fplId": 250,
+          "fplCode": 80201,
+          "name": "Leno",
           "position": "GKP",
-          "team": "BHA",
+          "team": "FUL",
           "price": 4.5,
-          "ownership": 21.6,
+          "ownership": 3.4,
           "role": "bench",
           "primarySeasonLabel": "2026/27",
           "primaryStarts": 5,
           "primaryMinutes": 450,
-          "primaryPpgRaw": 4.6,
-          "primaryPpgShrunk": 4.010526315789473,
+          "primaryPpgRaw": 3.6,
+          "primaryPpgShrunk": 3.405263157894737,
           "components": {
-            "provenOutput": 0.8,
-            "openingFixtures": 0.35483870967741926,
-            "minutesSecurity": 0.95
+            "provenOutput": 0.6,
+            "openingFixtures": 0.6774193548387096,
+            "minutesSecurity": 1
           },
-          "composite": 0.6741935483870968,
-          "euRotation": "UECL",
+          "composite": 0.7070967741935483,
+          "euRotation": null,
           "isFirstChoiceGkp": true,
           "dataTier": 1,
-          "why": "5 starts, 4.6 pts/90 this season"
+          "why": "5 starts, 3.6 pts/90 this season"
         },
         {
           "fplId": 173,
@@ -2587,11 +2578,11 @@
           "primaryPpgRaw": 4.94279176201373,
           "primaryPpgShrunk": 3.126985753817772,
           "components": {
-            "provenOutput": 0.3673469387755102,
+            "provenOutput": 0.3711340206185567,
             "openingFixtures": 1,
             "minutesSecurity": 0.9884444444444445
           },
-          "composite": 0.7129950113378685,
+          "composite": 0.7146991981672394,
           "euRotation": null,
           "isFirstChoiceGkp": false,
           "dataTier": 1,
@@ -2604,7 +2595,7 @@
           "position": "DEF",
           "team": "LEE",
           "price": 4.6,
-          "ownership": 7.3,
+          "ownership": 7.4,
           "role": "bench",
           "primarySeasonLabel": "2026/27",
           "primaryStarts": 5,
@@ -2612,11 +2603,11 @@
           "primaryPpgRaw": 10.356164383561644,
           "primaryPpgShrunk": 6.344853320456117,
           "components": {
-            "provenOutput": 0.9693877551020408,
+            "provenOutput": 0.9690721649484536,
             "openingFixtures": 0,
             "minutesSecurity": 0.9244444444444444
           },
-          "composite": 0.6211133786848073,
+          "composite": 0.620971363115693,
           "euRotation": null,
           "isFirstChoiceGkp": false,
           "dataTier": 1,
@@ -2655,18 +2646,18 @@
       "description": "Ranked by ownership. What the collective FPL manager base is actually doing.",
       "rules": "Objective = ownership. Composite quality floor = 0.55 for starters to prevent an indefensible pick.",
       "feasible": true,
-      "totalCost": 99.9,
-      "remainingBank": 0.1,
+      "totalCost": 100,
+      "remainingBank": 0,
       "budgetCap": 100,
-      "objectiveValue": 4.13250891,
+      "objectiveValue": 4.13550846,
       "clubDistribution": {
         "MCI": 2,
         "ARS": 3,
         "CHE": 1,
-        "MUN": 1,
         "BHA": 2,
         "LEE": 1,
         "LIV": 1,
+        "MUN": 1,
         "TOT": 1,
         "IPS": 1,
         "FUL": 1,
@@ -2707,7 +2698,7 @@
           "name": "Calafiori",
           "position": "DEF",
           "team": "ARS",
-          "price": 5.8,
+          "price": 5.9,
           "ownership": 50.5,
           "role": "start",
           "primarySeasonLabel": "2025/26",
@@ -2733,7 +2724,7 @@
           "position": "DEF",
           "team": "BHA",
           "price": 5,
-          "ownership": 27.9,
+          "ownership": 28,
           "role": "start",
           "primarySeasonLabel": "2025/26",
           "primaryStarts": 17,
@@ -2816,11 +2807,11 @@
           "primaryPpgRaw": 4.455445544554456,
           "primaryPpgShrunk": 4.455445544554456,
           "components": {
-            "provenOutput": 0.648,
+            "provenOutput": 0.6451612903225806,
             "openingFixtures": 0.8124999999999999,
             "minutesSecurity": 0.8313099415204679
           },
-          "composite": 0.7422369883040935,
+          "composite": 0.7409595689492549,
           "euRotation": "UCL",
           "isFirstChoiceGkp": false,
           "dataTier": 1,
@@ -2833,7 +2824,7 @@
           "position": "MID",
           "team": "CHE",
           "price": 7.7,
-          "ownership": 40.6,
+          "ownership": 40.7,
           "role": "start",
           "primarySeasonLabel": "2025/26",
           "primaryStarts": 37,
@@ -2841,11 +2832,11 @@
           "primaryPpgRaw": 4.637195121951219,
           "primaryPpgShrunk": 4.637195121951219,
           "components": {
-            "provenOutput": 0.744,
+            "provenOutput": 0.7419354838709677,
             "openingFixtures": 0.53125,
             "minutesSecurity": 0.9836257309941521
           },
-          "composite": 0.7174626461988304,
+          "composite": 0.7165336139407659,
           "euRotation": null,
           "isFirstChoiceGkp": false,
           "dataTier": 1,
@@ -2866,11 +2857,11 @@
           "primaryPpgRaw": 4.886280264123258,
           "primaryPpgShrunk": 4.886280264123258,
           "components": {
-            "provenOutput": 0.8,
+            "provenOutput": 0.7983870967741935,
             "openingFixtures": 0.5000000000000001,
             "minutesSecurity": 0.5435029239766082
           },
-          "composite": 0.6437005847953217,
+          "composite": 0.6429747783437088,
           "euRotation": "UCL",
           "isFirstChoiceGkp": false,
           "dataTier": 1,
@@ -2883,7 +2874,7 @@
           "position": "MID",
           "team": "BHA",
           "price": 5.9,
-          "ownership": 29.4,
+          "ownership": 29.5,
           "role": "start",
           "primarySeasonLabel": "2025/26",
           "primaryStarts": 18,
@@ -2891,11 +2882,11 @@
           "primaryPpgRaw": 4.290953545232274,
           "primaryPpgShrunk": 4.290953545232274,
           "components": {
-            "provenOutput": 0.576,
+            "provenOutput": 0.5725806451612904,
             "openingFixtures": 0.46875,
             "minutesSecurity": 0.6947777777777777
           },
-          "composite": 0.5622180555555556,
+          "composite": 0.5606793458781363,
           "euRotation": "UECL",
           "isFirstChoiceGkp": false,
           "dataTier": 1,
@@ -3061,18 +3052,18 @@
       "description": "Highly-owned players (≥ 15%) sorted by our composite quality score.",
       "rules": "Starter ownership ≥ 15% AND composite ≥ 0.55. Objective = composite.",
       "feasible": true,
-      "totalCost": 99.8,
-      "remainingBank": 0.2,
+      "totalCost": 99.9,
+      "remainingBank": 0.1,
       "budgetCap": 100,
-      "objectiveValue": 8.93609896,
+      "objectiveValue": 8.93374444,
       "clubDistribution": {
         "EVE": 1,
-        "MCI": 2,
         "LEE": 1,
+        "MCI": 2,
         "BHA": 1,
+        "LIV": 2,
         "NFO": 1,
         "ARS": 2,
-        "LIV": 2,
         "MUN": 2,
         "TOT": 1,
         "BRE": 2
@@ -3111,7 +3102,7 @@
           "position": "DEF",
           "team": "EVE",
           "price": 6.2,
-          "ownership": 16.7,
+          "ownership": 16.8,
           "role": "start",
           "primarySeasonLabel": "2025/26",
           "primaryStarts": 37,
@@ -3161,7 +3152,7 @@
           "position": "DEF",
           "team": "MCI",
           "price": 6,
-          "ownership": 18.2,
+          "ownership": 18.1,
           "role": "start",
           "primarySeasonLabel": "2025/26",
           "primaryStarts": 35,
@@ -3185,7 +3176,7 @@
           "name": "Calafiori",
           "position": "DEF",
           "team": "ARS",
-          "price": 5.8,
+          "price": 5.9,
           "ownership": 50.5,
           "role": "start",
           "primarySeasonLabel": "2025/26",
@@ -3211,7 +3202,7 @@
           "position": "DEF",
           "team": "BHA",
           "price": 5,
-          "ownership": 27.9,
+          "ownership": 28,
           "role": "start",
           "primarySeasonLabel": "2025/26",
           "primaryStarts": 17,
@@ -3244,11 +3235,11 @@
           "primaryPpgRaw": 5.4563044179297,
           "primaryPpgShrunk": 5.4563044179297,
           "components": {
-            "provenOutput": 0.92,
+            "provenOutput": 0.9193548387096774,
             "openingFixtures": 0.8749999999999999,
             "minutesSecurity": 0.9626900584795322
           },
-          "composite": 0.9127880116959065,
+          "composite": 0.9124976891152613,
           "euRotation": null,
           "isFirstChoiceGkp": false,
           "dataTier": 1,
@@ -3269,11 +3260,11 @@
           "primaryPpgRaw": 5.101493680582152,
           "primaryPpgShrunk": 5.101493680582152,
           "components": {
-            "provenOutput": 0.824,
+            "provenOutput": 0.8225806451612904,
             "openingFixtures": 0.9999999999999998,
             "minutesSecurity": 0.7695730994152046
           },
-          "composite": 0.8747146198830408,
+          "composite": 0.8740759102056215,
           "euRotation": "UCL",
           "isFirstChoiceGkp": false,
           "dataTier": 1,
@@ -3294,11 +3285,11 @@
           "primaryPpgRaw": 4.455445544554456,
           "primaryPpgShrunk": 4.455445544554456,
           "components": {
-            "provenOutput": 0.648,
+            "provenOutput": 0.6451612903225806,
             "openingFixtures": 0.8124999999999999,
             "minutesSecurity": 0.8313099415204679
           },
-          "composite": 0.7422369883040935,
+          "composite": 0.7409595689492549,
           "euRotation": "UCL",
           "isFirstChoiceGkp": false,
           "dataTier": 1,
@@ -3396,11 +3387,11 @@
           "primaryPpgRaw": 5.1683168316831685,
           "primaryPpgShrunk": 5.1683168316831685,
           "components": {
-            "provenOutput": 0.84,
+            "provenOutput": 0.8387096774193549,
             "openingFixtures": 0.9999999999999998,
             "minutesSecurity": 0.40640935672514616
           },
-          "composite": 0.8092818713450292,
+          "composite": 0.8087012261837387,
           "euRotation": "UCL",
           "isFirstChoiceGkp": false,
           "dataTier": 1,
@@ -3421,11 +3412,11 @@
           "primaryPpgRaw": 4.644351464435147,
           "primaryPpgShrunk": 4.644351464435147,
           "components": {
-            "provenOutput": 0.752,
+            "provenOutput": 0.75,
             "openingFixtures": 0.6562499999999999,
             "minutesSecurity": 0.617719298245614
           },
-          "composite": 0.6916313596491228,
+          "composite": 0.6907313596491228,
           "euRotation": null,
           "isFirstChoiceGkp": false,
           "dataTier": 1,
@@ -3467,7 +3458,7 @@
       "totalCost": 86.3,
       "remainingBank": 13.7,
       "budgetCap": 100,
-      "objectiveValue": 9.35072253,
+      "objectiveValue": 9.34805156,
       "clubDistribution": {
         "EVE": 3,
         "NEW": 2,
@@ -3490,7 +3481,7 @@
           "position": "GKP",
           "team": "EVE",
           "price": 5.5,
-          "ownership": 9.1,
+          "ownership": 9.2,
           "role": "start",
           "primarySeasonLabel": "2025/26",
           "primaryStarts": 38,
@@ -3598,11 +3589,11 @@
           "primaryPpgRaw": 5.169265880562952,
           "primaryPpgShrunk": 5.169265880562952,
           "components": {
-            "provenOutput": 0.848,
+            "provenOutput": 0.8467741935483871,
             "openingFixtures": 1,
             "minutesSecurity": 0.9074853801169591
           },
-          "composite": 0.9130970760233919,
+          "composite": 0.9125454631201659,
           "euRotation": null,
           "isFirstChoiceGkp": false,
           "dataTier": 1,
@@ -3623,11 +3614,11 @@
           "primaryPpgRaw": 5.162454873646209,
           "primaryPpgShrunk": 5.162454873646209,
           "components": {
-            "provenOutput": 0.832,
+            "provenOutput": 0.8306451612903226,
             "openingFixtures": 0.9999999999999998,
             "minutesSecurity": 0.7578421052631579
           },
-          "composite": 0.8759684210526315,
+          "composite": 0.8753587436332767,
           "euRotation": "UCL",
           "isFirstChoiceGkp": false,
           "dataTier": 1,
@@ -3648,11 +3639,11 @@
           "primaryPpgRaw": 4.889800102511533,
           "primaryPpgShrunk": 4.889800102511533,
           "components": {
-            "provenOutput": 0.808,
+            "provenOutput": 0.8064516129032258,
             "openingFixtures": 0.8124999999999999,
             "minutesSecurity": 0.7981871345029239
           },
-          "composite": 0.8076124269005848,
+          "composite": 0.8069156527070364,
           "euRotation": null,
           "isFirstChoiceGkp": false,
           "dataTier": 1,
@@ -3673,11 +3664,11 @@
           "primaryPpgRaw": 5.3896961690885075,
           "primaryPpgShrunk": 5.3896961690885075,
           "components": {
-            "provenOutput": 0.896,
+            "provenOutput": 0.8951612903225806,
             "openingFixtures": 0.6562499999999999,
             "minutesSecurity": 0.8656140350877193
           },
-          "composite": 0.8060103070175438,
+          "composite": 0.8056328876627051,
           "euRotation": null,
           "isFirstChoiceGkp": false,
           "dataTier": 1,
@@ -3698,11 +3689,11 @@
           "primaryPpgRaw": 5.280612244897959,
           "primaryPpgShrunk": 5.280612244897959,
           "components": {
-            "provenOutput": 0.88,
+            "provenOutput": 0.8790322580645161,
             "openingFixtures": 0.6562499999999999,
             "minutesSecurity": 0.8292397660818713
           },
-          "composite": 0.7915354532163742,
+          "composite": 0.7910999693454065,
           "euRotation": null,
           "isFirstChoiceGkp": false,
           "dataTier": 1,
@@ -3715,7 +3706,7 @@
           "position": "FWD",
           "team": "BRE",
           "price": 7.8,
-          "ownership": 9.1,
+          "ownership": 9.2,
           "role": "start",
           "primarySeasonLabel": "2025/26",
           "primaryStarts": 37,
@@ -3871,7 +3862,7 @@
       "totalCost": 92,
       "remainingBank": 8,
       "budgetCap": 92,
-      "objectiveValue": 9.78801837,
+      "objectiveValue": 9.78652321,
       "clubDistribution": {
         "MUN": 3,
         "NFO": 3,
@@ -3920,7 +3911,7 @@
           "position": "DEF",
           "team": "EVE",
           "price": 6.2,
-          "ownership": 16.7,
+          "ownership": 16.8,
           "role": "start",
           "primarySeasonLabel": "2025/26",
           "primaryStarts": 37,
@@ -4053,11 +4044,11 @@
           "primaryPpgRaw": 5.169265880562952,
           "primaryPpgShrunk": 5.169265880562952,
           "components": {
-            "provenOutput": 0.848,
+            "provenOutput": 0.8467741935483871,
             "openingFixtures": 1,
             "minutesSecurity": 0.9074853801169591
           },
-          "composite": 0.9130970760233919,
+          "composite": 0.9125454631201659,
           "euRotation": null,
           "isFirstChoiceGkp": false,
           "dataTier": 1,
@@ -4078,11 +4069,11 @@
           "primaryPpgRaw": 5.4563044179297,
           "primaryPpgShrunk": 5.4563044179297,
           "components": {
-            "provenOutput": 0.92,
+            "provenOutput": 0.9193548387096774,
             "openingFixtures": 0.8749999999999999,
             "minutesSecurity": 0.9626900584795322
           },
-          "composite": 0.9127880116959065,
+          "composite": 0.9124976891152613,
           "euRotation": null,
           "isFirstChoiceGkp": false,
           "dataTier": 1,
@@ -4103,11 +4094,11 @@
           "primaryPpgRaw": 5.162454873646209,
           "primaryPpgShrunk": 5.162454873646209,
           "components": {
-            "provenOutput": 0.832,
+            "provenOutput": 0.8306451612903226,
             "openingFixtures": 0.9999999999999998,
             "minutesSecurity": 0.7578421052631579
           },
-          "composite": 0.8759684210526315,
+          "composite": 0.8753587436332767,
           "euRotation": "UCL",
           "isFirstChoiceGkp": false,
           "dataTier": 1,
@@ -4230,11 +4221,11 @@
           "primaryPpgRaw": 5.280612244897959,
           "primaryPpgShrunk": 5.280612244897959,
           "components": {
-            "provenOutput": 0.88,
+            "provenOutput": 0.8790322580645161,
             "openingFixtures": 0.6562499999999999,
             "minutesSecurity": 0.8292397660818713
           },
-          "composite": 0.7915354532163742,
+          "composite": 0.7910999693454065,
           "euRotation": null,
           "isFirstChoiceGkp": false,
           "dataTier": 1,
@@ -4347,6 +4338,6 @@
       "reason": "Displaced by higher-composite alternative at same position under club-cap + budget constraints"
     }
   ],
-  "_fetchedAt": "2026-10-05T10:43:00Z",
+  "_fetchedAt": "2026-10-06T10:36:09Z",
   "_source": "prefetch-draft-builder-squads.yml"
 }
