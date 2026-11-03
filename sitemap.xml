@@ -82,4 +82,10 @@
     <loc>https://si187apps.com/fpl-coach-ai/draft-builder/</loc>
     <lastmod>2026-10-05</lastmod>
   </url>
+  <url>
+    <loc>https://si187apps.com/stylist/</loc>
+    <lastmod>2026-11-03</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
 </urlset>

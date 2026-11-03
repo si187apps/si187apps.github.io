@@ -1,0 +1,402 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Outfit Stylist — Dressed for it. On budget. | si187 Apps</title>
+<meta name="description" content="Outfit Stylist from si187 Apps: tell it the occasion, place and budget, and get complete menswear outfits from real UK retailer stock, priced and linked. UK closed beta coming soon.">
+<meta name="robots" content="index, follow">
+<link rel="canonical" href="https://si187apps.com/stylist/">
+<meta property="og:title" content="Outfit Stylist — Dressed for it. On budget.">
+<meta property="og:description" content="Complete menswear outfits from real UK retailer stock, priced against your budget.">
+<meta property="og:url" content="https://si187apps.com/stylist/">
+<meta property="og:image" content="https://si187apps.com/assets/images/og-card.png">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:site" content="@si187apps">
+<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 160 160'><rect width='160' height='160' fill='%23050E05'/><path d='M80 148 A69 69 0 0 1 11 79' fill='none' stroke='%2339FF7A' stroke-width='4.5' stroke-linecap='round' opacity='.15'/><path d='M80 148 A69 69 0 0 0 149 79' fill='none' stroke='%2339FF7A' stroke-width='4.5' stroke-linecap='round' opacity='.15'/><path d='M80 132 A53 53 0 0 1 27 79' fill='none' stroke='%2339FF7A' stroke-width='4.5' stroke-linecap='round' opacity='.32'/><path d='M80 132 A53 53 0 0 0 133 79' fill='none' stroke='%2339FF7A' stroke-width='4.5' stroke-linecap='round' opacity='.32'/><path d='M80 116 A37 37 0 0 1 43 79' fill='none' stroke='%2339FF7A' stroke-width='4.5' stroke-linecap='round' opacity='.55'/><path d='M80 116 A37 37 0 0 0 117 79' fill='none' stroke='%2339FF7A' stroke-width='4.5' stroke-linecap='round' opacity='.55'/><path d='M80 100 A21 21 0 0 1 59 79' fill='none' stroke='%2339FF7A' stroke-width='4.5' stroke-linecap='round' opacity='.75'/><path d='M80 100 A21 21 0 0 0 101 79' fill='none' stroke='%2339FF7A' stroke-width='4.5' stroke-linecap='round' opacity='.75'/><path d='M80 88 A9 9 0 0 1 71 79' fill='none' stroke='%23C084C8' stroke-width='4.5' stroke-linecap='round' opacity='.92'/><path d='M80 88 A9 9 0 0 0 89 79' fill='none' stroke='%23C084C8' stroke-width='4.5' stroke-linecap='round' opacity='.92'/><circle cx='80' cy='79' r='7' fill='%2339FF7A'/></svg>">
+<meta name="theme-color" content="#0A0A0A">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Syne:wght@700;800&family=Inter+Tight:wght@400;500;600&family=Inter:wght@300;400;500;600&family=JetBrains+Mono:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="/assets/css/site.css">
+<link rel="stylesheet" href="/assets/css/cookie-banner.css">
+<style>
+/* Outfit Stylist palette: monochrome, ISOLATED to this page. si187 brand mark kept as-is.
+   Reference (observed 3 Nov 2026): Alta (black, white, grotesk, pill buttons), Reiss (white, black, uppercase sans, photo-led). */
+:root {
+  --bg: #0A0A0A; --bg-card: #141414; --bg-raised: #1A1A1A; --bg-border: #262626;
+  --green: #FFFFFF; --green-dim: #BDBDBD;
+  --magenta: #9A9A9A; --magenta-dim: #6B6B6B;
+  --text1: #FFFFFF; --text2: #A3A3A3; --text3: #6B6B6B;
+  --st-gold: #FFFFFF; --st-ivory: #FFFFFF; --st-line: rgba(255,255,255,0.18);
+}
+.st-light { background: #F4F3F0; color: #0A0A0A; --text1: #0A0A0A; --text2: #555; --text3: #8A8A8A; --bg-card: #FFFFFF; --bg-border: #E2E0DB; --st-gold: #0A0A0A; --st-line: rgba(0,0,0,0.15); }
+.nav-cta { color: #0A0A0A !important; }
+body { background: var(--bg); }
+.st-serif { font-family: 'Inter Tight', 'Helvetica Neue', sans-serif; font-weight: 500; letter-spacing: -0.5px; }
+.st-eyebrow { font-family: 'JetBrains Mono', monospace; font-size: 10px; letter-spacing: 4px; text-transform: uppercase; color: var(--st-gold); display: block; margin-bottom: 18px; }
+.st-wrap { max-width: 1180px; margin: 0 auto; padding: 0 24px; }
+.st-section { padding: 120px 0; border-top: 1px solid var(--bg-border); }
+.st-h2 { font-family: 'Inter Tight', 'Helvetica Neue', sans-serif; font-weight: 500; font-size: clamp(34px, 4.6vw, 56px); line-height: 1.02; letter-spacing: -1.8px; color: var(--text1); margin-bottom: 20px; }
+.st-h2 em { font-style: normal; color: var(--text3); }
+.st-lede { font-size: 17px; line-height: 1.75; color: var(--text2); max-width: 560px; }
+
+/* Hero */
+.st-hero { position: relative; overflow: hidden; border-bottom: 1px solid var(--bg-border); }
+.st-hero::before { content: ""; position: absolute; inset: 0; background: radial-gradient(ellipse 55% 70% at 78% 40%, rgba(255,255,255,0.05) 0%, transparent 70%); pointer-events: none; }
+.st-hero-grid { position: relative; display: grid; grid-template-columns: 1.1fr 0.9fr; gap: 64px; align-items: center; padding: 120px 24px 110px; max-width: 1180px; margin: 0 auto; }
+.st-badge { display: inline-flex; align-items: center; gap: 10px; border: 1px solid var(--st-line); border-radius: 100px; padding: 8px 18px; margin-bottom: 36px; font-family: 'JetBrains Mono', monospace; font-size: 11px; letter-spacing: 1px; color: var(--st-gold); }
+.st-badge i { width: 6px; height: 6px; border-radius: 50%; background: var(--st-gold); display: inline-block; }
+.st-h1 { font-family: 'Inter Tight', 'Helvetica Neue', sans-serif; font-weight: 500; font-size: clamp(52px, 7.5vw, 100px); line-height: 0.95; letter-spacing: -3px; color: var(--text1); }
+.st-h1 em { font-style: normal; color: var(--text3); }
+.st-sub { font-family: 'JetBrains Mono', monospace; font-size: 11px; letter-spacing: 4px; text-transform: uppercase; color: var(--text3); margin: 22px 0 28px; }
+.st-hero p.st-lede { margin-bottom: 40px; }
+.st-btn { display: inline-flex; align-items: center; gap: 10px; background: var(--text1); color: var(--bg); font-weight: 600; font-size: 14px; letter-spacing: 0.3px; padding: 15px 28px; border-radius: 100px; text-decoration: none; transition: background .2s; }
+.st-btn:hover { opacity: .85; }
+.st-light .st-btn { color: #F4F3F0; }
+.st-btn-ghost { background: transparent; color: var(--text1); border: 1px solid var(--bg-border); margin-left: 10px; }
+.st-btn-ghost:hover { background: var(--bg-card); }
+
+/* Hero basket mock */
+.st-card { background: var(--bg-card); border: 1px solid var(--bg-border); border-radius: 20px; padding: 28px; box-shadow: 0 40px 80px rgba(0,0,0,0.5); }
+.st-card-head { display: flex; justify-content: space-between; align-items: baseline; border-bottom: 1px solid var(--bg-border); padding-bottom: 16px; margin-bottom: 8px; }
+.st-card-title { font-family: 'Inter Tight', 'Helvetica Neue', sans-serif; font-size: 20px; font-weight: 500; letter-spacing: -0.4px; color: var(--text1); }
+.st-card-meta { font-family: 'JetBrains Mono', monospace; font-size: 10px; letter-spacing: 1.5px; text-transform: uppercase; color: var(--text3); }
+.st-line { display: flex; justify-content: space-between; padding: 13px 0; border-bottom: 1px solid var(--bg-border); font-size: 14px; color: var(--text2); }
+.st-line span:last-child { color: var(--text1); font-variant-numeric: tabular-nums; }
+.st-total { display: flex; justify-content: space-between; align-items: baseline; padding-top: 18px; }
+.st-total b { font-family: 'Inter Tight', 'Helvetica Neue', sans-serif; font-size: 34px; font-weight: 500; letter-spacing: -1px; color: var(--text1); }
+.st-under { font-family: 'JetBrains Mono', monospace; font-size: 10px; letter-spacing: 1.5px; text-transform: uppercase; color: var(--st-gold); }
+.st-bar { height: 3px; background: var(--bg-border); margin: 14px 0 6px; border-radius: 2px; overflow: hidden; }
+.st-bar i { display: block; height: 100%; width: 84%; background: var(--st-gold); }
+.st-note { font-size: 11px; color: var(--text3); margin-top: 16px; }
+
+/* Lookbook */
+.st-look-head { display: flex; justify-content: space-between; align-items: end; gap: 32px; flex-wrap: wrap; margin-bottom: 48px; }
+.st-tabs { display: flex; gap: 6px; flex-wrap: wrap; }
+.st-tab { font-family: 'JetBrains Mono', monospace; font-size: 11px; letter-spacing: 1.5px; text-transform: uppercase; background: transparent; color: var(--text2); border: 1px solid var(--bg-border); padding: 9px 16px; border-radius: 100px; cursor: pointer; }
+.st-tab[aria-pressed="true"] { background: var(--text1); color: #F4F3F0; border-color: var(--text1); }
+.st-grid { display: grid; grid-template-columns: repeat(8, 1fr); gap: 24px 12px; }
+@media (max-width: 1100px) { .st-grid { grid-template-columns: repeat(4, 1fr); } }
+.st-look { margin: 0; }
+.st-look[hidden] { display: none; }
+.st-frame { border-radius: 12px; position: relative; aspect-ratio: 2 / 5; background: var(--bg-card); border: 1px solid var(--bg-border); overflow: hidden; }
+.st-frame img { width: 100%; height: 100%; object-fit: cover; display: block; transition: transform .6s ease; }
+.st-look:hover .st-frame img { transform: scale(1.03); }
+.st-frame .st-ph { position: absolute; inset: 0; display: flex; align-items: center; justify-content: center; text-align: center; padding: 24px; font-family: 'JetBrains Mono', monospace; font-size: 10px; letter-spacing: 2px; text-transform: uppercase; color: var(--text3); }
+.st-tagai { position: absolute; left: 8px; bottom: 8px; font-family: 'JetBrains Mono', monospace; font-size: 9px; letter-spacing: 1.5px; text-transform: uppercase; color: #FFFFFF; background: rgba(10,10,10,0.65); backdrop-filter: blur(6px); padding: 5px 9px; border-radius: 2px; }
+.st-look figcaption { display: flex; flex-direction: column; gap: 4px; padding: 14px 2px 0; }
+.st-look figcaption b { font-family: 'Inter Tight', 'Helvetica Neue', sans-serif; font-weight: 500; font-size: 15px; letter-spacing: -0.3px; color: var(--text1); }
+.st-look figcaption span { font-family: 'JetBrains Mono', monospace; font-size: 10px; letter-spacing: 1.5px; text-transform: uppercase; color: var(--text3); }
+.st-disclaim { font-size: 13px; color: var(--text3); margin-top: 28px; max-width: 720px; line-height: 1.7; }
+
+/* Steps */
+.st-steps { display: grid; grid-template-columns: repeat(4, 1fr); gap: 0; margin-top: 56px; border-top: 1px solid var(--bg-border); }
+.st-step { padding: 32px 28px 0 0; }
+.st-step + .st-step { padding-left: 28px; border-left: 1px solid var(--bg-border); }
+.st-num { font-family: 'JetBrains Mono', monospace; font-size: 12px; letter-spacing: 2px; color: var(--text3); line-height: 1; margin-bottom: 18px; }
+.st-step h3 { font-size: 16px; font-weight: 600; color: var(--text1); margin-bottom: 10px; }
+.st-step p { font-size: 14px; line-height: 1.7; color: var(--text2); }
+
+/* Promises */
+.st-promises { display: grid; grid-template-columns: repeat(3, 1fr); gap: 16px; margin-top: 48px; }
+.st-promise { border: 1px solid var(--bg-border); padding: 32px; background: var(--bg-card); border-radius: 16px; }
+.st-promise h3 { font-family: 'Inter Tight', 'Helvetica Neue', sans-serif; font-weight: 500; font-size: 22px; letter-spacing: -0.5px; color: var(--text1); margin-bottom: 12px; }
+.st-promise p { font-size: 14px; line-height: 1.7; color: var(--text2); }
+
+/* Join */
+.st-join { display: grid; grid-template-columns: 1fr 1fr; gap: 64px; align-items: center; }
+.st-form { display: flex; flex-direction: column; gap: 16px; }
+.st-form label { font-family: 'JetBrains Mono', monospace; font-size: 10px; letter-spacing: 2px; text-transform: uppercase; color: var(--text3); display: block; margin-bottom: 8px; }
+.st-form input, .st-form select { width: 100%; background: var(--bg-card); border: 1px solid var(--bg-border); color: var(--text1); padding: 14px 16px; font: inherit; font-size: 15px; border-radius: 12px; outline: none; }
+.st-form input:focus, .st-form select:focus { border-color: var(--st-gold); }
+.st-form button { border: 0; cursor: pointer; justify-content: center; margin-top: 4px; }
+.st-confirm { display: none; color: var(--st-gold); font-size: 14px; }
+.st-small { font-size: 12px; color: var(--text3); }
+.st-small a { color: var(--text2); }
+
+@media (max-width: 900px) {
+  .st-hero-grid { grid-template-columns: 1fr; padding: 88px 16px 72px; gap: 48px; }
+  .st-wrap { padding: 0 16px; }
+  .st-section { padding: 80px 0; }
+  .st-grid { grid-template-columns: repeat(4, 1fr); gap: 16px 8px; }
+  .st-steps { grid-template-columns: 1fr 1fr; }
+  .st-step:nth-child(3) { padding-left: 0; border-left: 0; }
+  .st-promises, .st-join { grid-template-columns: 1fr; gap: 32px; }
+  .st-btn-ghost { margin-left: 0; margin-top: 10px; }
+}
+@media (max-width: 520px) {
+  .st-grid { grid-template-columns: 1fr 1fr; gap: 16px 10px; }
+  .st-steps { grid-template-columns: 1fr; }
+  .st-step, .st-step + .st-step { padding: 28px 0 0; border-left: 0; }
+}
+
+</style>
+</head>
+<body>
+
+<!-- Skip link (accessibility) -->
+<a href="#main-content" class="skip-link">Skip to main content</a>
+
+<!-- ══ NAV ══ -->
+<nav id="main-nav">
+  <a href="/" class="nav-logo" aria-label="si187 Apps home">
+    <div class="fp-mark" aria-hidden="true"><svg width="28" height="28" viewBox="0 0 160 160"><path d="M80 148 A69 69 0 0 1 11 79" fill="none" stroke="#39FF7A" stroke-width="4.5" stroke-linecap="round" opacity=".11"/><path d="M80 148 A69 69 0 0 0 149 79" fill="none" stroke="#39FF7A" stroke-width="4.5" stroke-linecap="round" opacity=".11"/><path d="M80 132 A53 53 0 0 1 27 79" fill="none" stroke="#39FF7A" stroke-width="4.5" stroke-linecap="round" opacity=".24"/><path d="M80 132 A53 53 0 0 0 133 79" fill="none" stroke="#39FF7A" stroke-width="4.5" stroke-linecap="round" opacity=".24"/><path d="M80 116 A37 37 0 0 1 43 79" fill="none" stroke="#39FF7A" stroke-width="4.5" stroke-linecap="round" opacity=".44"/><path d="M80 116 A37 37 0 0 0 117 79" fill="none" stroke="#39FF7A" stroke-width="4.5" stroke-linecap="round" opacity=".44"/><path d="M80 100 A21 21 0 0 1 59 79" fill="none" stroke="#39FF7A" stroke-width="4.5" stroke-linecap="round" opacity=".68"/><path d="M80 100 A21 21 0 0 0 101 79" fill="none" stroke="#39FF7A" stroke-width="4.5" stroke-linecap="round" opacity=".68"/><path d="M80 88 A9 9 0 0 1 71 79" fill="none" stroke="#C084C8" stroke-width="4.5" stroke-linecap="round" opacity=".92"/><path d="M80 88 A9 9 0 0 0 89 79" fill="none" stroke="#C084C8" stroke-width="4.5" stroke-linecap="round" opacity=".92"/><circle cx="80" cy="79" r="7" fill="#39FF7A"/></svg></div>
+    <span class="nav-wordmark">si187 <em>Apps</em></span>
+  </a>
+  <ul class="nav-links">
+    <li><a href="/about">About</a></li>
+    <li><a href="/roadmap">Roadmap</a></li>
+    <li><a href="/manifesto">Manifesto</a></li>
+    <li><a href="/labs">Labs</a></li>
+    <li><a href="/#waitlist" class="nav-cta">Early access</a></li>
+  </ul>
+  <button class="nav-toggle" aria-label="Open menu" id="nav-toggle-btn"><span></span><span></span><span></span></button>
+</nav>
+<div class="mobile-nav" id="mobile-nav">
+  <button class="mobile-nav-close" id="mobile-nav-close" aria-label="Close">✕</button>
+  <a href="/" onclick="closeMobileNav()">Home</a>
+  <a href="/about" onclick="closeMobileNav()">About</a>
+  <a href="/roadmap" onclick="closeMobileNav()">Roadmap</a>
+  <a href="/manifesto" onclick="closeMobileNav()">Manifesto</a>
+  <a href="/labs" onclick="closeMobileNav()">Labs</a>
+  <a href="/#waitlist" onclick="closeMobileNav()" style="color:var(--green)">Early access</a>
+</div>
+
+
+<!-- ══ HERO ══ -->
+<header id="main-content" class="st-hero">
+  <div class="st-hero-grid">
+    <div>
+      <span class="st-badge reveal"><i></i>In development · UK closed beta</span>
+      <h1 class="st-h1 reveal reveal-d1">Dressed for it.<br><em>On budget.</em></h1>
+      <p class="st-sub reveal reveal-d1">Outfit Stylist · Menswear</p>
+      <p class="st-lede reveal reveal-d2">Tell us the occasion, where you're going and what you want to spend. We build complete outfits from real UK retailer stock, total them against your budget, and link you straight to each piece.</p>
+      <div class="reveal reveal-d3">
+        <a href="#join" class="st-btn">Join the beta</a>
+        <a href="#lookbook" class="st-btn st-btn-ghost">See the lookbook</a>
+      </div>
+    </div>
+    <div class="reveal reveal-d2" aria-label="Example outfit basket (illustrative)">
+      <div class="st-card">
+        <div class="st-card-head">
+          <span class="st-card-title">Corporate evening</span>
+          <span class="st-card-meta">London · 8°C · Rain</span>
+        </div>
+        <div class="st-line"><span>Wool blend overcoat, navy</span><span>£120</span></div>
+        <div class="st-line"><span>Merino roll neck, charcoal</span><span>£38</span></div>
+        <div class="st-line"><span>Wool trousers, grey</span><span>£50</span></div>
+        <div class="st-line"><span>Leather Oxford, black</span><span>£70</span></div>
+        <div class="st-bar"><i></i></div>
+        <div class="st-total"><span class="st-under">£22 under your £300</span><b>£278</b></div>
+        <p class="st-note">Illustrative example. Items and prices are not real products.</p>
+      </div>
+    </div>
+  </div>
+</header>
+
+
+<!-- ══ LOOKBOOK ══ -->
+<section class="st-section st-light" id="lookbook">
+  <div class="st-wrap">
+    <div class="st-look-head">
+      <div>
+        <span class="st-eyebrow reveal">The lookbook · Race weekend</span>
+        <h2 class="st-h2 reveal reveal-d1">One trip.<br>Every <em>occasion.</em></h2>
+        <p class="st-lede reveal reveal-d2">One race weekend, eight occasions: travel, the casino floor, race day, drinks and black tie. Same man, dressed for each moment.</p>
+      </div>
+      <div class="st-tabs reveal" role="group" aria-label="Filter looks">
+        <button class="st-tab" aria-pressed="true" data-filter="all">All</button>
+        <button class="st-tab" aria-pressed="false" data-filter="travel">Travel</button>
+        <button class="st-tab" aria-pressed="false" data-filter="casino">Casino</button>
+        <button class="st-tab" aria-pressed="false" data-filter="racetrack">Racetrack</button>
+        <button class="st-tab" aria-pressed="false" data-filter="drinks">Drinks</button>
+      </div>
+    </div>
+
+    <div class="st-grid">
+      <figure class="st-look reveal" data-time="travel"><div class="st-frame"><img src="/stylist/img/departure.webp" alt="AI preview: travel day, navy bomber, striped shirt, jeans and white trainers" loading="lazy"><span class="st-tagai">AI preview</span></div><figcaption><b>Departure</b><span>Day · Travel</span></figcaption></figure>
+      <figure class="st-look reveal" data-time="travel"><div class="st-frame"><img src="/stylist/img/arrival.webp" alt="AI preview: evening arrival, houndstooth overcoat, green knit and stone chinos" loading="lazy"><span class="st-tagai">AI preview</span></div><figcaption><b>Arrival</b><span>Night · Travel</span></figcaption></figure>
+      <figure class="st-look reveal" data-time="casino"><div class="st-frame"><img src="/stylist/img/casino-day.webp" alt="AI preview: daytime casino, waxed jacket, oatmeal knit, jeans and Chelsea boots" loading="lazy"><span class="st-tagai">AI preview</span></div><figcaption><b>The Casino</b><span>Day · Smart casual</span></figcaption></figure>
+      <figure class="st-look reveal" data-time="racetrack"><div class="st-frame"><img src="/stylist/img/race-day.webp" alt="AI preview: race day, leather racing jacket, white tee and black trousers" loading="lazy"><span class="st-tagai">AI preview</span></div><figcaption><b>Race day</b><span>Day · Trackside</span></figcaption></figure>
+      <figure class="st-look reveal" data-time="drinks"><div class="st-frame"><img src="/stylist/img/speakeasy.webp" alt="AI preview: speakeasy, grey velvet double-breasted jacket and black roll neck" loading="lazy"><span class="st-tagai">AI preview</span></div><figcaption><b>Speakeasy</b><span>Night · Drinks</span></figcaption></figure>
+      <figure class="st-look reveal" data-time="casino"><div class="st-frame"><img src="/stylist/img/casino-night.webp" alt="AI preview: evening casino, burgundy velvet dinner jacket and open white shirt" loading="lazy"><span class="st-tagai">AI preview</span></div><figcaption><b>The Casino</b><span>Night · Velvet</span></figcaption></figure>
+      <figure class="st-look reveal" data-time="racetrack"><div class="st-frame"><img src="/stylist/img/trackside-night.webp" alt="AI preview: night trackside hospitality, black suit and black roll neck" loading="lazy"><span class="st-tagai">AI preview</span></div><figcaption><b>Trackside</b><span>Night · Hospitality</span></figcaption></figure>
+      <figure class="st-look reveal" data-time="casino"><div class="st-frame"><img src="/stylist/img/black-tie-dinner.webp" alt="AI preview: black tie dinner, dinner suit and bow tie" loading="lazy"><span class="st-tagai">AI preview</span></div><figcaption><b>High-stakes dinner</b><span>Night · Black tie</span></figcaption></figure>
+    </div>
+    <p class="st-disclaim">AI previews created from our founder's own photo during early prototyping. The clothing shown was generated by AI and is not a specific retailer's product, and no retailer or venue endorses these images. In the app, every outfit is built from real products you can buy.</p>
+  </div>
+</section>
+
+
+<!-- ══ HOW IT WORKS ══ -->
+<section class="st-section">
+  <div class="st-wrap">
+    <span class="st-eyebrow reveal">How it works</span>
+    <h2 class="st-h2 reveal reveal-d1">Occasion in.<br>Priced outfit <em>out.</em></h2>
+    <div class="st-steps reveal reveal-d2">
+      <div class="st-step"><div class="st-num">01</div><h3>Tell us the plan</h3><p>The occasion, where and when, the look you're after, the shops you like, and your total budget.</p></div>
+      <div class="st-step"><div class="st-num">02</div><h3>Three complete outfits</h3><p>Picked only from retailer stock, dressed for the occasion and the forecast, each totalled against your budget.</p></div>
+      <div class="st-step"><div class="st-num">03</div><h3>Make it yours</h3><p>Swap any piece, or ask for a cheaper version of the whole look. The total updates as you go.</p></div>
+      <div class="st-step"><div class="st-num">04</div><h3>Buy direct</h3><p>Each piece links to the retailer's own product page. You buy from them, at their price.</p></div>
+    </div>
+  </div>
+</section>
+
+
+<!-- ══ PROMISES ══ -->
+<section class="st-section st-light">
+  <div class="st-wrap">
+    <span class="st-eyebrow reveal">The fine print, up front</span>
+    <h2 class="st-h2 reveal reveal-d1">Straight with <em>you.</em></h2>
+    <div class="st-promises reveal reveal-d2">
+      <div class="st-promise"><h3>We earn commission</h3><p>When you buy through our links, the retailer pays us a commission. Your price doesn't change, and we label it beside every outfit.</p></div>
+      <div class="st-promise"><h3>Your photo, your call</h3><p>The AI preview is optional and opt-in. Only your own photo, deleted after your session. Fit and colour may differ from the real thing.</p></div>
+      <div class="st-promise"><h3>Starting small</h3><p>Menswear, UK only, 18 and over. A closed beta first, so we get it right before we open the doors.</p></div>
+    </div>
+  </div>
+</section>
+
+
+<!-- ══ JOIN ══ -->
+<section class="st-section" id="join">
+  <div class="st-wrap st-join">
+    <div>
+      <span class="st-eyebrow">Closed beta</span>
+      <h2 class="st-h2">Got somewhere<br>to <em>be?</em></h2>
+      <p class="st-lede">We're opening Outfit Stylist to a small group of UK men first. Leave your email and we'll be in touch when there's a place.</p>
+    </div>
+    <div class="st-form" id="stylist-form">
+      <div><label for="stylist-name">Name</label><input type="text" id="stylist-name" placeholder="Your name" autocomplete="name"></div>
+      <div><label for="stylist-email">Email</label><input type="email" id="stylist-email" placeholder="your@email.com" autocomplete="email"></div>
+      <div><label for="stylist-occasion">What would you use it for first?</label>
+        <select id="stylist-occasion">
+          <option value="">Select one...</option>
+          <option value="corporate">Corporate or work event</option>
+          <option value="evening">Smart evening out</option>
+          <option value="city-break">City break or holiday</option>
+          <option value="wedding">Wedding or celebration</option>
+          <option value="other">Something else</option>
+        </select></div>
+      <button class="st-btn" id="stylist-submit" onclick="handleStylistSubmit()">Join the beta</button>
+      <p class="st-confirm" id="stylist-confirm">✓ You're on the list. We'll email you when there's a place.</p>
+      <p class="st-small">No spam. See our <a href="/privacy">privacy policy</a>.</p>
+    </div>
+  </div>
+</section>
+
+
+<!-- ══ FOOTER ══ -->
+<footer>
+  <div class="footer-col">
+    <div class="footer-brand">
+      <div class="fp-mark" aria-hidden="true"><svg width="24" height="24" viewBox="0 0 160 160"><path d="M80 148 A69 69 0 0 1 11 79" fill="none" stroke="#39FF7A" stroke-width="4.5" stroke-linecap="round" opacity=".15"/><path d="M80 148 A69 69 0 0 0 149 79" fill="none" stroke="#39FF7A" stroke-width="4.5" stroke-linecap="round" opacity=".15"/><path d="M80 132 A53 53 0 0 1 27 79" fill="none" stroke="#39FF7A" stroke-width="4.5" stroke-linecap="round" opacity=".32"/><path d="M80 132 A53 53 0 0 0 133 79" fill="none" stroke="#39FF7A" stroke-width="4.5" stroke-linecap="round" opacity=".32"/><path d="M80 116 A37 37 0 0 1 43 79" fill="none" stroke="#39FF7A" stroke-width="4.5" stroke-linecap="round" opacity=".55"/><path d="M80 116 A37 37 0 0 0 117 79" fill="none" stroke="#39FF7A" stroke-width="4.5" stroke-linecap="round" opacity=".55"/><path d="M80 100 A21 21 0 0 1 59 79" fill="none" stroke="#39FF7A" stroke-width="4.5" stroke-linecap="round" opacity=".75"/><path d="M80 100 A21 21 0 0 0 101 79" fill="none" stroke="#39FF7A" stroke-width="4.5" stroke-linecap="round" opacity=".75"/><path d="M80 88 A9 9 0 0 1 71 79" fill="none" stroke="#C084C8" stroke-width="4.5" stroke-linecap="round" opacity=".9"/><path d="M80 88 A9 9 0 0 0 89 79" fill="none" stroke="#C084C8" stroke-width="4.5" stroke-linecap="round" opacity=".9"/><circle cx="80" cy="79" r="7" fill="#39FF7A"/></svg></div>
+      <div><p class="footer-name">si187 <em>Apps</em></p><p class="footer-tagline">si187 Enterprises Ltd · London</p></div>
+    </div>
+    <div class="footer-social">
+      <a href="https://twitter.com/si187apps" aria-label="X (formerly Twitter)">
+      <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+      <path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/>
+    </svg>
+    </a>
+      <a href="https://instagram.com/si187apps" aria-label="Instagram">
+      <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+      <rect x="2" y="2" width="20" height="20" rx="5" ry="5"/>
+      <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/>
+      <line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/>
+    </svg>
+    </a>
+      <a href="https://tiktok.com/@si187apps" aria-label="TikTok">
+      <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+      <path d="M19.59 6.69a4.83 4.83 0 0 1-3.77-4.25V2h-3.45v13.67a2.89 2.89 0 0 1-5.2 1.74 2.89 2.89 0 0 1 2.31-4.64 2.93 2.93 0 0 1 .88.13V9.4a6.84 6.84 0 0 0-1-.05A6.33 6.33 0 0 0 5.8 20.1a6.34 6.34 0 0 0 10.86-4.43v-7a8.16 8.16 0 0 0 4.77 1.52v-3.4a4.85 4.85 0 0 1-1.84-.1z"/>
+    </svg>
+    </a>
+    </div>
+  </div>
+  <div class="footer-col">
+    <p class="footer-nav-label">Studio</p>
+    <ul class="footer-nav-links">
+      <li><a href="/about">About</a></li>
+      <li><a href="/roadmap">Roadmap</a></li>
+      <li><a href="/manifesto">Manifesto</a></li>
+      <li><a href="/labs">Labs</a></li>
+    </ul>
+  </div>
+  <div class="footer-col">
+    <p class="footer-nav-label">Apps</p>
+    <ul class="footer-nav-links">
+      <li><a href="/fpl-coach-ai">FPL Coach AI</a></li>
+      <li><a href="/stylist">Outfit Stylist</a></li>
+      <li><a href="/#waitlist">Early access</a></li>
+    </ul>
+  </div>
+  <div class="footer-col">
+    <p class="footer-nav-label">Contact</p>
+    <ul class="footer-nav-links"><li><a href="mailto:studio@si187apps.com">studio@si187apps.com</a></li></ul>
+  </div>
+  <div class="footer-bottom">
+    <p class="footer-copy">© 2026 si187 Enterprises Ltd. All rights reserved.</p>
+    <div class="footer-legal"><a href="/privacy">Privacy</a><a href="/terms">Terms</a><a href="#" onclick="window.si187CookiePrefs && window.si187CookiePrefs(); return false;" style="cursor:pointer;">Cookie preferences</a></div>
+  </div>
+</footer>
+
+<script src="/assets/js/site.js"></script>
+<script>
+// Beta waitlist. Uses the studio waitlist form (xwvynpjr, per CLAUDE.md); submissions tagged source si187apps.com/stylist.
+const FORMSPREE_STYLIST_ID = 'xwvynpjr';
+
+async function handleStylistSubmit() {
+  const name     = document.getElementById('stylist-name').value.trim();
+  const email    = document.getElementById('stylist-email').value.trim();
+  const occasion = document.getElementById('stylist-occasion').value;
+  const btn      = document.getElementById('stylist-submit');
+  const confirm  = document.getElementById('stylist-confirm');
+
+  if (!email || !email.includes('@') || !email.includes('.')) {
+    document.getElementById('stylist-email').style.borderColor = 'var(--magenta)';
+    document.getElementById('stylist-email').focus();
+    return;
+  }
+
+  btn.textContent = 'Joining...';
+  btn.disabled = true;
+
+  try {
+    const res = await fetch(`https://formspree.io/f/${FORMSPREE_STYLIST_ID}`, {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json', 'Accept': 'application/json' },
+      body: JSON.stringify({
+        name, email, interest: 'outfit-stylist', occasion,
+        _replyto: email,
+        _subject: `New Outfit Stylist beta signup — ${name || email}`,
+        source: 'si187apps.com/stylist',
+        submitted_at: new Date().toISOString()
+      })
+    });
+    if (res.ok) {
+      btn.style.display = 'none';
+      confirm.style.display = 'block';
+      document.querySelectorAll('#stylist-form input, #stylist-form select').forEach(r => r.disabled = true);
+    } else {
+      btn.textContent = 'Try again';
+      btn.disabled = false;
+    }
+  } catch (err) {
+    btn.textContent = 'Try again';
+    btn.disabled = false;
+  }
+}
+</script>
+
+<script>
+// Lookbook day/night filter
+document.querySelectorAll('.st-tab').forEach(btn => btn.addEventListener('click', () => {
+  document.querySelectorAll('.st-tab').forEach(b => b.setAttribute('aria-pressed', b === btn));
+  const f = btn.dataset.filter;
+  document.querySelectorAll('.st-look').forEach(l => { l.hidden = !(f === 'all' || l.dataset.time === f); });
+}));
+</script>
+<!-- Cookie consent + GA4 (consent-gated) -->
+<script src="/assets/js/cookie-banner.js"></script>
+</body>
+</html>
