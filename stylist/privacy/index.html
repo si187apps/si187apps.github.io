@@ -97,6 +97,7 @@
   <h2 id="sharing">4. Who receives data</h2>
   <ul>
     <li><strong>Google (Gemini API)</strong> receives your answers to generate outfits. We use Google's paid service and ask it not to store requests (the API's <code>store: false</code> setting). Google's terms may still allow it to keep requests briefly to detect abuse. You can turn the AI stylist off in the app's Settings; outfits are then worked out on your phone and nothing is sent.</li>
+    <li><strong>Google (Maps Places API)</strong>: with the AI stylist on, what you type in the Where field is sent through our server to Google Maps to suggest places. We don't store it. Google's <a href="https://policies.google.com/privacy">privacy policy</a> applies.</li>
     <li><strong>Cloudflare</strong> runs our server. Your answers pass through it but are not stored. Operational logs record only timings and error codes, never your answers.</li>
     <li><strong>Retailers and affiliate networks</strong> (such as Awin): when you tap a shop link, it opens in your phone's browser and the retailer or network may set a tracking cookie so we can be paid commission. Their own privacy policies apply. We do not send them your answers.</li>
     <li><strong>Apple and Google</strong> distribute the app (App Store, TestFlight, Google Play). Their privacy terms apply.</li>
