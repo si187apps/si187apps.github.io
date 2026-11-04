@@ -92,11 +92,11 @@
 
   <h2 id="how">3. How your answers are used</h2>
   <p>When you tap <em>Style me</em>, your answers are sent to our server, which runs on <strong>Cloudflare</strong>, and from there to <strong>Google Gemini</strong>, an AI service that picks outfits from our product catalogue. Our server checks every outfit and works out all prices itself.</p>
-  <p>The app asks for your agreement before your answers are first sent to Google Gemini. Our lawful basis is your request for the service (to provide outfits you ask for) and our legitimate interest in running and protecting it.</p>
+  <p>The app asks for your agreement, and that you are 18 or over, before your answers are first sent to Google Gemini. You can withdraw it at any time with the <em>Use AI stylist</em> switch in Settings. Our lawful basis is your request for the service (to provide outfits you ask for) and our legitimate interest in running and protecting it.</p>
 
   <h2 id="sharing">4. Who receives data</h2>
   <ul>
-    <li><strong>Google (Gemini API)</strong> receives your answers to generate outfits. Under Google's Gemini API terms, Google may keep requests and responses for a limited period to detect abuse. We use Google's paid service.</li>
+    <li><strong>Google (Gemini API)</strong> receives your answers to generate outfits. We use Google's paid service and ask it not to store requests (the API's <code>store: false</code> setting). Google's terms may still allow it to keep requests briefly to detect abuse. You can turn the AI stylist off in the app's Settings; outfits are then worked out on your phone and nothing is sent.</li>
     <li><strong>Cloudflare</strong> runs our server. Your answers pass through it but are not stored. Operational logs record only timings and error codes, never your answers.</li>
     <li><strong>Retailers and affiliate networks</strong> (such as Awin): when you tap a shop link, it opens in your phone's browser and the retailer or network may set a tracking cookie so we can be paid commission. Their own privacy policies apply. We do not send them your answers.</li>
     <li><strong>Apple and Google</strong> distribute the app (App Store, TestFlight, Google Play). Their privacy terms apply.</li>
