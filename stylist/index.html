@@ -115,6 +115,13 @@ body { background: var(--bg); }
 .st-small { font-size: 12px; color: var(--text3); }
 .st-small a { color: var(--text2); }
 
+.st-screens { display: grid; grid-template-columns: repeat(3, 1fr); gap: 24px; margin-top: 48px; }
+.st-screen { margin: 0; }
+.st-screen img { width: 100%; height: auto; display: block; border-radius: 28px; border: 1px solid var(--bg-border); background: #0A0A0A; }
+.st-screen figcaption { margin-top: 14px; font-size: 14px; line-height: 1.6; color: var(--text2); }
+.st-screen figcaption b { display: block; color: var(--text1); font-weight: 600; }
+@media (max-width: 900px) { .st-screens { grid-template-columns: 1fr 1fr; } }
+@media (max-width: 520px) { .st-screens { grid-template-columns: 1fr; max-width: 340px; margin-left: auto; margin-right: auto; } }
 @media (max-width: 900px) {
   .st-hero-grid { grid-template-columns: 1fr; padding: 88px 16px 72px; gap: 48px; }
   .st-wrap { padding: 0 16px; }
@@ -244,8 +251,24 @@ body { background: var(--bg); }
 </section>
 
 
+<!-- ══ INSIDE THE APP ══ -->
+<section class="st-section st-light" id="app">
+  <div class="st-wrap">
+    <span class="st-eyebrow reveal">Inside the app</span>
+    <h2 class="st-h2 reveal reveal-d1">Every part of the trip.<br>One <em>list.</em></h2>
+    <p class="st-lede reveal reveal-d2">Tell Kitted where you're going and it splits the trip into the moments that need different clothes. Pick a look for each, then see every piece once, with the total.</p>
+    <div class="st-screens reveal reveal-d2">
+      <figure class="st-screen"><img src="/stylist/img/app-trip-parts.webp" alt="App screen: looks for each part of a trip, with tabs for daytime, evening lounge and hospitality suite, and a look priced against a £250 budget" width="780" height="1328" loading="lazy"><figcaption><b>Looks for each part of the trip</b>Three complete outfits per moment, each priced against your budget.</figcaption></figure>
+      <figure class="st-screen"><img src="/stylist/img/app-outfit.webp" alt="App screen: an outfit with each piece, swap buttons, a note about delivery from several shops, and Cheaper version and Share look buttons" width="780" height="1328" loading="lazy"><figcaption><b>Make it yours</b>Swap any piece, ask for a cheaper version, or share the look.</figcaption></figure>
+      <figure class="st-screen"><img src="/stylist/img/app-packing.webp" alt="App screen: packing list grouping every piece across the picked looks, with the total to buy everything once" width="780" height="1328" loading="lazy"><figcaption><b>Your packing list</b>Every piece across your looks, listed once, ready to tick off.</figcaption></figure>
+    </div>
+    <p class="st-disclaim">Screens from the beta app using our test catalogue: items, prices and retailers are made up, and the place details are an example. Real retailer stock and shop links arrive as retailers connect.</p>
+  </div>
+</section>
+
+
 <!-- ══ PROMISES ══ -->
-<section class="st-section st-light">
+<section class="st-section">
   <div class="st-wrap">
     <span class="st-eyebrow reveal">The fine print, up front</span>
     <h2 class="st-h2 reveal reveal-d1">Straight with <em>you.</em></h2>
