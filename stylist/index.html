@@ -3,11 +3,11 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Outfit Stylist — Dressed for it. On budget. | si187 Apps</title>
-<meta name="description" content="Outfit Stylist from si187 Apps: tell it the occasion, place and budget, and get complete menswear outfits from real UK retailer stock, priced and linked. UK closed beta coming soon.">
+<title>Kitted — Dressed for it. On budget. | si187 Apps</title>
+<meta name="description" content="Kitted from si187 Apps: tell it the occasion, place and budget, and get complete menswear outfits from real UK retailer stock, priced and linked. UK closed beta coming soon.">
 <meta name="robots" content="index, follow">
 <link rel="canonical" href="https://si187apps.com/stylist/">
-<meta property="og:title" content="Outfit Stylist — Dressed for it. On budget.">
+<meta property="og:title" content="Kitted — Dressed for it. On budget.">
 <meta property="og:description" content="Complete menswear outfits from real UK retailer stock, priced against your budget.">
 <meta property="og:url" content="https://si187apps.com/stylist/">
 <meta property="og:image" content="https://si187apps.com/assets/images/og-card.png">
@@ -21,7 +21,7 @@
 <link rel="stylesheet" href="/assets/css/site.css">
 <link rel="stylesheet" href="/assets/css/cookie-banner.css">
 <style>
-/* Outfit Stylist palette: monochrome, ISOLATED to this page. si187 brand mark kept as-is.
+/* Kitted palette: monochrome, ISOLATED to this page. si187 brand mark kept as-is.
    Reference (observed 3 Nov 2026): Alta (black, white, grotesk, pill buttons), Reiss (white, black, uppercase sans, photo-led). */
 :root {
   --bg: #0A0A0A; --bg-card: #141414; --bg-raised: #1A1A1A; --bg-border: #262626;
@@ -170,7 +170,7 @@ body { background: var(--bg); }
     <div>
       <span class="st-badge reveal"><i></i>In development · UK closed beta</span>
       <h1 class="st-h1 reveal reveal-d1">Dressed for it.<br><em>On budget.</em></h1>
-      <p class="st-sub reveal reveal-d1">Outfit Stylist · Menswear</p>
+      <p class="st-sub reveal reveal-d1">Kitted · Menswear</p>
       <p class="st-lede reveal reveal-d2">Tell us the occasion, where you're going and what you want to spend. We build complete outfits from real UK retailer stock, total them against your budget, and link you straight to each piece.</p>
       <div class="reveal reveal-d3">
         <a href="#join" class="st-btn">Join the beta</a>
@@ -264,7 +264,7 @@ body { background: var(--bg); }
     <div>
       <span class="st-eyebrow">Closed beta</span>
       <h2 class="st-h2">Got somewhere<br>to <em>be?</em></h2>
-      <p class="st-lede">We're opening Outfit Stylist to a small group of UK men first. Leave your email and we'll be in touch when there's a place.</p>
+      <p class="st-lede">We're opening Kitted to a small group of UK men first. Leave your email and we'll be in touch when there's a place.</p>
     </div>
     <div class="st-form" id="stylist-form">
       <div><label for="stylist-name">Name</label><input type="text" id="stylist-name" placeholder="Your name" autocomplete="name"></div>
@@ -326,7 +326,7 @@ body { background: var(--bg); }
     <p class="footer-nav-label">Apps</p>
     <ul class="footer-nav-links">
       <li><a href="/fpl-coach-ai">FPL Coach AI</a></li>
-      <li><a href="/stylist">Outfit Stylist</a></li>
+      <li><a href="/stylist">Kitted</a></li>
       <li><a href="/#waitlist">Early access</a></li>
     </ul>
   </div>
@@ -368,7 +368,7 @@ async function handleStylistSubmit() {
       body: JSON.stringify({
         name, email, interest: 'outfit-stylist', occasion,
         _replyto: email,
-        _subject: `New Outfit Stylist beta signup — ${name || email}`,
+        _subject: `New Kitted beta signup — ${name || email}`,
         source: 'si187apps.com/stylist',
         submitted_at: new Date().toISOString()
       })
