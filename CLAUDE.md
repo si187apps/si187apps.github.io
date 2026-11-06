@@ -122,7 +122,7 @@ The fingerprint SVG mark is defined inline across all pages. Green outer rings, 
 
 ## Studio information
 
-- **Legal entity:** si187 Enterprises Ltd (London, UK)
+- **Legal entity:** si187 Enterprises Ltd (company 15126475; registered office 2 Wheeleys Road, Edgbaston, Birmingham B15 2LD)
 - **Trading name:** si187 Apps
 - **Social handles:** @si187apps on X, Instagram, TikTok
 - **Tagline:** "Apps worth using."
