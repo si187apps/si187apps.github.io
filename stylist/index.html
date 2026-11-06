@@ -3,12 +3,12 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Kitted — Dressed for it. On budget. | si187 Apps</title>
-<meta name="description" content="Kitted from si187 Apps: tell it the occasion, place and budget, and get complete menswear outfits from real UK retailer stock, priced and linked. UK closed beta coming soon.">
+<title>Kitted — Complete menswear looks for every occasion | si187 Apps</title>
+<meta name="description" content="Kitted is a UK menswear styling app from si187 Apps: complete looks for weddings, interviews, dates, work events and trips, with plain-English style guides. Built to your budget. UK closed beta.">
 <meta name="robots" content="index, follow">
 <link rel="canonical" href="https://si187apps.com/stylist/">
-<meta property="og:title" content="Kitted — Dressed for it. On budget.">
-<meta property="og:description" content="Complete menswear outfits from real UK retailer stock, priced against your budget.">
+<meta property="og:title" content="Kitted — Complete menswear looks for every occasion">
+<meta property="og:description" content="Dressed for it. Complete menswear looks for every occasion, built to your budget.">
 <meta property="og:url" content="https://si187apps.com/stylist/">
 <meta property="og:image" content="https://si187apps.com/assets/images/og-card.png">
 <meta name="twitter:card" content="summary_large_image">
@@ -138,6 +138,40 @@ body { background: var(--bg); }
   .st-step, .st-step + .st-step { padding: 28px 0 0; border-left: 0; }
 }
 
+/* Kitted brand bar (sits under the fixed studio nav) */
+.kt-bar { padding-top: 66px; background: var(--bg); }
+.kt-bar-in { max-width: 1180px; margin: 0 auto; padding: 18px 24px; display: flex; align-items: center; justify-content: space-between; gap: 16px; flex-wrap: wrap; border-bottom: 1px solid var(--bg-border); }
+.kt-brand { display: flex; align-items: baseline; gap: 14px; flex-wrap: wrap; }
+.kt-word { font-family: 'Inter Tight', 'Helvetica Neue', sans-serif; font-weight: 600; font-size: 22px; letter-spacing: 5px; text-transform: uppercase; color: #FFFFFF; text-decoration: none; line-height: 1; }
+.kt-tag { font-family: 'JetBrains Mono', monospace; font-size: 10px; letter-spacing: 2px; text-transform: uppercase; color: #8A8A8A; }
+.kt-links { display: flex; gap: 22px; }
+.kt-links a { font-size: 13px; font-weight: 500; color: #A3A3A3; text-decoration: none; }
+.kt-links a:hover { color: #FFFFFF; }
+.st-hero-grid { padding-top: 80px; }
+.st-hero-sub { font-family: 'Inter Tight', 'Helvetica Neue', sans-serif; font-weight: 400; font-size: clamp(21px, 2.3vw, 27px); line-height: 1.35; letter-spacing: -0.4px; color: var(--text1); margin: 26px 0 22px; max-width: 520px; }
+
+/* Style guides */
+.st-guides { display: grid; grid-template-columns: 1fr 1fr; gap: 48px; margin-top: 48px; }
+.st-guides h3 { font-family: 'JetBrains Mono', monospace; font-size: 11px; letter-spacing: 2px; text-transform: uppercase; color: var(--text3); font-weight: 500; margin-bottom: 8px; }
+.st-guides ul { list-style: none; padding: 0; margin: 0; border-top: 1px solid var(--bg-border); }
+.st-guides li a { display: flex; justify-content: space-between; align-items: baseline; gap: 16px; padding: 16px 0; border-bottom: 1px solid var(--bg-border); text-decoration: none; color: var(--text1); font-family: 'Inter Tight', 'Helvetica Neue', sans-serif; font-size: 20px; letter-spacing: -0.3px; }
+.st-guides li a span { font-family: 'Inter', sans-serif; font-size: 13px; color: var(--text2); letter-spacing: 0; text-align: right; }
+.st-guides li a:hover { color: var(--text3); }
+.st-guides-all { margin-top: 40px; }
+@media (max-width: 900px) {
+  .kt-bar { padding-top: 77px; }
+  .kt-bar-in { padding: 14px 16px; }
+  .st-hero-grid { padding-top: 44px; }
+  .st-guides { grid-template-columns: 1fr; gap: 40px; }
+}
+@media (max-width: 600px) {
+  .kt-tag { display: none; }
+  .kt-bar-in { flex-wrap: nowrap; }
+  .kt-word { font-size: 18px; letter-spacing: 4px; }
+  .kt-links { gap: 14px; }
+  .kt-links a { font-size: 12px; }
+  .st-guides li a span { display: none; }
+}
 </style>
 </head>
 <body>
@@ -170,18 +204,26 @@ body { background: var(--bg); }
   <a href="/#waitlist" onclick="closeMobileNav()" style="color:var(--green)">Early access</a>
 </div>
 
+<!-- ══ KITTED BAR ══ -->
+<div class="kt-bar">
+  <div class="kt-bar-in">
+    <div class="kt-brand"><a href="/stylist/" class="kt-word" aria-label="Kitted home">Kitted</a><span class="kt-tag">Menswear styling · from si187 Apps</span></div>
+    <div class="kt-links"><a href="/stylist/guides/">Style guides</a><a href="#app">The app</a><a href="#join">Join the beta</a></div>
+  </div>
+</div>
+
 
 <!-- ══ HERO ══ -->
 <header id="main-content" class="st-hero">
   <div class="st-hero-grid">
     <div>
       <span class="st-badge reveal"><i></i>In development · UK closed beta</span>
-      <h1 class="st-h1 reveal reveal-d1">Dressed for it.<br><em>On budget.</em></h1>
-      <p class="st-sub reveal reveal-d1">Kitted · Menswear</p>
-      <p class="st-lede reveal reveal-d2">Tell us the occasion, where you're going and what you want to spend. We build complete outfits from real UK retailer stock, total them against your budget, and link you straight to each piece.</p>
+      <h1 class="st-h1 reveal reveal-d1">Dressed<br>for <em>it.</em></h1>
+      <p class="st-hero-sub reveal reveal-d1">Complete menswear looks for every occasion, built to your budget.</p>
+      <p class="st-lede reveal reveal-d2">A wedding, an interview, a first date, a weekend away. Tell Kitted the occasion and where you're going, and it puts together whole outfits, piece by piece, with a plain-English tip on how to wear each one. Set a budget and every look is totalled against it, with a link to each piece.</p>
       <div class="reveal reveal-d3">
         <a href="#join" class="st-btn">Join the beta</a>
-        <a href="#lookbook" class="st-btn st-btn-ghost">See the lookbook</a>
+        <a href="/stylist/guides/" class="st-btn st-btn-ghost">Read the style guides</a>
       </div>
     </div>
     <div class="reveal reveal-d2" aria-label="Example outfit basket (illustrative)">
@@ -203,35 +245,18 @@ body { background: var(--bg); }
 </header>
 
 
-<!-- ══ LOOKBOOK ══ -->
-<section class="st-section st-light" id="lookbook">
+<!-- ══ INSIDE THE APP ══ -->
+<section class="st-section st-light" id="app">
   <div class="st-wrap">
-    <div class="st-look-head">
-      <div>
-        <span class="st-eyebrow reveal">The lookbook · Race weekend</span>
-        <h2 class="st-h2 reveal reveal-d1">One trip.<br>Every <em>occasion.</em></h2>
-        <p class="st-lede reveal reveal-d2">One race weekend, eight occasions: travel, long lunches, race day, drinks and black tie. Same man, dressed for each moment.</p>
-      </div>
-      <div class="st-tabs reveal" role="group" aria-label="Filter looks">
-        <button class="st-tab" aria-pressed="true" data-filter="all">All</button>
-        <button class="st-tab" aria-pressed="false" data-filter="travel">Travel</button>
-        <button class="st-tab" aria-pressed="false" data-filter="dining">Dining</button>
-        <button class="st-tab" aria-pressed="false" data-filter="racetrack">Racetrack</button>
-        <button class="st-tab" aria-pressed="false" data-filter="drinks">Drinks</button>
-      </div>
+    <span class="st-eyebrow reveal">Inside the app</span>
+    <h2 class="st-h2 reveal reveal-d1">Every part of the trip.<br>One <em>list.</em></h2>
+    <p class="st-lede reveal reveal-d2">Tell Kitted where you're going and it splits the trip into the moments that need different clothes. Pick a look for each, then see every piece once, with the total.</p>
+    <div class="st-screens reveal reveal-d2">
+      <figure class="st-screen"><img src="/stylist/img/app-trip-parts.webp" alt="App screen: looks for each part of a trip, with tabs for daytime, evening lounge and hospitality suite, and a look priced against a £250 budget" width="780" height="1328" loading="lazy"><figcaption><b>Looks for each part of the trip</b>Three complete outfits per moment, each priced against your budget.</figcaption></figure>
+      <figure class="st-screen"><img src="/stylist/img/app-outfit.webp" alt="App screen: an outfit with each piece, swap buttons, a note about delivery from several shops, and Cheaper version and Share look buttons" width="780" height="1328" loading="lazy"><figcaption><b>Make it yours</b>Swap any piece, ask for a cheaper version, or share the look.</figcaption></figure>
+      <figure class="st-screen"><img src="/stylist/img/app-packing.webp" alt="App screen: packing list grouping every piece across the picked looks, with the total to buy everything once" width="780" height="1328" loading="lazy"><figcaption><b>Your packing list</b>Every piece across your looks, listed once, ready to tick off.</figcaption></figure>
     </div>
-
-    <div class="st-grid">
-      <figure class="st-look reveal" data-time="travel"><div class="st-frame"><img src="/stylist/img/departure.webp" alt="AI preview: travel day, navy bomber, striped shirt, jeans and white trainers" loading="lazy"><span class="st-tagai">AI preview</span></div><figcaption><b>Departure</b><span>Day · Travel</span></figcaption></figure>
-      <figure class="st-look reveal" data-time="travel"><div class="st-frame"><img src="/stylist/img/arrival.webp" alt="AI preview: evening arrival, houndstooth overcoat, green knit and stone chinos" loading="lazy"><span class="st-tagai">AI preview</span></div><figcaption><b>Arrival</b><span>Night · Travel</span></figcaption></figure>
-      <figure class="st-look reveal" data-time="dining"><div class="st-frame"><img src="/stylist/img/smart-casual.webp" alt="AI preview: long lunch, waxed jacket, oatmeal knit, jeans and Chelsea boots" loading="lazy"><span class="st-tagai">AI preview</span></div><figcaption><b>Long lunch</b><span>Day · Smart casual</span></figcaption></figure>
-      <figure class="st-look reveal" data-time="racetrack"><div class="st-frame"><img src="/stylist/img/race-day.webp" alt="AI preview: race day, leather racing jacket, white tee and black trousers" loading="lazy"><span class="st-tagai">AI preview</span></div><figcaption><b>Race day</b><span>Day · Trackside</span></figcaption></figure>
-      <figure class="st-look reveal" data-time="drinks"><div class="st-frame"><img src="/stylist/img/speakeasy.webp" alt="AI preview: speakeasy, grey velvet double-breasted jacket and black roll neck" loading="lazy"><span class="st-tagai">AI preview</span></div><figcaption><b>Speakeasy</b><span>Night · Drinks</span></figcaption></figure>
-      <figure class="st-look reveal" data-time="dining"><div class="st-frame"><img src="/stylist/img/evening-velvet.webp" alt="AI preview: dinner, burgundy velvet dinner jacket and open white shirt" loading="lazy"><span class="st-tagai">AI preview</span></div><figcaption><b>Dinner</b><span>Night · Velvet</span></figcaption></figure>
-      <figure class="st-look reveal" data-time="racetrack"><div class="st-frame"><img src="/stylist/img/trackside-night.webp" alt="AI preview: night trackside hospitality, black suit and black roll neck" loading="lazy"><span class="st-tagai">AI preview</span></div><figcaption><b>Trackside</b><span>Night · Hospitality</span></figcaption></figure>
-      <figure class="st-look reveal" data-time="dining"><div class="st-frame"><img src="/stylist/img/black-tie-dinner.webp" alt="AI preview: black tie dinner, dinner suit and bow tie" loading="lazy"><span class="st-tagai">AI preview</span></div><figcaption><b>Black-tie dinner</b><span>Night · Black tie</span></figcaption></figure>
-    </div>
-    <p class="st-disclaim">AI previews created from our founder's own photo during early prototyping. The clothing shown was generated by AI and is not a specific retailer's product, and no retailer or venue endorses these images. In the app, outfits are built from retailer product feeds; during the beta you may see a clearly marked test catalogue.</p>
+    <p class="st-disclaim">Screens from the beta app using our test catalogue: items, prices and retailers are made up, and the place details are an example. Real retailer stock and shop links arrive as retailers connect.</p>
   </div>
 </section>
 
@@ -251,18 +276,36 @@ body { background: var(--bg); }
 </section>
 
 
-<!-- ══ INSIDE THE APP ══ -->
-<section class="st-section st-light" id="app">
+<!-- ══ STYLE GUIDES ══ -->
+<section class="st-section st-light" id="guides">
   <div class="st-wrap">
-    <span class="st-eyebrow reveal">Inside the app</span>
-    <h2 class="st-h2 reveal reveal-d1">Every part of the trip.<br>One <em>list.</em></h2>
-    <p class="st-lede reveal reveal-d2">Tell Kitted where you're going and it splits the trip into the moments that need different clothes. Pick a look for each, then see every piece once, with the total.</p>
-    <div class="st-screens reveal reveal-d2">
-      <figure class="st-screen"><img src="/stylist/img/app-trip-parts.webp" alt="App screen: looks for each part of a trip, with tabs for daytime, evening lounge and hospitality suite, and a look priced against a £250 budget" width="780" height="1328" loading="lazy"><figcaption><b>Looks for each part of the trip</b>Three complete outfits per moment, each priced against your budget.</figcaption></figure>
-      <figure class="st-screen"><img src="/stylist/img/app-outfit.webp" alt="App screen: an outfit with each piece, swap buttons, a note about delivery from several shops, and Cheaper version and Share look buttons" width="780" height="1328" loading="lazy"><figcaption><b>Make it yours</b>Swap any piece, ask for a cheaper version, or share the look.</figcaption></figure>
-      <figure class="st-screen"><img src="/stylist/img/app-packing.webp" alt="App screen: packing list grouping every piece across the picked looks, with the total to buy everything once" width="780" height="1328" loading="lazy"><figcaption><b>Your packing list</b>Every piece across your looks, listed once, ready to tick off.</figcaption></figure>
+    <span class="st-eyebrow reveal">Kitted style guides</span>
+    <h2 class="st-h2 reveal reveal-d1">What to wear,<br>and <em>why.</em></h2>
+    <p class="st-lede reveal reveal-d2">Plain-English guides to the occasions and dress codes men ask about most: what to wear piece by piece, what to avoid, and two example outfits for each.</p>
+    <div class="st-guides reveal reveal-d2">
+      <div>
+        <h3>By occasion</h3>
+        <ul>
+          <li><a href="/stylist/guides/wedding-guest/">Wedding guest<span>Smart, never competing with the groom</span></a></li>
+          <li><a href="/stylist/guides/job-interview/">Job interview<span>One step smarter than the team</span></a></li>
+          <li><a href="/stylist/guides/date-night/">Date night<span>Effort, without the meeting look</span></a></li>
+          <li><a href="/stylist/guides/corporate-event/">Corporate event<span>Serious, not off to court</span></a></li>
+          <li><a href="/stylist/guides/smart-evening/">Smart evening<span>Sharper than daytime</span></a></li>
+          <li><a href="/stylist/guides/city-break/">City break<span>Walk all day, still look put together</span></a></li>
+        </ul>
+      </div>
+      <div>
+        <h3>Dress codes, explained</h3>
+        <ul>
+          <li><a href="/stylist/guides/smart-casual/">Smart casual<span>The most common, the most confusing</span></a></li>
+          <li><a href="/stylist/guides/business-casual/">Business casual<span>Office-smart, no full suit</span></a></li>
+          <li><a href="/stylist/guides/cocktail/">Cocktail<span>A step below black tie</span></a></li>
+          <li><a href="/stylist/guides/lounge-suit/">Lounge suit<span>A proper suit and tie</span></a></li>
+          <li><a href="/stylist/guides/black-tie/">Black tie<span>Evening formal, done right</span></a></li>
+        </ul>
+      </div>
     </div>
-    <p class="st-disclaim">Screens from the beta app using our test catalogue: items, prices and retailers are made up, and the place details are an example. Real retailer stock and shop links arrive as retailers connect.</p>
+    <p class="st-guides-all reveal"><a href="/stylist/guides/" class="st-btn">All style guides</a></p>
   </div>
 </section>
 
@@ -277,6 +320,39 @@ body { background: var(--bg); }
       <div class="st-promise"><h3>Your answers, handled with care</h3><p>No account and no photos. Your answers are sent to Google Gemini, an AI service, to build your outfits; we don't store them. <a href="/stylist/privacy/">Privacy notice</a>.</p></div>
       <div class="st-promise"><h3>Starting small</h3><p>Menswear, UK only, 18 and over. A closed beta first, so we get it right before we open the doors.</p></div>
     </div>
+  </div>
+</section>
+
+
+<!-- ══ LOOKBOOK ══ -->
+<section class="st-section st-light" id="lookbook">
+  <div class="st-wrap">
+    <div class="st-look-head">
+      <div>
+        <span class="st-eyebrow reveal">AI-generated concept images · Not real products</span>
+        <h2 class="st-h2 reveal reveal-d1">Concept lookbook.<br>One trip, every <em>occasion.</em></h2>
+        <p class="st-lede reveal reveal-d2">AI-generated concept images we made while shaping the idea: one race weekend, eight occasions, from travel and long lunches to race day, drinks and black tie. They show the thinking, not products you can buy.</p>
+      </div>
+      <div class="st-tabs reveal" role="group" aria-label="Filter looks">
+        <button class="st-tab" aria-pressed="true" data-filter="all">All</button>
+        <button class="st-tab" aria-pressed="false" data-filter="travel">Travel</button>
+        <button class="st-tab" aria-pressed="false" data-filter="dining">Dining</button>
+        <button class="st-tab" aria-pressed="false" data-filter="racetrack">Racetrack</button>
+        <button class="st-tab" aria-pressed="false" data-filter="drinks">Drinks</button>
+      </div>
+    </div>
+
+    <div class="st-grid">
+      <figure class="st-look reveal" data-time="travel"><div class="st-frame"><img src="/stylist/img/departure.webp" alt="AI-generated concept image: travel day, navy bomber, striped shirt, jeans and white trainers" loading="lazy"><span class="st-tagai">AI concept</span></div><figcaption><b>Departure</b><span>Day · Travel</span></figcaption></figure>
+      <figure class="st-look reveal" data-time="travel"><div class="st-frame"><img src="/stylist/img/arrival.webp" alt="AI-generated concept image: evening arrival, houndstooth overcoat, green knit and stone chinos" loading="lazy"><span class="st-tagai">AI concept</span></div><figcaption><b>Arrival</b><span>Night · Travel</span></figcaption></figure>
+      <figure class="st-look reveal" data-time="dining"><div class="st-frame"><img src="/stylist/img/smart-casual.webp" alt="AI-generated concept image: long lunch, waxed jacket, oatmeal knit, jeans and Chelsea boots" loading="lazy"><span class="st-tagai">AI concept</span></div><figcaption><b>Long lunch</b><span>Day · Smart casual</span></figcaption></figure>
+      <figure class="st-look reveal" data-time="racetrack"><div class="st-frame"><img src="/stylist/img/race-day.webp" alt="AI-generated concept image: race day, leather racing jacket, white tee and black trousers" loading="lazy"><span class="st-tagai">AI concept</span></div><figcaption><b>Race day</b><span>Day · Trackside</span></figcaption></figure>
+      <figure class="st-look reveal" data-time="drinks"><div class="st-frame"><img src="/stylist/img/speakeasy.webp" alt="AI-generated concept image: speakeasy, grey velvet double-breasted jacket and black roll neck" loading="lazy"><span class="st-tagai">AI concept</span></div><figcaption><b>Speakeasy</b><span>Night · Drinks</span></figcaption></figure>
+      <figure class="st-look reveal" data-time="dining"><div class="st-frame"><img src="/stylist/img/evening-velvet.webp" alt="AI-generated concept image: dinner, burgundy velvet dinner jacket and open white shirt" loading="lazy"><span class="st-tagai">AI concept</span></div><figcaption><b>Dinner</b><span>Night · Velvet</span></figcaption></figure>
+      <figure class="st-look reveal" data-time="racetrack"><div class="st-frame"><img src="/stylist/img/trackside-night.webp" alt="AI-generated concept image: night trackside hospitality, black suit and black roll neck" loading="lazy"><span class="st-tagai">AI concept</span></div><figcaption><b>Trackside</b><span>Night · Hospitality</span></figcaption></figure>
+      <figure class="st-look reveal" data-time="dining"><div class="st-frame"><img src="/stylist/img/black-tie-dinner.webp" alt="AI-generated concept image: black tie dinner, dinner suit and bow tie" loading="lazy"><span class="st-tagai">AI concept</span></div><figcaption><b>Black-tie dinner</b><span>Night · Black tie</span></figcaption></figure>
+    </div>
+    <p class="st-disclaim">AI-generated concept images, created from our founder's own photo during early prototyping. The clothing shown was generated by AI and is not a specific retailer's product, and no retailer or venue endorses these images. In the app, outfits are built from retailer product feeds; during the beta you may see a clearly marked test catalogue.</p>
   </div>
 </section>
 
@@ -413,7 +489,7 @@ async function handleStylistSubmit() {
 </script>
 
 <script>
-// Lookbook day/night filter
+// Concept lookbook filter
 document.querySelectorAll('.st-tab').forEach(btn => btn.addEventListener('click', () => {
   document.querySelectorAll('.st-tab').forEach(b => b.setAttribute('aria-pressed', b === btn));
   const f = btn.dataset.filter;
