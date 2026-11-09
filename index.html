@@ -726,8 +726,8 @@ footer {
 .app-card-stylist .st-desc { font-size:15px; color:#A3A3A3; line-height:1.7; margin-bottom:24px; max-width:460px; }
 .app-card-stylist .st-cta { display:inline-flex; align-items:center; gap:6px; background:#FFFFFF; color:#0A0A0A; padding:11px 22px; border-radius:100px; font-weight:600; font-size:14px; text-decoration:none; transition:opacity .15s; }
 .app-card-stylist .st-cta:hover { opacity:.85; }
-.app-card-stylist .st-strip { display:grid; grid-template-columns:repeat(4,1fr); gap:8px; }
-.app-card-stylist .st-strip img { width:100%; aspect-ratio:2/5; object-fit:cover; border-radius:10px; display:block; }
+.app-card-stylist .st-strip { display:grid; grid-template-columns:repeat(3,1fr); gap:8px; }
+.app-card-stylist .st-strip img { width:100%; height:auto; object-fit:contain; border-radius:10px; display:block; }
 .app-card-stylist .st-note { font-size:11px; color:#6B6B6B; margin-top:10px; }
 @media (max-width: 900px) { .app-card-stylist { grid-template-columns:1fr; padding:36px 24px; gap:28px; } }
 </style>
@@ -1045,10 +1045,10 @@ footer {
 
 
     <!-- Kitted — in development (UK closed beta), added 2026-11-03.
-         Own monochrome palette scoped to .app-card-stylist; full page at /stylist/. -->
+         Own monochrome palette scoped to .app-card-stylist; full site at kitted.si187apps.com. -->
     <div class="app-card-stylist reveal">
       <div>
-        <p class="st-tag">Menswear styling · iPhone · UK</p>
+        <p class="st-tag">In beta · Launching on iOS &amp; Android · UK</p>
         <h2>Kitted. <em>On budget.</em></h2>
         <p class="st-sub">Menswear styling</p>
         <p class="st-desc">Tell it the occasion, where you're going and what you want to spend. It builds complete outfits, totals them against your budget and, as retailers come on board, links you to each piece.</p>
@@ -1056,12 +1056,11 @@ footer {
       </div>
       <div aria-hidden="true">
         <div class="st-strip">
-          <img src="/stylist/img/departure.webp" alt="" loading="lazy">
-          <img src="/stylist/img/smart-casual.webp" alt="" loading="lazy">
-          <img src="/stylist/img/speakeasy.webp" alt="" loading="lazy">
-          <img src="/stylist/img/black-tie-dinner.webp" alt="" loading="lazy">
+          <img src="https://kitted.si187apps.com/img/app-trip-parts.webp" alt="" loading="lazy">
+          <img src="https://kitted.si187apps.com/img/app-outfit.webp" alt="" loading="lazy">
+          <img src="https://kitted.si187apps.com/img/app-packing.webp" alt="" loading="lazy">
         </div>
-        <p class="st-note">AI previews from the lookbook.</p>
+        <p class="st-note">Screens from the beta app, using test products.</p>
       </div>
     </div>
 
