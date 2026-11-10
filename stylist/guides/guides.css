@@ -1,4 +1,4 @@
-/* Kitted style guides: monochrome Kitted palette, ISOLATED to /stylist/guides/*.
+/* Togged style guides: monochrome Togged palette, ISOLATED to /stylist/guides/*.
    Mirrors the scoped styles on /stylist/. si187 brand mark kept as-is in nav/footer. */
 :root {
   --bg: #0A0A0A; --bg-card: #141414; --bg-raised: #1A1A1A; --bg-border: #262626;
@@ -23,7 +23,7 @@ body { background: var(--bg); overflow-x: hidden; }
 .st-light .st-btn-ghost { color: var(--text1); }
 .st-btn-ghost:hover { background: var(--bg-card); }
 
-/* Kitted brand bar (sits under the fixed studio nav) */
+/* Togged brand bar (sits under the fixed studio nav) */
 .kt-bar { padding-top: 66px; background: var(--bg); }
 .kt-bar-in { max-width: 1180px; margin: 0 auto; padding: 18px 24px; display: flex; align-items: center; justify-content: space-between; gap: 16px; flex-wrap: wrap; border-bottom: 1px solid var(--bg-border); }
 .kt-brand { display: flex; align-items: baseline; gap: 14px; flex-wrap: wrap; }
