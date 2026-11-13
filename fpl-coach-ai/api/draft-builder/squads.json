@@ -1,6 +1,6 @@
 {
-  "generatedAt": "2026-11-12T10:36:15.508Z",
-  "poolSize": 485,
+  "generatedAt": "2026-11-13T10:28:49.168Z",
+  "poolSize": 484,
   "scoredPool": [
     {
       "fplId": 1,
@@ -179,11 +179,6 @@
     },
     {
       "fplId": 52,
-      "composite": 0.1590909090909091,
-      "position": "MID"
-    },
-    {
-      "fplId": 53,
       "composite": 0.1590909090909091,
       "position": "MID"
     },
@@ -2438,7 +2433,7 @@
       "totalCost": 99.1,
       "remainingBank": 0.9,
       "budgetCap": 100,
-      "objectiveValue": 61.25715671,
+      "objectiveValue": 61.25715701,
       "clubDistribution": {
         "BHA": 3,
         "EVE": 2,
@@ -2512,7 +2507,7 @@
           "position": "DEF",
           "team": "TOT",
           "price": 5.1,
-          "ownership": 14.6,
+          "ownership": 14.7,
           "role": "start",
           "primarySeasonLabel": "2026/27",
           "primaryStarts": 10,
@@ -2620,11 +2615,11 @@
           "primaryPpgRaw": 7.159090909090909,
           "primaryPpgShrunk": 6.1886684927477615,
           "components": {
-            "provenOutput": 0.974025974025974,
+            "provenOutput": 0.9738562091503268,
             "openingFixtures": 0.818181818181818,
             "minutesSecurity": 0.9415555555555555
           },
-          "composite": 0.9129864357864357,
+          "composite": 0.9129100415923944,
           "euRotation": "UECL",
           "isFirstChoiceGkp": false,
           "dataTier": 1,
@@ -2637,7 +2632,7 @@
           "position": "MID",
           "team": "CHE",
           "price": 8.2,
-          "ownership": 53.9,
+          "ownership": 54,
           "role": "start",
           "primarySeasonLabel": "2026/27",
           "primaryStarts": 10,
@@ -2645,11 +2640,11 @@
           "primaryPpgRaw": 5.318181818181818,
           "primaryPpgShrunk": 5.087772785622593,
           "components": {
-            "provenOutput": 0.8571428571428571,
+            "provenOutput": 0.8627450980392157,
             "openingFixtures": 0.3939393939393938,
             "minutesSecurity": 0.991111111111111
           },
-          "composite": 0.7218152958152957,
+          "composite": 0.7243363042186571,
           "euRotation": null,
           "isFirstChoiceGkp": false,
           "dataTier": 1,
@@ -2662,7 +2657,7 @@
           "position": "FWD",
           "team": "AVL",
           "price": 7.1,
-          "ownership": 31,
+          "ownership": 31.2,
           "role": "start",
           "primarySeasonLabel": "2026/27",
           "primaryStarts": 9,
@@ -2772,11 +2767,11 @@
           "primaryPpgRaw": 5.012658227848101,
           "primaryPpgShrunk": 4.768507611453425,
           "components": {
-            "provenOutput": 0.7662337662337663,
+            "provenOutput": 0.7712418300653595,
             "openingFixtures": 1,
             "minutesSecurity": 0.7574444444444445
           },
-          "composite": 0.8462940836940837,
+          "composite": 0.8485477124183006,
           "euRotation": "UCL",
           "isFirstChoiceGkp": false,
           "dataTier": 1,
@@ -2789,7 +2784,7 @@
           "position": "MID",
           "team": "SUN",
           "price": 5.7,
-          "ownership": 2.7,
+          "ownership": 2.8,
           "role": "bench",
           "primarySeasonLabel": "2026/27",
           "primaryStarts": 10,
@@ -2797,11 +2792,11 @@
           "primaryPpgRaw": 4.797219003476246,
           "primaryPpgShrunk": 4.700617869610537,
           "components": {
-            "provenOutput": 0.7402597402597403,
+            "provenOutput": 0.7450980392156863,
             "openingFixtures": 0.5151515151515151,
             "minutesSecurity": 0.8852
           },
-          "composite": 0.6904599134199134,
+          "composite": 0.6926371479500891,
           "euRotation": "UEL",
           "isFirstChoiceGkp": false,
           "dataTier": 1,
@@ -2822,11 +2817,11 @@
           "primaryPpgRaw": 4.469525959367946,
           "primaryPpgShrunk": 4.611085363869902,
           "components": {
-            "provenOutput": 0.7012987012987013,
+            "provenOutput": 0.7058823529411765,
             "openingFixtures": 0.33333333333333315,
             "minutesSecurity": 0.9937777777777778
           },
-          "composite": 0.6310066378066377,
+          "composite": 0.6330692810457517,
           "euRotation": null,
           "isFirstChoiceGkp": false,
           "dataTier": 1,
@@ -2843,7 +2838,7 @@
       "totalCost": 99.8,
       "remainingBank": 0.2,
       "budgetCap": 100,
-      "objectiveValue": 4.47191081,
+      "objectiveValue": 4.47091081,
       "clubDistribution": {
         "MCI": 2,
         "BHA": 2,
@@ -3016,7 +3011,7 @@
           "position": "MID",
           "team": "CHE",
           "price": 9.8,
-          "ownership": 28.4,
+          "ownership": 28.3,
           "role": "start",
           "primarySeasonLabel": "2025/26",
           "primaryStarts": 24,
@@ -3041,7 +3036,7 @@
           "position": "MID",
           "team": "CHE",
           "price": 8.2,
-          "ownership": 53.9,
+          "ownership": 54,
           "role": "start",
           "primarySeasonLabel": "2025/26",
           "primaryStarts": 37,
@@ -3116,7 +3111,7 @@
           "position": "FWD",
           "team": "LEE",
           "price": 6,
-          "ownership": 17.6,
+          "ownership": 17.5,
           "role": "start",
           "primarySeasonLabel": "2025/26",
           "primaryStarts": 30,
@@ -3521,7 +3516,7 @@
           "position": "FWD",
           "team": "LEE",
           "price": 6,
-          "ownership": 17.6,
+          "ownership": 17.5,
           "role": "start",
           "primarySeasonLabel": "2025/26",
           "primaryStarts": 30,
@@ -4548,6 +4543,6 @@
       "reason": "Ownership 12.9% falls in the gap between Balanced (≥15%) and Differentials (≤12%)"
     }
   ],
-  "_fetchedAt": "2026-11-12T11:36:56Z",
+  "_fetchedAt": "2026-11-13T11:20:19Z",
   "_source": "prefetch-draft-builder-squads.yml"
 }
