@@ -5,6 +5,21 @@
   var controls = document.getElementById('lib-controls');
   if (!list || !controls) return;
   var entries = Array.prototype.slice.call(list.querySelectorAll('.app-entry'));
+  var archive = document.getElementById('lib-archive');
+  var archGrid = document.getElementById('lib-archive-grid');
+  var archN = document.getElementById('lib-archive-n');
+  var incl = document.getElementById('lib-incl-archive');
+  // data-tier="archive" on an .app-entry moves it into the Archive panel (one attribute to change).
+  function isArch(el) { return el.getAttribute('data-tier') === 'archive'; }
+  function place() {
+    entries.forEach(function (el) {
+      (isArch(el) && archGrid ? archGrid : list).appendChild(el);
+    });
+    var n = entries.filter(isArch).length;
+    if (archive) archive.hidden = n === 0;
+    if (archN) archN.textContent = n ? '(' + n + ')' : '';
+  }
+  place();
   var search = document.getElementById('lib-search');
   var sort = document.getElementById('lib-sort');
   var count = document.getElementById('lib-count');
@@ -20,8 +35,10 @@
 
   function apply() {
     var q = (search.value || '').toLowerCase().trim();
-    var shown = 0;
+    var shown = 0, pool = 0, withArch = incl && incl.checked;
     entries.forEach(function (el) {
+      if (isArch(el) && !withArch) { el.hidden = false; return; }
+      pool++;
       var ok = (state.status === 'all' || el.getAttribute('data-status') === state.status) &&
         (!state.platform || has(el, 'platform', state.platform)) &&
         (!state.category || has(el, 'category', state.category)) &&
@@ -30,7 +47,8 @@
       if (ok) shown++;
     });
     empty.hidden = shown !== 0;
-    count.textContent = 'Showing ' + shown + ' of ' + entries.length + ' apps';
+    if (archive && withArch && entries.some(isArch)) archive.open = true;
+    count.textContent = 'Showing ' + shown + ' of ' + pool + ' apps' + (withArch ? ' (including archive)' : '');
   }
 
   function order() {
@@ -39,7 +57,7 @@
       return byName
         ? a.getAttribute('data-name').localeCompare(b.getAttribute('data-name'))
         : Number(a.getAttribute('data-order')) - Number(b.getAttribute('data-order'));
-    }).forEach(function (el) { list.appendChild(el); });
+    }).forEach(function (el) { (isArch(el) && archGrid ? archGrid : list).appendChild(el); });
   }
 
   chips.forEach(function (chip) {
@@ -65,6 +83,7 @@
 
   function reset() {
     search.value = '';
+    if (incl) incl.checked = false;
     state = { status: 'all', platform: '', category: '' };
     chips.forEach(function (c) {
       c.setAttribute('aria-pressed', c.getAttribute('data-group') === 'status' && c.getAttribute('data-value') === 'all' ? 'true' : 'false');
@@ -74,6 +93,7 @@
   }
 
   search.addEventListener('input', apply);
+  if (incl) incl.addEventListener('change', apply);
   sort.addEventListener('change', order);
   document.getElementById('lib-reset').addEventListener('click', function (e) { e.preventDefault(); reset(); });
   apply();
