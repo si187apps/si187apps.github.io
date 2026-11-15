@@ -19,7 +19,7 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Syne:wght@700;800&family=Inter+Tight:wght@400;500;600&family=Inter:wght@300;400;500;600&family=JetBrains+Mono:wght@400;500;600;700&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="/assets/css/site.css">
-<link rel="stylesheet" href="/assets/css/cookie-banner.css">
+<link rel="stylesheet" href="/assets/css/cookie-banner.css?v=2">
 <style>
 /* Togged palette: monochrome, ISOLATED to this page. si187 brand mark kept as-is.
    Reference (observed 3 Nov 2026): Alta (black, white, grotesk, pill buttons), Reiss (white, black, uppercase sans, photo-led). */
@@ -74,7 +74,7 @@ body { background: var(--bg); }
 /* Lookbook */
 .st-look-head { display: flex; justify-content: space-between; align-items: end; gap: 32px; flex-wrap: wrap; margin-bottom: 48px; }
 .st-tabs { display: flex; gap: 6px; flex-wrap: wrap; }
-.st-tab { font-family: 'JetBrains Mono', monospace; font-size: 11px; letter-spacing: 1.5px; text-transform: uppercase; background: transparent; color: var(--text2); border: 1px solid var(--bg-border); padding: 9px 16px; border-radius: 100px; cursor: pointer; }
+.st-tab { font-family: 'JetBrains Mono', monospace; font-size: 11px; letter-spacing: 1.5px; text-transform: uppercase; background: transparent; color: var(--text2); border: 1px solid var(--bg-border); padding: 9px 16px; min-height: 44px; border-radius: 100px; cursor: pointer; }
 .st-tab[aria-pressed="true"] { background: var(--text1); color: #F4F3F0; border-color: var(--text1); }
 .st-grid { display: grid; grid-template-columns: repeat(8, 1fr); gap: 24px 12px; }
 @media (max-width: 1100px) { .st-grid { grid-template-columns: repeat(4, 1fr); } }

@@ -91,3 +91,20 @@
 .app-card-rm .rm-fig img{display:block;width:100%;height:auto;border:3px solid #0000C6;border-right-color:#000029;border-bottom-color:#000029;background:#000;box-shadow:0 0 0 1px #000,0 18px 50px rgba(0,0,200,.35)}
 .app-card-rm .rm-fig figcaption{font-size:12px;color:#84FFFF;margin-top:8px}
 @media(max-width:900px){.app-card-rm .card-grid{padding:28px 20px 30px}}
+
+/* Archive + compact app cards (latest/archive tier via data-tier) */
+.app-entry[data-tier="latest"] .app-mini{display:none}
+.app-entry[data-tier="archive"] > :not(.app-mini){display:none}
+.lib-archive-opt{display:inline-flex;align-items:center;gap:10px;min-height:44px;color:#F0F5F0;font:500 14px 'Inter',system-ui,sans-serif;cursor:pointer}
+.lib-archive-opt input{width:20px;height:20px;accent-color:#39FF7A}
+.lib-archive{margin:8px 0 28px;border:1px solid var(--bg-border,#142014);border-radius:16px;background:var(--bg-card,#091409)}
+.lib-archive[hidden]{display:none}
+.lib-archive summary{min-height:44px;display:flex;align-items:center;gap:8px;padding:12px 20px;cursor:pointer;font:500 11px 'JetBrains Mono',monospace;letter-spacing:2px;text-transform:uppercase;color:#C084C8}
+.lib-archive summary:focus-visible{outline:2px solid #39FF7A;outline-offset:2px}
+.lib-archive-note{margin:0;padding:0 20px 8px;color:#8AAA8A;font-size:13px}
+.lib-archive-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(240px,1fr));gap:12px;padding:8px 20px 20px}
+.app-mini{padding:16px;border:1px solid var(--bg-border,#142014);border-radius:12px;background:#050E05}
+.app-mini-name{margin:0 0 4px;font:700 16px 'Syne',sans-serif;color:#F0F5F0}
+.app-mini-desc{margin:0 0 10px;font-size:13px;line-height:1.5;color:#8AAA8A}
+.app-mini-link{display:inline-flex;align-items:center;min-height:44px;color:#39FF7A;font-weight:600;font-size:14px;text-decoration:none}
+.app-mini-link:hover{text-decoration:underline}

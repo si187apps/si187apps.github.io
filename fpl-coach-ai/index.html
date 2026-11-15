@@ -26,7 +26,7 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Syne:wght@700;800&family=Inter:wght@300;400;500;600&family=JetBrains+Mono:wght@400;500;600;700&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="/assets/css/cookie-banner.css">
+<link rel="stylesheet" href="/assets/css/cookie-banner.css?v=2">
 <!-- Store-badge styles (matches homepage .dl-btn from site.css). Kept inline
      rather than loading site.css to avoid palette collisions with FPL page. -->
 <style>
@@ -137,7 +137,7 @@ nav.scrolled { padding: 12px 56px; }
 .nav-links a.active { color:var(--s-green); }
 .nav-cta { background:var(--teal) !important; color:#050E12 !important; padding:9px 18px !important; border-radius:8px !important; font-weight:700 !important; font-size:13px !important; transition:opacity 0.15s !important; }
 .nav-cta:hover { opacity:0.85 !important; }
-.nav-toggle { display:none; flex-direction:column; gap:5px; background:none; border:none; cursor:pointer; padding:4px; }
+.nav-toggle { display:none; flex-direction:column; gap:5px; background:none; border:none; cursor:pointer; padding:12px; min-width:44px; min-height:44px; align-items:center; justify-content:center; }
 .nav-toggle span { display:block; width:22px; height:2px; background:var(--s-text2); border-radius:2px; }
 .mobile-nav { display:none; position:fixed; top:0; left:0; right:0; bottom:0; z-index:300; background:var(--s-bg); flex-direction:column; align-items:center; justify-content:center; gap:32px; }
 .mobile-nav.open { display:flex; }
@@ -162,7 +162,7 @@ nav.scrolled { padding: 12px 56px; }
 .btn-teal:hover { opacity:0.88; transform:translateY(-1px); }
 .btn-outline { display:inline-flex; align-items:center; gap:8px; background:transparent; color:var(--text2); padding:14px 24px; border-radius:10px; border:1px solid var(--border); font-weight:500; font-size:15px; text-decoration:none; transition:color 0.15s, border-color 0.15s; }
 .btn-outline:hover { color:var(--text1); border-color:var(--border2); }
-.btn-text { display:inline-flex; align-items:center; gap:8px; color:var(--teal); font-size:14px; font-weight:600; text-decoration:none; transition:gap 0.2s; }
+.btn-text { display:inline-flex; align-items:center; min-height:44px; gap:8px; color:var(--teal); font-size:14px; font-weight:600; text-decoration:none; transition:gap 0.2s; }
 .btn-text:hover { gap:13px; }
 
 /* Tags */
