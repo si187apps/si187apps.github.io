@@ -67,7 +67,7 @@
 
 .mpm-list { list-style:none; margin:0 0 14px; padding:0; }
 .mpm-list li { position:relative; padding:5px 0 5px 34px; }
-.mpm-list li::before { content:""; position:absolute; left:2px; top:12px; width:20px; height:20px; border-radius:50%; background:var(--green-lt); border:3px solid var(--green-deep); }
+.mpm-list li::before { content:""; position:absolute; left:2px; box-sizing:border-box; width:20px; height:20px; top:calc(5px + (1.55em - 20px) / 2 + 1px); border-radius:50%; background:var(--green-lt); border:3px solid var(--green-deep); } /* centred on the FIRST line at any font size (was 12px + border = ~5px low) */
 
 /* Steps */
 .mpm-steps { list-style:none; counter-reset:s; margin:26px 0 0; padding:0; display:grid; grid-template-columns:repeat(2,1fr); gap:20px; }
