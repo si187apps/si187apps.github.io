@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>How to import your own database into Retro Manager | step by step</title>
+<meta name="description" content="A simple step by step guide to importing your own database file into Retro Manager on iPhone, iPad and Android, with fixes for every error message.">
+<meta name="robots" content="index, follow">
+<link rel="canonical" href="https://si187apps.com/retro-manager/how-to/">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://si187apps.com/retro-manager/how-to/">
+<meta property="og:title" content="How to import your own database into Retro Manager | step by step">
+<meta property="og:description" content="A simple step by step guide to importing your own database file into Retro Manager on iPhone, iPad and Android, with fixes for every error message.">
+<meta property="og:image" content="https://si187apps.com/assets/images/og-retro-manager.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:site_name" content="si187 Apps">
+<meta property="og:locale" content="en_GB">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:site" content="@si187apps">
+<meta name="twitter:title" content="How to import your own database into Retro Manager | step by step">
+<meta name="twitter:description" content="A simple step by step guide to importing your own database file into Retro Manager on iPhone, iPad and Android, with fixes for every error message.">
+<meta name="twitter:image" content="https://si187apps.com/assets/images/og-retro-manager.png">
+<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 160 160'><rect width='160' height='160' fill='%23050E05'/><circle cx='80' cy='79' r='22' fill='%2339FF7A'/></svg>">
+<meta name="theme-color" content="#050E05">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Syne:wght@700;800&family=Inter:wght@300;400;500;600&family=JetBrains+Mono:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="/assets/css/site.css">
+<link rel="stylesheet" href="/assets/css/cookie-banner.css">
+<link rel="stylesheet" href="/retro-manager/retro.css?v=2">
+</head>
+<body>
+<a href="#main-content" class="skip-link" style="position:absolute;left:-9999px;top:8px;background:#39FF7A;color:#050E05;padding:10px 16px;border-radius:8px;font-weight:700;z-index:10000">Skip to main content</a>
+<nav id="main-nav">
+  <a href="/" class="nav-logo" aria-label="si187 Apps home">
+    <div class="fp-mark" aria-hidden="true">
+      <svg width="28" height="28" viewBox="0 0 160 160">
+        <path d="M80 148 A69 69 0 0 1 11 79" fill="none" stroke="#39FF7A" stroke-width="4.5" stroke-linecap="round" opacity=".11"/>
+        <path d="M80 148 A69 69 0 0 0 149 79" fill="none" stroke="#39FF7A" stroke-width="4.5" stroke-linecap="round" opacity=".11"/>
+        <path d="M80 132 A53 53 0 0 1 27 79" fill="none" stroke="#39FF7A" stroke-width="4.5" stroke-linecap="round" opacity=".24"/>
+        <path d="M80 132 A53 53 0 0 0 133 79" fill="none" stroke="#39FF7A" stroke-width="4.5" stroke-linecap="round" opacity=".24"/>
+        <path d="M80 116 A37 37 0 0 1 43 79" fill="none" stroke="#39FF7A" stroke-width="4.5" stroke-linecap="round" opacity=".44"/>
+        <path d="M80 116 A37 37 0 0 0 117 79" fill="none" stroke="#39FF7A" stroke-width="4.5" stroke-linecap="round" opacity=".44"/>
+        <path d="M80 100 A21 21 0 0 1 59 79" fill="none" stroke="#39FF7A" stroke-width="4.5" stroke-linecap="round" opacity=".68"/>
+        <path d="M80 100 A21 21 0 0 0 101 79" fill="none" stroke="#39FF7A" stroke-width="4.5" stroke-linecap="round" opacity=".68"/>
+        <path d="M80 88 A9 9 0 0 1 71 79" fill="none" stroke="#C084C8" stroke-width="4.5" stroke-linecap="round" opacity=".92"/>
+        <path d="M80 88 A9 9 0 0 0 89 79" fill="none" stroke="#C084C8" stroke-width="4.5" stroke-linecap="round" opacity=".92"/>
+        <circle cx="80" cy="79" r="7" fill="#39FF7A"/>
+      </svg>
+    </div>
+    <span class="nav-wordmark">si187 <em>Apps</em></span>
+  </a>
+
+  <ul class="nav-links" role="navigation" aria-label="Primary navigation">
+    <li><a href="/about">About</a></li>
+    <li><a href="/roadmap">Roadmap</a></li>
+    <li><a href="/manifesto">Manifesto</a></li>
+    <li><a href="/labs">Labs</a></li>
+    <li><a href="/retro-manager/#launch" class="nav-cta">Get it on launch day</a></li>
+  </ul>
+
+  <button class="nav-toggle" aria-label="Open menu" id="nav-toggle-btn">
+    <span></span><span></span><span></span>
+  </button>
+</nav>
+
+<!-- Mobile nav drawer -->
+<div class="mobile-nav" id="mobile-nav" role="dialog" aria-modal="true" aria-label="Navigation">
+  <button class="mobile-nav-close" id="mobile-nav-close" aria-label="Close menu">✕</button>
+  <a href="/about"      onclick="closeMobileNav()">About</a>
+  <a href="/roadmap"    onclick="closeMobileNav()">Roadmap</a>
+  <a href="/manifesto"  onclick="closeMobileNav()">Manifesto</a>
+  <a href="/labs"       onclick="closeMobileNav()">Labs</a>
+  <a href="/retro-manager/#launch" onclick="closeMobileNav()" style="color:var(--green)">Launch day</a>
+</div>
+<main id="main-content" class="rm">
+<div class="rm-tabs" role="navigation" aria-label="Retro Manager sections"><ul><li><a href="/retro-manager/">Overview</a></li><li><a href="/retro-manager/how-to/" aria-current="page">How to import</a></li><li><a href="/retro-manager/faq/">FAQ</a></li><li><a href="/retro-manager/privacy/">Privacy</a></li></ul></div>
+<div class="rm-in" style="padding-bottom:60px">
+ <div class="rm-pagehead"><h1>How to import your own database</h1><p>A step by step guide. It takes about 5 minutes and you do not need any technical knowledge.</p></div>
+ <div class="rm-note ok"><p><strong class="rm-cy">Before you start:</strong> importing is optional. Retro Manager comes with a complete Classic World built in, so you can play straight away. Each import costs £4.99. We do not provide, host or link to any data files. You bring your own.</p></div>
+ <section class="rm-sec" style="border-top:0;padding-top:24px" aria-label="Steps"><ol class="rm-steps"><li><div class="body"><h3>Get your database file ready</h3><p>Retro Manager imports a <strong>zip file</strong> of your own database folder. You need:</p><ul class="rm-feat"><li>A folder called <strong>Data</strong> that has a file named <strong>index.dat</strong> inside it.</li><li>That folder made into a single <strong>.zip</strong> file, for example <strong>Data.zip</strong>.</li></ul><p class="rm-or">Do not zip your saved games or a program folder. Only the Data folder works.</p></div></li><li><div class="body"><h3>Make the zip on your computer</h3><p>On a <strong>Mac</strong>, right click the Data folder and choose <strong>Compress</strong>.</p><p>On <strong>Windows</strong>, right click the Data folder and choose <strong>Send to</strong>, then <strong>Compressed (zipped) folder</strong>.</p><p>You now have a file called Data.zip. If you already have a zip of the Data folder, skip this step. A RAR file will not work, so make a zip.</p><figure class="rm-fig"><img src="/retro-manager/images/phone-import-steps.png" width="1311" height="603" alt="Import screen with the 3 step computer guide expanded" loading="lazy"><figcaption>The app shows these same 3 steps if you tap The game is on my computer.</figcaption></figure></div></li><li><div class="body"><h3>Send the zip to your iPhone or iPad</h3><p>Pick whichever is easiest:</p><ul class="rm-feat"><li><strong>AirDrop:</strong> right click the zip, choose Share, then AirDrop, then your device. On your device, tap the file and choose Retro Manager, or Save to Files.</li><li><strong>iCloud Drive:</strong> drop the zip into iCloud Drive on your computer. It appears in the Files app on your device after a moment.</li><li><strong>Files app:</strong> if the zip is already on the device, it is in the Files app under Downloads or On My iPhone.</li></ul></div></li><li><div class="body"><h3>Or send it to your Android phone or tablet</h3><p>Pick whichever is easiest:</p><ul class="rm-feat"><li><strong>USB cable:</strong> connect the device and copy the zip into the <strong>Downloads</strong> folder.</li><li><strong>Google Drive:</strong> upload the zip on your computer, then open the Drive app on your device and download it. It lands in <strong>Downloads</strong>.</li><li><strong>Email or Nearby Share:</strong> send the zip to yourself and save the attachment to Downloads.</li></ul></div></li><li><div class="body"><h3>Open the import screen in Retro Manager</h3><p>Open the app and start from the Select Club screen. Tap <span class="rm-btnname">Change</span> next to Database to open <strong>Select Database</strong>, then tap <span class="rm-btnname">Import Game Data</span> (or <span class="rm-btnname">Import Another Database</span> if you already have one). Follow the prompts if the app asks you to unlock importing.</p><p>The <strong>Get the Full Game</strong> screen opens, titled <em>Where is your data?</em></p><figure class="rm-fig"><img src="/retro-manager/images/phone-new-game.png" width="1311" height="603" alt="Select Club screen with a Change button next to the Database line" loading="lazy"><figcaption>The Select Club screen. Tap Change next to Database.</figcaption></figure></div></li><li><div class="body"><h3>Choose your zip file</h3><p>Tap <strong>I have a data zip on this phone</strong>. The app says <em>Pick it from Files, iCloud Drive or Downloads.</em> Your device's file picker opens.</p><p>Find your zip and tap it. On iPhone and iPad look in iCloud Drive, On My iPhone or Downloads. On Android open the menu and choose Downloads.</p><p>If your zip arrived by AirDrop or was shared straight to Retro Manager, the Databases screen shows <strong>A data file is waiting to import</strong>. Just tap <span class="rm-btnname">Import</span>.</p><figure class="rm-fig"><img src="/retro-manager/images/phone-import.png" width="1311" height="603" alt="Import screen titled Where is your data with two choices" loading="lazy"><figcaption>Tap I have a data zip on this phone.</figcaption></figure></div></li><li><div class="body"><h3>Wait while it imports</h3><p>A spinner appears with <em>Importing your game data</em>. Large files can take a minute. Keep the app open and the screen on until it finishes.</p></div></li><li><div class="body"><h3>Start your career</h3><p>When it works you see <strong>Import Complete</strong> with the number of players and clubs, and <em>Your database is ready</em>. Tap <span class="rm-btnname">Start Career</span>.</p><p>Your imported database now appears under <strong>Select Database</strong>, where you can rename it, switch between databases, or delete one you no longer need.</p><figure class="rm-fig"><img src="/retro-manager/images/phone-import-done.png" width="1311" height="603" alt="Import Complete screen with a Start Career button" loading="lazy"><figcaption>The Import Complete screen. This example shows made up numbers.</figcaption></figure></div></li></ol></section>
+ <section class="rm-sec" id="problems" aria-labelledby="problems-h">
+  <h2 id="problems-h">Something went wrong?</h2>
+  <p>These are the messages the app shows when an import fails. Find yours below.</p>
+  <figure class="rm-fig"><img src="/retro-manager/images/phone-import-error.png" width="1311" height="603" alt="Import screen showing an orange error message above the two choices" loading="lazy"><figcaption>What an error looks like. The message appears in orange at the top.</figcaption></figure>
+  <div style="margin-top:24px"><div class="rm-err"><q>That doesn't look like game data.</q><p>You picked a file that is not a zip. <strong>Fix:</strong> zip the whole Data folder (the one with index.dat inside) and choose that zip.</p></div><div class="rm-err"><q>That archive is a RAR.</q><p>The app cannot read RAR files. <strong>Fix:</strong> unzip the RAR on a computer, then compress the Data folder as a zip and send that instead.</p></div><div class="rm-err"><q>That file could not be opened as a zip archive.</q><p>The zip is damaged or did not finish copying. <strong>Fix:</strong> make the zip again, send it again, and wait until it has fully arrived before you import.</p></div><div class="rm-err"><q>No game data found in that archive.</q><p>The zip does not contain the Data folder. Saved games and program folders are not the data. <strong>Fix:</strong> zip the folder named <strong>Data</strong> that has <strong>index.dat</strong> inside. It does not matter if the zip has an extra folder around it.</p></div><div class="rm-err"><q>The archive was read but the data inside is incomplete.</q><p>Some of the files in your Data folder are missing. <strong>Fix:</strong> zip the whole Data folder again, with every file in it.</p></div><div class="rm-err"><q>Something went wrong reading that file. Try re-zipping your Data folder and importing again.</q><p>A catch all message. <strong>Fix:</strong> make a fresh zip of the Data folder, send it again, and make sure your device has free storage space.</p></div><div class="rm-err"><q>That database could not be loaded.</q><p>An imported database has been damaged. <strong>Fix:</strong> on the Select Database screen delete it, then import the zip again.</p></div><div class="rm-err"><q>The purchase has not cleared yet.</q><p>The store has not confirmed your payment. <strong>Fix:</strong> wait a few minutes with the app open. It unlocks automatically once the App Store or Google Play confirms it. You can also tap <strong>Restore Purchases</strong>.</p></div></div>
+  <p>Still stuck? Email <a href="mailto:studio@si187apps.com">studio@si187apps.com</a> and tell us which message you see.</p>
+ </section></div>
+</main>
+
+<footer>
+  <div class="footer-col">
+    <div class="footer-brand">
+      <div class="fp-mark" aria-hidden="true">
+        <svg width="24" height="24" viewBox="0 0 160 160">
+          <path d="M80 148 A69 69 0 0 1 11 79" fill="none" stroke="#39FF7A" stroke-width="4.5" stroke-linecap="round" opacity=".15"/>
+          <path d="M80 148 A69 69 0 0 0 149 79" fill="none" stroke="#39FF7A" stroke-width="4.5" stroke-linecap="round" opacity=".15"/>
+          <path d="M80 132 A53 53 0 0 1 27 79" fill="none" stroke="#39FF7A" stroke-width="4.5" stroke-linecap="round" opacity=".32"/>
+          <path d="M80 132 A53 53 0 0 0 133 79" fill="none" stroke="#39FF7A" stroke-width="4.5" stroke-linecap="round" opacity=".32"/>
+          <path d="M80 116 A37 37 0 0 1 43 79" fill="none" stroke="#39FF7A" stroke-width="4.5" stroke-linecap="round" opacity=".55"/>
+          <path d="M80 116 A37 37 0 0 0 117 79" fill="none" stroke="#39FF7A" stroke-width="4.5" stroke-linecap="round" opacity=".55"/>
+          <path d="M80 100 A21 21 0 0 1 59 79" fill="none" stroke="#39FF7A" stroke-width="4.5" stroke-linecap="round" opacity=".75"/>
+          <path d="M80 100 A21 21 0 0 0 101 79" fill="none" stroke="#39FF7A" stroke-width="4.5" stroke-linecap="round" opacity=".75"/>
+          <path d="M80 88 A9 9 0 0 1 71 79" fill="none" stroke="#C084C8" stroke-width="4.5" stroke-linecap="round" opacity=".9"/>
+          <path d="M80 88 A9 9 0 0 0 89 79" fill="none" stroke="#C084C8" stroke-width="4.5" stroke-linecap="round" opacity=".9"/>
+          <circle cx="80" cy="79" r="7" fill="#39FF7A"/>
+        </svg>
+      </div>
+      <div>
+        <p class="footer-name">si187 <em>Apps</em></p>
+        <p class="footer-tagline">si187 Enterprises Ltd · London</p>
+      </div>
+    </div>
+    <div class="footer-social">
+      <a href="https://twitter.com/si187apps" aria-label="X (formerly Twitter)">
+      <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+      <path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/>
+    </svg>
+    </a>
+      <a href="https://instagram.com/si187apps" aria-label="Instagram">
+      <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+      <rect x="2" y="2" width="20" height="20" rx="5" ry="5"/>
+      <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/>
+      <line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/>
+    </svg>
+    </a>
+      <a href="https://tiktok.com/@si187apps" aria-label="TikTok">
+      <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+      <path d="M19.59 6.69a4.83 4.83 0 0 1-3.77-4.25V2h-3.45v13.67a2.89 2.89 0 0 1-5.2 1.74 2.89 2.89 0 0 1 2.31-4.64 2.93 2.93 0 0 1 .88.13V9.4a6.84 6.84 0 0 0-1-.05A6.33 6.33 0 0 0 5.8 20.1a6.34 6.34 0 0 0 10.86-4.43v-7a8.16 8.16 0 0 0 4.77 1.52v-3.4a4.85 4.85 0 0 1-1.84-.1z"/>
+    </svg>
+    </a>
+    </div>
+  </div>
+  <div class="footer-col">
+    <p class="footer-nav-label">Studio</p>
+    <ul class="footer-nav-links">
+      <li><a href="/about">About</a></li>
+      <li><a href="/roadmap">Roadmap</a></li>
+      <li><a href="/manifesto">Manifesto</a></li>
+      <li><a href="/labs">Labs</a></li>
+    </ul>
+  </div>
+  <div class="footer-col">
+    <p class="footer-nav-label">Apps</p>
+    <ul class="footer-nav-links">
+      <li><a href="/seasons">Seasons: The Journey</a></li>
+      <li><a href="/fpl-coach-ai">FPL Coach AI</a></li>
+      <li><a href="/retro-manager">Retro Manager</a></li>
+      <li><a href="/#waitlist">Studio updates</a></li>
+    </ul>
+  </div>
+  <div class="footer-col">
+    <p class="footer-nav-label">Contact</p>
+    <ul class="footer-nav-links">
+      <li><a href="mailto:studio@si187apps.com">studio@si187apps.com</a></li>
+    </ul>
+  </div>
+  <div class="footer-bottom">
+    <p class="footer-copy">© 2026 si187 Enterprises Ltd. All rights reserved.</p>
+    <div class="footer-legal">
+      <a href="/privacy">Privacy</a>
+      <a href="/terms">Terms</a>
+      <a href="#" onclick="window.si187CookiePrefs && window.si187CookiePrefs(); return false;" style="cursor:pointer;">Cookie preferences</a>
+    </div>
+  </div>
+</footer>
+<style>.sr-only{position:absolute;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip:rect(0,0,0,0);white-space:nowrap;border:0}</style>
+<script src="/assets/js/cookie-banner.js"></script>
+<script>
+const nav = document.getElementById('main-nav');
+window.addEventListener('scroll', () => { nav.classList.toggle('scrolled', window.scrollY > 60); }, { passive: true });
+const mobileNav = document.getElementById('mobile-nav');
+document.getElementById('nav-toggle-btn').addEventListener('click', () => { mobileNav.classList.add('open'); document.body.style.overflow = 'hidden'; });
+function closeMobileNav() { mobileNav.classList.remove('open'); document.body.style.overflow = ''; }
+document.getElementById('mobile-nav-close').addEventListener('click', closeMobileNav);
+</script>
+</body>
+</html>
