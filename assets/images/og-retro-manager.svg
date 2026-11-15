@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="630" viewBox="0 0 1200 630">
+  <rect width="1200" height="630" fill="#050E05"/>
+  <rect x="40" y="40" width="1120" height="550" rx="24" fill="#091409" stroke="#142014" stroke-width="2"/>
+  <circle cx="980" cy="315" r="170" fill="none" stroke="#39FF7A" stroke-opacity="0.15" stroke-width="4"/>
+  <circle cx="980" cy="315" r="110" fill="none" stroke="#39FF7A" stroke-opacity="0.3" stroke-width="4"/>
+  <circle cx="980" cy="315" r="50" fill="none" stroke="#39FF7A" stroke-opacity="0.6" stroke-width="4"/>
+  <circle cx="980" cy="315" r="14" fill="#39FF7A"/>
+  <text x="90" y="150" font-family="Courier New, monospace" font-size="26" letter-spacing="5" fill="#C084C8">SI187 APPS</text>
+  <text x="90" y="300" font-family="Arial Black, Arial, sans-serif" font-weight="900" font-size="104" fill="#F0F5F0">Retro</text>
+  <text x="90" y="410" font-family="Arial Black, Arial, sans-serif" font-weight="900" font-size="104" fill="#39FF7A">Manager</text>
+  <text x="90" y="480" font-family="Arial, sans-serif" font-size="30" fill="#8AAA8A">Classic football management. First season free.</text>
+  <text x="90" y="540" font-family="Courier New, monospace" font-size="24" letter-spacing="2" fill="#C084C8">LAUNCHING FRIDAY 12 DECEMBER 2026</text>
+</svg>
