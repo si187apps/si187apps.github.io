@@ -124,3 +124,7 @@
   .rm-legal table { display:block; overflow-x:auto; }
 }
 @media (max-width:480px) { .rm-tabs a { padding:0 10px; } .rm-store { width:100%; } }
+
+/* Pricing: best value bundle card */
+.rm-panel.best { position:relative; border-color:var(--rm-yellow); box-shadow:0 0 0 2px var(--rm-yellow); padding-top:34px; }
+.rm-badge { position:absolute; top:-2px; left:-2px; background:var(--rm-yellow); color:var(--rm-black); font-weight:900; font-size:12px; text-transform:uppercase; letter-spacing:.8px; padding:5px 12px; }
