@@ -128,3 +128,6 @@
 /* Pricing: best value bundle card */
 .rm-panel.best { position:relative; border-color:var(--rm-yellow); box-shadow:0 0 0 2px var(--rm-yellow); padding-top:34px; }
 .rm-badge { position:absolute; top:-2px; left:-2px; background:var(--rm-yellow); color:var(--rm-black); font-weight:900; font-size:12px; text-transform:uppercase; letter-spacing:.8px; padding:5px 12px; }
+
+.rm-icon { width:96px; height:96px; display:block; margin:0 0 18px; border-radius:22%; box-shadow:0 0 0 1px #000,0 8px 24px rgba(0,0,200,.35); }
+@media (max-width:760px){ .rm-icon { width:72px; height:72px; } }
