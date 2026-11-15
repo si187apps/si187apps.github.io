@@ -131,3 +131,9 @@
 
 .rm-icon { width:96px; height:96px; display:block; margin:0 0 18px; border-radius:22%; box-shadow:0 0 0 1px #000,0 8px 24px rgba(0,0,200,.35); }
 @media (max-width:760px){ .rm-icon { width:72px; height:72px; } }
+
+/* Hero video (v5) */
+.rm-hero { grid-template-columns:minmax(0,1fr) minmax(0,1.5fr); align-items:start; }
+.rm-hero-video { min-width:0; position:sticky; top:88px; }
+.rm-hero-video .rm-video { display:block; width:100%; height:auto; aspect-ratio:16/9; background:#000; border:4px solid var(--rm-blue-hi); border-right-color:var(--rm-navy-deep); border-bottom-color:var(--rm-navy-deep); box-shadow:0 0 0 1px #000,0 18px 50px rgba(0,0,200,.4); }
+@media (max-width:860px) { .rm-hero { grid-template-columns:minmax(0,1fr); } .rm-hero-video { order:-1; position:static; } }
