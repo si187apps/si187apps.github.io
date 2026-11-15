@@ -1,0 +1,299 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>My Pet Maze | A maze and storybook game for kids, with your own pet as the hero</title>
+<meta name="description" content="My Pet Maze is a gentle maze and storybook game for children on iPhone, iPad and Android. Tilt to guide your pet through hedge mazes, and turn your own pet into the hero. Coming soon.">
+<meta name="robots" content="index, follow">
+<link rel="canonical" href="https://si187apps.com/mypetmaze/">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://si187apps.com/mypetmaze/">
+<meta property="og:title" content="My Pet Maze | A maze and storybook game for kids, with your own pet as the hero">
+<meta property="og:description" content="My Pet Maze is a gentle maze and storybook game for children on iPhone, iPad and Android. Tilt to guide your pet through hedge mazes, and turn your own pet into the hero. Coming soon.">
+<meta property="og:image" content="https://si187apps.com/mypetmaze/images/feature-graphic.png">
+<meta property="og:image:width" content="1024">
+<meta property="og:image:height" content="500">
+<meta property="og:image:alt" content="My Pet Maze: a cream maze with a golden paw print, surrounded by bones, balls and fish">
+<meta property="og:site_name" content="si187 Apps">
+<meta property="og:locale" content="en_GB">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:site" content="@si187apps">
+<meta name="twitter:title" content="My Pet Maze | A maze and storybook game for kids, with your own pet as the hero">
+<meta name="twitter:description" content="My Pet Maze is a gentle maze and storybook game for children on iPhone, iPad and Android. Tilt to guide your pet through hedge mazes, and turn your own pet into the hero. Coming soon.">
+<meta name="twitter:image" content="https://si187apps.com/mypetmaze/images/feature-graphic.png">
+<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 160 160'><rect width='160' height='160' fill='%23050E05'/><circle cx='80' cy='79' r='22' fill='%2339FF7A'/></svg>">
+<meta name="theme-color" content="#050E05">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Syne:wght@700;800&family=Inter:wght@300;400;500;600&family=JetBrains+Mono:wght@400;500;600;700&family=Bubblegum+Sans&family=Baloo+2:wght@500;600;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="/assets/css/site.css">
+<link rel="stylesheet" href="/assets/css/cookie-banner.css?v=2">
+<link rel="stylesheet" href="/mypetmaze/mypetmaze.css?v=2">
+</head>
+<body>
+<a href="#main-content" class="skip-link" style="position:absolute;left:-9999px;top:8px;background:#39FF7A;color:#050E05;padding:10px 16px;border-radius:8px;font-weight:700;z-index:10000">Skip to main content</a>
+<nav id="main-nav">
+  <a href="/" class="nav-logo" aria-label="si187 Apps home">
+    <div class="fp-mark" aria-hidden="true">
+      <svg width="28" height="28" viewBox="0 0 160 160">
+        <path d="M80 148 A69 69 0 0 1 11 79" fill="none" stroke="#39FF7A" stroke-width="4.5" stroke-linecap="round" opacity=".11"/>
+        <path d="M80 148 A69 69 0 0 0 149 79" fill="none" stroke="#39FF7A" stroke-width="4.5" stroke-linecap="round" opacity=".11"/>
+        <path d="M80 132 A53 53 0 0 1 27 79" fill="none" stroke="#39FF7A" stroke-width="4.5" stroke-linecap="round" opacity=".24"/>
+        <path d="M80 132 A53 53 0 0 0 133 79" fill="none" stroke="#39FF7A" stroke-width="4.5" stroke-linecap="round" opacity=".24"/>
+        <path d="M80 116 A37 37 0 0 1 43 79" fill="none" stroke="#39FF7A" stroke-width="4.5" stroke-linecap="round" opacity=".44"/>
+        <path d="M80 116 A37 37 0 0 0 117 79" fill="none" stroke="#39FF7A" stroke-width="4.5" stroke-linecap="round" opacity=".44"/>
+        <path d="M80 100 A21 21 0 0 1 59 79" fill="none" stroke="#39FF7A" stroke-width="4.5" stroke-linecap="round" opacity=".68"/>
+        <path d="M80 100 A21 21 0 0 0 101 79" fill="none" stroke="#39FF7A" stroke-width="4.5" stroke-linecap="round" opacity=".68"/>
+        <path d="M80 88 A9 9 0 0 1 71 79" fill="none" stroke="#C084C8" stroke-width="4.5" stroke-linecap="round" opacity=".92"/>
+        <path d="M80 88 A9 9 0 0 0 89 79" fill="none" stroke="#C084C8" stroke-width="4.5" stroke-linecap="round" opacity=".92"/>
+        <circle cx="80" cy="79" r="7" fill="#39FF7A"/>
+      </svg>
+    </div>
+    <span class="nav-wordmark">si187 <em>Apps</em></span>
+  </a>
+
+  <ul class="nav-links" role="navigation" aria-label="Primary navigation">
+    <li><a href="/about">About</a></li>
+    <li><a href="/roadmap">Roadmap</a></li>
+    <li><a href="/manifesto">Manifesto</a></li>
+    <li><a href="/labs">Labs</a></li>
+    <li><a href="/mypetmaze/" class="nav-cta">My Pet Maze</a></li>
+  </ul>
+
+  <button class="nav-toggle" aria-label="Open menu" id="nav-toggle-btn">
+    <span></span><span></span><span></span>
+  </button>
+</nav>
+
+<!-- Mobile nav drawer -->
+<div class="mobile-nav" id="mobile-nav" role="dialog" aria-modal="true" aria-label="Navigation">
+  <button class="mobile-nav-close" id="mobile-nav-close" aria-label="Close menu">✕</button>
+  <a href="/about"      onclick="closeMobileNav()">About</a>
+  <a href="/roadmap"    onclick="closeMobileNav()">Roadmap</a>
+  <a href="/manifesto"  onclick="closeMobileNav()">Manifesto</a>
+  <a href="/labs"       onclick="closeMobileNav()">Labs</a>
+  <a href="/mypetmaze/" onclick="closeMobileNav()" style="color:var(--green)">My Pet Maze</a>
+</div>
+<main id="main-content" class="mpm">
+<div class="mpm-tabs" role="navigation" aria-label="My Pet Maze sections"><ul><li><a href="/mypetmaze/" aria-current="page">Overview</a></li><li><a href="/mypetmaze/faq/">FAQ</a></li><li><a href="/mypetmaze/support/">Support</a></li><li><a href="/mypetmaze/privacy/">Privacy</a></li></ul></div>
+<div class="mpm-in">
+ <section class="mpm-hero" aria-label="My Pet Maze">
+  <div>
+    <div class="mpm-hero-top"><img src="/mypetmaze/images/icon-256.png" width="256" height="256" alt="My Pet Maze app icon: a cream maze with a golden paw print in the middle"><span class="mpm-kicker">Coming soon</span></div>
+    <h1>My Pet Maze</h1>
+    <p class="mpm-tagline">Tilt the phone. Guide your pet. Read their very own storybook.</p>
+    <p class="mpm-lede">A gentle maze and storybook game for children, for iPhone, iPad and Android. Tilt your phone to lead a pet through the hedge maze, gather the treats and find the magic book. Every win turns the page on the pet's own story. And a grown-up can turn a photo of your real pet into the hero.</p>
+    <!-- STORE BADGES GO HERE AT LAUNCH: replace the two "Coming soon" boxes below with the official App Store and Google Play badges linking to the store listings. -->
+    <div class="mpm-stores" role="group" aria-label="Store availability">
+      <span class="mpm-store"><small>Coming soon to the</small>App Store</span>
+      <span class="mpm-store"><small>Coming soon to</small>Google Play</span>
+    </div>
+    <div class="mpm-btns"><a class="mpm-btn" href="#how">See how it works</a> <a class="mpm-btn alt" href="/mypetmaze/faq/">Grown-ups: read the FAQ</a></div>
+  </div>
+  <figure class="mpm-fig mpm-video-fig mpm-hero-video">
+    <video class="mpm-video" src="/mypetmaze/video/my-pet-maze-promo-720.mp4" poster="/mypetmaze/video/my-pet-maze-promo-poster.jpg" width="720" height="1280" controls muted loop playsinline preload="metadata" autoplay aria-label="My Pet Maze in action: real pets turned into storybook cartoons, the story pages, tilting through the hedge maze to collect treats, and the YAY celebration."></video>
+    <figcaption>Real gameplay with our own pets. Tap for sound.</figcaption>
+  </figure>
+ </section>
+</div>
+
+<section class="mpm-sec mpm-band" id="own-pet" aria-labelledby="own-pet-h"><div class="mpm-in">
+  <div class="mpm-split">
+    <div>
+      <p class="mpm-eyebrow">Your pet, the hero</p>
+      <h2 id="own-pet-h">Turn your pet into the hero</h2>
+      <p class="lead">A grown-up picks a photo of the family pet, and the game draws them as a storybook cartoon. Then your very own pet steps into the maze and the story.</p>
+      <ul class="mpm-list">
+        <li>A grown-up chooses a photo of the pet: just the pet, in bright light, with the face showing.</li>
+        <li>The photo is sent securely to our server, which draws the cartoon.</li>
+        <li>You see the reveal and answer &ldquo;Does this look like your pet?&rdquo; Not quite right? Try another photo (each pet has a limited number of goes).</li>
+        <li>Give your pet a name, and their story begins.</li>
+      </ul>
+      <p><strong>We keep only the finished cartoon, never the photo.</strong> That way your pet can come back if you get a new phone. <a href="/mypetmaze/privacy/">Read how it works in our privacy policy</a>.</p>
+    </div>
+    <figure class="mpm-fig"><img src="/mypetmaze/images/screen-cartoon.jpg" width="540" height="1170" alt="The cartoon reveal screen: a storybook drawing of an orange dog in a garden, beside the question Does this look like your pet, with the buttons Yes that is my pet and Try another photo." loading="lazy"><figcaption>The reveal: does this look like your pet?</figcaption></figure>
+  </div>
+</div></section>
+
+<section class="mpm-sec" id="how" aria-labelledby="how-h"><div class="mpm-in">
+  <p class="mpm-eyebrow">How to play</p>
+  <h2 id="how-h">How it works</h2>
+  <p class="lead">Easy for little hands, with a story that grows as they play.</p>
+  <ol class="mpm-steps">
+    <li><h3>Tilt to steer</h3><p>Tilt the phone and your pet walks through the hedge maze. Little ones get the hang of it in a minute.</p></li>
+    <li><h3>Collect the treats</h3><p>Gather every treat along the way. Stuck? Tap &ldquo;Show Me!&rdquo; for a hint.</p></li>
+    <li><h3>Find the magic book</h3><p>Reach the magic book at the end of the maze to win, and earn your stars.</p></li>
+    <li><h3>Turn the page</h3><p>Each win moves your pet's storybook on. Book 1 has six illustrated chapters with story pages to read together, and there are trophies to collect.</p></li>
+  </ol>
+  <div class="mpm-note"><p><strong>Pick your challenge.</strong> Choose Easy, Just Right, Tricky or Super, or jump straight into a Quick Game.</p></div>
+</div></section>
+
+<section class="mpm-sec mpm-band" id="screens" aria-labelledby="screens-h"><div class="mpm-in">
+  <h2 id="screens-h">A peek inside</h2>
+  <div class="mpm-shots">
+    <figure class="mpm-fig"><img src="/mypetmaze/images/screen-maze.jpg" width="540" height="1170" alt="A hedge maze seen from above. An orange dog stands at the bottom right, bone treats are scattered along the paths and a glowing magic book waits at the top left." loading="lazy"><figcaption>Guide your pet through the maze.</figcaption></figure>
+    <figure class="mpm-fig"><img src="/mypetmaze/images/screen-storybook.jpg" width="540" height="1170" alt="A storybook page with the words A treat jar tipped over, what a yummy mess, above a smiling orange dog in a flower-covered garden." loading="lazy"><figcaption>Read the story pages together.</figcaption></figure>
+    <figure class="mpm-fig"><img src="/mypetmaze/images/screen-celebrate.jpg" width="540" height="1170" alt="A win screen with three gold stars and the word Yay above a happy orange dog, with the message Red did it and a Next button." loading="lazy"><figcaption>Celebrate every win.</figcaption></figure>
+    <figure class="mpm-fig"><img src="/mypetmaze/images/screen-chapters.jpg" width="540" height="1170" alt="A chapter complete screen showing an open magic storybook next to the dog, with the words Red found the magic storybook and Next: Chapter 2, The Lost Ball." loading="lazy"><figcaption>Win mazes to unlock new chapters.</figcaption></figure>
+  </div>
+</div></section>
+
+<section class="mpm-sec" id="animals" aria-labelledby="animals-h"><div class="mpm-in">
+  <div class="mpm-split flip">
+    <figure class="mpm-fig"><img src="/mypetmaze/images/screen-pets.jpg" width="540" height="1170" alt="The storybook pets screen, a grid of eight round portraits: dog, cat, rabbit, bird, rodents, horse, tortoises and fish." loading="lazy"><figcaption>Eight kinds of storybook pets.</figcaption></figure>
+    <div>
+      <p class="mpm-eyebrow">The storybook pets</p>
+      <h2 id="animals-h">Eight kinds of storybook animals</h2>
+      <p class="lead">Red the dog plays free. A grown-up can unlock the other seven for good.</p>
+      <ul class="mpm-chips" aria-label="The eight storybook animals">
+        <li class="free">Dog (Red, free)</li><li>Cat</li><li>Rabbit</li><li>Bird</li><li>Rodents</li><li>Horse</li><li>Tortoises</li><li>Fish</li>
+      </ul>
+      <p>Each pet's storybook moves on with every maze they win. Children can give their pets their own names, and Red is just the storybook dog's starting name.</p>
+    </div>
+  </div>
+</div></section>
+
+<section class="mpm-sec mpm-band" id="price" aria-labelledby="price-h"><div class="mpm-in">
+  <p class="mpm-eyebrow">For parents</p>
+  <h2 id="price-h">Free to try, simple to unlock</h2>
+  <p class="lead">My Pet Maze is free to download. There are no subscriptions, only one-off purchases.</p>
+  <div class="mpm-grid">
+    <div class="mpm-card"><p class="mpm-price">Free</p><h3>Download and play</h3><p>Red the dog and his whole Book 1 story, all six chapters to &ldquo;The End&rdquo;, played through once. After that, a grown-up can unlock more play.</p></div>
+    <div class="mpm-card best"><p class="mpm-price">&pound;1.49<small>one-off</small></p><h3>Add my pet</h3><p>Unlocks all seven other storybook animals for good (cat, rabbit, bird, rodents, horse, tortoises and fish), and gives you one place for your own pet.</p></div>
+    <div class="mpm-card"><p class="mpm-price">&pound;1.49<small>each</small></p><h3>More of your own pets</h3><p>Each further purchase adds another place for your own pet, up to five own pets in all.</p></div>
+  </div>
+  <div class="mpm-note"><p>Prices are shown by the App Store or Google Play in your local currency and can vary by country. Purchases are not subscriptions, and you can bring them back on a new phone with &ldquo;Restore purchases&rdquo;. Children never see prices in the game: the shop sits behind a grown-ups maths question.</p></div>
+</div></section>
+
+<section class="mpm-sec" id="grown-ups" aria-labelledby="gu-h"><div class="mpm-in">
+  <p class="mpm-eyebrow">Peace of mind</p>
+  <h2 id="gu-h">For grown-ups</h2>
+  <div class="mpm-grid two">
+    <div class="mpm-card"><h3>A maths question at the shop door</h3><p>Before any shop screen, the app asks a &ldquo;Grown-ups only!&rdquo; maths question. Children's screens never show prices.</p></div>
+    <div class="mpm-card"><h3>Payments through Apple or Google</h3><p>Purchases go through the App Store or Google Play, so we never see your card details. Ask to Buy and family approval work as normal.</p></div>
+    <div class="mpm-card"><h3>No accounts</h3><p>There is no sign-in, and we never ask for a child's name, email address or location.</p></div>
+    <div class="mpm-card"><h3>Photos handled with care</h3><p>A grown-up chooses the photo, it travels securely, and we keep only the finished cartoon, never the photo.</p></div>
+  </div>
+  <p style="margin-top:20px"><a class="mpm-btn alt" href="/mypetmaze/privacy/">Read the privacy policy</a></p>
+</div></section>
+
+<section class="mpm-sec mpm-band mpm-faq" id="faq" aria-labelledby="faq-h"><div class="mpm-in">
+  <h2 id="faq-h">Quick answers</h2>
+  <details><summary>Is My Pet Maze free?</summary><div><p>It is free to download. Red the dog and his whole Book 1 story are free to play through once. After that, a grown-up can unlock more play with a one-off purchase. There are no subscriptions.</p></div></details>
+  <details><summary>What happens to my pet&rsquo;s photo?</summary><div><p>A grown-up chooses it, it is sent securely to our server to draw the cartoon, and we do not keep it. We keep only the finished cartoon, so your pet can come back on a new phone.</p></div></details>
+  <details><summary>Can my child buy something by accident?</summary><div><p>No. Every shop screen sits behind a &ldquo;Grown-ups only!&rdquo; maths question, children&rsquo;s screens never show prices, and the App Store and Google Play have their own family controls on top.</p></div></details>
+  <details><summary>We got a new phone. Where is our pet?</summary><div><p>Open the app, tap &ldquo;Restore purchases&rdquo; (behind the grown-ups question), then tap &ldquo;+ Add a pet&rdquo; and wait for &ldquo;Looking for your pet&hellip;&rdquo; Your pet comes back with a &ldquo;Welcome back!&rdquo;</p></div></details>
+  <p style="margin-top:18px"><a href="/mypetmaze/faq/">See all the questions in the full FAQ</a></p>
+</div></section>
+
+<section class="mpm-end" aria-labelledby="end-h"><div class="mpm-in">
+  <h2 id="end-h">Coming soon to the App Store and Google Play</h2>
+  <p>We are preparing My Pet Maze for both stores now. Want to hear the moment it is out? Follow the studio updates.</p>
+  <div class="mpm-btns"><a class="mpm-btn" href="/#waitlist">Get studio updates</a><a class="mpm-btn" href="/mypetmaze/faq/">FAQ</a><a class="mpm-btn" href="/mypetmaze/support/">Support</a><a class="mpm-btn" href="/mypetmaze/privacy/">Privacy</a></div>
+  <p style="margin-top:20px">Questions? <a href="mailto:studio@si187apps.com">studio@si187apps.com</a></p>
+</div></section>
+</main>
+
+<footer>
+  <div class="footer-col">
+    <div class="footer-brand">
+      <div class="fp-mark" aria-hidden="true">
+        <svg width="24" height="24" viewBox="0 0 160 160">
+          <path d="M80 148 A69 69 0 0 1 11 79" fill="none" stroke="#39FF7A" stroke-width="4.5" stroke-linecap="round" opacity=".15"/>
+          <path d="M80 148 A69 69 0 0 0 149 79" fill="none" stroke="#39FF7A" stroke-width="4.5" stroke-linecap="round" opacity=".15"/>
+          <path d="M80 132 A53 53 0 0 1 27 79" fill="none" stroke="#39FF7A" stroke-width="4.5" stroke-linecap="round" opacity=".32"/>
+          <path d="M80 132 A53 53 0 0 0 133 79" fill="none" stroke="#39FF7A" stroke-width="4.5" stroke-linecap="round" opacity=".32"/>
+          <path d="M80 116 A37 37 0 0 1 43 79" fill="none" stroke="#39FF7A" stroke-width="4.5" stroke-linecap="round" opacity=".55"/>
+          <path d="M80 116 A37 37 0 0 0 117 79" fill="none" stroke="#39FF7A" stroke-width="4.5" stroke-linecap="round" opacity=".55"/>
+          <path d="M80 100 A21 21 0 0 1 59 79" fill="none" stroke="#39FF7A" stroke-width="4.5" stroke-linecap="round" opacity=".75"/>
+          <path d="M80 100 A21 21 0 0 0 101 79" fill="none" stroke="#39FF7A" stroke-width="4.5" stroke-linecap="round" opacity=".75"/>
+          <path d="M80 88 A9 9 0 0 1 71 79" fill="none" stroke="#C084C8" stroke-width="4.5" stroke-linecap="round" opacity=".9"/>
+          <path d="M80 88 A9 9 0 0 0 89 79" fill="none" stroke="#C084C8" stroke-width="4.5" stroke-linecap="round" opacity=".9"/>
+          <circle cx="80" cy="79" r="7" fill="#39FF7A"/>
+        </svg>
+      </div>
+      <div>
+        <p class="footer-name">si187 <em>Apps</em></p>
+        <p class="footer-tagline">si187 Enterprises Ltd · London</p>
+      </div>
+    </div>
+    <div class="footer-social">
+      <a href="https://twitter.com/si187apps" aria-label="X (formerly Twitter)">
+      <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+      <path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/>
+    </svg>
+    </a>
+      <a href="https://instagram.com/si187apps" aria-label="Instagram">
+      <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+      <rect x="2" y="2" width="20" height="20" rx="5" ry="5"/>
+      <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/>
+      <line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/>
+    </svg>
+    </a>
+      <a href="https://tiktok.com/@si187apps" aria-label="TikTok">
+      <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+      <path d="M19.59 6.69a4.83 4.83 0 0 1-3.77-4.25V2h-3.45v13.67a2.89 2.89 0 0 1-5.2 1.74 2.89 2.89 0 0 1 2.31-4.64 2.93 2.93 0 0 1 .88.13V9.4a6.84 6.84 0 0 0-1-.05A6.33 6.33 0 0 0 5.8 20.1a6.34 6.34 0 0 0 10.86-4.43v-7a8.16 8.16 0 0 0 4.77 1.52v-3.4a4.85 4.85 0 0 1-1.84-.1z"/>
+    </svg>
+    </a>
+    </div>
+  </div>
+  <div class="footer-col">
+    <p class="footer-nav-label">Studio</p>
+    <ul class="footer-nav-links">
+      <li><a href="/about">About</a></li>
+      <li><a href="/roadmap">Roadmap</a></li>
+      <li><a href="/manifesto">Manifesto</a></li>
+      <li><a href="/labs">Labs</a></li>
+    </ul>
+  </div>
+  <div class="footer-col">
+    <p class="footer-nav-label">Apps</p>
+    <ul class="footer-nav-links">
+      <li><a href="/seasons">Seasons: The Journey</a></li>
+      <li><a href="/fpl-coach-ai">FPL Coach AI</a></li>
+      <li><a href="/mypetmaze/">My Pet Maze</a></li>
+      <li><a href="/retro-manager">Retro Manager</a></li>
+      <li><a href="/#waitlist">Studio updates</a></li>
+    </ul>
+  </div>
+  <div class="footer-col">
+    <p class="footer-nav-label">My Pet Maze</p>
+    <ul class="footer-nav-links">
+      <li><a href="/mypetmaze/faq/">FAQ</a></li>
+      <li><a href="/mypetmaze/support/">Support</a></li>
+      <li><a href="/mypetmaze/privacy/">Privacy</a></li>
+    </ul>
+  </div>
+  <div class="footer-col">
+    <p class="footer-nav-label">Contact</p>
+    <ul class="footer-nav-links">
+      <li><a href="mailto:studio@si187apps.com">studio@si187apps.com</a></li>
+    </ul>
+  </div>
+  <div class="footer-bottom">
+    <p class="footer-copy">© 2026 si187 Enterprises Ltd. All rights reserved.</p>
+    <div class="footer-legal">
+      <a href="/privacy">Privacy</a>
+      <a href="/terms">Terms</a>
+      <a href="#" onclick="window.si187CookiePrefs && window.si187CookiePrefs(); return false;" style="cursor:pointer;">Cookie preferences</a>
+    </div>
+  </div>
+</footer>
+<style>.sr-only{position:absolute;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip:rect(0,0,0,0);white-space:nowrap;border:0}</style>
+<script src="/assets/js/cookie-banner.js"></script>
+<script>
+const nav = document.getElementById('main-nav');
+window.addEventListener('scroll', () => { nav.classList.toggle('scrolled', window.scrollY > 60); }, { passive: true });
+const mobileNav = document.getElementById('mobile-nav');
+document.getElementById('nav-toggle-btn').addEventListener('click', () => { mobileNav.classList.add('open'); document.body.style.overflow = 'hidden'; });
+function closeMobileNav() { mobileNav.classList.remove('open'); document.body.style.overflow = ''; }
+document.getElementById('mobile-nav-close').addEventListener('click', closeMobileNav);
+</script>
+<script>
+// Respect reduced-motion: no autoplay, the grown-up can press play.
+(function(){var v=document.querySelector('.mpm-video');if(!v)return;
+if(window.matchMedia&&window.matchMedia('(prefers-reduced-motion: reduce)').matches){v.removeAttribute('autoplay');v.pause();}})();
+</script>
+</body>
+</html>

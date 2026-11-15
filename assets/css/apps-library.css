@@ -108,3 +108,25 @@
 .app-mini-desc{margin:0 0 10px;font-size:13px;line-height:1.5;color:#8AAA8A}
 .app-mini-link{display:inline-flex;align-items:center;min-height:44px;color:#39FF7A;font-weight:600;font-size:14px;text-decoration:none}
 .app-mini-link:hover{text-decoration:underline}
+
+/* ── My Pet Maze: storybook garden, cream cards, yellow title with blue outline, green and teal buttons ── */
+.app-card-mpm{background:linear-gradient(180deg,#C8E9F7 0,#E6F3DD 55%,#FEF9EC 100%);border:4px solid #5A3719;border-radius:28px;padding:0;margin-bottom:20px;overflow:hidden;color:#5A3719;font-family:"Baloo 2","Trebuchet MS",system-ui,sans-serif;font-weight:500}
+.app-card-mpm .mpm-bar{background:#5B4690;color:#fff;text-align:center;font-weight:700;font-size:16px;padding:8px 16px;border-bottom:4px solid #443374;letter-spacing:.3px}
+.app-card-mpm .card-grid{padding:40px 44px 44px;grid-template-columns:1.1fr .9fr}
+.app-card-mpm .mpm-kicker{display:inline-block;background:#5B4690;color:#fff;font-size:13px;font-weight:700;padding:5px 14px;border-radius:100px;margin-bottom:16px;letter-spacing:.6px;text-transform:uppercase}
+.app-card-mpm h2{font-family:"Bubblegum Sans","Baloo 2",sans-serif;color:#FFDE3C;font-size:clamp(46px,6vw,76px);line-height:1;font-weight:400;letter-spacing:.2px;margin:0 0 12px;text-shadow:-3px -3px 0 #2D4696,3px -3px 0 #2D4696,-3px 3px 0 #2D4696,3px 3px 0 #2D4696,0 -3px 0 #2D4696,0 3px 0 #2D4696,-3px 0 0 #2D4696,3px 0 0 #2D4696,0 6px 0 #1E3170}
+.app-card-mpm .mpm-tag{font-family:"Bubblegum Sans","Baloo 2",sans-serif;color:#A04708;font-size:26px;line-height:1.2;margin:18px 0 12px}
+.app-card-mpm .mpm-lede{font-size:17px;line-height:1.55;margin:0 0 20px;max-width:500px;color:#5A3719}
+.app-card-mpm .mpm-stores{display:flex;gap:10px;flex-wrap:wrap;margin-bottom:18px}
+.app-card-mpm .mpm-store{display:inline-flex;flex-direction:column;justify-content:center;min-height:52px;padding:6px 20px;background:#FEF9EC;border:3px dashed #8A5A2B;border-radius:14px;color:#5A3719;font-size:18px;font-weight:800;line-height:1.1}
+.app-card-mpm .mpm-store small{font-size:11px;font-weight:700;color:#A04708;text-transform:uppercase;letter-spacing:.6px}
+.app-card-mpm .mpm-btns{display:flex;gap:10px;flex-wrap:wrap}
+.app-card-mpm .mpm-btn{display:inline-flex;align-items:center;justify-content:center;min-height:48px;padding:0 24px;border-radius:100px;background:#3E7A2E;border:3px solid #2C5A20;box-shadow:0 4px 0 #2C5A20;color:#fff;font:700 17px "Baloo 2",system-ui,sans-serif;text-decoration:none}
+.app-card-mpm .mpm-btn.alt{background:#1F4E6B;border-color:#163A52;box-shadow:0 4px 0 #163A52}
+.app-card-mpm .mpm-btn:hover{filter:brightness(.9)}
+.app-card-mpm .mpm-btn:focus-visible{outline:3px solid #2D4696;outline-offset:3px}
+.app-card-mpm .mpm-fig{margin:0;max-width:260px;justify-self:center}
+.app-card-mpm .mpm-fig img{display:block;width:100%;height:auto;border-radius:24px;border:4px solid #5A3719;background:#F8EDCF;box-shadow:0 6px 0 #5A3719,0 16px 30px rgba(90,55,25,.25)}
+.app-card-mpm .mpm-fig figcaption{font-size:14px;color:#6E4A2B;margin-top:14px;text-align:center}
+@media(max-width:900px){.app-card-mpm .card-grid{grid-template-columns:1fr;padding:28px 18px 32px}}
+@media(max-width:480px){.app-card-mpm .mpm-btn{width:100%}.app-card-mpm .mpm-store{width:100%}}
