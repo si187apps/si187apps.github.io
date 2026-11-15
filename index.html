@@ -7,7 +7,7 @@
 
 <!-- ── SEO ── -->
 <title>si187 Apps — Apps worth using.</title>
-<meta name="description" content="Independent UK app studio. Seasons: The Journey for Championship fans, FPL Coach AI for Fantasy Premier League, and Togged: AI Stylist, for menswear.">
+<meta name="description" content="Independent UK app studio building focused, well made apps for iPhone and Android.">
 <meta name="robots" content="index, follow">
 <link rel="canonical" href="https://si187apps.com/">
 
@@ -15,7 +15,7 @@
 <meta property="og:type"        content="website">
 <meta property="og:url"         content="https://si187apps.com/">
 <meta property="og:title"       content="si187 Apps — Apps worth using.">
-<meta property="og:description" content="Independent mobile app studio. UK-based. Seasons: The Journey — English Championship 26/27 companion for iPhone and Android. FPL Coach AI — Fantasy Premier League AI coaching, live on iOS and Android.">
+<meta property="og:description" content="Independent mobile app studio. UK based. Focused, well made apps for iPhone and Android.">
 <meta property="og:image"       content="https://si187apps.com/assets/images/og-card.png">
 <meta property="og:image:width"  content="1200">
 <meta property="og:image:height" content="630">
@@ -27,7 +27,7 @@
 <meta name="twitter:site"        content="@si187apps">
 <meta name="twitter:creator"     content="@si187apps">
 <meta name="twitter:title"       content="si187 Apps — Apps worth using.">
-<meta name="twitter:description" content="Independent mobile app studio. UK-based. Seasons: The Journey — English Championship 26/27 companion for iPhone and Android. FPL Coach AI — Fantasy Premier League AI coaching, live on iOS and Android.">
+<meta name="twitter:description" content="Independent mobile app studio. UK based. Focused, well made apps for iPhone and Android.">
 <meta name="twitter:image"       content="https://si187apps.com/assets/images/og-card.png">
 
 <!-- ── Favicon — inline SVG fingerprint ── -->
@@ -39,8 +39,8 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Anton&family=DM+Serif+Display:ital@0;1&family=Syne:wght@700;800&family=Inter+Tight:wght@500&family=Inter:wght@300;400;500;600&family=JetBrains+Mono:wght@400;500;600;700&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="/assets/css/site.css">
-<link rel="stylesheet" href="/assets/css/apps-library.css?v=1">
-<link rel="stylesheet" href="/assets/css/cookie-banner.css">
+<link rel="stylesheet" href="/assets/css/apps-library.css?v=2">
+<link rel="stylesheet" href="/assets/css/cookie-banner.css?v=2">
 
 <!-- ── Cloudflare Web Analytics ── -->
 <!-- Replace TOKEN with your actual Cloudflare Analytics token after setup -->
@@ -163,7 +163,8 @@ nav.scrolled { padding: 12px 56px; }
 /* Mobile nav toggle */
 .nav-toggle {
   display: none; flex-direction: column; gap: 5px;
-  background: none; border: none; cursor: pointer; padding: 4px;
+  background: none; border: none; cursor: pointer; padding: 12px;
+  min-width: 44px; min-height: 44px; align-items: center; justify-content: center;
 }
 .nav-toggle span {
   display: block; width: 22px; height: 2px;
@@ -195,7 +196,7 @@ nav.scrolled { padding: 12px 56px; }
    HERO
    ═══════════════════════════════════════════════ */
 .hero {
-  min-height: 100vh;
+  min-height: 86vh;
   display: flex; flex-direction: column;
   justify-content: center; align-items: flex-start;
   padding: 140px 56px 100px;
@@ -214,7 +215,7 @@ nav.scrolled { padding: 12px 56px; }
   position: absolute; right: -80px; top: 50%;
   transform: translateY(-50%);
   z-index: 0; pointer-events: none;
-  opacity: 0.05;
+  opacity: 0.1;
   animation: slowspin 90s linear infinite;
 }
 @keyframes slowspin {
@@ -588,7 +589,7 @@ nav.scrolled { padding: 12px 56px; }
 .email-submit {
   background: var(--green); color: var(--bg);
   border: none; border-radius: 10px;
-  padding: 13px 24px; font-weight: 700; font-size: 14px;
+  padding: 13px 24px; min-height: 44px; font-weight: 700; font-size: 14px;
   cursor: pointer; font-family: 'Inter', sans-serif;
   transition: opacity 0.15s;
 }
@@ -682,6 +683,8 @@ footer {
 }
 @media (max-width: 540px) {
   .hero h1 { letter-spacing: -2.5px; }
+  .hero-actions { width: 100%; }
+  .hero-actions .btn-primary, .hero-actions .btn-ghost { flex: 1 1 100%; justify-content: center; }
   .stats-strip { grid-template-columns: 1fr 1fr; }
   .stat-num { font-size: 34px; }
   .stat-item { padding: 24px 20px; }
@@ -834,61 +837,34 @@ footer {
     </svg>
   </div>
 
-  <a class="wc-callout reveal" href="/fpl-coach-ai/draft-builder/">
-    <span class="wc-callout-tag">FREE</span>
-    <span>FPL Wildcard squad from FPL Coach AI, updated daily</span>
-    <span class="wc-callout-arrow" aria-hidden="true">→</span>
-  </a>
   <div class="hero-badge reveal">
     <div class="badge-dot"></div>
-    <span class="badge-text">Building in public · 2026</span>
+    <span class="badge-text">Independent mobile studio · UK</span>
   </div>
 
   <h1 class="reveal reveal-delay-1">Apps<br><em>worth</em><br>using.</h1>
 
   <p class="hero-sub reveal reveal-delay-2">
-    Independent mobile studio. UK-based.<br>
-    One app at a time, done properly.
+    si187 Apps is a small UK studio making mobile apps that earn their place on your phone. One app at a time, done properly.
   </p>
 
   <div class="hero-actions reveal reveal-delay-3">
     <a href="#apps" class="btn-primary">
-      See our apps
+      See our latest Apps
       <svg width="14" height="14" viewBox="0 0 14 14" fill="none" aria-hidden="true">
         <path d="M7 2v10M2 7l5 5 5-5" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/>
       </svg>
     </a>
-    <a href="#about" class="btn-ghost">About si187</a>
+    <a href="/roadmap/" class="btn-ghost">Roadmap</a>
   </div>
 </section>
-
-
-<!-- ══════════════════ STATS STRIP ══════════════════ -->
-<div class="stats-strip" aria-label="Studio statistics">
-  <div class="stat-item reveal">
-    <div class="stat-num">5</div>
-    <div class="stat-label">Studio projects</div>
-  </div>
-  <div class="stat-item reveal reveal-delay-1">
-    <div class="stat-num">11M+</div>
-    <div class="stat-label">Global FPL players · target market</div>
-  </div>
-  <div class="stat-item reveal reveal-delay-2">
-    <div class="stat-num">£0</div>
-    <div class="stat-label">VC funding. Independent.</div>
-  </div>
-  <div class="stat-item reveal reveal-delay-3">
-    <div class="stat-num">∞</div>
-    <div class="stat-label">Ideas in the pipeline</div>
-  </div>
-</div>
 
 
 <!-- ══════════════════ APPS ══════════════════ -->
 <section id="apps">
   <div class="section-wrap">
     <p class="eyebrow reveal">Our apps</p>
-    <p class="section-title reveal reveal-delay-1">What we're building</p>
+    <h2 class="section-title reveal reveal-delay-1">See our latest Apps</h2>
 
     <!-- Library controls: hidden until JS runs; without JS every app is shown, in "Latest" order. -->
     <div class="lib-controls" id="lib-controls" hidden>
@@ -910,12 +886,14 @@ footer {
         <button type="button" class="lib-chip" data-group="category" data-value="games" aria-pressed="false">Games</button>
         <button type="button" class="lib-chip" data-group="category" data-value="lifestyle" aria-pressed="false">Lifestyle</button>
         <button type="button" class="lib-chip" data-group="category" data-value="sports" aria-pressed="false">Sports</button></div></div>
+      <label class="lib-archive-opt"><input type="checkbox" id="lib-incl-archive"> Include archive</label>
       <p class="lib-count" id="lib-count" aria-live="polite"></p>
     </div>
     <div class="lib-empty" id="lib-empty" hidden><p>No apps match</p><a href="#apps" class="lib-reset" id="lib-reset">Reset filters</a></div>
     <div id="lib-list">
     <!-- Togged: monochrome, mirrors the Togged product page (outfit card). Live since 14 Nov 2026. -->
-    <div class="app-entry" data-name="Togged" data-order="1" data-status="live" data-platform="iphone android" data-category="lifestyle" data-search="Togged AI Stylist menswear styling outfits budget occasion lifestyle fashion">
+    <div class="app-entry" data-name="Togged" data-tier="latest" data-order="1" data-status="live" data-platform="iphone android" data-category="lifestyle" data-search="Togged AI Stylist menswear styling outfits budget occasion lifestyle fashion">
+      <div class="app-mini"><p class="app-mini-name">Togged</p><p class="app-mini-desc">Menswear styling for the occasion and your budget.</p><a href="/stylist/" class="app-mini-link">See Togged →</a></div>
       <div class="app-card-togged reveal">
         <div class="card-grid">
           <div>
@@ -949,7 +927,8 @@ footer {
       </div>
     </div>
     <!-- FPL Coach AI: navy and teal, mirrors its product page. -->
-    <div class="app-entry" data-name="FPL Coach AI" data-order="2" data-status="live" data-platform="iphone android web" data-category="sports" data-search="FPL Coach AI fantasy premier league football coaching captain transfers sports">
+    <div class="app-entry" data-name="FPL Coach AI" data-tier="latest" data-order="2" data-status="live" data-platform="iphone android web" data-category="sports" data-search="FPL Coach AI fantasy premier league football coaching captain transfers sports">
+      <div class="app-mini"><p class="app-mini-name">FPL Coach AI</p><p class="app-mini-desc">AI coaching for Fantasy Premier League managers.</p><a href="/fpl-coach-ai/" class="app-mini-link">See FPL Coach AI →</a></div>
       <div class="app-card-fpl reveal">
         <div class="fpl-inner">
           <div class="fpl-content">
@@ -1047,7 +1026,8 @@ footer {
       </div>
     </div>
     <!-- Seasons: The Journey: Anton, cream and red on midnight navy, mirrors its product page. -->
-    <div class="app-entry" data-name="Seasons: The Journey" data-order="3" data-status="live" data-platform="iphone android" data-category="sports" data-search="Seasons The Journey EFL Championship companion football wall planner live scores lineup builder sports">
+    <div class="app-entry" data-name="Seasons: The Journey" data-tier="latest" data-order="3" data-status="live" data-platform="iphone android" data-category="sports" data-search="Seasons The Journey EFL Championship companion football wall planner live scores lineup builder sports">
+      <div class="app-mini"><p class="app-mini-name">Seasons: The Journey</p><p class="app-mini-desc">A football companion for the EFL Championship.</p><a href="/seasons/" class="app-mini-link">See Seasons →</a></div>
       <div class="app-card-seasons reveal">
         <div class="card-grid">
           <div>
@@ -1076,7 +1056,8 @@ footer {
       </div>
     </div>
     <!-- Retro Manager: mirrors the /retro-manager/ hero. Launches Fri 12 Dec 2026, no store links yet. -->
-    <div class="app-entry" data-name="Retro Manager" data-order="4" data-status="soon" data-platform="iphone android" data-category="games sports" data-search="Retro Manager classic football management game 2001 iPhone iPad Android tactics transfers games sports coming soon">
+    <div class="app-entry" data-name="Retro Manager" data-tier="latest" data-order="4" data-status="soon" data-platform="iphone android" data-category="games sports" data-search="Retro Manager classic football management game 2001 iPhone iPad Android tactics transfers games sports coming soon">
+      <div class="app-mini"><p class="app-mini-name">Retro Manager</p><p class="app-mini-desc">Classic football management, the 2001 way.</p><a href="/retro-manager/" class="app-mini-link">See Retro Manager →</a></div>
       <div class="app-card-rm reveal">
         <div class="rm-bar">Retro Manager</div>
         <div class="card-grid">
@@ -1095,7 +1076,17 @@ footer {
         </div>
       </div>
     </div>
+    <!-- Archive tier: set data-tier="archive" on any app-entry (above) to move it here; JS does the rest. -->
+    <div class="app-entry" data-name="WC26: The Journey" data-tier="archive" data-order="9" data-status="live" data-platform="iphone android" data-category="sports" data-search="WC26 The Journey World Cup 2026 companion tournament football sports archive">
+      <div class="app-mini"><p class="app-mini-name">WC26: The Journey</p><p class="app-mini-desc">World Cup 2026 companion. The tournament is over; the journey continues in Seasons.</p><a href="/wc26/" class="app-mini-link">See WC26 →</a></div>
     </div>
+    </div>
+
+    <details class="lib-archive" id="lib-archive">
+      <summary>Archive <span class="lib-archive-n" id="lib-archive-n"></span></summary>
+      <p class="lib-archive-note">Older projects, kept for reference.</p>
+      <div class="lib-archive-grid" id="lib-archive-grid"></div>
+    </details>
 
     <!-- Future placeholders -->
     <div class="future-grid">
@@ -1107,7 +1098,7 @@ footer {
           </svg>
         </div>
         <p class="future-name">Got an idea?</p>
-        <p class="future-desc">Spotted a problem that deserves a thoughtful app? Get in touch — we're always listening for the next thing worth building.</p>
+        <p class="future-desc">Spotted a problem that deserves a thoughtful app? Get in touch, we're always listening for the next thing worth building.</p>
         <a href="/labs/" class="future-link">Join si187 Labs →</a>
       </div>
     </div>
@@ -1123,7 +1114,7 @@ footer {
         <p class="eyebrow reveal">About si187</p>
         <p class="section-title reveal reveal-delay-1">UK-based.<br>Independent.<br><em>Building properly.</em></p>
         <p class="about-lede reveal reveal-delay-2">si187 Apps is an independent mobile studio. We build one product at a time and build it well.</p>
-        <p class="about-body reveal reveal-delay-3">No VC pressure. No feature bloat. No compromises on quality. FPL Coach AI is our flagship app — born from a simple frustration: every existing FPL tool either drowns you in stats or tells you what to do. We built the thing in between.</p>
+        <p class="about-body reveal reveal-delay-3">No VC pressure. No feature bloat. No compromises on quality. Every app starts from a simple frustration, and we build the thing we wished existed.</p>
         <p class="about-body reveal reveal-delay-4">si187 Enterprises Ltd is the holding company. si187 Apps is the trading division. Built in public, accountable from day one.</p>
         <a href="mailto:studio@si187apps.com" class="about-link reveal">
           Get in touch
@@ -1360,6 +1351,6 @@ document.getElementById('waitlist-email').addEventListener('keydown', e => {
   if (e.key !== 'Enter') document.getElementById('waitlist-email').style.borderColor = '';
 });
 </script>
-<script src="/assets/js/app-library.js?v=1" defer></script>
+<script src="/assets/js/app-library.js?v=2" defer></script>
 </body>
 </html>

@@ -83,7 +83,7 @@
   .nav-links a.active { color:var(--s-green); }
   .nav-cta { background:var(--teal) !important; color:#050E12 !important; padding:9px 18px !important; border-radius:8px !important; font-weight:700 !important; font-size:13px !important; transition:opacity 0.15s !important; }
   .nav-cta:hover { opacity:0.85 !important; }
-  .nav-toggle { display:none; flex-direction:column; gap:5px; background:none; border:none; cursor:pointer; padding:4px; }
+  .nav-toggle { display:none; flex-direction:column; gap:5px; background:none; border:none; cursor:pointer; padding:12px; min-width:44px; min-height:44px; align-items:center; justify-content:center; }
   .nav-toggle span { display:block; width:22px; height:2px; background:var(--s-text2); border-radius:2px; }
   .mobile-nav { display:none; position:fixed; top:0; left:0; right:0; bottom:0; z-index:300; background:var(--s-bg); flex-direction:column; align-items:center; justify-content:center; gap:32px; }
   .mobile-nav.open { display:flex; }
@@ -756,7 +756,7 @@
 <!-- Cookie banner styles — shared with the rest of the site. The
      cookie-banner.js script (already loaded at the end of body)
      needs this stylesheet to render correctly. -->
-<link rel="stylesheet" href="/assets/css/cookie-banner.css">
+<link rel="stylesheet" href="/assets/css/cookie-banner.css?v=2">
 </head>
 <body>
 

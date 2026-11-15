@@ -11,7 +11,7 @@
        The shared banner styles + script live in /assets/ so this page
        matches the site-wide pattern exactly — no per-page GA snippet,
        no pre-consent tracking. -->
-  <link rel="stylesheet" href="/assets/css/cookie-banner.css">
+  <link rel="stylesheet" href="/assets/css/cookie-banner.css?v=2">
 
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -63,7 +63,7 @@
     #main-nav .nav-links a:hover { color:var(--s-text1); }
     #main-nav .nav-cta { background:var(--gold) !important; color:#080C18 !important; padding:9px 18px !important; border-radius:8px !important; font-weight:700 !important; font-size:13px !important; }
     #main-nav .nav-cta:hover { opacity:0.85 !important; }
-    #main-nav .nav-toggle { display:none; flex-direction:column; gap:5px; background:none; border:none; cursor:pointer; padding:4px; }
+    #main-nav .nav-toggle { display:none; flex-direction:column; gap:5px; background:none; border:none; cursor:pointer; padding:12px; min-width:44px; min-height:44px; align-items:center; justify-content:center; }
     #main-nav .nav-toggle span { display:block; width:22px; height:2px; background:var(--s-text2); border-radius:2px; }
     /* Push page content below the fixed nav (nav height ~72px). */
     body { padding-top: 72px; }

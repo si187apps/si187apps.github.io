@@ -70,6 +70,7 @@
   font-size: 13px;
   font-weight: 600;
   cursor: pointer;
+  min-height: 44px;
   transition: border-color 0.15s, color 0.15s, background 0.15s;
 }
 .si187-cb-btn:hover { color: var(--text1, #F0F5F0); border-color: var(--text2, #8AAA8A); }
