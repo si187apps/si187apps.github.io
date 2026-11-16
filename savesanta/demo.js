@@ -17,10 +17,12 @@
   var reduce = window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches;
 
   var SIZES = { easy: [7, 10], medium: [9, 13], hard: [12, 17] };
-  var T = 0.12;       // wall thickness, in cells
+  var T = 0.2;        // wall thickness, in cells
   var R = 0.26;       // Rudolph's radius, in cells
   var cols, rows, cell, walls, ball, vel, goal, state, t0, elapsed, parts, freed, help;
   var keys = {}, pad = {}, drag = null, tilt = null, tiltOn = false, tiltBase = null;
+  var IMG = {}, SRC = { rud: 'demo-rudolph.webp', santa: 'demo-santa.webp', freed: 'demo-santa-freed.webp', bub: 'demo-bubble.webp', wall: 'demo-wall.webp' };
+  Object.keys(SRC).forEach(function (k) { var i = new Image(); i.onload = function () { IMG[k] = i; if (cell) { layout(); wake(); } }; i.src = '/savesanta/images/' + SRC[k]; });
   var raf = 0, last = 0, visible = true, dpr = 1, maze = null, winMs = 0;
 
   function say(msg) { statusEl.textContent = msg; }
@@ -79,18 +81,23 @@
     maze = document.createElement('canvas');
     maze.width = canvas.width; maze.height = canvas.height;
     var m = maze.getContext('2d'), u = cell * dpr;
+    // snowy floor
     var g = m.createLinearGradient(0, 0, 0, maze.height);
-    g.addColorStop(0, '#173C7E'); g.addColorStop(1, '#0B1D4A');
+    g.addColorStop(0, '#F2F9FF'); g.addColorStop(1, '#D3E6F6');
     m.fillStyle = g; m.fillRect(0, 0, maze.width, maze.height);
-    // snow flecks (static)
-    m.fillStyle = 'rgba(255,255,255,.18)';
-    for (var i = 0; i < cols * rows * 2; i++) { m.beginPath(); m.arc(((i * 97) % 1000) / 1000 * maze.width, ((i * 53 + 17) % 1000) / 1000 * maze.height, 1.2 * dpr, 0, 6.3); m.fill(); }
-    // ice walls
+    for (var i = 0; i < cols * rows * 3; i++) { m.fillStyle = i % 3 ? 'rgba(160,195,225,.22)' : 'rgba(255,255,255,.9)'; m.beginPath(); m.arc(((i * 97) % 1000) / 1000 * maze.width, ((i * 53 + 17) % 1000) / 1000 * maze.height, (1 + (i % 3)) * dpr, 0, 6.3); m.fill(); }
+    // icy brick walls: shadow, brick texture, highlight
+    var pat = IMG.wall ? m.createPattern(IMG.wall, 'repeat') : null;
+    if (pat && pat.setTransform && window.DOMMatrix) pat.setTransform(new DOMMatrix().scale(u * 1.7 / 256));
     walls.forEach(function (w) {
       var x = w[0] * u, y = w[1] * u, ww = (w[2] - w[0]) * u, hh = (w[3] - w[1]) * u;
-      m.fillStyle = '#D9F1FF'; m.fillRect(x, y, ww, hh);
-      m.fillStyle = 'rgba(255,255,255,.7)'; m.fillRect(x, y, ww, Math.min(hh, 2 * dpr));
-      m.strokeStyle = '#6FB2DC'; m.lineWidth = dpr; m.strokeRect(x + .5, y + .5, ww - 1, hh - 1);
+      m.fillStyle = 'rgba(40,80,130,.30)'; m.fillRect(x + 2 * dpr, y + 3 * dpr, ww, hh);
+    });
+    walls.forEach(function (w) {
+      var x = w[0] * u, y = w[1] * u, ww = (w[2] - w[0]) * u, hh = (w[3] - w[1]) * u;
+      m.fillStyle = pat || '#BFE3F2'; m.fillRect(x, y, ww, hh);
+      m.fillStyle = 'rgba(255,255,255,.55)'; m.fillRect(x, y, ww, Math.min(hh, 2 * dpr));
+      m.strokeStyle = 'rgba(40,100,150,.55)'; m.lineWidth = dpr; m.strokeRect(x + .5, y + .5, ww - 1, hh - 1);
     });
     draw(0);
   }
@@ -168,20 +175,19 @@
     var u = cell * dpr, W = canvas.width, H = canvas.height;
     ctx.clearRect(0, 0, W, H);
     ctx.drawImage(maze, 0, 0);
-    // Rudolph's light: dark all around, a warm pool of light around the nose
+    // Rudolph's light: the maze is dimmed (still readable); a warm pool of light surrounds the nose
     var bx = ball.x * u, by = ball.y * u;
-    var rad = (help ? 7.5 : 3.4) * u;
+    var rad = (help ? 8 : 3.6) * u;
     var pulse = reduce ? 1 : 1 + Math.sin(performance.now() / 380) * 0.04;
-    var gr = ctx.createRadialGradient(bx, by, u * .2, bx, by, rad * pulse);
-    var dark = help ? 0.28 : 0.8;
-    gr.addColorStop(0, 'rgba(255,120,90,0)');
-    gr.addColorStop(.35, 'rgba(255,160,120,0)');
-    gr.addColorStop(1, 'rgba(4,10,34,' + dark + ')');
+    var gr = ctx.createRadialGradient(bx, by, u * .3, bx, by, rad * pulse);
+    var dark = help ? 0.10 : 0.52;
+    gr.addColorStop(0, 'rgba(18,36,84,0)');
+    gr.addColorStop(.4, 'rgba(18,36,84,0)');
+    gr.addColorStop(1, 'rgba(18,36,84,' + dark + ')');
     ctx.fillStyle = gr; ctx.fillRect(0, 0, W, H);
-    // glow on the walls near the nose
-    var gl = ctx.createRadialGradient(bx, by, 0, bx, by, rad * .8 * pulse);
-    gl.addColorStop(0, 'rgba(255,70,50,.28)'); gl.addColorStop(1, 'rgba(255,70,50,0)');
-    ctx.globalCompositeOperation = 'lighter'; ctx.fillStyle = gl; ctx.fillRect(0, 0, W, H); ctx.globalCompositeOperation = 'source-over';
+    var gl = ctx.createRadialGradient(bx, by, 0, bx, by, rad * .75 * pulse);
+    gl.addColorStop(0, 'rgba(255,150,90,.42)'); gl.addColorStop(.5, 'rgba(255,190,120,.16)'); gl.addColorStop(1, 'rgba(255,190,120,0)');
+    ctx.globalCompositeOperation = 'source-over'; ctx.fillStyle = gl; ctx.fillRect(0, 0, W, H);
 
     drawSanta(goal.x * u, goal.y * u, u);
     drawRudolph(bx, by, u);
@@ -196,41 +202,22 @@
     ctx.globalAlpha = 1;
   }
 
+  function sprite(img, cx, cy, w) { var h = w * img.height / img.width; ctx.drawImage(img, cx - w / 2, cy - h / 2, w, h); }
+
   function drawSanta(x, y, u) {
-    var r = u * 0.34, broken = state === 'won';
-    // chain + ball (breaks on win)
-    if (!broken) {
-      ctx.strokeStyle = '#9BA7B8'; ctx.lineWidth = 2 * dpr; ctx.setLineDash([3 * dpr, 3 * dpr]);
-      ctx.beginPath(); ctx.moveTo(x - r * .6, y + r * .5); ctx.lineTo(x - r * 1.3, y + r * .9); ctx.stroke(); ctx.setLineDash([]);
-      ctx.fillStyle = '#222'; ctx.beginPath(); ctx.arc(x - r * 1.45, y + r * .95, r * .38, 0, 6.3); ctx.fill();
-    } else {
-      var k = Math.min(1, (performance.now() - winMs) / 700);
-      ctx.fillStyle = 'rgba(34,34,34,' + (1 - k) + ')'; ctx.beginPath(); ctx.arc(x - r * (1.45 + k * 1.2), y + r * (.95 + k * 1.5), r * .38, 0, 6.3); ctx.fill();
-    }
-    ctx.fillStyle = '#C0281F'; ctx.beginPath(); ctx.arc(x, y + r * .15, r, 0, 6.3); ctx.fill();            // coat
-    ctx.fillStyle = '#F6D2A8'; ctx.beginPath(); ctx.arc(x, y - r * .25, r * .5, 0, 6.3); ctx.fill();         // face
-    ctx.fillStyle = '#fff'; ctx.beginPath(); ctx.arc(x, y + r * .1, r * .52, .15, Math.PI - .15); ctx.fill(); // beard
-    ctx.fillStyle = '#C0281F'; ctx.beginPath(); ctx.moveTo(x - r * .55, y - r * .45); ctx.lineTo(x + r * .55, y - r * .45); ctx.lineTo(x + r * .1, y - r * 1.25); ctx.closePath(); ctx.fill(); // hat
-    ctx.fillStyle = '#fff'; ctx.fillRect(x - r * .6, y - r * .55, r * 1.2, r * .2);
-    ctx.beginPath(); ctx.arc(x + r * .1, y - r * 1.3, r * .17, 0, 6.3); ctx.fill();
-    ctx.fillStyle = '#1b1b1b'; ctx.fillRect(x - r * .22, y - r * .3, r * .1, r * .1); ctx.fillRect(x + r * .12, y - r * .3, r * .1, r * .1);
+    var won = state === 'won', img = won ? IMG.freed : IMG.santa;
+    if (img) sprite(img, x, y - u * .05, u * (won ? 1.05 : 1.15));
+    if (!won && IMG.bub) sprite(IMG.bub, Math.max(u * .7, x - u * 1.05), Math.max(u * .45, y - u * .15), u * .95);
   }
 
   function drawRudolph(x, y, u) {
-    var r = R * u * 1.18;
-    ctx.strokeStyle = '#D9B48A'; ctx.lineWidth = 2.4 * dpr; ctx.lineCap = 'round';
-    [-1, 1].forEach(function (s) {  // antlers
-      ctx.beginPath(); ctx.moveTo(x + s * r * .45, y - r * .7); ctx.lineTo(x + s * r * .8, y - r * 1.35); ctx.moveTo(x + s * r * .65, y - r * 1.05); ctx.lineTo(x + s * r * 1.15, y - r * 1.15); ctx.stroke();
-    });
-    ctx.fillStyle = '#8A5230'; ctx.beginPath(); ctx.arc(x, y, r, 0, 6.3); ctx.fill();
-    ctx.strokeStyle = '#5E3716'; ctx.lineWidth = 1.5 * dpr; ctx.stroke();
-    ctx.fillStyle = '#A8693F'; ctx.beginPath(); ctx.arc(x - r * .1, y - r * .15, r * .6, 0, 6.3); ctx.fill();
-    ctx.fillStyle = '#1b1b1b'; ctx.beginPath(); ctx.arc(x - r * .35, y - r * .25, r * .09, 0, 6.3); ctx.arc(x + r * .35, y - r * .25, r * .09, 0, 6.3); ctx.fill();
-    var ng = ctx.createRadialGradient(x, y + r * .25, 0, x, y + r * .25, r * .9);   // glowing nose
-    ng.addColorStop(0, 'rgba(255,90,60,.9)'); ng.addColorStop(1, 'rgba(255,90,60,0)');
-    ctx.fillStyle = ng; ctx.beginPath(); ctx.arc(x, y + r * .25, r * .9, 0, 6.3); ctx.fill();
-    ctx.fillStyle = '#FF2A1E'; ctx.beginPath(); ctx.arc(x, y + r * .25, r * .28, 0, 6.3); ctx.fill();
-    ctx.fillStyle = 'rgba(255,255,255,.7)'; ctx.beginPath(); ctx.arc(x - r * .08, y + r * .17, r * .08, 0, 6.3); ctx.fill();
+    if (!IMG.rud) return;
+    var w = u * 1.05, h = w * IMG.rud.height / IMG.rud.width;
+    // soft red halo behind the nose, then the sprite
+    var ny = y + h * .12, ng = ctx.createRadialGradient(x, ny, 0, x, ny, u * .7);
+    ng.addColorStop(0, 'rgba(255,60,40,.55)'); ng.addColorStop(1, 'rgba(255,60,40,0)');
+    ctx.fillStyle = ng; ctx.beginPath(); ctx.arc(x, ny, u * .7, 0, 6.3); ctx.fill();
+    ctx.drawImage(IMG.rud, x - w / 2, y - h / 2, w, h);
   }
 
   /* ---------- loop ---------- */
