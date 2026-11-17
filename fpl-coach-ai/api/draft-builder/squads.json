@@ -1,6 +1,6 @@
 {
-  "generatedAt": "2026-11-16T10:35:09.939Z",
-  "poolSize": 479,
+  "generatedAt": "2026-11-17T11:28:45.141Z",
+  "poolSize": 474,
   "scoredPool": [
     {
       "fplId": 1,
@@ -24,67 +24,62 @@
     },
     {
       "fplId": 5,
-      "composite": 0.7569501860712388,
+      "composite": 0.7565326602980429,
       "position": "DEF"
     },
     {
       "fplId": 6,
-      "composite": 0.7061712387028177,
+      "composite": 0.7040836098368384,
       "position": "DEF"
     },
     {
       "fplId": 7,
-      "composite": 0.3240189528787686,
+      "composite": 0.3248642727585453,
       "position": "MID"
     },
     {
       "fplId": 8,
-      "composite": 0.7509384901648061,
+      "composite": 0.7507993149070741,
       "position": "DEF"
     },
     {
       "fplId": 9,
-      "composite": 0.6447279638490166,
+      "composite": 0.6412485824057177,
       "position": "DEF"
     },
     {
       "fplId": 10,
-      "composite": 0.5984952153110049,
+      "composite": 0.5959900606718297,
       "position": "DEF"
     },
     {
       "fplId": 11,
-      "composite": 0.4287016480595429,
+      "composite": 0.43004700888428515,
       "position": "DEF"
     },
     {
       "fplId": 13,
-      "composite": 0.724071127719764,
+      "composite": 0.7236363917815931,
       "position": "MID"
     },
     {
       "fplId": 14,
-      "composite": 0.7099064288680117,
+      "composite": 0.7095441489195359,
       "position": "MID"
     },
     {
       "fplId": 15,
-      "composite": 0.6331420800397367,
+      "composite": 0.6324416721393502,
       "position": "MID"
     },
     {
       "fplId": 16,
-      "composite": 0.669416617966061,
+      "composite": 0.6690060340244551,
       "position": "MID"
     },
     {
       "fplId": 17,
-      "composite": 0.6713491744180181,
-      "position": "MID"
-    },
-    {
-      "fplId": 19,
-      "composite": 0.5249627655735225,
+      "composite": 0.6712042624386279,
       "position": "MID"
     },
     {
@@ -99,12 +94,12 @@
     },
     {
       "fplId": 31,
-      "composite": 0.38604199893673585,
+      "composite": 0.38771210202951933,
       "position": "DEF"
     },
     {
       "fplId": 452,
-      "composite": 0.7343983313736675,
+      "composite": 0.7341326594114521,
       "position": "MID"
     },
     {
@@ -119,47 +114,47 @@
     },
     {
       "fplId": 33,
-      "composite": 0.4193762892078682,
+      "composite": 0.42424742322848674,
       "position": "DEF"
     },
     {
       "fplId": 34,
-      "composite": 0.4551552365762892,
+      "composite": 0.46044389637010363,
       "position": "DEF"
     },
     {
       "fplId": 35,
-      "composite": 0.2884637822714273,
+      "composite": 0.2888502142164681,
       "position": "MID"
     },
     {
       "fplId": 36,
-      "composite": 0.3584049441786284,
+      "composite": 0.36091009881780367,
       "position": "DEF"
     },
     {
       "fplId": 37,
-      "composite": 0.2654207336523126,
+      "composite": 0.2663949604564363,
       "position": "DEF"
     },
     {
       "fplId": 41,
-      "composite": 0.676967777661362,
+      "composite": 0.6764605857334959,
       "position": "MID"
     },
     {
       "fplId": 45,
-      "composite": 0.576188821755783,
+      "composite": 0.5748846139412703,
       "position": "MID"
     },
     {
       "fplId": 46,
-      "composite": 0.6320101518449963,
+      "composite": 0.6317927838759109,
       "position": "MID"
     },
     {
       "fplId": 47,
-      "composite": 0.4413442449853898,
+      "composite": 0.4425759968102074,
       "position": "MID"
     },
     {
@@ -179,7 +174,7 @@
     },
     {
       "fplId": 54,
-      "composite": 0.36004076182493394,
+      "composite": 0.3603547377802796,
       "position": "MID"
     },
     {
@@ -189,7 +184,7 @@
     },
     {
       "fplId": 160,
-      "composite": 0.4460743726159016,
+      "composite": 0.44747518841667444,
       "position": "MID"
     },
     {
@@ -219,7 +214,7 @@
     },
     {
       "fplId": 630,
-      "composite": 0.1725909090909091,
+      "composite": 0.17300843486410497,
       "position": "DEF"
     },
     {
@@ -249,22 +244,22 @@
     },
     {
       "fplId": 60,
-      "composite": 0.5302526315789474,
+      "composite": 0.5280258274552361,
       "position": "DEF"
     },
     {
       "fplId": 61,
-      "composite": 0.5211157894736842,
+      "composite": 0.5177755832881172,
       "position": "DEF"
     },
     {
       "fplId": 62,
-      "composite": 0.2158421052631579,
+      "composite": 0.2191823114487249,
       "position": "DEF"
     },
     {
       "fplId": 64,
-      "composite": 0.5031894736842105,
+      "composite": 0.5017977211068909,
       "position": "DEF"
     },
     {
@@ -274,27 +269,27 @@
     },
     {
       "fplId": 67,
-      "composite": 0.4975830195927776,
+      "composite": 0.49724489164086694,
       "position": "MID"
     },
     {
       "fplId": 68,
-      "composite": 0.47099024202842876,
+      "composite": 0.4699275541795666,
       "position": "MID"
     },
     {
       "fplId": 69,
-      "composite": 0.4274469458317326,
+      "composite": 0.4260461300309597,
       "position": "MID"
     },
     {
       "fplId": 70,
-      "composite": 0.24469765655013448,
+      "composite": 0.24595356037151705,
       "position": "MID"
     },
     {
       "fplId": 71,
-      "composite": 0.2684922013061852,
+      "composite": 0.2667049535603715,
       "position": "MID"
     },
     {
@@ -304,27 +299,27 @@
     },
     {
       "fplId": 73,
-      "composite": 0.31932969650403387,
+      "composite": 0.32060975232198147,
       "position": "MID"
     },
     {
       "fplId": 74,
-      "composite": 0.3974003073376873,
+      "composite": 0.39631346749226004,
       "position": "MID"
     },
     {
       "fplId": 75,
-      "composite": 0.3385325393776412,
+      "composite": 0.33720417956656346,
       "position": "MID"
     },
     {
       "fplId": 77,
-      "composite": 0.4871944679216289,
+      "composite": 0.48690464396284827,
       "position": "MID"
     },
     {
       "fplId": 78,
-      "composite": 0.5798718401844026,
+      "composite": 0.5797752321981424,
       "position": "MID"
     },
     {
@@ -363,33 +358,23 @@
       "position": "GKP"
     },
     {
-      "fplId": 84,
-      "composite": 0.6336940457203615,
-      "position": "DEF"
-    },
-    {
       "fplId": 85,
-      "composite": 0.5657817650186071,
+      "composite": 0.5676838268742772,
       "position": "DEF"
     },
     {
       "fplId": 86,
-      "composite": 0.7231361637892563,
+      "composite": 0.7226772758545204,
       "position": "MID"
     },
     {
       "fplId": 87,
-      "composite": 0.5659191919191919,
+      "composite": 0.5685171300635218,
       "position": "DEF"
     },
     {
       "fplId": 88,
-      "composite": 0.45590749601275915,
-      "position": "DEF"
-    },
-    {
-      "fplId": 90,
-      "composite": 0.5260800106326422,
+      "composite": 0.45869100116739836,
       "position": "DEF"
     },
     {
@@ -404,37 +389,37 @@
     },
     {
       "fplId": 94,
-      "composite": 0.5641030823020834,
+      "composite": 0.5623399865528348,
       "position": "MID"
     },
     {
       "fplId": 95,
-      "composite": 0.7402650321889661,
+      "composite": 0.7398786002439253,
       "position": "MID"
     },
     {
       "fplId": 96,
-      "composite": 0.6988704874329154,
+      "composite": 0.6982183835256591,
       "position": "MID"
     },
     {
       "fplId": 97,
-      "composite": 0.5194435014765403,
+      "composite": 0.5207477092910529,
       "position": "MID"
     },
     {
       "fplId": 98,
-      "composite": 0.6282773256964574,
+      "composite": 0.6274320058166808,
       "position": "MID"
     },
     {
       "fplId": 102,
-      "composite": 0.4371335172702825,
+      "composite": 0.4377614691809738,
       "position": "MID"
     },
     {
       "fplId": 105,
-      "composite": 0.5930335471503354,
+      "composite": 0.5914878193701723,
       "position": "MID"
     },
     {
@@ -449,7 +434,7 @@
     },
     {
       "fplId": 620,
-      "composite": 0.5284952153110047,
+      "composite": 0.5339230503625512,
       "position": "DEF"
     },
     {
@@ -479,27 +464,27 @@
     },
     {
       "fplId": 113,
-      "composite": 0.48664646464646466,
+      "composite": 0.4957392481516193,
       "position": "DEF"
     },
     {
       "fplId": 114,
-      "composite": 0.5341464646464646,
+      "composite": 0.52505368114131,
       "position": "DEF"
     },
     {
       "fplId": 115,
-      "composite": 0.714690909090909,
+      "composite": 0.7139950328022493,
       "position": "DEF"
     },
     {
       "fplId": 116,
-      "composite": 0.43063535353535354,
+      "composite": 0.43819720920545663,
       "position": "DEF"
     },
     {
       "fplId": 117,
-      "composite": 0.237779797979798,
+      "composite": 0.23508907633031345,
       "position": "DEF"
     },
     {
@@ -514,17 +499,17 @@
     },
     {
       "fplId": 122,
-      "composite": 0.6185155644031556,
+      "composite": 0.6173562685680333,
       "position": "MID"
     },
     {
       "fplId": 123,
-      "composite": 0.6499898547518985,
+      "composite": 0.6491686868686869,
       "position": "MID"
     },
     {
       "fplId": 124,
-      "composite": 0.5542508442085083,
+      "composite": 0.5528258764111704,
       "position": "MID"
     },
     {
@@ -534,22 +519,22 @@
     },
     {
       "fplId": 126,
-      "composite": 0.2768046154980462,
+      "composite": 0.2775533273915627,
       "position": "MID"
     },
     {
       "fplId": 127,
-      "composite": 0.5434930177689301,
+      "composite": 0.5418265300059417,
       "position": "MID"
     },
     {
       "fplId": 129,
-      "composite": 0.6311082651330827,
+      "composite": 0.6301180332739156,
       "position": "MID"
     },
     {
       "fplId": 130,
-      "composite": 0.6663353535353536,
+      "composite": 0.6632734978652505,
       "position": "DEF"
     },
     {
@@ -589,12 +574,12 @@
     },
     {
       "fplId": 40,
-      "composite": 0.5921133346527123,
+      "composite": 0.5912438627763705,
       "position": "MID"
     },
     {
       "fplId": 101,
-      "composite": 0.32359359247488323,
+      "composite": 0.3242940003752697,
       "position": "MID"
     },
     {
@@ -604,17 +589,17 @@
     },
     {
       "fplId": 144,
-      "composite": 0.5018849016480595,
+      "composite": 0.5054570665965131,
       "position": "DEF"
     },
     {
       "fplId": 145,
-      "composite": 0.3858234981392876,
+      "composite": 0.3908338074176381,
       "position": "DEF"
     },
     {
       "fplId": 149,
-      "composite": 0.13039952153110046,
+      "composite": 0.12729127410842003,
       "position": "DEF"
     },
     {
@@ -624,27 +609,27 @@
     },
     {
       "fplId": 154,
-      "composite": 0.6136505353186106,
+      "composite": 0.6131674953873096,
       "position": "MID"
     },
     {
       "fplId": 156,
-      "composite": 0.4914838046232591,
+      "composite": 0.48998638083622603,
       "position": "MID"
     },
     {
       "fplId": 157,
-      "composite": 0.5822693939005886,
+      "composite": 0.5821003299246332,
       "position": "MID"
     },
     {
       "fplId": 159,
-      "composite": 0.3377260037951547,
+      "composite": 0.33837810770241106,
       "position": "MID"
     },
     {
       "fplId": 161,
-      "composite": 0.12923161697652666,
+      "composite": 0.12947313694217716,
       "position": "MID"
     },
     {
@@ -699,7 +684,7 @@
     },
     {
       "fplId": 91,
-      "composite": 0.16707496012759168,
+      "composite": 0.16930176425130303,
       "position": "DEF"
     },
     {
@@ -769,7 +754,7 @@
     },
     {
       "fplId": 190,
-      "composite": 0.4201523494646814,
+      "composite": 0.41863077368108326,
       "position": "MID"
     },
     {
@@ -819,12 +804,12 @@
     },
     {
       "fplId": 42,
-      "composite": 0.5771875109139805,
+      "composite": 0.5759316070925978,
       "position": "MID"
     },
     {
       "fplId": 153,
-      "composite": 0.5205606060606061,
+      "composite": 0.5262667916276165,
       "position": "DEF"
     },
     {
@@ -839,17 +824,17 @@
     },
     {
       "fplId": 202,
-      "composite": 0.7103091440723021,
+      "composite": 0.7103555358248793,
       "position": "DEF"
     },
     {
       "fplId": 203,
-      "composite": 0.7473617756512495,
+      "composite": 0.7461091983316618,
       "position": "DEF"
     },
     {
       "fplId": 204,
-      "composite": 0.6393208399787348,
+      "composite": 0.6415012523498688,
       "position": "DEF"
     },
     {
@@ -859,32 +844,32 @@
     },
     {
       "fplId": 210,
-      "composite": 0.5830801134665907,
+      "composite": 0.5844084732776684,
       "position": "MID"
     },
     {
       "fplId": 211,
-      "composite": 0.41751926487308744,
+      "composite": 0.41771248084560786,
       "position": "MID"
     },
     {
       "fplId": 212,
-      "composite": 0.37650317233029496,
+      "composite": 0.37652732432686,
       "position": "MID"
     },
     {
       "fplId": 213,
-      "composite": 0.4826868065984471,
+      "composite": 0.4835079744816587,
       "position": "MID"
     },
     {
       "fplId": 214,
-      "composite": 0.4002870114902386,
+      "composite": 0.4003836194764988,
       "position": "MID"
     },
     {
       "fplId": 218,
-      "composite": 0.29827471798274724,
+      "composite": 0.29883021390374337,
       "position": "MID"
     },
     {
@@ -899,7 +884,7 @@
     },
     {
       "fplId": 241,
-      "composite": 0.5473888170991513,
+      "composite": 0.5456498733464679,
       "position": "MID"
     },
     {
@@ -924,7 +909,7 @@
     },
     {
       "fplId": 643,
-      "composite": 0.2992272727272728,
+      "composite": 0.30159325210871607,
       "position": "DEF"
     },
     {
@@ -939,12 +924,12 @@
     },
     {
       "fplId": 21,
-      "composite": 0.4076326460921159,
+      "composite": 0.4079949260405916,
       "position": "MID"
     },
     {
       "fplId": 209,
-      "composite": 0.549985401459854,
+      "composite": 0.5503235294117648,
       "position": "MID"
     },
     {
@@ -964,67 +949,67 @@
     },
     {
       "fplId": 229,
-      "composite": 0.9123947368421053,
+      "composite": 0.909750406945198,
       "position": "DEF"
     },
     {
       "fplId": 230,
-      "composite": 0.614859649122807,
+      "composite": 0.6119833604630133,
       "position": "DEF"
     },
     {
       "fplId": 231,
-      "composite": 0.8905380116959064,
+      "composite": 0.8877545065412672,
       "position": "DEF"
     },
     {
       "fplId": 232,
-      "composite": 0.67793567251462,
+      "composite": 0.6821109302465787,
       "position": "DEF"
     },
     {
       "fplId": 233,
-      "composite": 0.5752163742690058,
+      "composite": 0.5809689515885934,
       "position": "DEF"
     },
     {
       "fplId": 236,
-      "composite": 0.9092343023007641,
+      "composite": 0.908702958376333,
       "position": "MID"
     },
     {
       "fplId": 238,
-      "composite": 0.7785402313569814,
+      "composite": 0.7773084795321638,
       "position": "MID"
     },
     {
       "fplId": 239,
-      "composite": 0.7863326076749051,
+      "composite": 0.7847627278981768,
       "position": "MID"
     },
     {
       "fplId": 242,
-      "composite": 0.43647330003841717,
+      "composite": 0.43700464396284827,
       "position": "MID"
     },
     {
       "fplId": 243,
-      "composite": 0.523415887651001,
+      "composite": 0.5243095115239078,
       "position": "MID"
     },
     {
       "fplId": 244,
-      "composite": 0.4573813975327613,
+      "composite": 0.4578161334709322,
       "position": "MID"
     },
     {
       "fplId": 245,
-      "composite": 0.4807038886754599,
+      "composite": 0.4814284485724114,
       "position": "MID"
     },
     {
       "fplId": 246,
-      "composite": 0.6350011525163273,
+      "composite": 0.633407120743034,
       "position": "MID"
     },
     {
@@ -1059,72 +1044,72 @@
     },
     {
       "fplId": 253,
-      "composite": 0.6801424774056353,
+      "composite": 0.6838538176118207,
       "position": "DEF"
     },
     {
       "fplId": 254,
-      "composite": 0.6385108984582668,
+      "composite": 0.6378614139221843,
       "position": "DEF"
     },
     {
       "fplId": 255,
-      "composite": 0.5355986177565124,
+      "composite": 0.5379182053853784,
       "position": "DEF"
     },
     {
       "fplId": 256,
-      "composite": 0.681622009569378,
+      "composite": 0.6768900508064915,
       "position": "DEF"
     },
     {
       "fplId": 257,
-      "composite": 0.6044553429027113,
+      "composite": 0.6107182295006495,
       "position": "DEF"
     },
     {
       "fplId": 258,
-      "composite": 0.4442214247740563,
+      "composite": 0.45530905364003565,
       "position": "DEF"
     },
     {
       "fplId": 261,
-      "composite": 0.5471456788398779,
+      "composite": 0.548232518685305,
       "position": "MID"
     },
     {
       "fplId": 262,
-      "composite": 0.5286231193999154,
+      "composite": 0.5296616552522124,
       "position": "MID"
     },
     {
       "fplId": 263,
-      "composite": 0.550455876475085,
+      "composite": 0.548982604684617,
       "position": "MID"
     },
     {
       "fplId": 264,
-      "composite": 0.44092302975975656,
+      "composite": 0.4418649576257935,
       "position": "MID"
     },
     {
       "fplId": 265,
-      "composite": 0.4172264403543696,
+      "composite": 0.41727474434749967,
       "position": "MID"
     },
     {
       "fplId": 268,
-      "composite": 0.6286691346814282,
+      "composite": 0.6274615348531757,
       "position": "MID"
     },
     {
       "fplId": 269,
-      "composite": 0.7587068048910153,
+      "composite": 0.756340825509572,
       "position": "DEF"
     },
     {
       "fplId": 270,
-      "composite": 0.3129259323934698,
+      "composite": 0.31352973230759607,
       "position": "MID"
     },
     {
@@ -1174,7 +1159,7 @@
     },
     {
       "fplId": 240,
-      "composite": 0.589203987628882,
+      "composite": 0.5875858038590237,
       "position": "MID"
     },
     {
@@ -1273,11 +1258,6 @@
       "position": "DEF"
     },
     {
-      "fplId": 586,
-      "composite": 0.22272727272727277,
-      "position": "DEF"
-    },
-    {
       "fplId": 589,
       "composite": 0.22272727272727277,
       "position": "MID"
@@ -1309,12 +1289,12 @@
     },
     {
       "fplId": 259,
-      "composite": 0.536888091440723,
+      "composite": 0.5409241739149498,
       "position": "DEF"
     },
     {
       "fplId": 267,
-      "composite": 0.562270534775337,
+      "composite": 0.5627294227100729,
       "position": "MID"
     },
     {
@@ -1344,12 +1324,12 @@
     },
     {
       "fplId": 305,
-      "composite": 0.3483939393939394,
+      "composite": 0.34867228990940335,
       "position": "DEF"
     },
     {
       "fplId": 306,
-      "composite": 0.3438939393939394,
+      "composite": 0.34403311465167136,
       "position": "DEF"
     },
     {
@@ -1369,17 +1349,17 @@
     },
     {
       "fplId": 312,
-      "composite": 0.5266202167662022,
+      "composite": 0.52799688057041,
       "position": "MID"
     },
     {
       "fplId": 313,
-      "composite": 0.5528975890289759,
+      "composite": 0.5511586452762923,
       "position": "MID"
     },
     {
       "fplId": 315,
-      "composite": 0.47078080070780803,
+      "composite": 0.47174688057041003,
       "position": "MID"
     },
     {
@@ -1389,7 +1369,7 @@
     },
     {
       "fplId": 318,
-      "composite": 0.5364742313647424,
+      "composite": 0.5346145276292336,
       "position": "MID"
     },
     {
@@ -1404,7 +1384,7 @@
     },
     {
       "fplId": 323,
-      "composite": 0.47406547224065476,
+      "composite": 0.4750557040998218,
       "position": "MID"
     },
     {
@@ -1424,12 +1404,12 @@
     },
     {
       "fplId": 571,
-      "composite": 0.616910906995425,
+      "composite": 0.6177079228820715,
       "position": "MID"
     },
     {
       "fplId": 591,
-      "composite": 0.6612917496129176,
+      "composite": 0.6603498217468806,
       "position": "MID"
     },
     {
@@ -1449,27 +1429,27 @@
     },
     {
       "fplId": 260,
-      "composite": 0.7800060225769023,
+      "composite": 0.7797645026112519,
       "position": "MID"
     },
     {
       "fplId": 327,
-      "composite": 0.7314667729930888,
+      "composite": 0.7295183193848414,
       "position": "DEF"
     },
     {
       "fplId": 329,
-      "composite": 0.4953556618819777,
+      "composite": 0.4992525690984725,
       "position": "DEF"
     },
     {
       "fplId": 330,
-      "composite": 0.45118314726209463,
+      "composite": 0.45382747715900185,
       "position": "DEF"
     },
     {
       "fplId": 332,
-      "composite": 0.7000837320574163,
+      "composite": 0.6971610516450453,
       "position": "DEF"
     },
     {
@@ -1479,37 +1459,37 @@
     },
     {
       "fplId": 336,
-      "composite": 0.7707765010846072,
+      "composite": 0.770704045094912,
       "position": "MID"
     },
     {
       "fplId": 337,
-      "composite": 0.6860567332953043,
+      "composite": 0.6851631094223974,
       "position": "MID"
     },
     {
       "fplId": 338,
-      "composite": 0.5309263282071581,
+      "composite": 0.5320856240422804,
       "position": "MID"
     },
     {
       "fplId": 339,
-      "composite": 0.6283635587531093,
+      "composite": 0.627735606842418,
       "position": "MID"
     },
     {
       "fplId": 343,
-      "composite": 0.32106915486016524,
+      "composite": 0.3217454107639866,
       "position": "MID"
     },
     {
       "fplId": 344,
-      "composite": 0.4456589871050109,
+      "composite": 0.4467216749538731,
       "position": "MID"
     },
     {
       "fplId": 345,
-      "composite": 0.6200586114700598,
+      "composite": 0.619140835600588,
       "position": "MID"
     },
     {
@@ -1584,12 +1564,12 @@
     },
     {
       "fplId": 358,
-      "composite": 0.5224839978734716,
+      "composite": 0.5272159566363581,
       "position": "DEF"
     },
     {
       "fplId": 359,
-      "composite": 0.5222377990430622,
+      "composite": 0.5207532629605879,
       "position": "DEF"
     },
     {
@@ -1604,42 +1584,42 @@
     },
     {
       "fplId": 364,
-      "composite": 0.5692272727272727,
+      "composite": 0.5660262417994376,
       "position": "DEF"
     },
     {
       "fplId": 366,
-      "composite": 0.7135354513246176,
+      "composite": 0.712738435437971,
       "position": "MID"
     },
     {
       "fplId": 367,
-      "composite": 0.6451856668878566,
+      "composite": 0.6438331550802139,
       "position": "MID"
     },
     {
       "fplId": 368,
-      "composite": 0.6878943705204174,
+      "composite": 0.6867833786784251,
       "position": "MID"
     },
     {
       "fplId": 369,
-      "composite": 0.6039938070679907,
+      "composite": 0.6032209431779091,
       "position": "MID"
     },
     {
       "fplId": 370,
-      "composite": 0.4870499047330779,
+      "composite": 0.48560078493917497,
       "position": "MID"
     },
     {
       "fplId": 372,
-      "composite": 0.5023143816187227,
+      "composite": 0.5032321574881946,
       "position": "MID"
     },
     {
       "fplId": 374,
-      "composite": 0.300185491876118,
+      "composite": 0.300692683803984,
       "position": "MID"
     },
     {
@@ -1684,12 +1664,12 @@
     },
     {
       "fplId": 155,
-      "composite": 0.8259595850941222,
+      "composite": 0.8249452012383901,
       "position": "MID"
     },
     {
       "fplId": 237,
-      "composite": 0.7339370726085287,
+      "composite": 0.7322947368421052,
       "position": "MID"
     },
     {
@@ -1704,32 +1684,32 @@
     },
     {
       "fplId": 387,
-      "composite": 0.9365508771929825,
+      "composite": 0.9359941761620546,
       "position": "DEF"
     },
     {
       "fplId": 389,
-      "composite": 0.909385380116959,
+      "composite": 0.9078544522819075,
       "position": "DEF"
     },
     {
       "fplId": 390,
-      "composite": 0.8860298245614036,
+      "composite": 0.8842205462108881,
       "position": "DEF"
     },
     {
       "fplId": 392,
-      "composite": 0.871506432748538,
+      "composite": 0.871228082233074,
       "position": "DEF"
     },
     {
       "fplId": 393,
-      "composite": 0.7788730994152047,
+      "composite": 0.77497619219871,
       "position": "DEF"
     },
     {
       "fplId": 395,
-      "composite": 0.4818730994152047,
+      "composite": 0.47579577982757576,
       "position": "DEF"
     },
     {
@@ -1739,22 +1719,22 @@
     },
     {
       "fplId": 398,
-      "composite": 0.9170395868015537,
+      "composite": 0.9168463708290333,
       "position": "MID"
     },
     {
       "fplId": 399,
-      "composite": 0.928848077005165,
+      "composite": 0.9288239250085999,
       "position": "MID"
     },
     {
       "fplId": 400,
-      "composite": 0.9157292739147138,
+      "composite": 0.9156085139318886,
       "position": "MID"
     },
     {
       "fplId": 406,
-      "composite": 0.4134247961753532,
+      "composite": 0.4138353801169591,
       "position": "MID"
     },
     {
@@ -1764,7 +1744,7 @@
     },
     {
       "fplId": 481,
-      "composite": 0.8697101464122594,
+      "composite": 0.8689855865153079,
       "position": "MID"
     },
     {
@@ -1799,12 +1779,12 @@
     },
     {
       "fplId": 43,
-      "composite": 0.4311037404393532,
+      "composite": 0.4312245004221784,
       "position": "MID"
     },
     {
       "fplId": 162,
-      "composite": 0.40298311466567316,
+      "composite": 0.4032487866278887,
       "position": "MID"
     },
     {
@@ -1824,37 +1804,37 @@
     },
     {
       "fplId": 416,
-      "composite": 0.48682073365231254,
+      "composite": 0.49057846561107543,
       "position": "DEF"
     },
     {
       "fplId": 417,
-      "composite": 0.6906324295587454,
+      "composite": 0.694065419249467,
       "position": "DEF"
     },
     {
       "fplId": 419,
-      "composite": 0.5824938330675172,
+      "composite": 0.5845350701809193,
       "position": "DEF"
     },
     {
       "fplId": 420,
-      "composite": 0.44695523657628916,
+      "composite": 0.4529861644113407,
       "position": "DEF"
     },
     {
       "fplId": 421,
-      "composite": 0.6606499734183944,
+      "composite": 0.6563355404287037,
       "position": "DEF"
     },
     {
       "fplId": 422,
-      "composite": 0.7697833067517278,
+      "composite": 0.7688090799476041,
       "position": "DEF"
     },
     {
       "fplId": 424,
-      "composite": 0.2982575757575757,
+      "composite": 0.29895345204623547,
       "position": "DEF"
     },
     {
@@ -1864,27 +1844,27 @@
     },
     {
       "fplId": 427,
-      "composite": 0.7975554073194487,
+      "composite": 0.7969516074053226,
       "position": "MID"
     },
     {
       "fplId": 428,
-      "composite": 0.7984938800218861,
+      "composite": 0.7979142321043249,
       "position": "MID"
     },
     {
       "fplId": 430,
-      "composite": 0.7314920018471305,
+      "composite": 0.7309365059261344,
       "position": "MID"
     },
     {
       "fplId": 431,
-      "composite": 0.489957439163048,
+      "composite": 0.49044047909434896,
       "position": "MID"
     },
     {
       "fplId": 432,
-      "composite": 0.5741658482636585,
+      "composite": 0.5755183600713012,
       "position": "MID"
     },
     {
@@ -1914,7 +1894,7 @@
     },
     {
       "fplId": 405,
-      "composite": 0.5325203708230984,
+      "composite": 0.5333898426994402,
       "position": "MID"
     },
     {
@@ -1929,62 +1909,62 @@
     },
     {
       "fplId": 445,
-      "composite": 0.7215675172780436,
+      "composite": 0.7248613317110332,
       "position": "DEF"
     },
     {
       "fplId": 446,
-      "composite": 0.6867312599681021,
+      "composite": 0.6826951774938752,
       "position": "DEF"
     },
     {
       "fplId": 447,
-      "composite": 0.7716581605528974,
+      "composite": 0.7680396038518664,
       "position": "DEF"
     },
     {
       "fplId": 448,
-      "composite": 0.6946026049973417,
+      "composite": 0.7022572441725994,
       "position": "DEF"
     },
     {
       "fplId": 449,
-      "composite": 0.5636581605528974,
+      "composite": 0.5672767172539284,
       "position": "DEF"
     },
     {
       "fplId": 450,
-      "composite": 0.6742751196172249,
+      "composite": 0.6737648103388744,
       "position": "DEF"
     },
     {
       "fplId": 453,
-      "composite": 0.7934241997384525,
+      "composite": 0.7927479438346311,
       "position": "MID"
     },
     {
       "fplId": 454,
-      "composite": 0.4132064168383799,
+      "composite": 0.4133754808143352,
       "position": "MID"
     },
     {
       "fplId": 456,
-      "composite": 0.5604140832062461,
+      "composite": 0.5615975310379335,
       "position": "MID"
     },
     {
       "fplId": 457,
-      "composite": 0.7459379659056955,
+      "composite": 0.7449718860430935,
       "position": "MID"
     },
     {
       "fplId": 459,
-      "composite": 0.6765939611248869,
+      "composite": 0.6753139053069392,
       "position": "MID"
     },
     {
       "fplId": 460,
-      "composite": 0.43732653465116006,
+      "composite": 0.4379061825687212,
       "position": "MID"
     },
     {
@@ -2059,7 +2039,7 @@
     },
     {
       "fplId": 201,
-      "composite": 0.8855039872408292,
+      "composite": 0.8846689356944375,
       "position": "DEF"
     },
     {
@@ -2073,28 +2053,23 @@
       "position": "GKP"
     },
     {
-      "fplId": 469,
-      "composite": 0.6702876129718234,
-      "position": "DEF"
-    },
-    {
       "fplId": 471,
-      "composite": 0.5843110047846889,
+      "composite": 0.592012035712524,
       "position": "DEF"
     },
     {
       "fplId": 472,
-      "composite": 0.6361881977671451,
+      "composite": 0.6417552080764234,
       "position": "DEF"
     },
     {
       "fplId": 473,
-      "composite": 0.6699864433811802,
+      "composite": 0.672723556783242,
       "position": "DEF"
     },
     {
       "fplId": 474,
-      "composite": 0.3613870281765018,
+      "composite": 0.36222207972289355,
       "position": "DEF"
     },
     {
@@ -2104,37 +2079,37 @@
     },
     {
       "fplId": 478,
-      "composite": 0.3531209463051567,
+      "composite": 0.3497343483670124,
       "position": "DEF"
     },
     {
       "fplId": 480,
-      "composite": 0.8862009181325354,
+      "composite": 0.8858869421771898,
       "position": "MID"
     },
     {
       "fplId": 482,
-      "composite": 0.7121315110381572,
+      "composite": 0.7107548472339493,
       "position": "MID"
     },
     {
       "fplId": 483,
-      "composite": 0.5487567724886203,
+      "composite": 0.5498677643306126,
       "position": "MID"
     },
     {
       "fplId": 486,
-      "composite": 0.41020996751999433,
+      "composite": 0.4109828314100759,
       "position": "MID"
     },
     {
       "fplId": 488,
-      "composite": 0.6092344264776074,
+      "composite": 0.6103695703161647,
       "position": "MID"
     },
     {
       "fplId": 489,
-      "composite": 0.47667908435100126,
+      "composite": 0.4778866841792538,
       "position": "MID"
     },
     {
@@ -2164,12 +2139,12 @@
     },
     {
       "fplId": 112,
-      "composite": 0.7328149920255185,
+      "composite": 0.7286397342935597,
       "position": "DEF"
     },
     {
       "fplId": 147,
-      "composite": 0.48716002126528446,
+      "composite": 0.4886445573477587,
       "position": "DEF"
     },
     {
@@ -2179,7 +2154,7 @@
     },
     {
       "fplId": 455,
-      "composite": 0.41185614112698254,
+      "composite": 0.4119285971166776,
       "position": "MID"
     },
     {
@@ -2199,32 +2174,32 @@
     },
     {
       "fplId": 498,
-      "composite": 0.8156395534290272,
+      "composite": 0.8139694503362437,
       "position": "DEF"
     },
     {
       "fplId": 499,
-      "composite": 0.6375606060606062,
+      "composite": 0.640019368947204,
       "position": "DEF"
     },
     {
       "fplId": 502,
-      "composite": 0.6444787347155769,
+      "composite": 0.6407210027568141,
       "position": "DEF"
     },
     {
       "fplId": 503,
-      "composite": 0.5803617756512494,
+      "composite": 0.5855112601873318,
       "position": "DEF"
     },
     {
       "fplId": 506,
-      "composite": 0.35595534290271136,
+      "composite": 0.3565120439336392,
       "position": "DEF"
     },
     {
       "fplId": 508,
-      "composite": 0.3054085592769804,
+      "composite": 0.3028570128852278,
       "position": "DEF"
     },
     {
@@ -2239,32 +2214,32 @@
     },
     {
       "fplId": 512,
-      "composite": 0.6616848003663217,
+      "composite": 0.6605013525346343,
       "position": "MID"
     },
     {
       "fplId": 515,
-      "composite": 0.6661579296615794,
+      "composite": 0.6661096256684493,
       "position": "MID"
     },
     {
       "fplId": 516,
-      "composite": 0.6067768736151372,
+      "composite": 0.6050862338555838,
       "position": "MID"
     },
     {
       "fplId": 519,
-      "composite": 0.36396183114277625,
+      "composite": 0.3641791991118617,
       "position": "MID"
     },
     {
       "fplId": 521,
-      "composite": 0.5183477106834771,
+      "composite": 0.5172125668449199,
       "position": "MID"
     },
     {
       "fplId": 522,
-      "composite": 0.503092833831981,
+      "composite": 0.504107217687713,
       "position": "MID"
     },
     {
@@ -2274,7 +2249,7 @@
     },
     {
       "fplId": 525,
-      "composite": 0.6169500071789739,
+      "composite": 0.6151386074365951,
       "position": "MID"
     },
     {
@@ -2294,7 +2269,7 @@
     },
     {
       "fplId": 501,
-      "composite": 0.4191776714513556,
+      "composite": 0.4220539601111494,
       "position": "DEF"
     },
     {
@@ -2309,27 +2284,27 @@
     },
     {
       "fplId": 533,
-      "composite": 0.6336408293460924,
+      "composite": 0.6325274272842367,
       "position": "DEF"
     },
     {
       "fplId": 534,
-      "composite": 0.33736188197767136,
+      "composite": 0.3408412634209703,
       "position": "DEF"
     },
     {
       "fplId": 535,
-      "composite": 0.5079145135566188,
+      "composite": 0.5075433795360001,
       "position": "DEF"
     },
     {
       "fplId": 536,
-      "composite": 0.34191977671451346,
+      "composite": 0.3508733849619361,
       "position": "DEF"
     },
     {
       "fplId": 539,
-      "composite": 0.2404250398724082,
+      "composite": 0.2357394728620989,
       "position": "DEF"
     },
     {
@@ -2339,7 +2314,7 @@
     },
     {
       "fplId": 542,
-      "composite": 0.53147363764421,
+      "composite": 0.5304351017919129,
       "position": "MID"
     },
     {
@@ -2349,22 +2324,22 @@
     },
     {
       "fplId": 548,
-      "composite": 0.32875316127079474,
+      "composite": 0.32691760953185095,
       "position": "MID"
     },
     {
       "fplId": 549,
-      "composite": 0.5203002223541601,
+      "composite": 0.5195515104606435,
       "position": "MID"
     },
     {
       "fplId": 550,
-      "composite": 0.09864636142446352,
+      "composite": 0.09893618538324411,
       "position": "MID"
     },
     {
       "fplId": 551,
-      "composite": 0.10818043749054113,
+      "composite": 0.10832534946993143,
       "position": "MID"
     },
     {
@@ -2408,7 +2383,7 @@
       "totalCost": 99.1,
       "remainingBank": 0.9,
       "budgetCap": 100,
-      "objectiveValue": 61.25715741,
+      "objectiveValue": 61.25715707,
       "clubDistribution": {
         "BHA": 3,
         "EVE": 2,
@@ -2457,7 +2432,7 @@
           "position": "DEF",
           "team": "BHA",
           "price": 5.5,
-          "ownership": 47.9,
+          "ownership": 48,
           "role": "start",
           "primarySeasonLabel": "2026/27",
           "primaryStarts": 10,
@@ -2482,7 +2457,7 @@
           "position": "DEF",
           "team": "TOT",
           "price": 5.1,
-          "ownership": 14.8,
+          "ownership": 14.9,
           "role": "start",
           "primarySeasonLabel": "2026/27",
           "primaryStarts": 10,
@@ -2490,11 +2465,11 @@
           "primaryPpgRaw": 5.7,
           "primaryPpgShrunk": 5.1831775700934575,
           "components": {
-            "provenOutput": 0.923728813559322,
+            "provenOutput": 0.9210526315789473,
             "openingFixtures": 0.6666666666666663,
             "minutesSecurity": 1
           },
-          "composite": 0.8490112994350281,
+          "composite": 0.8478070175438595,
           "euRotation": null,
           "isFirstChoiceGkp": false,
           "dataTier": 1,
@@ -2515,11 +2490,11 @@
           "primaryPpgRaw": 6.444444444444445,
           "primaryPpgShrunk": 5.246869409660107,
           "components": {
-            "provenOutput": 0.9322033898305084,
+            "provenOutput": 0.9298245614035088,
             "openingFixtures": 0.424242424242424,
             "minutesSecurity": 0.96
           },
-          "composite": 0.7599763739085772,
+          "composite": 0.7589059011164274,
           "euRotation": null,
           "isFirstChoiceGkp": false,
           "dataTier": 1,
@@ -2532,7 +2507,7 @@
           "position": "DEF",
           "team": "EVE",
           "price": 6.2,
-          "ownership": 19.3,
+          "ownership": 19.2,
           "role": "start",
           "primarySeasonLabel": "2026/27",
           "primaryStarts": 10,
@@ -2540,11 +2515,11 @@
           "primaryPpgRaw": 5.6,
           "primaryPpgShrunk": 5.264864864864864,
           "components": {
-            "provenOutput": 0.940677966101695,
+            "provenOutput": 0.9385964912280702,
             "openingFixtures": 0.27272727272727276,
             "minutesSecurity": 1
           },
-          "composite": 0.7187596302003081,
+          "composite": 0.7178229665071771,
           "euRotation": null,
           "isFirstChoiceGkp": false,
           "dataTier": 1,
@@ -2565,11 +2540,11 @@
           "primaryPpgRaw": 6.6,
           "primaryPpgShrunk": 6.68,
           "components": {
-            "provenOutput": 0.9915254237288136,
+            "provenOutput": 0.9912280701754386,
             "openingFixtures": 0.1515151515151515,
             "minutesSecurity": 0.85
           },
-          "composite": 0.6692167437082692,
+          "composite": 0.6690829346092504,
           "euRotation": "UCL",
           "isFirstChoiceGkp": false,
           "dataTier": 1,
@@ -2632,7 +2607,7 @@
           "position": "FWD",
           "team": "AVL",
           "price": 7.1,
-          "ownership": 31.5,
+          "ownership": 31.6,
           "role": "start",
           "primarySeasonLabel": "2026/27",
           "primaryStarts": 9,
@@ -2682,7 +2657,7 @@
           "position": "FWD",
           "team": "EVE",
           "price": 5.7,
-          "ownership": 10.8,
+          "ownership": 10.9,
           "role": "start",
           "primarySeasonLabel": "2026/27",
           "primaryStarts": 10,
@@ -2784,7 +2759,7 @@
           "position": "MID",
           "team": "NEW",
           "price": 6.1,
-          "ownership": 6.6,
+          "ownership": 6.5,
           "role": "bench",
           "primarySeasonLabel": "2026/27",
           "primaryStarts": 10,
@@ -2813,7 +2788,7 @@
       "totalCost": 99.8,
       "remainingBank": 0.2,
       "budgetCap": 100,
-      "objectiveValue": 4.47281152,
+      "objectiveValue": 4.47081125,
       "clubDistribution": {
         "MCI": 2,
         "BHA": 2,
@@ -2861,7 +2836,7 @@
           "position": "DEF",
           "team": "EVE",
           "price": 6.2,
-          "ownership": 19.3,
+          "ownership": 19.2,
           "role": "start",
           "primarySeasonLabel": "2025/26",
           "primaryStarts": 37,
@@ -2869,11 +2844,11 @@
           "primaryPpgRaw": 4.594594594594595,
           "primaryPpgShrunk": 4.594594594594595,
           "components": {
-            "provenOutput": 0.81,
+            "provenOutput": 0.8041237113402062,
             "openingFixtures": 1,
             "minutesSecurity": 0.9894736842105263
           },
-          "composite": 0.9123947368421053,
+          "composite": 0.909750406945198,
           "euRotation": null,
           "isFirstChoiceGkp": false,
           "dataTier": 1,
@@ -2894,11 +2869,11 @@
           "primaryPpgRaw": 5.780789628756629,
           "primaryPpgShrunk": 5.780789628756629,
           "components": {
-            "provenOutput": 0.99,
+            "provenOutput": 0.9896907216494846,
             "openingFixtures": 0.48484848484848503,
             "minutesSecurity": 0.6787076023391813
           },
-          "composite": 0.7509384901648061,
+          "composite": 0.7507993149070741,
           "euRotation": "UCL",
           "isFirstChoiceGkp": false,
           "dataTier": 1,
@@ -2911,7 +2886,7 @@
           "position": "DEF",
           "team": "BHA",
           "price": 5.5,
-          "ownership": 47.9,
+          "ownership": 48,
           "role": "start",
           "primarySeasonLabel": "2025/26",
           "primaryStarts": 17,
@@ -2919,11 +2894,11 @@
           "primaryPpgRaw": 5.384615384615385,
           "primaryPpgShrunk": 5.384615384615385,
           "components": {
-            "provenOutput": 0.95,
+            "provenOutput": 0.9484536082474226,
             "openingFixtures": 0.4545454545454546,
             "minutesSecurity": 0.6405
           },
-          "composite": 0.714690909090909,
+          "composite": 0.7139950328022493,
           "euRotation": "UECL",
           "isFirstChoiceGkp": false,
           "dataTier": 1,
@@ -2936,7 +2911,7 @@
           "position": "DEF",
           "team": "NEW",
           "price": 5.2,
-          "ownership": 18.2,
+          "ownership": 18.1,
           "role": "start",
           "primarySeasonLabel": "2025/26",
           "primaryStarts": 24,
@@ -2944,11 +2919,11 @@
           "primaryPpgRaw": 3.2674632352941178,
           "primaryPpgShrunk": 3.2674632352941178,
           "components": {
-            "provenOutput": 0.26,
+            "provenOutput": 0.26804123711340205,
             "openingFixtures": 0.7878787878787878,
             "minutesSecurity": 0.8545029239766082
           },
-          "composite": 0.5636581605528974,
+          "composite": 0.5672767172539284,
           "euRotation": null,
           "isFirstChoiceGkp": false,
           "dataTier": 1,
@@ -2969,11 +2944,11 @@
           "primaryPpgRaw": 6.856659142212189,
           "primaryPpgShrunk": 6.856659142212189,
           "components": {
-            "provenOutput": 0.9927007299270073,
+            "provenOutput": 0.9926470588235294,
             "openingFixtures": 1,
             "minutesSecurity": 0.6606637426900585
           },
-          "composite": 0.928848077005165,
+          "composite": 0.9288239250085999,
           "euRotation": "UCL",
           "isFirstChoiceGkp": false,
           "dataTier": 1,
@@ -2994,11 +2969,11 @@
           "primaryPpgRaw": 5.250767656090072,
           "primaryPpgShrunk": 5.250767656090072,
           "components": {
-            "provenOutput": 0.8540145985401459,
+            "provenOutput": 0.8529411764705882,
             "openingFixtures": 0.1818181818181817,
             "minutesSecurity": 0.8285380116959065
           },
-          "composite": 0.6136505353186106,
+          "composite": 0.6131674953873096,
           "euRotation": null,
           "isFirstChoiceGkp": false,
           "dataTier": 1,
@@ -3019,11 +2994,11 @@
           "primaryPpgRaw": 4.637195121951219,
           "primaryPpgShrunk": 4.637195121951219,
           "components": {
-            "provenOutput": 0.7372262773722628,
+            "provenOutput": 0.7352941176470589,
             "openingFixtures": 0.1818181818181817,
             "minutesSecurity": 0.9836257309941521
           },
-          "composite": 0.5921133346527123,
+          "composite": 0.5912438627763705,
           "euRotation": null,
           "isFirstChoiceGkp": false,
           "dataTier": 1,
@@ -3044,11 +3019,11 @@
           "primaryPpgRaw": 4.290953545232274,
           "primaryPpgShrunk": 4.290953545232274,
           "components": {
-            "provenOutput": 0.5693430656934306,
+            "provenOutput": 0.5661764705882353,
             "openingFixtures": 0.4545454545454546,
             "minutesSecurity": 0.6947777777777777
           },
-          "composite": 0.5542508442085083,
+          "composite": 0.5528258764111704,
           "euRotation": "UECL",
           "isFirstChoiceGkp": false,
           "dataTier": 1,
@@ -3086,7 +3061,7 @@
           "position": "FWD",
           "team": "LEE",
           "price": 6,
-          "ownership": 17.5,
+          "ownership": 17.4,
           "role": "start",
           "primarySeasonLabel": "2025/26",
           "primaryStarts": 30,
@@ -3171,11 +3146,11 @@
           "primaryPpgRaw": 2.5961538461538463,
           "primaryPpgShrunk": 2.5961538461538463,
           "components": {
-            "provenOutput": 0.0072992700729927005,
+            "provenOutput": 0.007352941176470588,
             "openingFixtures": 0.6363636363636366,
             "minutesSecurity": 0.7524561403508772
           },
-          "composite": 0.37650317233029496,
+          "composite": 0.37652732432686,
           "euRotation": null,
           "isFirstChoiceGkp": false,
           "dataTier": 1,
@@ -3217,7 +3192,7 @@
       "totalCost": 100,
       "remainingBank": 0,
       "budgetCap": 100,
-      "objectiveValue": 8.6230633,
+      "objectiveValue": 8.62120028,
       "clubDistribution": {
         "MCI": 2,
         "MUN": 1,
@@ -3266,7 +3241,7 @@
           "position": "DEF",
           "team": "EVE",
           "price": 6.2,
-          "ownership": 19.3,
+          "ownership": 19.2,
           "role": "start",
           "primarySeasonLabel": "2025/26",
           "primaryStarts": 37,
@@ -3274,11 +3249,11 @@
           "primaryPpgRaw": 4.594594594594595,
           "primaryPpgShrunk": 4.594594594594595,
           "components": {
-            "provenOutput": 0.81,
+            "provenOutput": 0.8041237113402062,
             "openingFixtures": 1,
             "minutesSecurity": 0.9894736842105263
           },
-          "composite": 0.9123947368421053,
+          "composite": 0.909750406945198,
           "euRotation": null,
           "isFirstChoiceGkp": false,
           "dataTier": 1,
@@ -3324,11 +3299,11 @@
           "primaryPpgRaw": 5.780789628756629,
           "primaryPpgShrunk": 5.780789628756629,
           "components": {
-            "provenOutput": 0.99,
+            "provenOutput": 0.9896907216494846,
             "openingFixtures": 0.48484848484848503,
             "minutesSecurity": 0.6787076023391813
           },
-          "composite": 0.7509384901648061,
+          "composite": 0.7507993149070741,
           "euRotation": "UCL",
           "isFirstChoiceGkp": false,
           "dataTier": 1,
@@ -3341,7 +3316,7 @@
           "position": "DEF",
           "team": "BHA",
           "price": 5.5,
-          "ownership": 47.9,
+          "ownership": 48,
           "role": "start",
           "primarySeasonLabel": "2025/26",
           "primaryStarts": 17,
@@ -3349,11 +3324,11 @@
           "primaryPpgRaw": 5.384615384615385,
           "primaryPpgShrunk": 5.384615384615385,
           "components": {
-            "provenOutput": 0.95,
+            "provenOutput": 0.9484536082474226,
             "openingFixtures": 0.4545454545454546,
             "minutesSecurity": 0.6405
           },
-          "composite": 0.714690909090909,
+          "composite": 0.7139950328022493,
           "euRotation": "UECL",
           "isFirstChoiceGkp": false,
           "dataTier": 1,
@@ -3366,7 +3341,7 @@
           "position": "DEF",
           "team": "NEW",
           "price": 5.2,
-          "ownership": 18.2,
+          "ownership": 18.1,
           "role": "start",
           "primarySeasonLabel": "2025/26",
           "primaryStarts": 24,
@@ -3374,11 +3349,11 @@
           "primaryPpgRaw": 3.2674632352941178,
           "primaryPpgShrunk": 3.2674632352941178,
           "components": {
-            "provenOutput": 0.26,
+            "provenOutput": 0.26804123711340205,
             "openingFixtures": 0.7878787878787878,
             "minutesSecurity": 0.8545029239766082
           },
-          "composite": 0.5636581605528974,
+          "composite": 0.5672767172539284,
           "euRotation": null,
           "isFirstChoiceGkp": false,
           "dataTier": 1,
@@ -3399,11 +3374,11 @@
           "primaryPpgRaw": 6.856659142212189,
           "primaryPpgShrunk": 6.856659142212189,
           "components": {
-            "provenOutput": 0.9927007299270073,
+            "provenOutput": 0.9926470588235294,
             "openingFixtures": 1,
             "minutesSecurity": 0.6606637426900585
           },
-          "composite": 0.928848077005165,
+          "composite": 0.9288239250085999,
           "euRotation": "UCL",
           "isFirstChoiceGkp": false,
           "dataTier": 1,
@@ -3424,11 +3399,11 @@
           "primaryPpgRaw": 5.101493680582152,
           "primaryPpgShrunk": 5.101493680582152,
           "components": {
-            "provenOutput": 0.8175182481751825,
+            "provenOutput": 0.8161764705882353,
             "openingFixtures": 0.7878787878787878,
             "minutesSecurity": 0.7695730994152046
           },
-          "composite": 0.7975554073194487,
+          "composite": 0.7969516074053226,
           "euRotation": "UCL",
           "isFirstChoiceGkp": false,
           "dataTier": 1,
@@ -3449,11 +3424,11 @@
           "primaryPpgRaw": 4.290953545232274,
           "primaryPpgShrunk": 4.290953545232274,
           "components": {
-            "provenOutput": 0.5693430656934306,
+            "provenOutput": 0.5661764705882353,
             "openingFixtures": 0.4545454545454546,
             "minutesSecurity": 0.6947777777777777
           },
-          "composite": 0.5542508442085083,
+          "composite": 0.5528258764111704,
           "euRotation": "UECL",
           "isFirstChoiceGkp": false,
           "dataTier": 1,
@@ -3491,7 +3466,7 @@
           "position": "FWD",
           "team": "LEE",
           "price": 6,
-          "ownership": 17.5,
+          "ownership": 17.4,
           "role": "start",
           "primarySeasonLabel": "2025/26",
           "primaryStarts": 30,
@@ -3551,11 +3526,11 @@
           "primaryPpgRaw": 5.024925224327019,
           "primaryPpgShrunk": 5.024925224327019,
           "components": {
-            "provenOutput": 0.8102189781021898,
+            "provenOutput": 0.8088235294117647,
             "openingFixtures": 0.5151515151515152,
             "minutesSecurity": 0.41730994152046785
           },
-          "composite": 0.6283635587531093,
+          "composite": 0.627735606842418,
           "euRotation": null,
           "isFirstChoiceGkp": false,
           "dataTier": 1,
@@ -3576,11 +3551,11 @@
           "primaryPpgRaw": 3.8639652677279304,
           "primaryPpgShrunk": 3.8639652677279304,
           "components": {
-            "provenOutput": 0.34306569343065696,
+            "provenOutput": 0.34558823529411764,
             "openingFixtures": 0.818181818181818,
             "minutesSecurity": 0.8424561403508772
           },
-          "composite": 0.6092344264776074,
+          "composite": 0.6103695703161647,
           "euRotation": null,
           "isFirstChoiceGkp": false,
           "dataTier": 1,
@@ -3622,7 +3597,7 @@
       "totalCost": 88.7,
       "remainingBank": 11.3,
       "budgetCap": 100,
-      "objectiveValue": 9.84717529,
+      "objectiveValue": 9.84000558,
       "clubDistribution": {
         "EVE": 3,
         "MCI": 3,
@@ -3631,8 +3606,8 @@
         "IPS": 2,
         "TOT": 1,
         "LEE": 1,
-        "MUN": 1,
-        "NEW": 1
+        "NEW": 1,
+        "MUN": 1
       },
       "clubsAtCap": [
         "EVE",
@@ -3679,11 +3654,11 @@
           "primaryPpgRaw": 5.448354143019296,
           "primaryPpgShrunk": 5.448354143019296,
           "components": {
-            "provenOutput": 0.96,
+            "provenOutput": 0.9587628865979382,
             "openingFixtures": 1,
             "minutesSecurity": 0.7727543859649123
           },
-          "composite": 0.9365508771929825,
+          "composite": 0.9359941761620546,
           "euRotation": "UCL",
           "isFirstChoiceGkp": false,
           "dataTier": 1,
@@ -3704,11 +3679,11 @@
           "primaryPpgRaw": 4.55564142194745,
           "primaryPpgShrunk": 4.55564142194745,
           "components": {
-            "provenOutput": 0.8,
+            "provenOutput": 0.7938144329896907,
             "openingFixtures": 1,
             "minutesSecurity": 0.9026900584795321
           },
-          "composite": 0.8905380116959064,
+          "composite": 0.8877545065412672,
           "euRotation": null,
           "isFirstChoiceGkp": false,
           "dataTier": 1,
@@ -3729,11 +3704,11 @@
           "primaryPpgRaw": 5.1,
           "primaryPpgShrunk": 5.1,
           "components": {
-            "provenOutput": 0.94,
+            "provenOutput": 0.9381443298969072,
             "openingFixtures": 0.818181818181818,
             "minutesSecurity": 0.8807017543859649
           },
-          "composite": 0.8855039872408292,
+          "composite": 0.8846689356944375,
           "euRotation": null,
           "isFirstChoiceGkp": false,
           "dataTier": 1,
@@ -3754,11 +3729,11 @@
           "primaryPpgRaw": 4.79014598540146,
           "primaryPpgShrunk": 4.79014598540146,
           "components": {
-            "provenOutput": 0.88,
+            "provenOutput": 0.8762886597938144,
             "openingFixtures": 0.6363636363636366,
             "minutesSecurity": 0.984561403508772
           },
-          "composite": 0.8156395534290272,
+          "composite": 0.8139694503362437,
           "euRotation": null,
           "isFirstChoiceGkp": false,
           "dataTier": 1,
@@ -3779,11 +3754,11 @@
           "primaryPpgRaw": 5.673724735322425,
           "primaryPpgShrunk": 5.673724735322425,
           "components": {
-            "provenOutput": 0.9416058394160584,
+            "provenOutput": 0.9411764705882353,
             "openingFixtures": 1,
             "minutesSecurity": 0.7165847953216374
           },
-          "composite": 0.9170395868015537,
+          "composite": 0.9168463708290333,
           "euRotation": "UCL",
           "isFirstChoiceGkp": false,
           "dataTier": 1,
@@ -3804,11 +3779,11 @@
           "primaryPpgRaw": 6.091370558375634,
           "primaryPpgShrunk": 6.091370558375634,
           "components": {
-            "provenOutput": 0.9635036496350365,
+            "provenOutput": 0.9632352941176471,
             "openingFixtures": 1,
             "minutesSecurity": 0.6607631578947367
           },
-          "composite": 0.9157292739147138,
+          "composite": 0.9156085139318886,
           "euRotation": "UCL",
           "isFirstChoiceGkp": false,
           "dataTier": 1,
@@ -3829,11 +3804,11 @@
           "primaryPpgRaw": 5.169265880562952,
           "primaryPpgShrunk": 5.169265880562952,
           "components": {
-            "provenOutput": 0.8394160583941606,
+            "provenOutput": 0.8382352941176471,
             "openingFixtures": 1,
             "minutesSecurity": 0.9074853801169591
           },
-          "composite": 0.9092343023007641,
+          "composite": 0.908702958376333,
           "euRotation": null,
           "isFirstChoiceGkp": false,
           "dataTier": 1,
@@ -3854,11 +3829,11 @@
           "primaryPpgRaw": 5.4563044179297,
           "primaryPpgShrunk": 5.4563044179297,
           "components": {
-            "provenOutput": 0.9051094890510949,
+            "provenOutput": 0.9044117647058824,
             "openingFixtures": 0.818181818181818,
             "minutesSecurity": 0.9626900584795322
           },
-          "composite": 0.8862009181325354,
+          "composite": 0.8858869421771898,
           "euRotation": null,
           "isFirstChoiceGkp": false,
           "dataTier": 1,
@@ -3956,11 +3931,11 @@
           "primaryPpgRaw": 4.882292732855681,
           "primaryPpgShrunk": 4.882292732855681,
           "components": {
-            "provenOutput": 0.93,
+            "provenOutput": 0.9278350515463918,
             "openingFixtures": 0.7878787878787878,
             "minutesSecurity": 0.37762865497076026
           },
-          "composite": 0.7697833067517278,
+          "composite": 0.7688090799476041,
           "euRotation": "UCL",
           "isFirstChoiceGkp": false,
           "dataTier": 1,
@@ -3973,7 +3948,7 @@
           "position": "MID",
           "team": "NEW",
           "price": 6.1,
-          "ownership": 6.6,
+          "ownership": 6.5,
           "role": "bench",
           "primarySeasonLabel": "2025/26",
           "primaryStarts": 19,
@@ -3981,11 +3956,11 @@
           "primaryPpgRaw": 4.889800102511533,
           "primaryPpgShrunk": 4.889800102511533,
           "components": {
-            "provenOutput": 0.7956204379562044,
+            "provenOutput": 0.7941176470588235,
             "openingFixtures": 0.7878787878787878,
             "minutesSecurity": 0.7981871345029239
           },
-          "composite": 0.7934241997384525,
+          "composite": 0.7927479438346311,
           "euRotation": null,
           "isFirstChoiceGkp": false,
           "dataTier": 1,
@@ -4497,6 +4472,11 @@
       "reason": "Composite 0.50 below quality floor 0.55"
     },
     {
+      "name": "B.Fernandes",
+      "team": "MUN",
+      "reason": "Displaced by higher-composite alternative at same position under club-cap + budget constraints"
+    },
+    {
       "name": "Ødegaard",
       "team": "ARS",
       "reason": "Displaced by higher-composite alternative at same position under club-cap + budget constraints"
@@ -4517,6 +4497,6 @@
       "reason": "Ownership 12.8% falls in the gap between Balanced (≥15%) and Differentials (≤12%)"
     }
   ],
-  "_fetchedAt": "2026-11-16T11:51:06Z",
+  "_fetchedAt": "2026-11-17T12:13:00Z",
   "_source": "prefetch-draft-builder-squads.yml"
 }
