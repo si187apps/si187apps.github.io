@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-11-17T11:28:45.141Z",
+  "generatedAt": "2026-11-18T11:03:54.344Z",
   "poolSize": 474,
   "scoredPool": [
     {
@@ -2380,8 +2380,8 @@
       "description": "Built for a Wildcard now, not for GW1: points per 90 this season (anchored to last season so five hot games don't outweigh a proven record), the fixtures from GW11–GW16 (home games weighted up), and how reliably each player has started. Anyone FPL flags as injured, suspended or under 75% to play is left out. Spends the full £100m.",
       "rules": "£100m, max 3 per club. Picks maximise expected points: this-season pts/90 blended with last season's (equal weight after five full games, this season taking over as minutes build) × fixture factor for GW11–GW16 × share of minutes played. Starters need 3+ starts this season and composite ≥ 0.55. No ownership filter.",
       "feasible": true,
-      "totalCost": 99.1,
-      "remainingBank": 0.9,
+      "totalCost": 99,
+      "remainingBank": 1,
       "budgetCap": 100,
       "objectiveValue": 61.25715707,
       "clubDistribution": {
@@ -2393,8 +2393,8 @@
         "CHE": 1,
         "MCI": 1,
         "LEE": 1,
-        "SUN": 1,
-        "NEW": 1
+        "NEW": 1,
+        "SUN": 1
       },
       "clubsAtCap": [
         "BHA"
@@ -2432,7 +2432,7 @@
           "position": "DEF",
           "team": "BHA",
           "price": 5.5,
-          "ownership": 48,
+          "ownership": 48.1,
           "role": "start",
           "primarySeasonLabel": "2026/27",
           "primaryStarts": 10,
@@ -2457,7 +2457,7 @@
           "position": "DEF",
           "team": "TOT",
           "price": 5.1,
-          "ownership": 14.9,
+          "ownership": 15.1,
           "role": "start",
           "primarySeasonLabel": "2026/27",
           "primaryStarts": 10,
@@ -2532,7 +2532,7 @@
           "position": "DEF",
           "team": "ARS",
           "price": 8.1,
-          "ownership": 26.2,
+          "ownership": 26.3,
           "role": "start",
           "primarySeasonLabel": "2026/27",
           "primaryStarts": 10,
@@ -2557,7 +2557,7 @@
           "position": "MID",
           "team": "BHA",
           "price": 6.3,
-          "ownership": 48.2,
+          "ownership": 48.3,
           "role": "start",
           "primarySeasonLabel": "2026/27",
           "primaryStarts": 10,
@@ -2607,7 +2607,7 @@
           "position": "FWD",
           "team": "AVL",
           "price": 7.1,
-          "ownership": 31.6,
+          "ownership": 31.8,
           "role": "start",
           "primarySeasonLabel": "2026/27",
           "primaryStarts": 9,
@@ -2709,7 +2709,7 @@
           "position": "MID",
           "team": "AVL",
           "price": 5.4,
-          "ownership": 3.7,
+          "ownership": 3.8,
           "role": "bench",
           "primarySeasonLabel": "2026/27",
           "primaryStarts": 9,
@@ -2758,7 +2758,7 @@
           "name": "Barnes",
           "position": "MID",
           "team": "NEW",
-          "price": 6.1,
+          "price": 6,
           "ownership": 6.5,
           "role": "bench",
           "primarySeasonLabel": "2026/27",
@@ -2788,19 +2788,19 @@
       "totalCost": 99.8,
       "remainingBank": 0.2,
       "budgetCap": 100,
-      "objectiveValue": 4.47081125,
+      "objectiveValue": 4.47281125,
       "clubDistribution": {
         "MCI": 2,
         "BHA": 2,
         "LEE": 1,
         "CHE": 2,
         "ARS": 2,
-        "EVE": 1,
         "NEW": 1,
+        "EVE": 1,
         "CRY": 1,
-        "HUL": 1,
         "TOT": 1,
-        "FUL": 1
+        "FUL": 1,
+        "HUL": 1
       },
       "clubsAtCap": [],
       "starters": [
@@ -2886,7 +2886,7 @@
           "position": "DEF",
           "team": "BHA",
           "price": 5.5,
-          "ownership": 48,
+          "ownership": 48.1,
           "role": "start",
           "primarySeasonLabel": "2025/26",
           "primaryStarts": 17,
@@ -3011,7 +3011,7 @@
           "position": "MID",
           "team": "BHA",
           "price": 6.3,
-          "ownership": 48.2,
+          "ownership": 48.3,
           "role": "start",
           "primarySeasonLabel": "2025/26",
           "primaryStarts": 18,
@@ -3192,47 +3192,45 @@
       "totalCost": 100,
       "remainingBank": 0,
       "budgetCap": 100,
-      "objectiveValue": 8.62120028,
+      "objectiveValue": 8.78381765,
       "clubDistribution": {
         "MCI": 2,
-        "MUN": 1,
+        "LEE": 1,
+        "MUN": 2,
         "BHA": 2,
-        "ARS": 3,
+        "TOT": 2,
+        "ARS": 2,
         "EVE": 1,
-        "NEW": 1,
-        "LEE": 2,
-        "TOT": 1,
-        "IPS": 1,
-        "NFO": 1
+        "IPS": 3
       },
       "clubsAtCap": [
-        "ARS"
+        "IPS"
       ],
       "starters": [
         {
-          "fplId": 1,
-          "fplCode": 154561,
-          "name": "Raya",
+          "fplId": 109,
+          "fplCode": 489639,
+          "name": "Verbruggen",
           "position": "GKP",
-          "team": "ARS",
-          "price": 6.2,
-          "ownership": 47.6,
+          "team": "BHA",
+          "price": 4.7,
+          "ownership": 24,
           "role": "start",
           "primarySeasonLabel": "2025/26",
-          "primaryStarts": 37,
-          "primaryMinutes": 3330,
-          "primaryPpgRaw": 4.378378378378378,
-          "primaryPpgShrunk": 4.378378378378378,
+          "primaryStarts": 38,
+          "primaryMinutes": 3420,
+          "primaryPpgRaw": 3.4210526315789473,
+          "primaryPpgShrunk": 3.4210526315789473,
           "components": {
-            "provenOutput": 1,
-            "openingFixtures": 0.48484848484848503,
-            "minutesSecurity": 0.8410526315789473
+            "provenOutput": 0.7096774193548387,
+            "openingFixtures": 0.4545454545454546,
+            "minutesSecurity": 0.95
           },
-          "composite": 0.7879074960127592,
-          "euRotation": "UCL",
+          "composite": 0.6684457478005865,
+          "euRotation": "UECL",
           "isFirstChoiceGkp": true,
           "dataTier": 1,
-          "why": "37 starts, 4.4 pts/90 last season, 48% owned across the game, midweek Champions League fixtures may cost him minutes"
+          "why": "38 starts, 3.4 pts/90 last season"
         },
         {
           "fplId": 229,
@@ -3260,31 +3258,6 @@
           "why": "37 starts, 4.6 pts/90 last season, one of the best opening runs"
         },
         {
-          "fplId": 4,
-          "fplCode": 226597,
-          "name": "Gabriel",
-          "position": "DEF",
-          "team": "ARS",
-          "price": 8.1,
-          "ownership": 26.2,
-          "role": "start",
-          "primarySeasonLabel": "2025/26",
-          "primaryStarts": 30,
-          "primaryMinutes": 2750,
-          "primaryPpgRaw": 6.84,
-          "primaryPpgShrunk": 6.84,
-          "components": {
-            "provenOutput": 1,
-            "openingFixtures": 0.48484848484848503,
-            "minutesSecurity": 0.7833918128654971
-          },
-          "composite": 0.7763753322700692,
-          "euRotation": "UCL",
-          "isFirstChoiceGkp": false,
-          "dataTier": 1,
-          "why": "30 starts, 6.8 pts/90 last season, midweek Champions League fixtures may cost him minutes"
-        },
-        {
           "fplId": 8,
           "fplCode": 466075,
           "name": "Calafiori",
@@ -3310,13 +3283,38 @@
           "why": "22 starts, 5.8 pts/90 last season, 49% owned across the game, midweek Champions League fixtures may cost him minutes"
         },
         {
+          "fplId": 112,
+          "fplCode": 469142,
+          "name": "Van Hecke",
+          "position": "DEF",
+          "team": "TOT",
+          "price": 5.1,
+          "ownership": 15.1,
+          "role": "start",
+          "primarySeasonLabel": "2025/26",
+          "primaryStarts": 36,
+          "primaryMinutes": 3210,
+          "primaryPpgRaw": 4.149532710280374,
+          "primaryPpgShrunk": 4.149532710280374,
+          "components": {
+            "provenOutput": 0.6907216494845361,
+            "openingFixtures": 0.6363636363636366,
+            "minutesSecurity": 0.9754385964912281
+          },
+          "composite": 0.7286397342935597,
+          "euRotation": null,
+          "isFirstChoiceGkp": false,
+          "dataTier": 1,
+          "why": "36 starts, 4.1 pts/90 last season"
+        },
+        {
           "fplId": 115,
           "fplCode": 465730,
           "name": "De Cuyper",
           "position": "DEF",
           "team": "BHA",
           "price": 5.5,
-          "ownership": 48,
+          "ownership": 48.1,
           "role": "start",
           "primarySeasonLabel": "2025/26",
           "primaryStarts": 17,
@@ -3333,31 +3331,6 @@
           "isFirstChoiceGkp": false,
           "dataTier": 1,
           "why": "17 starts, 5.4 pts/90 last season, 48% owned across the game"
-        },
-        {
-          "fplId": 449,
-          "fplCode": 487838,
-          "name": "Hall",
-          "position": "DEF",
-          "team": "NEW",
-          "price": 5.2,
-          "ownership": 18.1,
-          "role": "start",
-          "primarySeasonLabel": "2025/26",
-          "primaryStarts": 24,
-          "primaryMinutes": 2176,
-          "primaryPpgRaw": 3.2674632352941178,
-          "primaryPpgShrunk": 3.2674632352941178,
-          "components": {
-            "provenOutput": 0.26804123711340205,
-            "openingFixtures": 0.7878787878787878,
-            "minutesSecurity": 0.8545029239766082
-          },
-          "composite": 0.5672767172539284,
-          "euRotation": null,
-          "isFirstChoiceGkp": false,
-          "dataTier": 1,
-          "why": "24 starts, 3.3 pts/90 last season"
         },
         {
           "fplId": 399,
@@ -3385,13 +3358,38 @@
           "why": "19 starts, 6.9 pts/90 last season, one of the best opening runs, 34% owned across the game, midweek Champions League fixtures may cost him minutes"
         },
         {
+          "fplId": 426,
+          "fplCode": 141746,
+          "name": "B.Fernandes",
+          "position": "MID",
+          "team": "MUN",
+          "price": 11.6,
+          "ownership": 20.3,
+          "role": "start",
+          "primarySeasonLabel": "2025/26",
+          "primaryStarts": 35,
+          "primaryMinutes": 3065,
+          "primaryPpgRaw": 6.900489396411093,
+          "primaryPpgShrunk": 6.900489396411093,
+          "components": {
+            "provenOutput": 1,
+            "openingFixtures": 0.7878787878787878,
+            "minutesSecurity": 0.8147076023391813
+          },
+          "composite": 0.888699096225412,
+          "euRotation": "UCL",
+          "isFirstChoiceGkp": false,
+          "dataTier": 1,
+          "why": "35 starts, 6.9 pts/90 last season, midweek Champions League fixtures may cost him minutes"
+        },
+        {
           "fplId": 427,
           "fplCode": 446008,
           "name": "Mbeumo",
           "position": "MID",
           "team": "MUN",
           "price": 7.9,
-          "ownership": 19,
+          "ownership": 18.9,
           "role": "start",
           "primarySeasonLabel": "2025/26",
           "primaryStarts": 31,
@@ -3410,29 +3408,29 @@
           "why": "31 starts, 5.1 pts/90 last season, midweek Champions League fixtures may cost him minutes"
         },
         {
-          "fplId": 124,
-          "fplCode": 60307,
-          "name": "Groß",
+          "fplId": 15,
+          "fplCode": 184029,
+          "name": "Ødegaard",
           "position": "MID",
-          "team": "BHA",
-          "price": 6.3,
-          "ownership": 48.2,
+          "team": "ARS",
+          "price": 6.7,
+          "ownership": 16.5,
           "role": "start",
           "primarySeasonLabel": "2025/26",
-          "primaryStarts": 18,
-          "primaryMinutes": 1636,
-          "primaryPpgRaw": 4.290953545232274,
-          "primaryPpgShrunk": 4.290953545232274,
+          "primaryStarts": 16,
+          "primaryMinutes": 1363,
+          "primaryPpgRaw": 4.886280264123258,
+          "primaryPpgShrunk": 4.886280264123258,
           "components": {
-            "provenOutput": 0.5661764705882353,
-            "openingFixtures": 0.4545454545454546,
-            "minutesSecurity": 0.6947777777777777
+            "provenOutput": 0.7867647058823529,
+            "openingFixtures": 0.48484848484848503,
+            "minutesSecurity": 0.5435029239766082
           },
-          "composite": 0.5528258764111704,
-          "euRotation": "UECL",
+          "composite": 0.6324416721393502,
+          "euRotation": "UCL",
           "isFirstChoiceGkp": false,
           "dataTier": 1,
-          "why": "18 starts, 4.3 pts/90 last season, 48% owned across the game"
+          "why": "16 starts, 4.9 pts/90 last season, midweek Champions League fixtures may cost him minutes"
         },
         {
           "fplId": 411,
@@ -3512,79 +3510,79 @@
           "why": "35 starts, 2.7 pts/90 last season"
         },
         {
-          "fplId": 339,
-          "fplCode": 180135,
-          "name": "Longstaff",
-          "position": "MID",
-          "team": "LEE",
-          "price": 4.8,
-          "ownership": 0.1,
+          "fplId": 259,
+          "fplCode": 219924,
+          "name": "Diop",
+          "position": "DEF",
+          "team": "IPS",
+          "price": 3.9,
+          "ownership": 9.8,
           "role": "bench",
           "primarySeasonLabel": "2025/26",
-          "primaryStarts": 10,
-          "primaryMinutes": 1003,
-          "primaryPpgRaw": 5.024925224327019,
-          "primaryPpgShrunk": 5.024925224327019,
+          "primaryStarts": 8,
+          "primaryMinutes": 812,
+          "primaryPpgRaw": 3.435960591133005,
+          "primaryPpgShrunk": 3.3343197026022304,
           "components": {
-            "provenOutput": 0.8088235294117647,
-            "openingFixtures": 0.5151515151515152,
-            "minutesSecurity": 0.41730994152046785
+            "provenOutput": 0.29896907216494845,
+            "openingFixtures": 0.9696969696969698,
+            "minutesSecurity": 0.33497076023391814
           },
-          "composite": 0.627735606842418,
+          "composite": 0.5409241739149498,
           "euRotation": null,
           "isFirstChoiceGkp": false,
           "dataTier": 1,
-          "why": "10 starts, 5.0 pts/90 last season, 10 starts is a small sample so we have rated him cautiously"
+          "why": "8 starts, 3.4 pts/90 last season, one of the best opening runs, 8 starts is a small sample so we have rated him cautiously"
         },
         {
-          "fplId": 488,
-          "fplCode": 210462,
-          "name": "I.Sangaré",
+          "fplId": 323,
+          "fplCode": 461587,
+          "name": "McAteer",
           "position": "MID",
-          "team": "NFO",
-          "price": 4.7,
-          "ownership": 0.3,
+          "team": "IPS",
+          "price": 4.3,
+          "ownership": 0.9,
           "role": "bench",
-          "primarySeasonLabel": "2025/26",
-          "primaryStarts": 25,
-          "primaryMinutes": 2073,
-          "primaryPpgRaw": 3.8639652677279304,
-          "primaryPpgShrunk": 3.8639652677279304,
+          "primarySeasonLabel": "2024/25",
+          "primaryStarts": 9,
+          "primaryMinutes": 846,
+          "primaryPpgRaw": 3.723404255319149,
+          "primaryPpgShrunk": 3.6862290562036053,
           "components": {
-            "provenOutput": 0.34558823529411764,
-            "openingFixtures": 0.818181818181818,
-            "minutesSecurity": 0.8424561403508772
+            "provenOutput": 0.3014705882352941,
+            "openingFixtures": 0.9696969696969698,
+            "minutesSecurity": 0
           },
-          "composite": 0.6103695703161647,
+          "composite": 0.4750557040998218,
           "euRotation": null,
           "isFirstChoiceGkp": false,
-          "dataTier": 1,
-          "why": "25 starts, 3.9 pts/90 last season"
+          "dataTier": 2,
+          "why": "9 starts, 3.7 pts/90 in 2024/25, one of the best opening runs, 9 starts is a small sample so we have rated him cautiously"
         },
         {
-          "fplId": 640,
-          "fplCode": 431639,
-          "name": "Flemming",
+          "fplId": 321,
+          "fplCode": 557012,
+          "name": "Walle Egeli",
           "position": "FWD",
           "team": "IPS",
-          "price": 5.5,
-          "ownership": 0.1,
+          "price": 4.5,
+          "ownership": 2.5,
           "role": "bench",
-          "primarySeasonLabel": "2025/26",
-          "primaryStarts": 21,
-          "primaryMinutes": 1764,
-          "primaryPpgRaw": 5.051020408163265,
-          "primaryPpgShrunk": 5.051020408163265,
+          "primarySeasonLabel": null,
+          "primaryStarts": 0,
+          "primaryMinutes": 0,
+          "primaryPpgRaw": null,
+          "primaryPpgShrunk": null,
           "components": {
-            "provenOutput": 0.7307692307692307,
+            "provenOutput": 0,
             "openingFixtures": 0.9696969696969698,
-            "minutesSecurity": 0.8063157894736842
+            "minutesSecurity": 0
           },
-          "composite": 0.8295032511348301,
+          "composite": 0.3393939393939394,
           "euRotation": null,
           "isFirstChoiceGkp": false,
-          "dataTier": 1,
-          "why": "21 starts, 5.1 pts/90 last season, one of the best opening runs"
+          "dataTier": 4,
+          "why": "no Premier League starts to price him on, one of the best opening runs"
         }
       ]
     },
@@ -3594,8 +3592,8 @@
       "description": "Every player (starter and bench) is a lower-owned pick with strong minutes security. Naturally banks around £7m — under the ownership cap, the eligible pool has no better use for the extra spend.",
       "rules": "All-15 ownership ≤ 12%. Starters also need minutes security ≥ 0.65 AND composite ≥ 0.55. Bank is whatever the LP holds under those filters — no forced minimum spend.",
       "feasible": true,
-      "totalCost": 88.7,
-      "remainingBank": 11.3,
+      "totalCost": 88.6,
+      "remainingBank": 11.4,
       "budgetCap": 100,
       "objectiveValue": 9.84000558,
       "clubDistribution": {
@@ -3746,7 +3744,7 @@
           "position": "MID",
           "team": "MCI",
           "price": 6.8,
-          "ownership": 2.3,
+          "ownership": 2.2,
           "role": "start",
           "primarySeasonLabel": "2025/26",
           "primaryStarts": 23,
@@ -3762,7 +3760,7 @@
           "euRotation": "UCL",
           "isFirstChoiceGkp": false,
           "dataTier": 1,
-          "why": "23 starts, 5.7 pts/90 last season, one of the best opening runs, under the radar at 2.3% owned, midweek Champions League fixtures may cost him minutes"
+          "why": "23 starts, 5.7 pts/90 last season, one of the best opening runs, under the radar at 2.2% owned, midweek Champions League fixtures may cost him minutes"
         },
         {
           "fplId": 400,
@@ -3947,7 +3945,7 @@
           "name": "Barnes",
           "position": "MID",
           "team": "NEW",
-          "price": 6.1,
+          "price": 6,
           "ownership": 6.5,
           "role": "bench",
           "primarySeasonLabel": "2025/26",
@@ -4472,16 +4470,6 @@
       "reason": "Composite 0.50 below quality floor 0.55"
     },
     {
-      "name": "B.Fernandes",
-      "team": "MUN",
-      "reason": "Displaced by higher-composite alternative at same position under club-cap + budget constraints"
-    },
-    {
-      "name": "Ødegaard",
-      "team": "ARS",
-      "reason": "Displaced by higher-composite alternative at same position under club-cap + budget constraints"
-    },
-    {
       "name": "Rice",
       "team": "ARS",
       "reason": "Ownership 13.7% falls in the gap between Balanced (≥15%) and Differentials (≤12%)"
@@ -4497,6 +4485,6 @@
       "reason": "Ownership 12.8% falls in the gap between Balanced (≥15%) and Differentials (≤12%)"
     }
   ],
-  "_fetchedAt": "2026-11-17T12:13:00Z",
+  "_fetchedAt": "2026-11-18T12:00:18Z",
   "_source": "prefetch-draft-builder-squads.yml"
 }
