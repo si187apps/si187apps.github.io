@@ -18,7 +18,7 @@ jobs:
   deploy:
     environment:
       name: github-pages
-      url: ${{ steps.deployment.outputs.page_url }}
+      url: ${{ steps.deployment.outputs.page_url || steps.deployment_retry.outputs.page_url }}
     runs-on: ubuntu-latest
     steps:
       - name: Checkout
@@ -32,6 +32,21 @@ jobs:
         with:
           path: '.'
 
+      # 23-25 Nov 2026: three bot-dispatched deploys failed with
+      # "No artifacts named github-pages were found" even though the
+      # artifact had uploaded (a GitHub-side lookup flake). The daily
+      # squads.json never went live and the freshness canary failed.
+      # So: try once, wait, try again. A second failure still fails the job.
       - name: Deploy to GitHub Pages
         id: deployment
+        continue-on-error: true
+        uses: actions/deploy-pages@v4
+
+      - name: Wait before retrying the deploy
+        if: steps.deployment.outcome == 'failure'
+        run: sleep 60
+
+      - name: Deploy to GitHub Pages (retry)
+        id: deployment_retry
+        if: steps.deployment.outcome == 'failure'
         uses: actions/deploy-pages@v4
