@@ -168,7 +168,7 @@
   .mpm-hero .mpm-tagline { order:3; }
   .mpm-hero .mpm-hero-video { order:4; margin:4px auto 0; }
   .mpm-hero .mpm-lede { order:5; }
-  .mpm-hero .mpm-stores { order:6; }
+  .mpm-hero .mpm-stores, .mpm-hero .store-badges { order:6; }
   .mpm-hero .mpm-btns { order:7; }
   .mpm-hero { gap:14px; }
 }
